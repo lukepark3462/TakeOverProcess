@@ -358,7 +358,7 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
 }
 
 /* Colorstream v8: green=people, blue=finance, teal=process, grey=neutral */
-#home .hero-eyebrow{font-size:clamp(18px,1.8vw,24px)!important;color:var(--sg-deep-green)!important;font-weight:800!important;letter-spacing:-.03em;line-height:1.4;margin-bottom:15px}
+#home .hero-eyebrow{font-size:clamp(18px,1.8vw,24px)!important;color:var(--sg-brand-green)!important;font-weight:800!important;letter-spacing:-.03em;line-height:1.4;margin-bottom:15px}
 #home h1{font-size:clamp(33px,4.55vw,66px)!important;line-height:1.28!important}
 #home h1 .hero-line{white-space:normal}
 #home-menu .launch-head h2,#roadmap .section-head h2,#finance .section-head h2,#past .section-head h2,#lawfirm .law-head h2,#rights .section-head h2,#donors .section-head h2,#rules .section-head h2,#contact .section-head h2{font-size:clamp(40px,4.6vw,64px)!important;line-height:1.25!important;letter-spacing:-.05em!important;font-weight:780!important;word-break:keep-all;overflow-wrap:anywhere}
