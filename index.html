@@ -196,6 +196,128 @@ header{background:#ffffffef;border-color:#e4e4e4}.logo{color:#151515}nav a{color
 @media(min-width:1000px){.statement h2{font-size:clamp(23px,3.1vw,43px)}}
 @media(max-width:970px){.statement h2{font-size:clamp(20px,4.45vw,36px)}.statement h2 .statement-line{white-space:normal}.law-profile{grid-template-columns:1fr 1.15fr}}
 @media(max-width:760px){.statement h2{font-size:clamp(19px,5.5vw,32px)}.statement h2 .statement-line{white-space:normal}.law-profile{grid-template-columns:1fr}.law-profile-photo{min-height:375px;max-height:520px}.section-head{align-items:start}.section-head>p{max-width:none}}
+
+
+/* =============================================
+   Brand dark reset — 2026-10-19
+   Dark home / navigation, white editorial details
+   ============================================= */
+:root{
+ --brand-black:#101010;
+ --brand-charcoal:#191919;
+ --brand-white:#ffffff;
+ --brand-lime:#86BC25;
+ --brand-paper:#ffffff;
+ --brand-muted:#f2f3f1;
+ --bg:#ffffff;
+ --green:#86BC25;
+ --green-light:#f0f7e6;
+}
+html{background:#101010}
+body{background:#101010;color:#151515}
+header{
+ background:#101010;
+ border-bottom:1px solid #323232;
+ color:#fff;
+ box-shadow:0 1px 0 #101010;
+}
+header .logo,header .logo:visited{color:#fff}
+header nav a{color:#cbcbcb}
+header nav a:hover,header nav a.active{color:#86BC25}
+header .menu-toggle{color:#fff}
+header nav a:focus-visible,header .logo:focus-visible{outline-color:#86BC25}
+
+/* The large, immediately visible canvas was previously transparent/light. */
+#home.hero{
+ background:#101010;
+ color:#fff;
+ min-height:calc(100svh - 76px);
+}
+#home.hero h1 .hero-line,
+#home.hero h1 .hero-line:first-child{color:#f9f9f9}
+#home.hero h1 .hero-line--muted{color:#86BC25}
+#home .eyebrow{color:#b5db81}
+#home .eyebrow:before{background:#86BC25}
+#home .hero-bottom p{color:#d4d4d4}
+#home .hero-meta{color:#aaaaaa;border-top:1px solid #454545}
+#home .rounded-arrow{color:#86BC25;border-color:#86BC25}
+#home .rounded-arrow:hover{background:#86BC25;color:#101010}
+#home .hero-architecture{
+ opacity:.2;
+ filter:grayscale(1) brightness(1.4);
+}
+#home.hero .hero-main{z-index:1}
+
+/* Main landing navigation: dark instead of previous white #home-menu. */
+#home-menu{
+ background:#191919;
+ color:#f9f9f9;
+ border-top:1px solid #2f2f2f;
+}
+#home-menu .launch-head{border-top:1px solid #525252}
+#home-menu .launch-head h2{color:#fff}
+#home-menu .launch-head p{color:#b4b4b4}
+#home-menu .eyebrow{color:#86BC25}
+#home-menu .eyebrow:before{background:#86BC25}
+#home-menu .launch-card{
+ background:#242424;
+ color:#fff;
+ border:1px solid #454545;
+ box-shadow:0 12px 34px rgba(0,0,0,.26);
+}
+#home-menu .launch-card:hover,
+#home-menu .launch-card:focus-visible{
+ background:#303030;
+ border-color:#86BC25;
+ box-shadow:0 19px 42px rgba(0,0,0,.4),0 0 0 1px rgba(134,188,37,.16);
+}
+#home-menu .launch-card .launch-index{color:#a8d26e}
+#home-menu .launch-card .launch-name{color:#fff}
+#home-menu .launch-card .launch-arrow{color:#86BC25;border-color:#64893a}
+#home-menu .launch-card:hover .launch-arrow{background:#86BC25;color:#101010}
+#home-menu .launch-foot{color:#8e8e8e}
+
+/* Detail pages: bright editorial areas with restrained grayscale hierarchy */
+body.is-detail main{background:#fff}
+#roadmap,#finance,#committee,#rules{background:#fff;color:#151515}
+#progress,#donors,#rights,#lawfirm{background:#f2f3f1;color:#151515}
+#about.statement{background:#101010;color:#fff}
+#about.statement h2 .statement-line:last-child{color:#86BC25}
+#lawfirm .law-panel,#rights .rights-ribbon{background:#101010}
+#lawfirm .law-panel .law-label{color:#b1df75}
+#lawfirm .law-link.primary{background:#101010;border-color:#101010;color:#fff}
+#lawfirm .law-link.primary:hover{background:#333}
+#lawfirm .law-field{background:#fff;border-color:#ddd}
+#finance .balance strong{color:#567d0e}
+#rights .rights-actor.union,#rights .rights-phase.after{background:#edf5e7;border-color:#d1e3c4}
+#rights .rights-case:first-child{background:#f1f7e9}
+#committee .committee-card{background:#fff}
+#committee .committee-grid{background:#e4e4e4;border-color:#e4e4e4}
+footer.footer{background:#101010;color:#fff}
+.footer p{color:#ccc}
+.footer-bottom{border-color:#404040;color:#aaa}
+
+/* No cropped headings on desktop and no horizontal overflow on mobile */
+#about.statement h2{max-width:100%;overflow:visible}
+#about.statement h2 .statement-line{display:block}
+@media(min-width:971px){
+ #about.statement h2{font-size:clamp(24px,3.05vw,42px)}
+ #about.statement h2 .statement-line{white-space:nowrap}
+}
+@media(max-width:970px){
+ header nav{background:#191919;border-color:#373737}
+ header nav a{color:#ddd}
+ #home.hero{min-height:calc(90svh - 66px)}
+ #home-menu{padding-top:54px}
+ #about.statement h2 .statement-line{white-space:normal}
+}
+@media(max-width:600px){
+ #home.hero h1 .hero-line{white-space:normal}
+ #home.hero h1{line-height:1.48}
+ #home-menu .launch-card{background:#262626}
+ #home-menu .launch-card .launch-name{font-size:clamp(16px,4.4vw,19px)}
+}
+
 </style></head><body>
 <header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav><a href="#about">소개</a><a href="#rights">조합원 권리</a><a href="#roadmap">실행 로드맵</a><a href="#progress">진행 현황</a><a href="#finance">재정 현황</a><a href="#donors">후원자</a><a href="#committee">비대위</a><a href="#lawfirm">법률자문</a><a href="#rules">정관·규정</a></nav></header>
 <main>
