@@ -114,8 +114,59 @@
 @media(max-width:450px){.launch-grid{gap:10px}.launch-card{padding:15px;min-height:140px}.launch-card .launch-name{font-size:18px}.launch-arrow{height:30px;width:30px}}
 @media(prefers-reduced-motion:reduce){.launch-card,.launch-arrow{transition:none}}
 
+
+/* 법무법인 지산앤파트너스 소개 */
+#lawfirm{scroll-margin-top:82px;background:#f3f5f0}
+.law-head{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:end;border-top:1px solid #b3c7b8;padding-top:26px;margin-bottom:44px}
+.law-head h2{font-size:clamp(37px,5vw,66px);line-height:1.27;letter-spacing:-.075em;margin:20px 0 0;font-weight:600}
+.law-head p{font-size:14px;color:#6d8072;line-height:2;max-width:460px}
+.law-panel{background:#244a3a;color:#eef5ed;border-radius:6px;padding:clamp(25px,3.7vw,46px);display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center;margin-bottom:16px;position:relative;overflow:hidden}
+.law-panel:after{content:"";position:absolute;right:-100px;top:-170px;width:500px;height:500px;border:1px solid #d6e8d61d;border-radius:50%;pointer-events:none;box-shadow:0 0 0 80px #d6e8d608}
+.law-panel .law-label{font-size:11px;letter-spacing:.18em;color:#b9d2c0;font-weight:800}
+.law-panel h3{font-size:clamp(28px,3.8vw,45px);font-weight:550;letter-spacing:-.06em;margin:22px 0}
+.law-panel p{font-size:13px;line-height:1.95;color:#d1e1d5;max-width:580px}
+.law-panel .law-panel-right{padding:12px 0 12px 32px;border-left:1px solid #ffffff35;position:relative}
+.law-panel .law-panel-right strong{display:block;font-size:14px;font-weight:650;margin-bottom:18px}
+.law-panel .law-panel-right span{display:block;padding:11px 0;font-size:13px;color:#e0eee3;border-top:1px solid #ffffff1c}
+.law-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:0 0 55px}
+.law-field{padding:22px 20px;min-height:128px;background:#fff;border:1px solid #dce6dc;display:flex;flex-direction:column;justify-content:space-between}
+.law-field .law-field-num{font-size:11px;letter-spacing:.13em;color:#829689}
+.law-field b{font-size:17px;color:#294d3a;line-height:1.45;font-weight:650}
+.law-person-title{display:flex;justify-content:space-between;align-items:end;gap:24px;margin:0 0 24px}
+.law-person-title h3{font-size:clamp(27px,3.2vw,38px);line-height:1.3;letter-spacing:-.06em;font-weight:600}
+.law-person-title p{max-width:400px;font-size:12px;color:#7c8a80;line-height:1.8}
+.law-profile{display:grid;grid-template-columns:.8fr 1.2fr;background:white;border:1px solid #d7e3d8;min-height:380px;margin-bottom:13px}
+.law-profile-photo{position:relative;min-height:330px;overflow:hidden;background:linear-gradient(145deg,#d8e3d8,#9eb9a6);display:grid;place-items:center}
+.law-profile-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;position:absolute;inset:0;filter:saturate(.75)}
+.law-profile-photo span{color:#517362;font-size:90px;letter-spacing:-.13em;font-weight:350;opacity:.42}
+.law-profile-content{padding:clamp(25px,4vw,50px);display:flex;flex-direction:column;justify-content:center}
+.law-profile-tag{font-size:11px;letter-spacing:.14em;color:#71907d;font-weight:780}
+.law-profile-content h4{font-size:clamp(30px,3.8vw,50px);letter-spacing:-.07em;font-weight:640;margin:13px 0 16px}
+.law-profile-content p{font-size:14px;line-height:1.85;color:#64786b;max-width:580px}
+.law-profile-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;margin:25px 0;color:#3e644c}
+.law-profile-list span{font-size:12px;padding-top:10px;border-top:1px solid #dce7dc}
+.law-members{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin:16px 0}
+.law-member{display:grid;grid-template-columns:138px 1fr;background:#fff;border:1px solid #dbe5dc;min-height:165px}
+.law-member-portrait{position:relative;background:linear-gradient(140deg,#dde8de,#bacdbd);overflow:hidden}
+.law-member-portrait img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;object-position:center 20%;filter:saturate(.78)}
+.law-member-portrait span{position:absolute;inset:0;display:grid;place-items:center;font-size:34px;color:#7a9380;opacity:.4}
+.law-member-text{padding:22px 22px 20px}
+.law-member-text .r{font-size:11px;color:#76907c;letter-spacing:.08em}
+.law-member-text h4{font-size:21px;margin:8px 0;font-weight:650}
+.law-member-text p{font-size:12px;color:#6b7f70;line-height:1.8}
+.law-links{margin-top:19px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.law-link{display:inline-flex;align-items:center;justify-content:center;gap:14px;border-radius:6px;border:1px solid #809a84;padding:13px 17px;color:#285440;font-size:12px;font-weight:720;transition:.2s}
+.law-link:hover{background:#e4eee6;transform:translateY(-2px)}
+.law-link.primary{background:#214b37;color:#fff;border-color:#214b37}
+.law-link.primary:hover{background:#33664b}
+.law-source{font-size:11px;color:#87968b;line-height:1.8;margin-top:15px}
+@media(max-width:1050px){.law-fields{grid-template-columns:repeat(2,1fr)}.law-member{grid-template-columns:110px 1fr}}
+@media(max-width:760px){.law-head{display:block}.law-head p{margin-top:20px}.law-panel{grid-template-columns:1fr;gap:24px}.law-panel .law-panel-right{padding:18px 0 0;border-left:0;border-top:1px solid #ffffff35}.law-fields{gap:9px;margin-bottom:37px}.law-field{padding:16px;min-height:110px}.law-field b{font-size:15px}.law-person-title{display:block}.law-person-title p{margin-top:12px}.law-profile{grid-template-columns:1fr}.law-profile-photo{min-height:250px}.law-profile-content{padding:25px}.law-profile-list{grid-template-columns:1fr}.law-members{grid-template-columns:1fr}.law-member{grid-template-columns:108px 1fr}.law-member-portrait{min-height:170px}}
+
+@media(min-width:971px){.launch-card--legal{grid-column:span 4;min-height:135px;display:grid;grid-template-columns:1fr 2fr auto;align-items:center;gap:24px}.launch-card--legal .launch-arrow{align-self:center}}
+@media(max-width:970px){.launch-card--legal{grid-column:span 2;min-height:116px;display:grid;grid-template-columns:1fr auto;align-items:center}.launch-card--legal .launch-index{grid-column:1}.launch-card--legal .launch-name{grid-column:1}.launch-card--legal .launch-arrow{grid-column:2;grid-row:1/span 2;align-self:center}}
 </style></head><body>
-<header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav><a href="#about">소개</a><a href="#rights">조합원 권리</a><a href="#roadmap">실행 로드맵</a><a href="#progress">진행 현황</a><a href="#finance">재정 현황</a><a href="#donors">후원자</a><a href="#committee">비대위</a><a href="#rules">정관·규정</a></nav></header>
+<header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav><a href="#about">소개</a><a href="#rights">조합원 권리</a><a href="#roadmap">실행 로드맵</a><a href="#progress">진행 현황</a><a href="#finance">재정 현황</a><a href="#donors">후원자</a><a href="#committee">비대위</a><a href="#lawfirm">법률자문</a><a href="#rules">정관·규정</a></nav></header>
 <main>
 <section id="home" class="hero container">
 
@@ -143,7 +194,7 @@
 <div class="hero-main"><div class="hero-copy"><div class="eyebrow">SONGRIM 03 / REBUILDING PROCESS</div><h1 aria-label="송림3지구 정상화 과정, 모든 주요한 내용에 대한 기록."><span class="hero-line">송림3지구 정상화 과정,</span><span class="hero-line hero-line--muted">모든 주요한 내용에 대한 기록.</span></h1></div></div>
 <div class="hero-bottom-wrap"><div class="hero-bottom"><p>송림3지구 조합 비상대책위원회<br>집행부 재구성과 조합 정상화를 위한 모든 주요 과정과 재정 기록을 한곳에 모았습니다.</p><a href="#home-menu" class="rounded-arrow" aria-label="아래로 스크롤">↓</a></div><div class="hero-meta"><span>REBUILDING TRUST, TOGETHER</span><span id="heroDate">UPDATED — 2026.10.19</span></div></div>
 </section>
-<section id="home-menu" aria-label="전체 메뉴"><div class="container"><div class="launch-head"><div><div class="eyebrow">EXPLORE / CONTENTS</div><h2>송림3지구의 기록을<br>분야별로 확인하세요.</h2></div><p>필요한 내용을 선택해서 확인할 수 있습니다. 모바일에서는 아래로 스크롤해 전체 내용을 순서대로 볼 수 있습니다.</p></div><div class="launch-grid"><a class="launch-card" href="#about"><span class="launch-index">01 / INTRODUCTION</span><strong class="launch-name">비대위 설립 취지</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#roadmap"><span class="launch-index">02 / ROADMAP</span><strong class="launch-name">선거 로드맵</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#progress"><span class="launch-index">03 / UPDATES</span><strong class="launch-name">진행 현황</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#finance"><span class="launch-index">04 / FINANCE</span><strong class="launch-name">수입·지출 및 잔액</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#donors"><span class="launch-index">05 / SUPPORTERS</span><strong class="launch-name">후원자 명단</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rights"><span class="launch-index">06 / MEMBER RIGHTS</span><strong class="launch-name">조합원 권리</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#committee"><span class="launch-index">07 / PEOPLE</span><strong class="launch-name">비대위 소개</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rules"><span class="launch-index">08 / REFERENCE</span><strong class="launch-name">정관·선거관리규정</strong><span class="launch-arrow" aria-hidden="true">↗</span></a></div><p class="launch-foot">TAKEOVER PROCESS · SONGrIM 03</p></div></section>
+<section id="home-menu" aria-label="전체 메뉴"><div class="container"><div class="launch-head"><div><div class="eyebrow">EXPLORE / CONTENTS</div><h2>송림3지구의 기록을<br>분야별로 확인하세요.</h2></div><p>필요한 내용을 선택해서 확인할 수 있습니다. 모바일에서는 아래로 스크롤해 전체 내용을 순서대로 볼 수 있습니다.</p></div><div class="launch-grid"><a class="launch-card" href="#about"><span class="launch-index">01 / INTRODUCTION</span><strong class="launch-name">비대위 설립 취지</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#roadmap"><span class="launch-index">02 / ROADMAP</span><strong class="launch-name">선거 로드맵</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#progress"><span class="launch-index">03 / UPDATES</span><strong class="launch-name">진행 현황</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#finance"><span class="launch-index">04 / FINANCE</span><strong class="launch-name">수입·지출 및 잔액</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#donors"><span class="launch-index">05 / SUPPORTERS</span><strong class="launch-name">후원자 명단</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rights"><span class="launch-index">06 / MEMBER RIGHTS</span><strong class="launch-name">조합원 권리</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#committee"><span class="launch-index">07 / PEOPLE</span><strong class="launch-name">비대위 소개</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rules"><span class="launch-index">08 / REFERENCE</span><strong class="launch-name">정관·선거관리규정</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card launch-card--legal" href="#lawfirm"><span class="launch-index">09 / LEGAL PARTNER</span><strong class="launch-name">법무법인 지산앤파트너스 · 법률자문</strong><span class="launch-arrow" aria-hidden="true">↗</span></a></div><p class="launch-foot">TAKEOVER PROCESS · SONGrIM 03</p></div></section>
 <section id="about" class="statement"><div class="container reveal"><div class="eyebrow">WHY WE ARE HERE</div><h2>누군가를 비난하기 위해서가 아니라,<br><span>조합의 미래를 조합원 스스로 결정하기 위해.</span></h2><p id="mission"></p><div class="statement-figures"><div class="figure"><strong>432</strong><span>조합원 수</span></div><div class="figure"><strong>10.16</strong><span>해임총회 개최일</span></div><div class="figure"><strong>252</strong><span>해임안 찬성 표결 수</span></div></div></div></section>
 
 <!-- 전용 안내 섹션: 업로드된 3개 인포그래픽의 핵심 개념을 HTML/CSS 도식으로 재구성 -->
@@ -238,6 +289,51 @@
 
 
 <section id="committee" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">05 / PEOPLE</div><h2>비대위를<br>소개합니다.</h2></div><p>송림3지구 조합 비상대책위원회<br>2026년 9월 17일 설립 · 핵심 인물 4인</p></div><div id="people" class="committee-grid reveal"></div><div id="committeeMore" class="committee-more reveal"></div></div></section>
+
+
+<section id="lawfirm" class="section" aria-labelledby="law-firm-heading">
+<div class="container">
+ <div class="law-head reveal">
+  <div><div class="eyebrow">LEGAL PARTNER / PROFESSIONAL ADVISORY</div><h2 id="law-firm-heading">정상화의 과정에<br>법률적 전문성을 더합니다.</h2></div>
+  <p>송림3지구 비대위의 법률자문 협력기관과 담당 변호사, 건설·부동산 분야 업무를 소개합니다. 법률 지원 내용은 공식 공개 자료에 확인되는 범위로 정리했습니다.</p>
+ </div>
+ <div class="law-panel reveal">
+  <div><div class="law-label">LEGAL COUNSEL / SONGRIM 03</div><h3>법무법인<br>지산앤파트너스</h3><p>공사대금 및 채권 분쟁, 재개발·재건축, 건설 하도급·하자 관련 법률 이슈를 다루는 지산의 건설·부동산 업무와 비대위 자문변호사를 소개합니다.</p></div>
+  <div class="law-panel-right"><strong>건설·부동산 분야 주요 업무</strong><span>재개발·재건축 및 정비사업 분쟁</span><span>공사대금 정산·채권 문제</span><span>하도급·설계변경·간접비</span><span>하자보수 및 손해배상</span></div>
+ </div>
+ <div class="law-fields reveal">
+  <div class="law-field"><span class="law-field-num">01 / REDEVELOPMENT</span><b>재개발·재건축</b></div>
+  <div class="law-field"><span class="law-field-num">02 / CONSTRUCTION</span><b>공사대금·정산</b></div>
+  <div class="law-field"><span class="law-field-num">03 / CONTRACTS</span><b>하도급·설계변경</b></div>
+  <div class="law-field"><span class="law-field-num">04 / LITIGATION</span><b>하자·민사 분쟁</b></div>
+ </div>
+ <div class="law-person-title reveal">
+  <div><div class="eyebrow">COUNSEL / OUR LEGAL ADVISOR</div><h3>함께하는 변호사를 소개합니다.</h3></div>
+  <p>공식 홈페이지에 송림3지구재개발조합 비상대책위원회 자문변호사로 소개된 담당 변호사입니다.</p>
+ </div>
+ <article class="law-profile reveal">
+  <div class="law-profile-photo" aria-label="박한민 변호사 사진 제공 전, 이름을 사용한 그래픽"><span aria-hidden="true">朴</span></div>
+  <div class="law-profile-content">
+   <div class="law-profile-tag">PARTNER ATTORNEY / CONSTRUCTION & REAL ESTATE</div>
+   <h4>박한민 변호사</h4>
+   <p>건설·부동산 분야를 중심으로 재개발·재건축, 설계변경, 하도급, 간접비, 하자보수 사건을 다룹니다. 지산 공식 홈페이지에 송림3지구 비대위 자문변호사로 기재되어 있습니다.</p>
+   <div class="law-profile-list"><span>재개발·재건축 분쟁</span><span>건설 계약·공사대금</span><span>하도급·설계변경·간접비</span><span>하자보수 관련 사건</span></div>
+   <div class="law-links"><a class="law-link primary" href="https://jisanlaw.com/" target="_blank" rel="noopener noreferrer">지산 공식 홈페이지 ↗</a></div>
+  </div>
+ </article>
+ <div class="law-members reveal" aria-label="지산 구성원 소개">
+  <article class="law-member">
+   <div class="law-member-portrait"><span aria-hidden="true">金</span><img src="https://jisanlaw.com/images/lawyers/kim.jpg" loading="lazy" alt="지산 공식 홈페이지의 김한솔 대표 변호사 사진" onerror="this.remove()"></div>
+   <div class="law-member-text"><div class="r">REPRESENTATIVE ATTORNEY</div><h4>김한솔 변호사</h4><p>대표 변호사 · 검사 재직 경험을 바탕으로 형사 사건 등의 법률 대응 담당</p></div>
+  </article>
+  <article class="law-member">
+   <div class="law-member-portrait"><span aria-hidden="true">朴</span><img src="https://jisanlaw.com/images/lawyers/park.jpg" loading="lazy" alt="지산 공식 홈페이지의 박종진 파트너 변호사 사진" onerror="this.remove()"></div>
+   <div class="law-member-text"><div class="r">PARTNER ATTORNEY</div><h4>박종진 변호사</h4><p>파트너 변호사 · 기업 자문 및 민사·기업 분쟁 관련 업무 담당</p></div>
+  </article>
+ </div>
+ <div class="law-source">자료 출처: <a href="https://jisanlaw.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">지산 공식 홈페이지</a>. 위 ‘법무법인 지산앤파트너스’는 비대위에서 사용하는 소개 명칭이며, 공식 홈페이지의 표시 명칭은 ‘법률사무소 지산’임. 공식 사이트에서 확인 가능한 인물 사진은 해당 사이트 이미지로 연결했으며, 박한민 변호사의 인물 사진은 확인된 원본 URL이 없어 임의의 다른 인물 사진으로 대체하지 않았습니다.</div>
+ </div>
+</section>
 
 <section id="rules" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">06 / REFERENCE</div><h2>진행의 근거를<br>확인할 수 있도록.</h2></div><p>정관과 선거관리규정의 주요 조항을 업무별로 구분해 정리했습니다. 조항을 누르면 관련 설명이 펼쳐집니다.</p></div><div id="ruleList" class="rules-list reveal"></div><p class="more-info">제공받은 정관(안)·선거관리규정 변경(안)의 요약임. 실제 시행본과의 일치 여부 및 법적 효력은 별도 확인 필요.</p></div></section>
 </main><footer class="footer"><div class="container"><div class="footer-grid"><h2>함께 만드는<br>송림3지구의 다음.</h2><p>조합원 한 사람 한 사람의 권리를 존중하고, 주요 의사결정과 진행 경과를 투명하게 기록하겠습니다.</p></div><div class="footer-bottom"><span>송림3지구 조합원 비상대책위원회</span><span>TAKEOVER PROCESS · 2026</span></div></div></footer>
@@ -369,7 +465,7 @@ const io=('IntersectionObserver'in window)?new IntersectionObserver(entries=>ent
 })();
 </script><script>
 (function(){
-const ids=['about','roadmap','progress','finance','donors','rights','committee','rules'];
+const ids=['about','roadmap','progress','finance','donors','rights','committee','lawfirm','rules'];
 const mq=window.matchMedia('(max-width:970px)');
 const target=()=>decodeURIComponent(location.hash.slice(1));
 function display(){
