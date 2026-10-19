@@ -23,7 +23,8 @@ window.SONGRIM = {
   committee:[
     {role:"위원장",name:"이인섭",description:"비대위 운영 총괄 및 대외 협의"},
     {role:"감사",name:"최천호",description:"회계·사업집행 감시"},
-    {role:"이사",name:"박형철",description:"운영 및 실행업무 지원"}
+    {role:"이사",name:"박형철",description:"운영 및 실행업무 지원"},
+    {role:"회계감사",name:"박종인",description:"비대위 수입·지출 및 회계 집행 점검"}
   ],
   scenarios:[
     {id:"s1",label:"시나리오 01",title:"김명숙 이사 사퇴",condition:"임원 전원 공석 · 조합원 소집청구 경로",weeks:"6–8주",summary:"조합원 연명 87명 → 대의원회 소집권 확보 → 선관위 구성 → 보궐선임 → 직무대행 체계 → 조합장 선출",signature:"조합원 87명 이상",directors:5,auditors:1,
