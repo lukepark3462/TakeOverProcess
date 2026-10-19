@@ -440,3 +440,9 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
  #lawfirm .law-members>.law-member>.law-member-text{padding:14px!important}
  #lawfirm .law-members .law-member-text h4{font-size:21px!important}
 }
+
+/* 2026-10-19: remove decorative rules and operator before expenditure. */
+#finance .finance-top-simple .finance-equation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2.4vw,30px);align-items:start;max-width:100%;border:0}
+#finance .finance-top-simple .finance-equation>div,#finance .finance-top-simple .finance-equation>div:not(.finance-minus){border:0!important;border-left:0!important;border-right:0!important;padding-left:0!important;padding-right:0!important;box-shadow:none!important;background:none!important}
+#finance .finance-top-simple .finance-equation>div:before,#finance .finance-top-simple .finance-equation>div:after{content:none!important;display:none!important}
+@media(max-width:700px){#finance .finance-top-simple .finance-equation{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px!important}}
