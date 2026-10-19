@@ -1,0 +1,86 @@
+/* SONGRIM 03 / CANONICAL COLOR SYSTEM
+   Source: user-supplied Color Palette Analysis Guide (2026.10)
+   All future additions should use tokens below; do not introduce random palettes.
+   Primary: brand green | Information: blue | Process: teal
+   Neutral: gray | Exceptions: risk red | Base: black & white
+*/
+:root{
+  --sg-brand-green:#86BC25;
+  --sg-spectrum-green:#83BC22;
+  --sg-growth-green:#45AF2B;
+  --sg-deep-green:#076638;
+  --sg-deep-green-2:#245034;
+  --sg-green-light:#E6EE94;
+  --sg-green-lime:#CADB0A;
+  --sg-data-blue:#0272A6;
+  --sg-data-blue-light:#64B6E7;
+  --sg-data-blue-dark:#035489;
+  --sg-strategic-teal:#05767D;
+  --sg-teal-light:#9DD5CD;
+  --sg-neutral-gray:#75797A;
+  --sg-neutral-gray-light:#CFCFCF;
+  --sg-neutral-gray-mid:#979B9C;
+  --sg-neutral-gray-dark:#535558;
+  --sg-risk-red:#E12211;
+  --sg-white:#FFFFFF;
+  --sg-black:#000000;
+  --bg:var(--sg-black);
+  --ink:var(--sg-white);
+  --muted:var(--sg-neutral-gray-light);
+  --green:var(--sg-brand-green);
+  --green-light:#25321a;
+  --line:#3c3c3c;
+}
+html,body,main{background:var(--sg-black);color:var(--sg-white)}
+header,#home.hero,#about.statement,footer.footer{background:var(--sg-black)}
+#home-menu{background:#111}
+body.is-detail main{background:var(--sg-black)}
+#about,#roadmap,#progress,#finance,#donors,#rights,#committee,#lawfirm,#rules{background:var(--sg-black)!important;color:var(--sg-white)!important}
+#progress,#donors,#rights,#lawfirm{background:#111!important}
+#home-menu .launch-card{background:#191919;border-color:var(--sg-neutral-gray-dark)}
+#home-menu .launch-card:hover{border-color:var(--sg-brand-green)}
+#roadmap .road-step.week-selected{border-color:var(--sg-strategic-teal);background:#142927}
+#roadmap .road-step.task-active{background:#142927}
+#roadmap .status.active{color:var(--sg-teal-light);border-color:var(--sg-strategic-teal)}
+#finance .balance strong,#donors .donor-finance-summary>div:last-child strong{color:var(--sg-brand-green)}
+#finance .finance-metrics strong{color:var(--sg-white)}
+#finance .cost-analysis{background:#121212;border-color:#444}
+#finance .cost-foot,#finance .finance-caution{color:var(--sg-neutral-gray-light)}
+#finance .cost-cat{color:var(--sg-white)}
+#finance .cost-money{color:var(--sg-neutral-gray-light)}
+#finance .cost-pct{color:var(--sg-green-light)}
+#finance .monthly-ledger{width:100%;min-width:760px;border-collapse:collapse;table-layout:auto}
+#finance .monthly-ledger th{font-size:12px;font-weight:650;color:var(--sg-neutral-gray-light);letter-spacing:.015em;text-align:left;border-bottom:1px solid var(--sg-neutral-gray-dark);padding:17px 12px}
+#finance .monthly-ledger td{border-bottom:1px solid #343434;padding:19px 12px;font-size:13px;vertical-align:middle;color:#d9d9d9}
+#finance .monthly-ledger th:first-child,#finance .monthly-ledger td:first-child{padding-left:0}
+#finance .monthly-ledger th:last-child,#finance .monthly-ledger td:last-child{padding-right:0}
+#finance .monthly-ledger .month{white-space:nowrap;font:600 13px 'DM Sans','Noto Sans KR',sans-serif;letter-spacing:.01em;color:#e0e0e0}
+#finance .monthly-ledger .account{font-size:13px;font-weight:660;color:var(--sg-white);white-space:nowrap}
+#finance .monthly-ledger .description{font-size:12px;line-height:1.85;color:var(--sg-neutral-gray-light)}
+#finance .monthly-ledger .amount-cell,#finance .monthly-ledger .balance-cell{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+#finance .monthly-ledger .amount-cell .amount-sign{font-weight:750;font-size:16px;padding-right:4px}
+#finance .monthly-ledger .amount-cell.inflow .amount-sign,#finance .monthly-ledger .amount-cell.inflow .amount-number{color:var(--sg-brand-green)}
+#finance .monthly-ledger .amount-cell.outflow .amount-sign{color:var(--sg-neutral-gray-mid)}
+#finance .monthly-ledger .amount-cell.outflow .amount-number{color:color-mix(in srgb,var(--sg-risk-red) 72%,var(--sg-white));font-weight:690}
+#finance .monthly-ledger .amount-cell .amount-number{font:700 14px 'DM Sans','Noto Sans KR',sans-serif}
+#finance .monthly-ledger .balance-cell{color:var(--sg-data-blue-light);font-weight:690;font-size:14px}
+#finance .monthly-ledger .final-row{background:rgba(134,188,37,.075)}
+#finance .monthly-ledger .final-row .balance-cell{color:var(--sg-green-light);font-weight:800}
+#finance .monthly-ledger .opening-row{background:rgba(2,114,166,.07)}
+#finance .monthly-ledger .monthly-divider td{border-top:1px solid #676767}
+#finance .monthly-ledger tfoot td{border-top:1px solid var(--sg-brand-green);border-bottom:0;color:var(--sg-white);font-weight:750}
+#finance .monthly-ledger tfoot .balance-cell{color:var(--sg-brand-green);font-size:16px}
+#finance .monthly-ledger .ledger-summary-note{display:block;font-size:11px;color:var(--sg-neutral-gray-light);font-weight:400}
+#finance .expense-head .eyebrow{color:var(--sg-data-blue-light)}
+#finance .table-caption{font-size:12px;color:var(--sg-neutral-gray-light);max-width:520px;line-height:1.7;text-align:right}
+#finance .monthly-scroll{overflow-x:auto;max-width:100%;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+#finance .ledger-summary{font-size:12px;color:var(--sg-neutral-gray-light);margin:15px 0 28px;line-height:1.9}
+#finance .ledger-summary b{color:var(--sg-green-light)}
+@media(max-width:760px){
+ #finance .expense-head{display:block}
+ #finance .table-caption{margin-top:9px;text-align:left}
+ #finance .monthly-ledger th,#finance .monthly-ledger td{padding-top:15px;padding-bottom:15px}
+}
+@supports not (color:color-mix(in srgb, red 50%, white)){
+ #finance .monthly-ledger .amount-cell.outflow .amount-number{color:#EF6D62}
+}
