@@ -960,3 +960,75 @@ footer.footer .footer-grid p{
  footer.footer .footer-grid h2{font-size:clamp(21px,1.55vw,25px)!important;letter-spacing:-.055em!important}
  footer.footer .footer-grid p{font-size:clamp(13px,1.06vw,15px)!important;letter-spacing:-.04em!important}
 }
+
+/* v17: Compact, single-row footer on desktop; small, readable typography. */
+@media(min-width:1020px){
+  footer.footer .footer-grid{
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:clamp(12px,1.8vw,24px)!important;
+    padding-bottom:20px!important;
+  }
+  footer.footer .footer-grid h2{
+    flex:0 0 auto!important;
+    font-size:clamp(17px,1.35vw,21px)!important;
+    font-weight:700!important;
+    line-height:1.4!important;
+    white-space:nowrap!important;
+    margin:0!important;
+  }
+  footer.footer .footer-grid p{
+    flex:0 1 auto!important;
+    min-width:0;
+    width:auto!important;
+    max-width:none!important;
+    font-size:clamp(11px,.9vw,13px)!important;
+    line-height:1.5!important;
+    letter-spacing:-.035em!important;
+    text-align:right!important;
+    white-space:nowrap!important;
+    margin:0!important;
+  }
+}
+@media(max-width:1019px){
+  footer.footer .footer-grid{gap:8px!important;padding-bottom:20px!important}
+  footer.footer .footer-grid h2{font-size:clamp(20px,4vw,27px)!important}
+  footer.footer .footer-grid p{font-size:clamp(13px,2.5vw,15px)!important}
+}
+/* Rights 01 and 03: use the entire horizontal space for a single line of descriptive text. */
+@media(min-width:761px){
+ #rights .rights-chapter[aria-labelledby="rights-title-1"] .rights-chapter-heading,
+ #rights .rights-chapter[aria-labelledby="rights-title-3"] .rights-chapter-heading{
+   display:flex!important;
+   flex-direction:column!important;
+   align-items:stretch!important;
+   gap:6px!important;
+ }
+ #rights .rights-chapter[aria-labelledby="rights-title-1"] .rights-chapter-heading>div,
+ #rights .rights-chapter[aria-labelledby="rights-title-3"] .rights-chapter-heading>div{
+   width:100%;
+   flex:none!important;
+ }
+ #rights .rights-chapter[aria-labelledby="rights-title-1"] .rights-chapter-heading>p,
+ #rights .rights-chapter[aria-labelledby="rights-title-3"] .rights-chapter-heading>p{
+   display:block!important;
+   width:100%!important;
+   max-width:100%!important;
+   align-self:stretch!important;
+   padding-top:0!important;
+   font-size:clamp(13px,1.03vw,15px)!important;
+   white-space:nowrap!important;
+   word-break:keep-all!important;
+ }
+}
+@media(max-width:760px){
+ #rights .rights-chapter[aria-labelledby="rights-title-1"] .rights-chapter-heading>p,
+ #rights .rights-chapter[aria-labelledby="rights-title-3"] .rights-chapter-heading>p{
+  max-width:100%!important;
+  white-space:normal!important;
+  word-break:keep-all;
+  font-size:14px!important;
+ }
+}
