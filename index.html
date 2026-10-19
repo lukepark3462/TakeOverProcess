@@ -165,6 +165,16 @@
 
 @media(min-width:971px){.launch-card--legal{grid-column:span 4;min-height:135px;display:grid;grid-template-columns:1fr 2fr auto;align-items:center;gap:24px}.launch-card--legal .launch-arrow{align-self:center}}
 @media(max-width:970px){.launch-card--legal{grid-column:span 2;min-height:116px;display:grid;grid-template-columns:1fr auto;align-items:center}.launch-card--legal .launch-index{grid-column:1}.launch-card--legal .launch-name{grid-column:1}.launch-card--legal .launch-arrow{grid-column:2;grid-row:1/span 2;align-self:center}}
+
+/* 후원 계좌: 포스터의 예금주와 계좌번호만 반영 */
+.donation-account{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:24px;margin:0 0 34px;padding:28px 31px;background:#fff;border:1px solid #d6dfd5;border-radius:5px;box-shadow:0 7px 24px rgba(32,65,42,.045)}
+.donation-account .account-eyebrow{font-size:11px;letter-spacing:.14em;font-weight:750;color:#7e9183;margin:0 0 14px}
+.donation-account dl{display:grid;grid-template-columns:78px minmax(0,1fr);column-gap:15px;row-gap:9px;margin:0;align-items:baseline}
+.donation-account dt{font-size:12px;color:#839386}
+.donation-account dd{font-size:clamp(17px,2vw,24px);line-height:1.5;font-weight:650;letter-spacing:-.035em;color:#244737;margin:0;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.donation-account .copy-account{padding:11px 15px;border-radius:5px;border:1px solid #a2b6a4;background:#f5f8f3;color:#2b5740;font-size:12px;font-weight:700;white-space:nowrap;transition:background .2s,transform .2s}
+.donation-account .copy-account:hover{background:#e4efe4;transform:translateY(-2px)}
+@media(max-width:760px){.donation-account{padding:21px;grid-template-columns:1fr;gap:16px}.donation-account dl{grid-template-columns:65px 1fr}.donation-account .copy-account{justify-self:start}}
 </style></head><body>
 <header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav><a href="#about">소개</a><a href="#rights">조합원 권리</a><a href="#roadmap">실행 로드맵</a><a href="#progress">진행 현황</a><a href="#finance">재정 현황</a><a href="#donors">후원자</a><a href="#committee">비대위</a><a href="#lawfirm">법률자문</a><a href="#rules">정관·규정</a></nav></header>
 <main>
@@ -207,7 +217,7 @@
 
 <section id="finance" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">03 / TRANSPARENCY</div><h2>수입과 지출,<br>숫자로 투명하게.</h2></div><p>확정된 회계 기록을 기준으로 수입·지출·잔액을 표시하며, 예정 지출은 잔액에서 차감하지 않습니다.</p></div><div class="finance-top reveal"><div class="balance"><small id="balanceTitle">현재 집계 잔액</small><strong id="balanceTotal">—</strong><span class="pill" id="balanceState">기초금액 검증 전</span></div><div class="finance-metrics"><div><span>총수입(기초금액 포함)</span><strong id="incomeTotal">—</strong></div><div><span>확정 지출</span><strong id="expenseTotal">—</strong></div></div></div><div class="tabs reveal"><button class="on" data-finance-tab="all">전체 거래</button><button data-finance-tab="income">수입</button><button data-finance-tab="expense">지출</button></div><div class="reveal"><table class="ledger"><thead><tr><th>일자</th><th>구분</th><th>내역</th><th>금액</th></tr></thead><tbody id="ledgerRows"></tbody></table><div id="financeNote" class="finance-caution"></div></div></div></section>
 
-<section id="donors" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">04 / SUPPORTERS</div><h2>함께해 주신<br>소중한 마음.</h2></div><p>후원은 자율적·자발적으로만 진행합니다.<br>후원자 이름은 공개 동의가 확인된 경우에만 표시합니다.</p></div><div class="donor-hero reveal"><div><span class="eyebrow" style="margin-bottom:14px">THANK YOU</span><strong id="donorCount">후원자 명단 준비 중</strong></div><p id="donationPolicy"></p></div><div id="donorGrid" class="donor-grid reveal"></div></div></section>
+<section id="donors" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">04 / SUPPORTERS</div><h2>함께해 주신<br>소중한 마음.</h2></div><p>후원은 자율적·자발적으로만 진행합니다.<br>후원자 이름은 공개 동의가 확인된 경우에만 표시합니다.</p></div><div class="donor-hero reveal"><div><span class="eyebrow" style="margin-bottom:14px">THANK YOU</span><strong id="donorCount">후원자 명단 준비 중</strong></div><p id="donationPolicy"></p></div><div class="donation-account reveal" aria-label="후원 계좌 안내"><div><p class="account-eyebrow">후원 계좌</p><dl><dt>예금주</dt><dd>이인섭</dd><dt>계좌번호</dt><dd id="donationAccountNumber">010-9929-1171</dd></dl></div><button type="button" class="copy-account" id="copyDonationAccount" aria-label="후원 계좌번호 복사">계좌번호 복사</button></div><div id="donorGrid" class="donor-grid reveal"></div></div></section>
 
 <section id="rights" class="section rights-section">
  <div class="container">
@@ -460,6 +470,7 @@ const seed=d.history;
 function historyRow(x){return '<article class="update-item"><div class="update-head"><h3>'+esc(x.title)+'</h3><span class="date">'+esc(x.date)+'</span></div><p>'+esc(x.detail)+'</p><div class="sm">'+(x.status==='done'?'확정 완료':x.status==='planned'?'예정':'진행 기록')+'</div></article>';}
 function renderHistory(){const merged=[...seed].sort((a,b)=>b.date.localeCompare(a.date));$('#historyList').innerHTML=merged.length?merged.slice(0,12).map(historyRow).join(''):'<p class="quiet">공개된 진행 기록이 없습니다.</p>';$('#progressCounter').textContent=merged.length+'건';$('#progressUpdated').textContent=merged[0]?.date||'—'}
 renderHistory();
+const copyAccount=$('#copyDonationAccount');if(copyAccount){copyAccount.onclick=async()=>{const number=$('#donationAccountNumber').textContent.trim();try{await navigator.clipboard.writeText(number);copyAccount.textContent='복사 완료';setTimeout(()=>copyAccount.textContent='계좌번호 복사',1800)}catch(_){window.prompt('계좌번호를 복사하세요',number)}}}
 const menu=$('.menu-toggle'),nav=$('nav');menu.onclick=()=>{const opened=nav.classList.toggle('open');menu.setAttribute('aria-expanded',opened)};$$('nav a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')});
 const io=('IntersectionObserver'in window)?new IntersectionObserver(entries=>entries.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target)}}),{threshold:.12}):null;$$('.reveal').forEach(el=>io?io.observe(el):el.classList.add('visible'));
 })();
