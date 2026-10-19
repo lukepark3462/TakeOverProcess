@@ -655,6 +655,20 @@ footer.footer{background:#101010}
 #donors .donor-finance-summary strong{display:block;color:#f7f7f7;font-size:clamp(18px,2.3vw,30px);font-weight:620;white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:-.045em}
 #donors .donor-finance-summary>div:last-child strong{color:#b5ea72}
 @media(max-width:760px){#donors .donor-finance-summary{grid-template-columns:1fr}#donors .donor-finance-summary>div{padding:13px 18px}#donors .donor-finance-summary strong{font-size:24px}}
+
+/* Corrected 35-row expenditure register */
+#finance .ledger{min-width:710px}
+#finance .ledger th:nth-child(1){width:56px;text-align:center}
+#finance .ledger th:nth-child(2){width:126px;text-align:left}
+#finance .ledger th:nth-child(3){width:150px;text-align:left}
+#finance .ledger th:nth-child(4){text-align:left}
+#finance .ledger th:nth-child(5){width:150px;text-align:right}
+#finance .ledger td:nth-child(1){width:56px;text-align:center;font-variant-numeric:tabular-nums;color:#a9a9a9}
+#finance .ledger td:nth-child(2){white-space:nowrap;color:#c5c5c5}
+#finance .ledger td:nth-child(3){white-space:nowrap}
+#finance .ledger td:nth-child(4){line-height:1.65}
+#finance .ledger td:nth-child(5){white-space:nowrap;text-align:right}
+#finance .ledger .ledger-seq{font-size:11px}
 </style></head><body>
 <header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav><a href="#about">소개·비대위</a><a href="#rights">조합원 권리</a><a href="#roadmap">실행 로드맵</a><a href="#progress">진행 현황</a><a href="#finance">재정 현황</a><a href="#donors">후원자</a><a href="#lawfirm">법률자문</a><a href="#rules">정관·규정</a></nav></header>
 <main>
@@ -727,9 +741,9 @@ footer.footer{background:#101010}
    </div>
    <div class="cost-foot">오입금 환불 1,200,000원 및 별도 정산 항목 20,000원은 계좌 출금 내역에 포함되지만, 실제 사용액과 차트에서는 제외했습니다.</div>
  </div>
- <div class="expense-head reveal"><div><div class="eyebrow">TRANSACTION RECORDS</div><h3>전체 거래내역</h3></div><span id="transactionCount">지출 37건</span></div>
- <div class="tabs reveal"><button class="on" data-finance-tab="all">전체 거래</button><button data-finance-tab="income">입금</button><button data-finance-tab="expense">출금</button></div>
- <div class="reveal ledger-scroll"><table class="ledger"><thead><tr><th>날짜</th><th>계정</th><th>내용</th><th>금액</th></tr></thead><tbody id="ledgerRows"></tbody></table></div>
+ <div class="expense-head reveal"><div><div class="eyebrow">TRANSACTION RECORDS</div><h3>실제 사용내역</h3></div><span id="transactionCount">지출 35건</span></div>
+ <div class="tabs reveal"><button data-finance-tab="all">입출금 집계·사용내역</button><button data-finance-tab="income">입금 누계</button><button class="on" data-finance-tab="expense">실제 사용내역</button></div>
+ <div class="reveal ledger-scroll"><table class="ledger"><thead><tr><th>순번</th><th>날짜</th><th>계정</th><th>내용</th><th>금액</th></tr></thead><tbody id="ledgerRows"></tbody></table></div>
  <div id="financeNote" class="finance-caution reveal"></div>
 </div></section>
 
@@ -954,7 +968,7 @@ window.SONGRIM_FINANCE = {
   updatedAt:"2026-10-19"
 };
 </script>
-<script src="./data.js?v=20261019-committee-v3"></script><script src="./updates.js?v=20261019-final"></script><script src="./finance.js?v=20261019-finance-179-ledger-v1"></script><script>
+<script src="./data.js?v=20261019-committee-v3"></script><script src="./updates.js?v=20261019-final"></script><script src="./finance.js?v=20261019-35expense-v2"></script><script>
 (()=>{'use strict';const d=window.SONGRIM,f=window.SONGRIM_FINANCE;if(!d||!f){document.body.insertAdjacentHTML('afterbegin','<p style="padding:20px">데이터 파일을 불러오지 못했습니다.</p>');return}const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const kr=n=>new Intl.NumberFormat('ko-KR').format(n),won=n=>kr(n)+'원';const dateString=t=>{const a=String(t).split('-');return Number(a[1])+'/'+Number(a[2])};const dateAdd=(start,days)=>{const x=new Date(start+'T12:00:00Z');x.setUTCDate(x.getUTCDate()+days);return x.toISOString().slice(0,10)};const range=s=>{const start=dateAdd(d.info.startDate,(s.weekStart-1)*7),end=dateAdd(d.info.startDate,s.weekEnd*7-1);return dateString(start)+'–'+dateString(end)+' 예상'};const statLabel=s=>({planned:'예정',active:'진행 중',done:'완료',hold:'보류'})[s]||'예정';$('#heroDate').textContent='PLANNING UPDATED — '+d.info.lastReviewed;$('#mission').textContent=d.info.mission;
 let selected='s1',selectedWeek=null;
 function renderRoad(){
@@ -986,7 +1000,7 @@ $('#grossIncome').textContent=won(grossIncome);$('#offsetAmount').textContent=wo
 $('#grossWithdrawal').textContent=won(grossWithdrawal);
 $('#donorNetIncome').textContent=won(netIncome);$('#donorActualSpend').textContent=won(actualSpend);$('#donorBalance').textContent=won(balance);
 $('#balanceState').textContent=(balance===financeCash.reportedBalance&&actualSpend===financeCash.actualSpend)?'입출금 대조 완료':'집계 차이 확인 필요';
-$('#transactionCount').textContent='출금 '+transactions.filter(x=>x.type==='expense').length+'건';
+$('#transactionCount').textContent='실제 지출 '+transactions.filter(x=>x.type==='expense'&&x.treatment==='operating').length+'건';
 $('#financeNote').textContent='현재 잔액 = 입금액 '+won(grossIncome)+' − 전체 출금액 '+won(grossWithdrawal)+' = '+won(balance)+'. 실입금액은 오입금 환불 '+won(financeCash.refund||0)+' 차감 후 '+won(netIncome)+'. 실제 사용액은 전체 출금 중 환불 '+won(financeCash.refund||0)+' 및 청약19001(56) '+won(financeCash.otherAdjustment||0)+' 제외 후 '+won(actualSpend)+'. 상계처리 '+won(financeCash.offsetDoubleSided||0)+'은 입금·출금 양방향 기준이며 재차 차감하지 않습니다.';
 const spendColors=['#86BC25','#B9E76A','#608F14','#D7E3C1','#8EAE61','#829181','#D9D9D9'];
 const groups=new Map();
@@ -996,12 +1010,13 @@ const svgC=2*Math.PI*101;let offset=0;
 const slices=breakdown.map(([name,amt],i)=>{const part=amt/actualSpend,seg=svgC*part,ret='<circle cx="160" cy="160" r="101" fill="none" stroke="'+spendColors[i%spendColors.length]+'" stroke-width="57" stroke-dasharray="'+seg.toFixed(4)+' '+(svgC-seg).toFixed(4)+'" stroke-dashoffset="'+(-offset).toFixed(4)+'" transform="rotate(-90 160 160)"><title>'+esc(name)+' · '+won(amt)+' · '+(100*part).toFixed(2)+'%</title></circle>';offset+=seg;return ret}).join('');
 $('#expenseDonut').innerHTML=actualSpend?'<svg viewBox="0 0 320 320" role="img" aria-label="법무비, 총회비 등 사용액의 항목별 비중"><circle cx="160" cy="160" r="101" fill="none" stroke="#333" stroke-width="57"/>'+slices+'<text x="160" y="145" text-anchor="middle" fill="#bdbdbd" font-size="14" font-weight="500">실제 사용액</text><text x="160" y="177" text-anchor="middle" fill="#fff" font-size="25" font-weight="750">'+kr(actualSpend)+'</text><text x="160" y="199" text-anchor="middle" fill="#a6d879" font-size="12">KRW · 100%</text></svg>':'<p>등록된 비용이 없습니다.</p>';
 $('#expenseBreakdown').innerHTML=breakdown.map(([name,amt],i)=>'<div class="cost-legend-row"><span class="cost-dot" style="background:'+spendColors[i%spendColors.length]+'"></span><span class="cost-cat">'+esc(name)+'</span><b class="cost-money">'+won(amt)+'</b><strong class="cost-pct">'+(100*amt/actualSpend).toFixed(2)+'%</strong></div>').join('');
-let financeTab='all';
+let financeTab='expense';
 function showLedger(){
  $$('[data-finance-tab]').forEach(b=>b.classList.toggle('on',b.dataset.financeTab===financeTab));
  const baseRow={date:f.base.date,type:'income',category:'후원금',description:'입금액 누계 · 2026.09~10.19',amount:grossIncome,isBase:true};
- const rows=[baseRow,...transactions].filter(x=>financeTab==='all'||x.type===financeTab).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
- $('#ledgerRows').innerHTML=rows.length?rows.map(x=>'<tr><td>'+esc(x.date)+'</td><td><span class="ledger-cat">'+esc(x.category||'—')+'</span></td><td>'+esc(x.description)+(x.treatment==='refund'?' <span class="ledger-exception">환불·상계</span>':x.treatment==='adjustment'?' <span class="ledger-exception">별도정산</span>':'')+'</td><td class="amount '+(x.type==='expense'?'neg':'')+'">'+(x.type==='expense'?'−':'+')+won(x.amount)+'</td></tr>').join(''):'<tr><td colspan="4" class="quiet">등록된 거래가 없습니다.</td></tr>';
+ const operatingRows=transactions.filter(x=>x.treatment==='operating');
+ const rows=[baseRow,...operatingRows].filter(x=>financeTab==='all'||x.type===financeTab);
+ $('#ledgerRows').innerHTML=rows.length?rows.map(x=>'<tr><td class="ledger-seq">'+(x.isBase?'—':String(Number(String(x.id).replace(/\D/g,''))))+'</td><td>'+esc(x.date)+'</td><td><span class="ledger-cat">'+esc(x.category||'—')+'</span></td><td>'+esc(x.description)+'</td><td class="amount '+(x.type==='expense'?'neg':'')+'">'+(x.type==='expense'?'−':'+')+won(x.amount)+'</td></tr>').join(''):'<tr><td colspan="5" class="quiet">등록된 거래가 없습니다.</td></tr>';
 }
 $$('[data-finance-tab]').forEach(b=>b.onclick=()=>{financeTab=b.dataset.financeTab;showLedger()});showLedger();
 
