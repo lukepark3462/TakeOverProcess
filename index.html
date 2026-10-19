@@ -868,20 +868,74 @@ header .menu-toggle{flex:0 0 auto}
   header .header-identity .logo{font-size:14.5px!important}
 }
 </style>
-<style id="header-overlap-dots-v19">
+<style id="header-overlap-dots-v20">
+/* Subtle two-tone signature: transparent sky-blue behind the foreground green. */
 header .logo,header .logo:visited{color:#FFFFFF!important}
 header .logo .logo-dots{
  position:relative;display:inline-block;box-sizing:border-box;
- width:.75em;height:.69em;margin-left:.07em;vertical-align:-.02em;
+ width:.69em;height:.66em;margin-left:.065em;vertical-align:-.015em;
 }
 header .logo .logo-dots::before,
 header .logo .logo-dots::after{
- content:"";position:absolute;display:block;width:.46em;height:.46em;
- border-radius:50%;bottom:.05em;box-sizing:border-box;
+ content:"";position:absolute;display:block;
+ width:.43em;height:.43em;border-radius:50%;box-sizing:border-box;
+ bottom:.06em;
 }
-header .logo .logo-dots::before{left:0;background:#86BC25}
+header .logo .logo-dots::before{
+ left:.115em;background:#64B6E7;opacity:.46;z-index:1;
+}
 header .logo .logo-dots::after{
- left:.135em;background:#64B6E7;opacity:.94;
+ left:0;background:#86BC25;z-index:2;
+}
+</style>
+<style id="home-menu-compact-grid-v20">
+/* Preserve card styling; move circled arrows to the right of titles. */
+#home-menu .launch-card{
+ display:grid!important;
+ grid-template-columns:minmax(0,1fr) auto!important;
+ grid-template-rows:auto auto!important;
+ align-content:space-between!important;
+ align-items:center!important;
+ column-gap:8px!important;
+ row-gap:16px!important;
+ min-height:128px!important;
+ padding:19px 18px!important;
+}
+#home-menu .launch-card .launch-index{
+ grid-column:1 / -1!important;grid-row:1!important;
+ align-self:start!important;justify-self:start!important;
+ margin:0!important;
+}
+#home-menu .launch-card .launch-name{
+ grid-column:1!important;grid-row:2!important;
+ align-self:center!important;justify-self:start!important;
+ min-width:0!important;margin:0!important;
+ line-height:1.25!important;
+ white-space:nowrap!important;
+ word-break:keep-all!important;overflow-wrap:normal!important;
+ letter-spacing:-.055em!important;
+ font-size:clamp(17px,1.52vw,23px)!important;
+}
+#home-menu .launch-card .launch-arrow{
+ grid-column:2!important;grid-row:2!important;
+ align-self:center!important;justify-self:end!important;
+ margin:0!important;width:34px!important;height:34px!important;
+}
+@media(max-width:900px){
+ #home-menu .launch-card{min-height:116px!important;padding:15px!important;row-gap:14px!important;column-gap:6px!important}
+ #home-menu .launch-card .launch-name{font-size:clamp(15px,2.3vw,20px)!important}
+ #home-menu .launch-card .launch-arrow{width:31px!important;height:31px!important}
+}
+@media(max-width:600px){
+ #home-menu .launch-card{min-height:111px!important;padding:13px 12px!important;row-gap:11px!important;column-gap:5px!important}
+ #home-menu .launch-card .launch-index{font-size:clamp(10.5px,2.95vw,12px)!important;white-space:nowrap!important}
+ #home-menu .launch-card .launch-name{font-size:clamp(14px,4.15vw,18px)!important;letter-spacing:-.065em!important}
+ #home-menu .launch-card .launch-arrow{width:29px!important;height:29px!important;font-size:18px!important}
+}
+@media(max-width:360px){
+ #home-menu .launch-card{min-height:104px!important;padding:12px 10px!important;column-gap:4px!important}
+ #home-menu .launch-card .launch-name{font-size:clamp(13px,4vw,14.5px)!important}
+ #home-menu .launch-card .launch-arrow{width:26px!important;height:26px!important;font-size:16px!important}
 }
 </style>
 </head><body>
