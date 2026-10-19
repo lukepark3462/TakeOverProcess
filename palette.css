@@ -867,3 +867,96 @@ footer.footer .footer-grid p{
  #donors .donor-hero .donor-thanks{font-size:19px!important}
  #donors .donation-hope .donation-policy{font-size:15px!important}
 }
+
+/* v15 — concise horizontal footer at desktop widths. */
+@media (min-width:1160px){
+ footer.footer .footer-grid{
+   display:flex!important;
+   flex-direction:row!important;
+   align-items:center!important;
+   justify-content:space-between!important;
+   gap:clamp(16px,2vw,30px)!important;
+   padding-bottom:26px!important;
+ }
+ footer.footer .footer-grid h2{
+   flex:0 0 auto!important;
+   white-space:nowrap!important;
+   font-size:clamp(21px,1.75vw,27px)!important;
+   line-height:1.45!important;
+   margin:0!important;
+ }
+ footer.footer .footer-grid p{
+   flex:0 1 auto!important;
+   min-width:0;
+   width:auto!important;
+   max-width:none!important;
+   margin:0!important;
+   text-align:right!important;
+   white-space:nowrap!important;
+   font-size:clamp(12px,1.02vw,15px)!important;
+   line-height:1.6!important;
+   letter-spacing:-.035em!important;
+ }
+}
+@media (max-width:1159px){
+ footer.footer .footer-grid{
+   display:flex!important;
+   flex-direction:column!important;
+   align-items:flex-start!important;
+   gap:12px!important;
+ }
+ footer.footer .footer-grid h2,
+ footer.footer .footer-grid p{white-space:normal!important}
+ footer.footer .footer-grid p{text-align:left!important}
+}
+
+/* v16 — clear divider after the rights principle and consistent interpretation cards. */
+#rights .rights-principle{border-bottom:none!important;padding-bottom:28px!important}
+#rights .rights-section-divider{
+ display:block;
+ width:100%;
+ height:1px;
+ margin:12px 0 0;
+ background:linear-gradient(90deg,#86BC25 0%,#63776b 23%,#646d66 100%);
+ opacity:.88;
+}
+#rights .rights-section-divider+.rights-chapter{padding-top:37px!important}
+#rights .rights-chapter-heading h3{
+ font-size:clamp(17px,1.38vw,21px)!important;
+ line-height:1.6!important;
+ font-weight:580!important;
+ letter-spacing:-.025em!important;
+ margin-top:1px!important;
+}
+#rights .rights-chapter .rights-note{
+ border-left:3px solid var(--sg-strategic-teal)!important;
+ background:#242424!important;
+ color:#d0d0d0!important;
+ font-size:14px!important;
+ line-height:1.85!important;
+}
+#rights .rights-chapter .rights-note b{color:#bce47f!important}
+#rights .rights-definition{
+ margin-top:10px;
+ padding:15px 21px;
+ background:#1e221f;
+ border-left:2px solid #677265;
+ font-size:13px;
+ line-height:1.85;
+ color:#b9c2ba;
+}
+#rights .rights-definition b{color:#d3dbcf}
+@media(max-width:760px){
+ #rights .rights-section-divider{margin-top:8px}
+ #rights .rights-section-divider+.rights-chapter{padding-top:30px!important}
+ #rights .rights-chapter-heading h3{
+   font-size:clamp(16px,3.75vw,18px)!important;
+   line-height:1.6!important;
+ }
+ #rights .rights-definition{font-size:13px;padding:14px 16px}
+}
+/* Keep the footer headline left and explanation right on one row for desktop. */
+@media(min-width:1160px){
+ footer.footer .footer-grid h2{font-size:clamp(21px,1.55vw,25px)!important;letter-spacing:-.055em!important}
+ footer.footer .footer-grid p{font-size:clamp(13px,1.06vw,15px)!important;letter-spacing:-.04em!important}
+}
