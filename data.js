@@ -11,7 +11,7 @@ window.SONGRIM = {
     mission:"투명한 의사결정과 책임 있는 집행을 통해 조합 운영을 정상화하고, 신임 집행부 구성과 신속한 등기 추진의 기반을 마련합니다.",
     founded:"2026-09-17",
     meetingDate:"2026-10-16",
-    members:432,
+    members:433,
     startDate:"2026-10-26",
     lastReviewed:"2026-10-19",
     updateLabel:"최종 계획 정리",
@@ -31,7 +31,7 @@ window.SONGRIM = {
     note:"그 외 17명의 운영진이 함께 참여하고 있습니다."
   },
   scenarios:[
-    {id:"s1",label:"시나리오 01",title:"김명숙 이사 사퇴",condition:"임원 전원 공석 · 조합원 소집청구 경로",weeks:"6–8주",summary:"조합원 연명 87명 → 대의원회 소집권 확보 → 선관위 구성 → 보궐선임 → 직무대행 체계 → 조합장 선출",signature:"조합원 87명 이상",directors:5,auditors:1,
+    {id:"s1",label:"시나리오 01",title:"잔류 이사 사퇴 시",condition:"임원 전원 공석 · 조합원 소집청구 경로",weeks:"6–8주",summary:"조합원 연명 87명 → 대의원회 소집권 확보 → 선관위 구성 → 보궐선임 → 직무대행 체계 → 조합장 선출",signature:"조합원 87명 이상",directors:5,auditors:1,
      steps:[
        {id:"s1-1",weekStart:1,weekEnd:1,title:"조합원 연명·소집요구",body:"조합원 87명 이상 연명 확보. 대의원회 소집요구와 조합장 선출총회 소집요구의 목적·안건을 각각 명시하여 제출.",owner:"소집청구인 대표",basis:["정관(안) 제20조④","정관(안) 제24조⑤"],status:"planned",updatedAt:""},
        {id:"s1-2",weekStart:1,weekEnd:3,title:"대의원회 소집권 확보",body:"소집요구 후 14일 미소집 여부 확인, 감사 부재 시 청구인 대표의 구청장 사전 승인 소집 경로 추진.",owner:"소집청구인 대표",basis:["정관(안) 제24조⑤·⑥"],status:"planned",updatedAt:""},
@@ -43,7 +43,7 @@ window.SONGRIM = {
        {id:"s1-8",weekStart:7,weekEnd:8,title:"조합장 선출총회",body:"적법한 총회 소집·통지 절차를 거쳐 신임 조합장 1명 선출. 선관위에서 투표·개표 및 당선 결과 공고.",owner:"총회·선관위",basis:["정관(안) 제21조·선거관리규정 변경(안) 제10~12조"],status:"planned",updatedAt:""},
        {id:"s1-9",weekStart:8,weekEnd:8,title:"변경인가·등기 착수",body:"조합장 선출 이후 변경인가·임원 변경등기 및 업무 인수인계 착수. 완료 기간은 별도.",owner:"신임 집행부",basis:["정관(안) 제18조②"],status:"planned",updatedAt:""}
      ]},
-    {id:"s2",label:"시나리오 02",title:"김명숙 이사 잔류",condition:"비상근이사 잔류 · 직무대행 직접 소집 계획",weeks:"4–6주",summary:"직무대행 업무 착수 → 대의원회 직접 소집 → 선관위 구성 → 후보 등록·심사 → 보궐선임 → 조합장 선출",signature:"연명 없이 착수 계획",directors:4,auditors:1,
+    {id:"s2",label:"시나리오 02",title:"잔류 이사 존재 시",condition:"비상근이사 잔류 · 직무대행 직접 소집 계획",weeks:"4–6주",summary:"직무대행 업무 착수 → 대의원회 직접 소집 → 선관위 구성 → 후보 등록·심사 → 보궐선임 → 조합장 선출",signature:"연명 없이 착수 계획",directors:4,auditors:1,
      steps:[
        {id:"s2-1",weekStart:1,weekEnd:1,title:"직무대행 업무 착수",body:"김명숙 비상근이사 잔류를 전제로 직무대행 업무 착수 및 대의원회 선관위원 선임 안건 준비. 연명 절차 생략 계획.",owner:"김명숙 이사",basis:["직무대행 직접 소집 경로 전제"],status:"planned",updatedAt:""},
        {id:"s2-2",weekStart:1,weekEnd:2,title:"1차 대의원회 소집",body:"선관위원 선임을 위한 대의원회 일정 공지 및 정관상 사전 통지기간 확보.",owner:"직무대행자",basis:["정관(안) 제24조⑦"],status:"planned",updatedAt:""},
