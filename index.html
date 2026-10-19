@@ -107,6 +107,13 @@
 
 
 @media(max-width:1190px){.menu-toggle{display:block}nav{display:none;position:absolute;left:0;right:0;top:76px;background:var(--bg);padding:24px 26px;border-bottom:1px solid var(--line);flex-direction:column;align-items:start;gap:19px}nav.open{display:flex}}
+
+#home-menu{padding:70px 0 95px;background:var(--bg);scroll-margin-top:82px}.launch-head{border-top:1px solid #c1cfc3;padding-top:29px;display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:32px}.launch-head h2{font-size:clamp(30px,4vw,53px);line-height:1.32;font-weight:570;margin:15px 0 0}.launch-head p{max-width:350px;font-size:13px;color:#728677;line-height:1.85}.launch-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.launch-card{min-height:191px;padding:25px 23px 20px;display:flex;flex-direction:column;justify-content:space-between;border-radius:8px;border:1px solid #dbe5da;background:rgba(255,255,255,.86);box-shadow:0 9px 26px #183a250b;transition:.23s;position:relative}.launch-card:hover,.launch-card:focus-visible{transform:translateY(-5px);background:#fff;box-shadow:0 18px 36px #183a251c;border-color:#9fb7a3}.launch-index{font:700 11px 'DM Sans',sans-serif;letter-spacing:.13em;color:#85998a}.launch-name{font-size:clamp(17px,1.7vw,24px);color:#284d3c;letter-spacing:-.065em;font-weight:650;word-break:keep-all}.launch-arrow{align-self:flex-end;border:1px solid #cbd9cd;width:35px;height:35px;border-radius:50%;display:grid;place-items:center;color:#406a4e;font-size:19px;transition:.23s}.launch-card:hover .launch-arrow{background:#e5eee4;transform:rotate(45deg)}.launch-foot{margin-top:35px;text-align:center;font-size:10px;letter-spacing:.17em;color:#97a69a}.detail-back{display:none;border:1px solid #c8d6c9;border-radius:24px;padding:11px 17px;font-size:12px;font-weight:700;color:#335d45;margin-bottom:30px}.detail-back:hover{background:#e8eee8}main>section{scroll-margin-top:82px}
+@media(min-width:971px){body:not(.is-detail) main>section:not(#home):not(#home-menu),body:not(.is-detail) footer.footer{display:none}body.is-detail main>section:not(.is-current){display:none}body.is-detail main>section.is-current{display:block}body.is-detail .detail-back{display:inline-flex}body.is-detail .section{padding-top:60px}body.is-detail .statement{padding-top:65px}}
+@media(max-width:970px){#home-menu{padding:55px 0 72px}.launch-head{display:block}.launch-head p{padding-top:14px;max-width:650px}.launch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.launch-card{min-height:151px;padding:20px}.launch-card .launch-name{font-size:20px}.launch-foot{display:none}}
+@media(max-width:450px){.launch-grid{gap:10px}.launch-card{padding:15px;min-height:140px}.launch-card .launch-name{font-size:18px}.launch-arrow{height:30px;width:30px}}
+@media(prefers-reduced-motion:reduce){.launch-card,.launch-arrow{transition:none}}
+
 </style></head><body>
 <header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav><a href="#about">소개</a><a href="#rights">조합원 권리</a><a href="#roadmap">실행 로드맵</a><a href="#progress">진행 현황</a><a href="#finance">재정 현황</a><a href="#donors">후원자</a><a href="#committee">비대위</a><a href="#rules">정관·규정</a></nav></header>
 <main>
@@ -134,11 +141,23 @@
 <g fill="none" stroke="#608373" opacity=".2"><path d="M505 170l250-100m-130 120L970 75m-450 245L700 120"/><path d="M480 808h1120m-1080-27h1060"/></g>
 </svg>
 <div class="hero-main"><div class="hero-copy"><div class="eyebrow">SONGRIM 03 / REBUILDING PROCESS</div><h1 aria-label="송림3지구 정상화 과정, 모든 주요한 내용에 대한 기록."><span class="hero-line">송림3지구 정상화 과정,</span><span class="hero-line hero-line--muted">모든 주요한 내용에 대한 기록.</span></h1></div></div>
-<div class="hero-bottom-wrap"><div class="hero-bottom"><p>송림3지구 조합 비상대책위원회<br>집행부 재구성과 조합 정상화를 위한 모든 주요 과정과 재정 기록을 한곳에 모았습니다.</p><a href="#about" class="rounded-arrow" aria-label="아래로 스크롤">↓</a></div><div class="hero-meta"><span>REBUILDING TRUST, TOGETHER</span><span id="heroDate">UPDATED — 2026.10.19</span></div></div>
+<div class="hero-bottom-wrap"><div class="hero-bottom"><p>송림3지구 조합 비상대책위원회<br>집행부 재구성과 조합 정상화를 위한 모든 주요 과정과 재정 기록을 한곳에 모았습니다.</p><a href="#home-menu" class="rounded-arrow" aria-label="아래로 스크롤">↓</a></div><div class="hero-meta"><span>REBUILDING TRUST, TOGETHER</span><span id="heroDate">UPDATED — 2026.10.19</span></div></div>
 </section>
+<section id="home-menu" aria-label="전체 메뉴"><div class="container"><div class="launch-head"><div><div class="eyebrow">EXPLORE / CONTENTS</div><h2>송림3지구의 기록을<br>분야별로 확인하세요.</h2></div><p>필요한 내용을 선택해서 확인할 수 있습니다. 모바일에서는 아래로 스크롤해 전체 내용을 순서대로 볼 수 있습니다.</p></div><div class="launch-grid"><a class="launch-card" href="#about"><span class="launch-index">01 / INTRODUCTION</span><strong class="launch-name">비대위 설립 취지</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#roadmap"><span class="launch-index">02 / ROADMAP</span><strong class="launch-name">선거 로드맵</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#progress"><span class="launch-index">03 / UPDATES</span><strong class="launch-name">진행 현황</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#finance"><span class="launch-index">04 / FINANCE</span><strong class="launch-name">수입·지출 및 잔액</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#donors"><span class="launch-index">05 / SUPPORTERS</span><strong class="launch-name">후원자 명단</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rights"><span class="launch-index">06 / MEMBER RIGHTS</span><strong class="launch-name">조합원 권리</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#committee"><span class="launch-index">07 / PEOPLE</span><strong class="launch-name">비대위 소개</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rules"><span class="launch-index">08 / REFERENCE</span><strong class="launch-name">정관·선거관리규정</strong><span class="launch-arrow" aria-hidden="true">↗</span></a></div><p class="launch-foot">TAKEOVER PROCESS · SONGrIM 03</p></div></section>
 <section id="about" class="statement"><div class="container reveal"><div class="eyebrow">WHY WE ARE HERE</div><h2>누군가를 비난하기 위해서가 아니라,<br><span>조합의 미래를 조합원 스스로 결정하기 위해.</span></h2><p id="mission"></p><div class="statement-figures"><div class="figure"><strong>432</strong><span>조합원 수</span></div><div class="figure"><strong>10.16</strong><span>해임총회 개최일</span></div><div class="figure"><strong>252</strong><span>해임안 찬성 표결 수</span></div></div></div></section>
 
 <!-- 전용 안내 섹션: 업로드된 3개 인포그래픽의 핵심 개념을 HTML/CSS 도식으로 재구성 -->
+
+<section id="roadmap" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">01 / ROADMAP</div><h2>새로운 집행부를 향한<br>주차별 로드맵.</h2></div><p>2026.10.26(월)부터 시작하는 목표 일정.<br>월·일은 모두 <strong>예상</strong>이며, 실제 확정일과 업데이트일은 따로 기록합니다.</p></div>
+<div class="segment reveal"><button class="on" data-scenario="s1">시나리오 1 · 김명숙 사퇴</button><button data-scenario="s2">시나리오 2 · 김명숙 잔류</button></div><div class="road-overview reveal"><div><div class="eyebrow" id="scenarioLabel"></div><h3 id="scenarioTitle"></h3><div class="road-metrics"><div><strong id="scenarioWeeks"></strong><span>조합장 선출 목표</span></div><div><strong id="scenarioOfficers"></strong><span>이사·감사 보궐선임</span></div></div></div><p id="scenarioDesc"></p></div><div id="weekAxis" class="road-axis reveal"></div><div id="roadSteps" class="road-steps"></div><div class="track-footer">W1 = 2026.10.26–11.01 · 표시된 날짜는 예상 일정임 · 조합장 선출 후 변경인가·등기 소요기간은 별도.</div>
+</div></section>
+
+<section id="progress" class="section tint"><div class="container progress-area"><div class="progress-main reveal"><div class="eyebrow">02 / PROGRESS</div><h2>우리가 걸어온<br>과정의 기록.</h2><p>중요 의결과 실행 결과를 사실에 따라 기록합니다. 예정된 업무는 계획으로, 완료된 업무는 완료일과 업데이트일을 구분합니다.</p><div class="progress-meta"><div><strong id="progressCounter">—</strong><br><span>총 공개 기록</span></div><div><strong id="progressUpdated">—</strong><br><span>최종 수정일</span></div></div></div><div class="reveal"><div class="eyebrow" style="margin-bottom:23px">ACTIVITY LOG</div><div id="historyList" class="update-list"></div></div></div></section>
+
+<section id="finance" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">03 / TRANSPARENCY</div><h2>수입과 지출,<br>숫자로 투명하게.</h2></div><p>확정된 회계 기록을 기준으로 수입·지출·잔액을 표시하며, 예정 지출은 잔액에서 차감하지 않습니다.</p></div><div class="finance-top reveal"><div class="balance"><small id="balanceTitle">현재 집계 잔액</small><strong id="balanceTotal">—</strong><span class="pill" id="balanceState">기초금액 검증 전</span></div><div class="finance-metrics"><div><span>총수입(기초금액 포함)</span><strong id="incomeTotal">—</strong></div><div><span>확정 지출</span><strong id="expenseTotal">—</strong></div></div></div><div class="tabs reveal"><button class="on" data-finance-tab="all">전체 거래</button><button data-finance-tab="income">수입</button><button data-finance-tab="expense">지출</button></div><div class="reveal"><table class="ledger"><thead><tr><th>일자</th><th>구분</th><th>내역</th><th>금액</th></tr></thead><tbody id="ledgerRows"></tbody></table><div id="financeNote" class="finance-caution"></div></div></div></section>
+
+<section id="donors" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">04 / SUPPORTERS</div><h2>함께해 주신<br>소중한 마음.</h2></div><p>후원은 자율적·자발적으로만 진행합니다.<br>후원자 이름은 공개 동의가 확인된 경우에만 표시합니다.</p></div><div class="donor-hero reveal"><div><span class="eyebrow" style="margin-bottom:14px">THANK YOU</span><strong id="donorCount">후원자 명단 준비 중</strong></div><p id="donationPolicy"></p></div><div id="donorGrid" class="donor-grid reveal"></div></div></section>
+
 <section id="rights" class="section rights-section">
  <div class="container">
   <div class="section-head reveal rights-lead">
@@ -217,13 +236,9 @@
  </div>
 </section>
 
-<section id="roadmap" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">01 / ROADMAP</div><h2>새로운 집행부를 향한<br>주차별 로드맵.</h2></div><p>2026.10.26(월)부터 시작하는 목표 일정.<br>월·일은 모두 <strong>예상</strong>이며, 실제 확정일과 업데이트일은 따로 기록합니다.</p></div>
-<div class="segment reveal"><button class="on" data-scenario="s1">시나리오 1 · 김명숙 사퇴</button><button data-scenario="s2">시나리오 2 · 김명숙 잔류</button></div><div class="road-overview reveal"><div><div class="eyebrow" id="scenarioLabel"></div><h3 id="scenarioTitle"></h3><div class="road-metrics"><div><strong id="scenarioWeeks"></strong><span>조합장 선출 목표</span></div><div><strong id="scenarioOfficers"></strong><span>이사·감사 보궐선임</span></div></div></div><p id="scenarioDesc"></p></div><div id="weekAxis" class="road-axis reveal"></div><div id="roadSteps" class="road-steps"></div><div class="track-footer">W1 = 2026.10.26–11.01 · 표시된 날짜는 예상 일정임 · 조합장 선출 후 변경인가·등기 소요기간은 별도.</div>
-</div></section>
-<section id="progress" class="section tint"><div class="container progress-area"><div class="progress-main reveal"><div class="eyebrow">02 / PROGRESS</div><h2>우리가 걸어온<br>과정의 기록.</h2><p>중요 의결과 실행 결과를 사실에 따라 기록합니다. 예정된 업무는 계획으로, 완료된 업무는 완료일과 업데이트일을 구분합니다.</p><div class="progress-meta"><div><strong id="progressCounter">—</strong><br><span>총 공개 기록</span></div><div><strong id="progressUpdated">—</strong><br><span>최종 수정일</span></div></div></div><div class="reveal"><div class="eyebrow" style="margin-bottom:23px">ACTIVITY LOG</div><div id="historyList" class="update-list"></div></div></div></section>
-<section id="finance" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">03 / TRANSPARENCY</div><h2>수입과 지출,<br>숫자로 투명하게.</h2></div><p>확정된 회계 기록을 기준으로 수입·지출·잔액을 표시하며, 예정 지출은 잔액에서 차감하지 않습니다.</p></div><div class="finance-top reveal"><div class="balance"><small id="balanceTitle">현재 집계 잔액</small><strong id="balanceTotal">—</strong><span class="pill" id="balanceState">기초금액 검증 전</span></div><div class="finance-metrics"><div><span>총수입(기초금액 포함)</span><strong id="incomeTotal">—</strong></div><div><span>확정 지출</span><strong id="expenseTotal">—</strong></div></div></div><div class="tabs reveal"><button class="on" data-finance-tab="all">전체 거래</button><button data-finance-tab="income">수입</button><button data-finance-tab="expense">지출</button></div><div class="reveal"><table class="ledger"><thead><tr><th>일자</th><th>구분</th><th>내역</th><th>금액</th></tr></thead><tbody id="ledgerRows"></tbody></table><div id="financeNote" class="finance-caution"></div></div></div></section>
-<section id="donors" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">04 / SUPPORTERS</div><h2>함께해 주신<br>소중한 마음.</h2></div><p>후원은 자율적·자발적으로만 진행합니다.<br>후원자 이름은 공개 동의가 확인된 경우에만 표시합니다.</p></div><div class="donor-hero reveal"><div><span class="eyebrow" style="margin-bottom:14px">THANK YOU</span><strong id="donorCount">후원자 명단 준비 중</strong></div><p id="donationPolicy"></p></div><div id="donorGrid" class="donor-grid reveal"></div></div></section>
+
 <section id="committee" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">05 / PEOPLE</div><h2>비대위를<br>소개합니다.</h2></div><p>송림3지구 조합 비상대책위원회<br>2026년 9월 17일 설립 · 핵심 인물 4인</p></div><div id="people" class="committee-grid reveal"></div><div id="committeeMore" class="committee-more reveal"></div></div></section>
+
 <section id="rules" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">06 / REFERENCE</div><h2>진행의 근거를<br>확인할 수 있도록.</h2></div><p>정관과 선거관리규정의 주요 조항을 업무별로 구분해 정리했습니다. 조항을 누르면 관련 설명이 펼쳐집니다.</p></div><div id="ruleList" class="rules-list reveal"></div><p class="more-info">제공받은 정관(안)·선거관리규정 변경(안)의 요약임. 실제 시행본과의 일치 여부 및 법적 효력은 별도 확인 필요.</p></div></section>
 </main><footer class="footer"><div class="container"><div class="footer-grid"><h2>함께 만드는<br>송림3지구의 다음.</h2><p>조합원 한 사람 한 사람의 권리를 존중하고, 주요 의사결정과 진행 경과를 투명하게 기록하겠습니다.</p></div><div class="footer-bottom"><span>송림3지구 조합원 비상대책위원회</span><span>TAKEOVER PROCESS · 2026</span></div></div></footer>
 <!-- Embedded snapshot: site stays functional when GitHub Pages serves stale or missing JS assets. External files override this snapshot when reachable. -->
@@ -256,7 +271,7 @@ window.SONGRIM = {
     {role:"위원",name:"송병일",description:"",career:[]},
     {role:"회계감사 및 자문",name:"박종인",description:"회계감사·운영 관련 자문",career:[]}
   ],
-  committeeMore:{operations:17,note:"그 외 17명의 운영진이 함께 참여하고 있습니다.",realEstateAdvisor:"정슬기",realEstateAdvisorAffiliation:"삼정회계법인 · 부동산 자문"},
+  committeeMore:{operations:17,note:"그 외 17명의 운영진이 함께 참여하고 있습니다."},
   scenarios:[
     {id:"s1",label:"시나리오 01",title:"김명숙 이사 사퇴",condition:"임원 전원 공석 · 조합원 소집청구 경로",weeks:"6–8주",summary:"조합원 연명 87명 → 대의원회 소집권 확보 → 선관위 구성 → 보궐선임 → 직무대행 체계 → 조합장 선출",signature:"조합원 87명 이상",directors:5,auditors:1,
      steps:[
@@ -351,5 +366,21 @@ function renderHistory(){const merged=[...seed].sort((a,b)=>b.date.localeCompare
 renderHistory();
 const menu=$('.menu-toggle'),nav=$('nav');menu.onclick=()=>{const opened=nav.classList.toggle('open');menu.setAttribute('aria-expanded',opened)};$$('nav a').forEach(a=>a.onclick=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')});
 const io=('IntersectionObserver'in window)?new IntersectionObserver(entries=>entries.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target)}}),{threshold:.12}):null;$$('.reveal').forEach(el=>io?io.observe(el):el.classList.add('visible'));
+})();
+</script><script>
+(function(){
+const ids=['about','roadmap','progress','finance','donors','rights','committee','rules'];
+const mq=window.matchMedia('(max-width:970px)');
+const target=()=>decodeURIComponent(location.hash.slice(1));
+function display(){
+const id=target(),desktop=!mq.matches,valid=ids.includes(id);
+document.body.classList.toggle('is-detail',desktop&&valid);
+document.querySelectorAll('main>section').forEach(x=>x.classList.toggle('is-current',desktop&&valid&&x.id===id));
+document.querySelectorAll('nav a').forEach(x=>x.classList.toggle('active',x.getAttribute('href')==='#'+id));
+if(desktop)window.scrollTo({top:0,behavior:'instant'});
+else if(id&&document.getElementById(id))requestAnimationFrame(()=>document.getElementById(id).scrollIntoView({block:'start',behavior:'auto'}));
+}
+ids.forEach(id=>{const s=document.getElementById(id),place=s?.querySelector('.container');if(place){const b=document.createElement('a');b.className='detail-back';b.href='#home-menu';b.textContent='← 전체 메뉴로 돌아가기';place.prepend(b)}});
+window.addEventListener('hashchange',display);mq.addEventListener('change',display);display();
 })();
 </script></body></html>
