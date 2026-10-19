@@ -669,7 +669,7 @@ footer.footer{background:#101010}
 #finance .ledger td:nth-child(4){line-height:1.65}
 #finance .ledger td:nth-child(5){white-space:nowrap;text-align:right}
 #finance .ledger .ledger-seq{font-size:11px}
-</style><link rel="stylesheet" href="./palette.css?v=20261019-sitecolors-v2"></head><body>
+</style><link rel="stylesheet" href="./palette.css?v=20261019-sitecolors-v3"></head><body>
 <header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav><a href="#about">소개·비대위</a><a href="#rights">조합원 권리</a><a href="#roadmap">실행 로드맵</a><a href="#progress">진행 현황</a><a href="#finance">재정 현황</a><a href="#donors">후원자</a><a href="#lawfirm">법률자문</a><a href="#rules">정관·규정</a></nav></header>
 <main>
 <section id="home" class="hero container">
@@ -724,14 +724,9 @@ footer.footer{background:#101010}
   <div><div class="eyebrow">03 / TRANSPARENCY</div><h2>수입과 지출,<br>숫자로 투명하게.</h2></div>
   <p>2026년 9월부터 10월 19일까지의 출금 내역을 한눈에 볼 수 있도록 정리했습니다. 상계·정산 내역은 실제 사용액과 구분합니다.</p>
  </div>
- <div class="finance-top reveal">
-  <div class="balance"><small id="balanceTitle">현재 잔액 · 2026.10.19 기준</small><strong id="balanceTotal">—</strong><span class="pill" id="balanceState">집계 확인 중</span></div>
-  <div class="finance-metrics"><div><span>실입금액</span><strong id="incomeTotal">—</strong></div><div><span>실제 사용액</span><strong id="expenseTotal">—</strong></div></div>
- </div>
- <div class="finance-bridge reveal" aria-label="입출금 및 상계처리 집계">
-   <div><small>입금액 · 총액</small><strong id="grossIncome">—</strong></div>
-   <div><small>상계처리 · 입출금 합계</small><strong id="offsetAmount">—</strong></div>
-   <div><small>전체 출금액</small><strong id="grossWithdrawal">—</strong></div>
+ <div class="finance-top finance-top-simple reveal" aria-label="수입에서 지출을 차감한 현재 잔액">
+  <div class="balance"><small>현재 잔액 · 2026.10.19 기준</small><strong id="balanceTotal">—</strong><p class="finance-formula">현재 잔액 = 수입 − 지출</p></div>
+  <div class="finance-metrics finance-equation"><div><span>수입</span><strong id="incomeTotal">—</strong></div><div class="finance-minus" aria-hidden="true">−</div><div><span>지출</span><strong id="expenseTotal">—</strong></div></div>
  </div>
  <div class="cost-analysis reveal">
    <div class="cost-head"><div><div class="eyebrow">COST BREAKDOWN / 2026.09 – 10.19</div><h3>2026년 9월부터 사용내역</h3></div><p>실제 사용액에 포함된 비용만 집계 · 전체 기간 합산</p></div>
@@ -739,14 +734,13 @@ footer.footer{background:#101010}
      <div class="cost-chart" id="expenseDonut" aria-label="항목별 지출 비중 도넛 차트"></div>
      <div class="cost-legend" id="expenseBreakdown"></div>
    </div>
-   <div class="cost-foot">오입금 환불 1,200,000원 및 별도 정산 항목 20,000원은 계좌 출금 내역에 포함되지만, 실제 사용액과 차트에서는 제외했습니다.</div>
+   <div class="cost-foot">비용 비중은 실제 사용액을 기준으로 집계했습니다.</div>
  </div>
- <div class="expense-head reveal"><div><div class="eyebrow">TRANSACTION RECORDS</div><h3>전체 거래내역</h3></div><p class="table-caption" id="transactionCount">9월 입금 및 9~10월 비용을 월·계정별로 합산</p></div>
- <div class="reveal monthly-scroll"><table class="ledger monthly-ledger" aria-label="2026년 9월부터 월별·계정별 입출금 요약 및 누적 잔액"><thead><tr><th scope="col">월</th><th scope="col">계정</th><th scope="col">내용에 대한 설명</th><th scope="col">금액</th><th scope="col">잔액</th></tr></thead><tbody id="ledgerRows"></tbody><tfoot><tr><td colspan="4">최종 잔액 <span class="ledger-summary-note">2026년 10월 19일 기준</span></td><td class="balance-cell" id="ledgerFinalBalance">—</td></tr></tfoot></table></div><p class="ledger-summary" id="ledgerMonthlyNote"></p>
- <div id="financeNote" class="finance-caution reveal"></div>
+ <div class="expense-head reveal"><div><div class="eyebrow">TRANSACTION RECORDS</div><h3>전체 거래내역</h3></div><p class="table-caption" id="transactionCount">월별 지출 합계 · 클릭하여 세부 계정 펼쳐보기</p></div>
+ <div class="reveal monthly-scroll"><table class="ledger monthly-ledger" aria-label="2026년 9월부터 월별·계정별 입출금 요약 및 누적 잔액"><thead><tr><th scope="col">월</th><th scope="col">계정</th><th scope="col">내용에 대한 설명</th><th scope="col">금액</th><th scope="col">잔액</th></tr></thead><tbody id="ledgerRows"></tbody><tfoot><tr><td colspan="4">최종 잔액 <span class="ledger-summary-note">2026년 10월 19일 기준</span></td><td class="balance-cell" id="ledgerFinalBalance">—</td></tr></tfoot></table></div>
 </div></section>
 
-<section id="donors" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">04 / SUPPORTERS</div><h2>함께해 주신<br>소중한 마음.</h2></div><p>후원은 자율적·자발적으로만 진행합니다.<br>후원자 성함은 식별을 줄이기 위해 첫 글자와 마지막 글자만 표시합니다.</p></div><div class="donor-hero reveal"><div><span class="eyebrow" style="margin-bottom:14px">THANK YOU</span><strong id="donorCount">후원자 명단 준비 중</strong></div><p id="donationPolicy"></p></div><div class="donor-finance-summary reveal" aria-label="후원금 수입·지출·잔액 요약"><div><span>실입금액</span><strong id="donorNetIncome">—</strong></div><div><span>실제 사용액</span><strong id="donorActualSpend">—</strong></div><div><span>현재 잔액</span><strong id="donorBalance">—</strong></div></div><div class="donation-account reveal" aria-label="후원 계좌 안내"><div><p class="account-eyebrow">후원 계좌</p><dl><dt>예금주</dt><dd>이인섭</dd><dt>계좌번호</dt><dd id="donationAccountNumber">010-9929-1171</dd></dl></div><button type="button" class="copy-account" id="copyDonationAccount" aria-label="후원 계좌번호 복사">계좌번호 복사</button></div><div class="donor-directory-wrap reveal"><div class="donor-directory-head"><h3>후원자 명단 <span>총 179명</span></h3><p>표시용 익명화 명칭 · 중복 표기는 원본 뒤 숫자 유지</p></div><div id="donorGrid" class="donor-grid donor-directory"></div></div></div></section>
+<section id="donors" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">04 / SUPPORTERS</div><h2>함께해 주신<br>소중한 마음.</h2></div><p>후원은 자율적·자발적으로만 진행합니다.<br>후원자 성함은 식별을 줄이기 위해 첫 글자와 마지막 글자만 표시합니다.</p></div><div class="donor-hero reveal"><div><span class="eyebrow" style="margin-bottom:14px">THANK YOU</span><strong id="donorCount">후원자 명단 준비 중</strong></div><p id="donationPolicy"></p></div><div class="donor-finance-summary reveal" aria-label="후원금 수입·지출·잔액 요약"><div><span>수입</span><strong id="donorNetIncome">—</strong></div><div><span>지출</span><strong id="donorActualSpend">—</strong></div><div><span>현재 잔액</span><strong id="donorBalance">—</strong></div></div><div class="donation-account reveal" aria-label="후원 계좌 안내"><div><p class="account-eyebrow">후원 계좌</p><dl><dt>예금주</dt><dd>이인섭</dd><dt>계좌번호</dt><dd id="donationAccountNumber">010-9929-1171</dd></dl></div><button type="button" class="copy-account" id="copyDonationAccount" aria-label="후원 계좌번호 복사">계좌번호 복사</button></div><div class="donor-directory-wrap reveal"><div class="donor-directory-head"><h3>후원자 명단 <span>총 179명</span></h3><p>표시용 익명화 명칭 · 중복 표기는 원본 뒤 숫자 유지</p></div><div id="donorGrid" class="donor-grid donor-directory"></div></div></div></section>
 
 <section id="rights" class="section rights-section">
  <div class="container">
@@ -994,13 +988,12 @@ const financeCash=f.cash||{}, grossWithdrawal=transactions.filter(x=>x.type==='e
 const grossIncome=financeCash.grossIncome??f.base.amount;
 const actualSpend=transactions.filter(x=>x.treatment==='operating'&&x.type==='expense').reduce((s,x)=>s+x.amount,0);
 const balance=grossIncome-grossWithdrawal,netIncome=grossIncome-(financeCash.refund||0);
-$('#balanceTotal').textContent=won(balance);$('#incomeTotal').textContent=won(netIncome);$('#expenseTotal').textContent=won(actualSpend);
-$('#grossIncome').textContent=won(grossIncome);$('#offsetAmount').textContent=won(financeCash.offsetDoubleSided||0);
-$('#grossWithdrawal').textContent=won(grossWithdrawal);
-$('#donorNetIncome').textContent=won(netIncome);$('#donorActualSpend').textContent=won(actualSpend);$('#donorBalance').textContent=won(balance);
-$('#balanceState').textContent=(balance===financeCash.reportedBalance&&actualSpend===financeCash.actualSpend)?'입출금 대조 완료':'집계 차이 확인 필요';
-$('#transactionCount').textContent='실제 지출 '+transactions.filter(x=>x.type==='expense'&&x.treatment==='operating').length+'건';
-$('#financeNote').textContent='현재 잔액 = 입금액 '+won(grossIncome)+' − 전체 출금액 '+won(grossWithdrawal)+' = '+won(balance)+'. 실입금액은 오입금 환불 '+won(financeCash.refund||0)+' 차감 후 '+won(netIncome)+'. 실제 사용액은 전체 출금 중 환불 '+won(financeCash.refund||0)+' 및 청약19001(56) '+won(financeCash.otherAdjustment||0)+' 제외 후 '+won(actualSpend)+'. 상계처리 '+won(financeCash.offsetDoubleSided||0)+'은 입금·출금 양방향 기준이며 재차 차감하지 않습니다.';
+$('#balanceTotal').textContent=won(balance);
+$('#incomeTotal').textContent=won(grossIncome);
+$('#expenseTotal').textContent=won(grossWithdrawal);
+$('#donorNetIncome').textContent=won(grossIncome);
+$('#donorActualSpend').textContent=won(grossWithdrawal);
+$('#donorBalance').textContent=won(balance);
 const spendColors=['#86BC25','#0272A6','#05767D','#979B9C','#245034'];
 const groups=new Map();
 for(const t of transactions.filter(x=>x.type==='expense'&&x.treatment==='operating'))groups.set(t.group||t.category,(groups.get(t.group||t.category)||0)+t.amount);
@@ -1010,51 +1003,74 @@ const slices=breakdown.map(([name,amt],i)=>{const part=amt/actualSpend,seg=svgC*
 $('#expenseDonut').innerHTML=actualSpend?'<svg viewBox="0 0 320 320" role="img" aria-label="법무비, 총회비 등 사용액의 항목별 비중"><circle cx="160" cy="160" r="101" fill="none" stroke="#333" stroke-width="57"/>'+slices+'<text x="160" y="145" text-anchor="middle" fill="#bdbdbd" font-size="14" font-weight="500">실제 사용액</text><text x="160" y="177" text-anchor="middle" fill="#fff" font-size="25" font-weight="750">'+kr(actualSpend)+'</text><text x="160" y="199" text-anchor="middle" fill="#a6d879" font-size="12">KRW · 100%</text></svg>':'<p>등록된 비용이 없습니다.</p>';
 $('#expenseBreakdown').innerHTML=breakdown.map(([name,amt],i)=>'<div class="cost-legend-row"><span class="cost-dot" style="background:'+spendColors[i%spendColors.length]+'"></span><span class="cost-cat">'+esc(name)+'</span><b class="cost-money">'+won(amt)+'</b><strong class="cost-pct">'+(100*amt/actualSpend).toFixed(2)+'%</strong></div>').join('');
 
-/* User-facing summary only: monthly grouped amounts rather than each bank transfer.
- * Sep income is recorded as one monthly opening figure. All actual cash outflows,
- * including return/offset amounts, are included for the rolling balance.
+/* TRANSACTION RECORDS: a compact September income + two monthly expense totals.
+ * Expand month to see category subtotals, with per-category running balances.
+ * Balances include ALL cash withdrawals; the donut remains actual operating cost only.
  */
 const accountDescriptions={
- '법무비':{'2026.09':'법률자문·법무법인 선임 관련 비용','2026.10':'가처분 신청·보수·인지세·송달료 등'},
- '총회비':{'2026.09':'비대위 회의 준비 및 장소 사용료','2026.10':'해임총회 운영·물품·경호·문자·속기 등'},
- '등기·우편비':{'2026.09':'소명기회 부여 관련 등기 비용','2026.10':'등기·우편·퀵 배송 비용'},
- '대관료':{'2026.10':'해임총회 보조 행사장 대관'},
- '기타':{'2026.10':'식대·화환·선물 등 부대 비용'},
- '상계·정산':{'2026.09':'오입금 환불 1,200,000원 및 정산성 출금 20,000원'}
+ '법무비':{'2026-09':'법률자문·법무법인 선임 비용','2026-10':'가처분 신청·보수·인지세·송달료'},
+ '총회비':{'2026-09':'비대위 회의 준비·장소 사용','2026-10':'해임총회 운영·물품·경호·문자·속기'},
+ '등기·우편비':{'2026-09':'소명기회 부여 관련 등기','2026-10':'등기·우편·퀵 배송'},
+ '대관료':{'2026-10':'해임총회 보조 장소 대관'},
+ '기타':{'2026-10':'식대·화환·선물 등 부대 비용'},
+ '상계·정산':{'2026-09':'환불·정산성 출금'}
 };
-const grouped=new Map();
-for(const t of transactions){
-  const month=String(t.date).slice(0,7);
-  const account=t.treatment==='operating'?(t.group||t.category):'상계·정산';
-  const key=month+'|'+account;
-  if(!grouped.has(key))grouped.set(key,{month,account,amount:0,count:0,type:'expense'});
-  const item=grouped.get(key);item.amount+=t.amount;item.count++;
+const accountOrder={'법무비':0,'총회비':1,'등기·우편비':2,'대관료':3,'기타':4,'상계·정산':5};
+const months=['2026-09','2026-10'];
+const groupByMonth=new Map(months.map(m=>[m,new Map()]));
+for(const t of transactions.filter(x=>x.type==='expense')){
+ const month=String(t.date).slice(0,7);
+ if(!groupByMonth.has(month))groupByMonth.set(month,new Map());
+ const category=t.treatment==='operating'?(t.group||t.category):'상계·정산';
+ const g=groupByMonth.get(month);
+ g.set(category,(g.get(category)||0)+t.amount);
 }
-const monthSort=(a,b)=>a.month.localeCompare(b.month);
-const order={'법무비':0,'총회비':1,'등기·우편비':2,'대관료':3,'기타':4,'상계·정산':5};
-const monthly=[{month:'2026-09',account:'후원금',description:'후원금 등 9월 입금액 합산',amount:grossIncome,type:'income'}];
-monthly.push(...[...grouped.values()].sort((a,b)=>monthSort(a,b)||(order[a.account]??8)-(order[b.account]??8)).map(row=>({
- ...row,description:(accountDescriptions[row.account]||{})[row.month]||row.account+' 관련 비용 '+row.count+'건 합산'
-})));
-let running=0;
-const fmt=n=>kr(n);
-$('#ledgerRows').innerHTML=monthly.map((row,i)=>{
- const plus=row.type==='income';running+=plus?row.amount:-row.amount;
- const monthText=row.month.replace('-','.');
- const label=row.type==='income'?'inflow':'outflow';
- return '<tr class="'+(i===0?'opening-row ':'')+(i===monthly.length-1?'final-row ':'')+(i>0&&monthly[i-1].month!==row.month?'monthly-divider':'')+'">'+
- '<td class="month">'+esc(monthText)+'</td><td class="account">'+esc(row.account)+'</td>'+
- '<td class="description">'+esc(row.description)+'</td>'+
- '<td class="amount-cell '+label+'"><span class="amount-sign" aria-label="'+(plus?'입금':'출금')+'">'+(plus?'+':'−')+'</span><span class="amount-number">'+fmt(row.amount)+'</span></td>'+
- '<td class="balance-cell">'+fmt(running)+'</td></tr>';
-}).join('');
-$('#ledgerFinalBalance').textContent=won(running);
-$('#transactionCount').textContent='2026.09~10.19 · '+monthly.length+'개 요약 항목 · 개별 거래 '+transactions.length+'건 합산';
-$('#ledgerMonthlyNote').innerHTML='입금액 <b>'+won(grossIncome)+'</b>은 모두 2026년 9월로 묶어 표기했습니다. '+transactions.length+'건의 출금 중 실사용 35건과 환불·별도정산 2건을 집계했으며, 표의 잔액은 월·계정 합계 적용 후 누적 금액입니다.';
-if(running!==balance){
- $('#ledgerMonthlyNote').textContent+=' / 집계 확인 필요: 요약 잔액과 기준 잔액이 일치하지 않음';
- $('#ledgerFinalBalance').textContent='집계 확인 필요';
+const trIncome='<tr class="opening-row"><td class="month">2026.09</td><td class="account">수입</td>'+
+ '<td class="description">9월 입금 합계</td>'+
+ '<td class="amount-cell inflow"><span class="amount-sign">+</span><span class="amount-number">'+kr(grossIncome)+'</span></td>'+
+ '<td class="balance-cell">'+kr(grossIncome)+'</td></tr>';
+let monthlyBalance=grossIncome;
+let ledgerHTML=trIncome;
+for(const month of months){
+ const groups=[...(groupByMonth.get(month)||new Map()).entries()].sort((a,b)=>(accountOrder[a[0]]??9)-(accountOrder[b[0]]??9));
+ const total=groups.reduce((s,[,v])=>s+v,0);
+ const endBalance=monthlyBalance-total;
+ const title=month.replace('-','.');
+ const detailCount=groups.length;
+ ledgerHTML+='<tr class="month-total-row" data-total-month="'+month+'">'+
+ '<td class="month">'+title+'</td>'+
+ '<td class="account">지출 합계</td>'+
+ '<td class="description">'+detailCount+'개 계정 · <button type="button" class="ledger-expand" data-month-toggle="'+month+'" aria-expanded="false">펼쳐보기 <span class="expand-arrow" aria-hidden="true">⌄</span></button></td>'+
+ '<td class="amount-cell outflow"><span class="amount-sign">−</span><span class="amount-number">'+kr(total)+'</span></td>'+
+ '<td class="balance-cell">'+kr(endBalance)+'</td></tr>';
+ let subBalance=monthlyBalance;
+ for(const [account,amount] of groups){
+  subBalance-=amount;
+  const explanation=(accountDescriptions[account]||{})[month]||account+' 관련 비용';
+  ledgerHTML+='<tr class="monthly-detail-row" data-detail-month="'+month+'" hidden>'+
+  '<td class="month month-detail-label">↳</td>'+
+  '<td class="account">'+esc(account)+'</td>'+
+  '<td class="description">'+esc(explanation)+'</td>'+
+  '<td class="amount-cell outflow"><span class="amount-sign">−</span><span class="amount-number">'+kr(amount)+'</span></td>'+
+  '<td class="balance-cell">'+kr(subBalance)+'</td></tr>';
+ }
+ monthlyBalance=endBalance;
 }
+$('#ledgerRows').innerHTML=ledgerHTML;
+$('#ledgerFinalBalance').textContent=won(monthlyBalance);
+$('#transactionCount').textContent='2026년 9월 · 10월 / 월별 합계 및 펼쳐보기';
+if(monthlyBalance!==balance)$('#ledgerFinalBalance').textContent='집계 확인 필요';
+$('#ledgerRows').addEventListener('click',event=>{
+ const button=event.target.closest('[data-month-toggle]');
+ if(!button)return;
+ const month=button.dataset.monthToggle;
+ const nowOpen=button.getAttribute('aria-expanded')!=='true';
+ button.setAttribute('aria-expanded',String(nowOpen));
+ button.innerHTML=(nowOpen?'접기':'펼쳐보기')+' <span class="expand-arrow" aria-hidden="true">'+(nowOpen?'⌃':'⌄')+'</span>';
+ for(const tr of $('#ledgerRows').querySelectorAll('[data-detail-month]')){
+  if(tr.dataset.detailMonth===month)tr.hidden=!nowOpen;
+ }
+});
 const supporters=f.donors.filter(x=>typeof x.publicName==='string'&&x.publicName.trim());
 $('#donorCount').textContent='총 '+kr(financeCash.donorCount||supporters.length)+'명';
 $('#donationPolicy').textContent=f.policy.donation;
