@@ -722,7 +722,7 @@ footer.footer{background:#101010}
 <div class="container">
  <div class="section-head reveal">
   <div><div class="eyebrow">03 / TRANSPARENCY</div><h2>수입과 지출,<br>숫자로 투명하게.</h2></div>
-  <p>2026년 9월부터 10월 19일까지의 출금 내역을 한눈에 볼 수 있도록 정리했습니다. 상계·정산 내역은 실제 사용액과 구분합니다.</p>
+  <p>2026년 9월부터 10월 19일까지의 수입과 비용을 월별로 투명하게 정리했습니다.</p>
  </div>
  <div class="finance-top finance-top-simple reveal" aria-label="수입에서 지출을 차감한 현재 잔액">
   <div class="balance"><small>현재 잔액 · 2026.10.19 기준</small><strong id="balanceTotal">—</strong><p class="finance-formula">현재 잔액 = 수입 − 지출</p></div>
@@ -984,15 +984,16 @@ $('#committeeMore').innerHTML='<div class="member-overview"><span class="member-
 $('#ruleList').innerHTML=d.references.map((r,i)=>'<div class="rule"><button aria-expanded="false" aria-controls="r'+i+'"><div><div class="small">'+esc(r.category)+' · '+esc(r.article)+'</div><h3>'+esc(r.title)+'</h3></div><span class="plus">＋</span></button><div id="r'+i+'" class="rule-detail">'+esc(r.summary)+'</div></div>').join('');$$('.rule button').forEach(b=>b.onclick=()=>{const root=b.parentElement;root.classList.toggle('open');b.setAttribute('aria-expanded',root.classList.contains('open'))});
 
 const transactions=f.transactions.filter(x=>typeof x.amount==='number'&&x.amount>=0);
-const financeCash=f.cash||{}, grossWithdrawal=transactions.filter(x=>x.type==='expense').reduce((s,x)=>s+x.amount,0);
-const grossIncome=financeCash.grossIncome??f.base.amount;
-const actualSpend=transactions.filter(x=>x.treatment==='operating'&&x.type==='expense').reduce((s,x)=>s+x.amount,0);
-const balance=grossIncome-grossWithdrawal,netIncome=grossIncome-(financeCash.refund||0);
+const operatingTransactions=transactions.filter(x=>x.type==='expense'&&x.treatment==='operating');
+const financeCash=f.cash||{};
+const grossIncome=financeCash.displayIncome??financeCash.netIncome??f.base.amount;
+const actualSpend=operatingTransactions.reduce((sum,x)=>sum+x.amount,0);
+const balance=grossIncome-actualSpend;
 $('#balanceTotal').textContent=won(balance);
 $('#incomeTotal').textContent=won(grossIncome);
-$('#expenseTotal').textContent=won(grossWithdrawal);
+$('#expenseTotal').textContent=won(actualSpend);
 $('#donorNetIncome').textContent=won(grossIncome);
-$('#donorActualSpend').textContent=won(grossWithdrawal);
+$('#donorActualSpend').textContent=won(actualSpend);
 $('#donorBalance').textContent=won(balance);
 const spendColors=['#86BC25','#0272A6','#05767D','#979B9C','#245034'];
 const groups=new Map();
@@ -1012,16 +1013,15 @@ const accountDescriptions={
  '총회비':{'2026-09':'비대위 회의 준비·장소 사용','2026-10':'해임총회 운영·물품·경호·문자·속기'},
  '등기·우편비':{'2026-09':'소명기회 부여 관련 등기','2026-10':'등기·우편·퀵 배송'},
  '대관료':{'2026-10':'해임총회 보조 장소 대관'},
- '기타':{'2026-10':'식대·화환·선물 등 부대 비용'},
- '상계·정산':{'2026-09':'환불·정산성 출금'}
+ '기타':{'2026-09':'기타 비용','2026-10':'식대·화환·선물 등 부대 비용'}
 };
-const accountOrder={'법무비':0,'총회비':1,'등기·우편비':2,'대관료':3,'기타':4,'상계·정산':5};
+const accountOrder={'법무비':0,'총회비':1,'등기·우편비':2,'대관료':3,'기타':4};
 const months=['2026-09','2026-10'];
 const groupByMonth=new Map(months.map(m=>[m,new Map()]));
-for(const t of transactions.filter(x=>x.type==='expense')){
+for(const t of operatingTransactions){
  const month=String(t.date).slice(0,7);
  if(!groupByMonth.has(month))groupByMonth.set(month,new Map());
- const category=t.treatment==='operating'?(t.group||t.category):'상계·정산';
+ const category=t.group||t.category;
  const g=groupByMonth.get(month);
  g.set(category,(g.get(category)||0)+t.amount);
 }
@@ -1047,7 +1047,7 @@ for(const month of months){
  for(const [account,amount] of groups){
   subBalance-=amount;
   const explanation=(accountDescriptions[account]||{})[month]||account+' 관련 비용';
-  ledgerHTML+='<tr class="monthly-detail-row" data-detail-month="'+month+'" hidden>'+
+  ledgerHTML+='<tr class="monthly-detail-row" data-detail-month="'+month+'" hidden style="display:none">'+
   '<td class="month month-detail-label">↳</td>'+
   '<td class="account">'+esc(account)+'</td>'+
   '<td class="description">'+esc(explanation)+'</td>'+
@@ -1060,17 +1060,24 @@ $('#ledgerRows').innerHTML=ledgerHTML;
 $('#ledgerFinalBalance').textContent=won(monthlyBalance);
 $('#transactionCount').textContent='2026년 9월 · 10월 / 월별 합계 및 펼쳐보기';
 if(monthlyBalance!==balance)$('#ledgerFinalBalance').textContent='집계 확인 필요';
-$('#ledgerRows').addEventListener('click',event=>{
- const button=event.target.closest('[data-month-toggle]');
- if(!button)return;
- const month=button.dataset.monthToggle;
- const nowOpen=button.getAttribute('aria-expanded')!=='true';
- button.setAttribute('aria-expanded',String(nowOpen));
- button.innerHTML=(nowOpen?'접기':'펼쳐보기')+' <span class="expand-arrow" aria-hidden="true">'+(nowOpen?'⌃':'⌄')+'</span>';
- for(const tr of $('#ledgerRows').querySelectorAll('[data-detail-month]')){
-  if(tr.dataset.detailMonth===month)tr.hidden=!nowOpen;
- }
-});
+/* Bind each month toggle directly after rendering the rows. */
+for(const button of $('#ledgerRows').querySelectorAll('button[data-month-toggle]')){
+ button.addEventListener('click',()=>{
+  const month=button.dataset.monthToggle;
+  const expanded=button.getAttribute('aria-expanded')!=='true';
+  button.setAttribute('aria-expanded',String(expanded));
+  button.replaceChildren(document.createTextNode(expanded?'접기 ':'펼쳐보기 '));
+  const arrow=document.createElement('span');
+  arrow.className='expand-arrow';arrow.setAttribute('aria-hidden','true');
+  arrow.textContent=expanded?'⌃':'⌄';button.appendChild(arrow);
+  for(const tr of $('#ledgerRows').querySelectorAll('tr[data-detail-month]')){
+   if(tr.dataset.detailMonth!==month)continue;
+   tr.classList.toggle('is-open',expanded);
+   tr.hidden=!expanded;
+   tr.style.display=expanded?'table-row':'none';
+  }
+ });
+}
 const supporters=f.donors.filter(x=>typeof x.publicName==='string'&&x.publicName.trim());
 $('#donorCount').textContent='총 '+kr(financeCash.donorCount||supporters.length)+'명';
 $('#donationPolicy').textContent=f.policy.donation;
