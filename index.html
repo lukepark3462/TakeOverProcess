@@ -1032,7 +1032,7 @@ for(const t of transactions){
 }
 const monthSort=(a,b)=>a.month.localeCompare(b.month);
 const order={'법무비':0,'총회비':1,'등기·우편비':2,'대관료':3,'기타':4,'상계·정산':5};
-const monthly=[{month:'2026.09',account:'후원금',description:'후원금 등 9월 입금액 합산',amount:grossIncome,type:'income'}];
+const monthly=[{month:'2026-09',account:'후원금',description:'후원금 등 9월 입금액 합산',amount:grossIncome,type:'income'}];
 monthly.push(...[...grouped.values()].sort((a,b)=>monthSort(a,b)||(order[a.account]??8)-(order[b.account]??8)).map(row=>({
  ...row,description:(accountDescriptions[row.account]||{})[row.month]||row.account+' 관련 비용 '+row.count+'건 합산'
 })));
