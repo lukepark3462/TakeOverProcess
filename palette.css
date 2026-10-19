@@ -356,3 +356,87 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
  #past .past-faq details>p{padding:0 13px 18px 42px;font-size:14px}
  #finance .monthly-scroll:after{content:"표를 좌우로 밀어 전체 금액을 확인할 수 있습니다";display:block;font-size:12px;color:#97ab90;padding:12px 0}
 }
+
+/* Colorstream v8: green=people, blue=finance, teal=process, grey=neutral */
+#home .hero-eyebrow{font-size:clamp(18px,1.8vw,24px)!important;color:var(--sg-deep-green)!important;font-weight:800!important;letter-spacing:-.03em;line-height:1.4;margin-bottom:15px}
+#home h1{font-size:clamp(33px,4.55vw,66px)!important;line-height:1.28!important}
+#home h1 .hero-line{white-space:normal}
+#home-menu .launch-head h2,#roadmap .section-head h2,#finance .section-head h2,#past .section-head h2,#lawfirm .law-head h2,#rights .section-head h2,#donors .section-head h2,#rules .section-head h2,#contact .section-head h2{font-size:clamp(40px,4.6vw,64px)!important;line-height:1.25!important;letter-spacing:-.05em!important;font-weight:780!important;word-break:keep-all;overflow-wrap:anywhere}
+#home-menu .launch-head p,#roadmap .section-head p,#finance .section-head p,#past .section-head p,#lawfirm .law-head p,#rights .section-head p,#donors .section-head p,#rules .section-head p,#contact .section-head p{font-size:clamp(14px,1.05vw,17px)!important;line-height:1.85;font-weight:450}
+#about .about-team-head h3,#about .committee-history-head h3,#finance .cost-head h3,#finance .expense-head h3,#lawfirm .law-person-title h3{font-size:clamp(29px,3vw,40px)!important;line-height:1.3!important}
+#rights .rights-chapter-heading h3,#past .past-subhead h3{font-size:clamp(29px,3vw,42px)!important;line-height:1.28!important;font-weight:760!important}
+#rights .rights-chapter-heading>p,#past .past-subhead p,#about .committee-history-head p{font-size:clamp(14px,1.08vw,17px)!important;line-height:1.85}
+#rights .rights-chapter-num,#past .past-index{font-size:clamp(14px,1.18vw,17px)!important;font-weight:800}
+#roadmap .road-overview{border-top:3px solid var(--sg-strategic-teal)}
+#roadmap .road-metrics strong{color:var(--sg-teal-light)}
+#finance .finance-top-simple{border-top:3px solid var(--sg-data-blue)!important}
+#finance .finance-metrics span,#finance .cost-head .eyebrow,#finance .expense-head .eyebrow{color:var(--sg-data-blue-light)!important}
+#finance .cost-pct{color:var(--sg-data-blue-light)!important}
+#finance .monthly-ledger thead th{border-color:var(--sg-data-blue-dark)!important}
+#past .past-intro{border-left-color:var(--sg-strategic-teal)!important}
+#past .past-subhead .past-index{color:var(--sg-teal-light)!important;border-color:var(--sg-strategic-teal)!important}
+#past .past-responsibility article:first-child{border-top:2px solid var(--sg-brand-green)}
+#past .past-responsibility article:nth-child(2){border-top:2px solid var(--sg-strategic-teal)}
+#past .past-responsibility article:nth-child(3){border-top:2px solid var(--sg-data-blue)}
+#past .past-issue-card dl>div:nth-child(2) dt{color:var(--sg-neutral-gray-light)!important}
+#past .past-issue-card dl>div:nth-child(3) dt{color:var(--sg-data-blue-light)!important}
+#rights .rights-chapter-num{color:var(--sg-teal-light)!important}
+#rights .rights-actor-diagram>.rights-actor:first-child{border-top:3px solid var(--sg-data-blue)}
+#rights .rights-actor-diagram>.rights-actor.union{border-top:3px solid var(--sg-brand-green)}
+#rights .rights-connector .arrows{background:var(--sg-strategic-teal)}
+#rights .rights-connector .arrows:before,#rights .rights-connector .arrows:after{border-color:var(--sg-strategic-teal)}
+#rights .rights-connector span{color:var(--sg-teal-light)}
+#rights .rights-note{border-left:3px solid var(--sg-strategic-teal)!important}
+
+/* Donor invitation and consistent three-counsel cards */
+#donors .donation-account{background:linear-gradient(145deg,#202b20,#1d231f)!important;border-top:3px solid var(--sg-growth-green)!important;border-color:#527042}
+#donors .donation-account .donation-hope{margin:0 0 23px;padding:0 0 20px;border-bottom:1px solid #4b5e45}
+#donors .donation-hope strong{display:block;color:var(--sg-green-light);font-size:clamp(20px,2.25vw,30px)!important;line-height:1.5;letter-spacing:-.04em;font-weight:800}
+#donors .donation-hope p{margin:9px 0 0;color:var(--sg-neutral-gray-light);font-size:14px;line-height:1.75}
+#donors .donation-account .account-eyebrow{font-size:15px!important;color:var(--sg-growth-green)!important;letter-spacing:-.02em}
+#donors .donation-account dt{font-size:14px!important}
+#donors .donation-account dd{color:var(--sg-white);font-size:clamp(18px,2.4vw,28px)}
+#donors .donation-account .copy-account{font-size:14px!important}
+#lawfirm .law-members{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:14px}
+#lawfirm .law-members>.law-member{display:flex;flex-direction:column;min-width:0;min-height:330px;height:100%;border:1px solid #515551;border-radius:8px;overflow:hidden;background:#262626}
+#lawfirm .law-members>.law-member>.law-member-portrait{height:195px;min-height:195px;width:100%;flex:none;background:#343434}
+#lawfirm .law-members>.law-member>.law-member-portrait img{width:100%;height:100%;object-fit:contain;object-position:center;background:transparent}
+#lawfirm .law-members>.law-member>.law-member-text{flex:1;display:flex;flex-direction:column;padding:20px}
+#lawfirm .law-members .law-member-text .r{font-size:13px!important;color:var(--sg-neutral-gray-light)}
+#lawfirm .law-members .law-member-text h4{font-size:clamp(23px,2vw,29px)!important;line-height:1.25;margin:11px 0}
+#lawfirm .law-members .law-member-text p{font-size:14px!important;line-height:1.75;color:#d6d6d6;margin:0}
+#lawfirm .law-members>.law-member:first-child{border-top:3px solid var(--sg-strategic-teal)}
+#lawfirm .law-members>.law-member:nth-child(2),#lawfirm .law-members>.law-member:nth-child(3){border-top:3px solid var(--sg-neutral-gray-mid)}
+
+/* On narrow screens, the contractual claim/debt relation is vertical. */
+@media(max-width:970px){
+ #home .hero-eyebrow{font-size:17px!important}
+ #home h1{font-size:clamp(29px,4.8vw,49px)!important}
+}
+@media(max-width:760px){
+ #home h1{font-size:clamp(28px,6vw,38px)!important;line-height:1.34!important}
+ #home .hero-eyebrow{font-size:16px!important;margin-bottom:9px}
+ #home-menu .launch-head h2,#roadmap .section-head h2,#finance .section-head h2,#past .section-head h2,#lawfirm .law-head h2,#rights .section-head h2,#donors .section-head h2,#rules .section-head h2,#contact .section-head h2{font-size:clamp(34px,8.1vw,44px)!important;line-height:1.28!important}
+ #rights .rights-chapter-heading h3,#past .past-subhead h3{font-size:clamp(27px,6vw,35px)!important}
+ #rights .rights-actor-diagram{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important;align-items:stretch}
+ #rights .rights-actor-diagram .rights-actor{min-height:124px;padding:22px 24px;display:flex;gap:6px}
+ #rights .rights-actor-diagram .rights-actor strong{font-size:28px!important}
+ #rights .rights-actor-diagram .rights-actor small{font-size:14px}
+ #rights .rights-connector{min-height:144px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:15px 5px;gap:12px}
+ #rights .rights-connector span:first-child{font-size:15px!important;color:var(--sg-teal-light);line-height:1.45;font-weight:750}
+ #rights .rights-connector .arrows{display:block!important;position:relative!important;width:3px!important;height:51px!important;min-height:51px!important;max-width:none!important;background:var(--sg-strategic-teal)!important;margin:0 auto!important}
+ #rights .rights-connector .arrows:before,#rights .rights-connector .arrows:after{content:""!important;position:absolute!important;display:block!important;width:10px!important;height:10px!important;border-top:2px solid var(--sg-teal-light)!important;border-right:2px solid var(--sg-teal-light)!important;left:-4.5px!important;right:auto!important}
+ #rights .rights-connector .arrows:before{top:0!important;bottom:auto!important;transform:rotate(-45deg)!important}
+ #rights .rights-connector .arrows:after{top:auto!important;bottom:0!important;transform:rotate(135deg)!important}
+ #rights .rights-connector .rights-mini{display:none!important}
+ #lawfirm .law-members{grid-template-columns:1fr!important}
+ #lawfirm .law-members>.law-member{flex-direction:row!important;min-height:174px;height:auto}
+ #lawfirm .law-members>.law-member>.law-member-portrait{flex:0 0 120px!important;width:120px!important;height:174px!important;min-height:174px!important}
+ #lawfirm .law-members>.law-member>.law-member-text{min-width:0;padding:17px!important}
+ #lawfirm .law-members .law-member-text h4{font-size:23px!important}
+}
+@media(max-width:420px){
+ #lawfirm .law-members>.law-member>.law-member-portrait{flex-basis:94px!important;width:94px!important}
+ #lawfirm .law-members>.law-member>.law-member-text{padding:14px!important}
+ #lawfirm .law-members .law-member-text h4{font-size:21px!important}
+}

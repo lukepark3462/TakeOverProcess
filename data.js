@@ -32,7 +32,7 @@ window.SONGRIM = {
   committeeMore:{
     operations:16,
     total:20,
-    note:"비대위 운영진 4명과 그 외 운영진 16명, 총 20명이 참여합니다. 박종인 재무·회계·운영 자문은 별도로 표시합니다."
+    note:"비대위 운영진 4명과 그 외 운영진 16명, 총 20명이 참여합니다."
   },
   scenarios:[
     {id:"s1",label:"시나리오 01",title:"잔류 이사 사퇴 시",condition:"임원 전원 공석 · 조합원 소집청구 경로",weeks:"6–8주",summary:"조합원 연명 87명 → 대의원회 소집권 확보 → 선관위 구성 → 보궐선임 → 직무대행 체계 → 조합장 선출",signature:"조합원 87명 이상",directors:5,auditors:1,
