@@ -188,3 +188,171 @@ body.is-detail main{background:var(--sg-black)}
  #finance .finance-equation strong{font-size:clamp(15px,4.7vw,23px)}
  #finance .monthly-ledger .ledger-expand{margin-left:0;margin-top:5px;padding:6px 9px}
 }
+
+
+/* 2026-10-19: normalisation of text hierarchy, timeline, archival issues and responsive layout.
+   Palette: charcoal + Deloitte green #86BC25, muted neutral greys, subdued gold dividers. */
+html{overflow-x:clip}
+body{overflow-wrap:break-word}
+#home .hero-architecture{filter:none!important;opacity:.42!important}
+#home .hero-architecture g[stroke]{stroke:#8fbd61!important}
+#home .hero-architecture stop{stop-color:#96b875!important}
+#home .hero-architecture rect[fill="url(#archTint)"]{opacity:.54}
+header nav{gap:clamp(10px,.9vw,16px)}
+header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
+#home-menu .launch-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+#home-menu .launch-card{grid-column:auto!important;min-width:0;min-height:165px;padding:20px}
+#home-menu .launch-name{font-size:clamp(19px,1.55vw,24px)!important;line-height:1.35;overflow-wrap:anywhere;word-break:keep-all}
+#home-menu .launch-index{font-size:12px;letter-spacing:.015em}
+#home-menu .launch-arrow{flex-shrink:0}
+.eyebrow{font-size:clamp(13px,1vw,15px);letter-spacing:.04em}
+.section-head p,.law-head p,.progress-main>p{font-size:clamp(14px,1.05vw,17px)!important;line-height:1.85}
+.section-head h2,.law-head h2{line-height:1.25}
+#about.statement p#mission{font-size:16px}
+#about .about-team-head p{font-size:14px;line-height:1.8}
+#about .committee-card .role{font-size:14px!important;min-height:0}
+#about .committee-card .profile-affiliation{font-size:14px!important;min-height:0}
+#about .committee-card .committee-born{font-size:13px}
+#about .committee-card .committee-line b{font-size:14px}
+#about .committee-card .committee-line li{font-size:13px;line-height:1.8}
+#about .committee-card .committee-intro{font-size:13px;line-height:1.85}
+#about .committee-grid{grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch}
+#about .committee-grid .committee-card{border-radius:8px;min-width:0;min-height:0;overflow:visible}
+#about .committee-grid .advisor-card{border-color:#444!important;background:#232323!important}
+#about .committee-grid .chair-card{
+ background:linear-gradient(155deg,#24351e,#222821 64%)!important;
+ border:1px solid #86BC25!important;
+ box-shadow:inset 0 0 0 1px #86bc2522,0 15px 40px #00000033;
+}
+#about .committee-grid .chair-card .role{color:#c8ed92!important}
+#about .committee-grid .chair-card h3{color:#f6fff0}
+#about .committee-grid .chair-card img.committee-portrait{outline:2px solid #86bc25;outline-offset:5px}
+#about .committee-grid .chair-card:before{
+ content:"비대위원장";font-size:11px;font-weight:800;letter-spacing:.01em;
+ color:#c7ee94;display:block;align-self:start;padding:5px 10px;
+ border:1px solid #577c33;border-radius:999px;margin:0 0 17px;
+}
+#about .committee-history{margin:50px 0 18px;padding:28px 30px 32px;background:#1d201e;border:1px solid #424a3c;border-radius:10px}
+#about .committee-history-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:32px}
+#about .committee-history-head h3{font-size:clamp(25px,2.8vw,39px);color:#fff;line-height:1.3;margin:0}
+#about .committee-history-head p{font-size:14px;color:#c6cec3;max-width:310px;line-height:1.8}
+#about .committee-timeline{list-style:none;margin:0 0 15px;padding:0 0 0 28px;position:relative;display:grid;grid-template-columns:1fr;gap:0}
+#about .committee-timeline:before{content:"";position:absolute;top:12px;bottom:16px;left:11px;width:2px;background:linear-gradient(180deg,#86BC25,#587a3c 68%,#3e4a3b)}
+#about .committee-timeline-item{position:relative;display:grid;grid-template-columns:145px minmax(0,1fr);gap:20px;padding:0 0 26px 10px;min-width:0}
+#about .committee-timeline-item:last-child{padding-bottom:0}
+#about .committee-timeline-item:before{
+ content:"";position:absolute;width:16px;height:16px;left:-24px;top:5px;
+ background:#191d1a;border:3px solid #86BC25;border-radius:50%;
+ box-shadow:0 0 0 4px #86bc251a;
+}
+#about .committee-timeline-item time{font-size:17px;color:#b9e583;font-weight:800;white-space:nowrap;line-height:1.65;font-variant-numeric:tabular-nums}
+#about .committee-timeline-item h4{font-size:clamp(19px,1.8vw,25px);line-height:1.3;color:#fff;font-weight:750;margin:5px 0 7px}
+#about .committee-timeline-item p{font-size:14px;line-height:1.85;color:#c4c9c3;margin:0}
+#about .timeline-type{display:inline-flex;border:1px solid #53694a;color:#bad998;padding:3px 9px;border-radius:4px;font-size:12px;font-weight:700}
+#about .committee-history-source{font-size:12px!important;color:#9ca99b;margin:22px 0 0;line-height:1.85}
+#past{background:#181a18!important;color:#f3f3f3;scroll-margin-top:90px}
+#past .section-head h2,#past h3,#past h4{color:#f7f7f7}
+#past .section-head p{color:#c4c6c2}
+#past .past-intro{padding:20px 24px;margin-bottom:50px;border:1px solid #445739;border-left:4px solid #86BC25;background:#242923;border-radius:7px}
+#past .past-intro strong{font-size:clamp(17px,1.7vw,22px);color:#e5f8c9}
+#past .past-intro p{font-size:14px;color:#c7cfc2;line-height:1.85;margin:7px 0 0}
+#past a{color:#b9e48a;text-decoration:underline;text-underline-offset:4px}
+#past .past-subhead{display:flex;gap:22px;align-items:start;margin:36px 0 19px;padding-top:22px;border-top:1px solid #485042}
+#past .past-subhead h3{font-size:clamp(24px,2.7vw,37px);line-height:1.32;margin:0 0 6px}
+#past .past-subhead p{font-size:14px;line-height:1.85;color:#bac2b6;margin:0}
+#past .past-index{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;padding:7px 13px;border:1px solid #577a34;border-radius:5px;font-size:13px;font-weight:800;color:#d3ecb4}
+#past .past-responsibility{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+#past .past-responsibility article,#past .past-issue-card{min-width:0;padding:23px;background:#242624;border:1px solid #42473f;border-radius:8px}
+#past .past-responsibility article>span{font-size:13px;color:#acd36f;font-weight:800}
+#past .past-responsibility h4{font-size:25px;line-height:1.35;margin:7px 0 10px}
+#past .past-responsibility p{font-size:14px;color:#ced1cc;line-height:1.85;margin:0}
+#past .past-issues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#past .past-issue-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+#past .past-issue-head>span{font-size:22px;font-weight:800;letter-spacing:-.035em;color:#86BC25}
+#past .past-issue-head h4{font-size:clamp(20px,2vw,28px);margin:0}
+#past .past-issue-card dl{display:grid;gap:0;margin:0}
+#past .past-issue-card dl>div{display:grid;grid-template-columns:103px minmax(0,1fr);gap:9px;align-items:start;padding:13px 0;border-top:1px solid #414840}
+#past .past-issue-card dt{font-size:13px;font-weight:800;color:#bde68c}
+#past .past-issue-card dd{font-size:14px;line-height:1.8;color:#e0e2dd;margin:0;overflow-wrap:anywhere}
+#past .past-faq{border-top:1px solid #495443}
+#past .past-faq details{border-bottom:1px solid #424b40}
+#past .past-faq summary{display:flex;align-items:center;gap:14px;cursor:pointer;padding:20px 12px;color:#f4f4f4;font-size:clamp(16px,1.35vw,19px);font-weight:750;line-height:1.5;list-style:none}
+#past .past-faq summary::-webkit-details-marker{display:none}
+#past .past-faq summary span{font-size:15px;color:#aad47b;min-width:28px;font-variant-numeric:tabular-nums}
+#past .past-faq summary b{margin-left:auto;color:#bde38f;font-size:21px;transition:transform .2s}
+#past .past-faq details[open] summary b{transform:rotate(45deg)}
+#past .past-faq details>p{font-size:15px;color:#ced4c9;line-height:1.95;padding:0 50px 20px 54px;margin:0}
+#past .past-source{margin-top:27px;padding:15px 18px;background:#242724;border-left:2px solid #688949}
+#past .past-source p{font-size:13px;line-height:1.85;color:#bbc5b8;margin:0}
+#contact{background:#151715!important;color:#f3f3f3!important;min-height:calc(100svh - 75px)}
+#contact .section-head{margin-bottom:28px}
+#contact .section-head h2{color:#f8f8f8}
+#contact .section-head>p{color:#ced1cb}
+#contact .contact-solo{width:min(100%,760px);margin:0 auto;padding:clamp(25px,3.7vw,51px);border:1px solid #465342;border-radius:8px;background:#222522;box-shadow:0 16px 36px #0000001a}
+#contact .contact-solo-role{font-size:15px;color:#b7d888;font-weight:730}
+#contact .contact-solo h3{font-size:clamp(34px,4vw,52px);color:#fff;margin:10px 0 25px}
+#contact .contact-solo-phone{display:grid;gap:5px;border-top:1px solid #515d4a;padding-top:24px;margin-bottom:23px}
+#contact .contact-solo-phone span{font-size:13px;color:#b9c8ae}
+#contact .contact-solo-phone a{font-size:clamp(27px,4vw,44px);line-height:1.3;color:#fff;text-decoration:none;font-weight:800;letter-spacing:-.045em;overflow-wrap:anywhere}
+#contact .contact-solo .contact-actions{display:flex;flex-wrap:wrap;gap:11px}
+#contact .contact-solo .contact-actions a{font-size:14px;font-weight:750;border-radius:6px;padding:13px 19px;text-decoration:none}
+#contact .contact-solo .contact-call{color:#152112;background:#86BC25}
+#contact .contact-solo .contact-message{color:#ecf4e4;background:transparent;border:1px solid #698757}
+#contact .contact-solo>p{margin-top:25px;color:#aab6a7;font-size:13px;line-height:1.75}
+#finance .finance-top-simple{border-top:1px solid #525d4e;border-bottom:1px solid #343b32}
+#finance .finance-top-simple .finance-equation{border:0}
+#finance .cost-analysis{border-color:#434c40}
+#finance .cost-legend-row{border-bottom:1px solid #353d34}
+#finance .cost-legend-row:last-child{border-bottom:0}
+#finance .monthly-ledger{border-collapse:collapse;border-spacing:0}
+#finance .monthly-ledger thead th{border-bottom:1px solid #637758!important}
+#finance .monthly-ledger tbody td{border-bottom:1px solid #363f35!important}
+#finance .monthly-ledger tbody .month-total-row td{border-bottom-color:#4c6541!important}
+#finance .monthly-ledger tfoot td{border-top:1px solid #6c8658!important}
+#finance .monthly-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+#finance .monthly-ledger{min-width:710px}
+#finance .monthly-ledger th,#finance .monthly-ledger td{font-size:14px!important}
+#finance .monthly-ledger .ledger-expand{font-size:13px}
+#finance .cost-head h3,#finance .expense-head h3{font-size:clamp(24px,2.4vw,33px)}
+#roadmap .road-step .small{font-size:13px;line-height:1.8}
+#roadmap .road-step h3{font-size:clamp(21px,2.25vw,29px)}
+#progress .update-item p{font-size:15px;line-height:1.85}
+#progress .update-item .date{font-size:13px}
+#lawfirm .law-member-text p{font-size:14px}
+#rules .rule-detail{font-size:15px;line-height:1.85}
+@media(max-width:1500px){
+ header .menu-toggle{display:block!important}
+ header nav{display:none!important;position:absolute;left:0;right:0;top:76px;flex-direction:column;align-items:stretch;gap:8px;padding:17px 24px;background:#171b17;border-bottom:1px solid #424b3f;max-height:calc(100svh - 76px);overflow-y:auto}
+ header nav.open{display:flex!important}
+ header nav a{display:block;font-size:15px!important;white-space:normal;padding:8px 4px}
+}
+@media(max-width:1120px){
+ #home-menu .launch-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ #about .committee-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:800px){
+ #home-menu .launch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #about .committee-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #past .past-responsibility{grid-template-columns:1fr}
+ #past .past-issues{grid-template-columns:1fr}
+ #about .committee-history-head{display:block}
+ #about .committee-history-head p{max-width:none;margin-top:10px}
+}
+@media(max-width:560px){
+ #about .committee-grid{grid-template-columns:1fr}
+ #about .committee-history{padding:23px 16px;margin-top:35px}
+ #about .committee-timeline{padding-left:26px}
+ #about .committee-timeline-item{grid-template-columns:minmax(0,1fr);gap:4px;padding-left:8px}
+ #about .committee-timeline-item:before{left:-23px}
+ #about .committee-timeline-item time{font-size:16px}
+ #home-menu .launch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #home-menu .launch-card{min-height:138px;padding:15px}
+ #home-menu .launch-name{font-size:18px!important}
+ #past .past-intro{padding:18px}
+ #past .past-subhead{gap:10px}
+ #past .past-responsibility article,#past .past-issue-card{padding:19px}
+ #past .past-issue-card dl>div{grid-template-columns:1fr;gap:5px}
+ #past .past-faq summary{gap:9px;font-size:16px;padding:17px 6px}
+ #past .past-faq details>p{padding:0 13px 18px 42px;font-size:14px}
+ #finance .monthly-scroll:after{content:"표를 좌우로 밀어 전체 금액을 확인할 수 있습니다";display:block;font-size:12px;color:#97ab90;padding:12px 0}
+}
