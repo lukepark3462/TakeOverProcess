@@ -560,8 +560,96 @@ footer.footer{background:#101010}
  main>section{background:#fff!important;color:#000!important}
 }
 
+
+/* 2026-10-19 public finance & directory layouts */
+#about .about-team{margin-top:58px;padding-top:36px;border-top:1px solid #494949}
+#about .about-team-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:24px}
+#about .about-team-head h3{font-size:clamp(27px,3.5vw,44px);font-weight:600;line-height:1.4;margin-top:13px;color:#fff}
+#about .about-team-head p{max-width:355px;color:#bdbdbd;font-size:12px;line-height:1.8}
+#about .committee-grid{margin-top:0;background:#464646;border-color:#464646}
+#about .committee-card{background:#242424;color:#fff}
+#about .committee-card h3{color:#fff}
+#about .committee-card .role,#about .member-overview-label{color:#acd870}
+#about .committee-card .profile-affiliation,#about .committee-card p,#about .committee-card .profile-pending span{color:#c9c9c9}
+#about .committee-card .profile-pending i{background:#5b5b5b}
+#about .committee-more{margin-top:15px}
+#about .member-overview{background:#252525;border:1px solid #404040}
+#about .member-overview strong{color:#f4f4f4}
+#about .member-overview p{color:#c1c1c1}
+#finance .finance-bridge{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#424242;border:1px solid #424242;margin-bottom:57px}
+#finance .finance-bridge>div{padding:20px 24px;background:#232323}
+#finance .finance-bridge small{display:block;color:#acacac;font-size:12px;margin-bottom:8px}
+#finance .finance-bridge strong{display:block;color:#f5f5f5;font-size:clamp(18px,2.2vw,27px);font-weight:570;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+#finance .cost-analysis{border:1px solid #454545;padding:31px 34px 22px;background:#191919;margin-bottom:53px}
+#finance .cost-head{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:25px}
+#finance .cost-head h3{font-size:clamp(24px,3vw,36px);font-weight:600;margin-top:9px;color:#fff}
+#finance .cost-head p{color:#b4b4b4;font-size:12px}
+#finance .cost-visual{display:grid;grid-template-columns:minmax(245px,.92fr) minmax(0,1.08fr);align-items:center;gap:35px}
+#finance .cost-chart{display:flex;align-items:center;justify-content:center;min-width:0}
+#finance .cost-chart svg{width:100%;max-width:385px;display:block;overflow:visible}
+#finance .cost-legend{min-width:0}
+#finance .cost-legend-row{display:grid;grid-template-columns:13px minmax(0,1fr) minmax(110px,auto) 66px;gap:10px;align-items:center;border-bottom:1px solid #343434;padding:13px 0}
+#finance .cost-dot{width:10px;height:10px;border-radius:50%}
+#finance .cost-cat{color:#f3f3f3;font-size:13px;font-weight:650}
+#finance .cost-money{color:#dbdbdb;font-size:13px;white-space:nowrap;font-weight:520;text-align:right;font-variant-numeric:tabular-nums}
+#finance .cost-pct{color:#b7e67b;font-size:13px;font-weight:760;text-align:right;font-variant-numeric:tabular-nums}
+#finance .cost-foot{font-size:11px;color:#afafaf;border-top:1px solid #373737;margin-top:24px;padding-top:18px;line-height:1.85}
+#finance .expense-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px;gap:20px}
+#finance .expense-head h3{font-size:clamp(23px,2.7vw,34px);margin-top:9px;color:#fff}
+#finance .expense-head>span{font-size:12px;color:#a4ce72}
+#finance .ledger-scroll{overflow-x:auto}
+#finance .ledger{min-width:640px}
+#finance .ledger th:nth-child(1){width:132px}
+#finance .ledger th:nth-child(2){width:145px}
+#finance .ledger td:nth-child(1){white-space:nowrap;font-variant-numeric:tabular-nums;color:#c1c1c1}
+#finance .ledger .ledger-cat{font-size:12px;color:#bce88b}
+#finance .ledger-exception{font-size:10px;display:inline-block;color:#a9b0a2;border:1px solid #525a4d;padding:2px 7px;border-radius:20px;margin-left:6px;white-space:nowrap}
+#finance .finance-caution{line-height:2}
+#donors .donor-directory-wrap{margin-top:44px;padding-top:24px;border-top:1px solid #525252}
+#donors .donor-directory-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}
+#donors .donor-directory-head h3{font-size:23px;color:#fff;font-weight:650}
+#donors .donor-directory-head h3 span{color:#86BC25}
+#donors .donor-directory-head p{font-size:11px;color:#a9a9a9}
+#donors .donor-directory{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+#donors .donor-name{display:flex;align-items:center;gap:10px;min-width:0;padding:13px 12px;background:#252525;border:1px solid #424242}
+#donors .donor-num{font-size:10px;color:#95a58b;min-width:25px;font-variant-numeric:tabular-nums}
+#donors .donor-name strong{font-size:14px;font-weight:550;color:#f6f6f6;letter-spacing:.03em;white-space:nowrap}
+#donors .donor-name:hover{border-color:#86BC25;background:#2d3428}
+.detail-back,body.is-detail .detail-back{
+ display:inline-flex!important;align-items:center;justify-content:center;
+ width:max-content!important;max-width:100%;height:auto;min-height:0;
+ padding:8px 13px!important;margin:0 0 25px!important;
+ font-size:12px!important;line-height:1.5!important;font-weight:600!important;
+ border:1px solid #505050;border-radius:5px!important;
+ background:transparent;color:#cdcdcd;
+ box-shadow:none!important;white-space:nowrap;
+}
+#progress .detail-back{grid-column:1 / -1;justify-self:start}
+.detail-back:hover,body.is-detail .detail-back:hover{color:#c4ef83;background:#232323}
+@media(max-width:1200px){#donors .donor-directory{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:970px){#donors .donor-directory{grid-template-columns:repeat(4,minmax(0,1fr))}.detail-back{display:none!important}#about .about-team-head{align-items:start}}
+@media(max-width:700px){
+ #about .about-team-head{display:block}
+ #about .about-team-head p{margin-top:8px}
+ #finance .finance-bridge{grid-template-columns:1fr;gap:1px}
+ #finance .finance-bridge>div{padding:15px 17px}
+ #finance .cost-analysis{padding:22px 17px}
+ #finance .cost-head{display:block}
+ #finance .cost-head p{margin-top:10px}
+ #finance .cost-visual{grid-template-columns:1fr;gap:20px}
+ #finance .cost-chart svg{max-width:320px}
+ #finance .cost-legend-row{grid-template-columns:12px minmax(0,1fr) auto 65px;gap:7px}
+ #finance .cost-cat,#finance .cost-money,#finance .cost-pct{font-size:12px}
+ #donors .donor-directory{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ #donors .donor-directory-head{display:block}
+ #donors .donor-directory-head p{margin-top:8px}
+ #donors .donor-name{padding:12px 7px;gap:5px}
+ #donors .donor-num{font-size:9px;min-width:20px}
+ #donors .donor-name strong{font-size:13px}
+}
+@media(max-width:410px){#donors .donor-directory{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style></head><body>
-<header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav><a href="#about">소개</a><a href="#rights">조합원 권리</a><a href="#roadmap">실행 로드맵</a><a href="#progress">진행 현황</a><a href="#finance">재정 현황</a><a href="#donors">후원자</a><a href="#committee">비대위</a><a href="#lawfirm">법률자문</a><a href="#rules">정관·규정</a></nav></header>
+<header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav><a href="#about">소개·비대위</a><a href="#rights">조합원 권리</a><a href="#roadmap">실행 로드맵</a><a href="#progress">진행 현황</a><a href="#finance">재정 현황</a><a href="#donors">후원자</a><a href="#lawfirm">법률자문</a><a href="#rules">정관·규정</a></nav></header>
 <main>
 <section id="home" class="hero container">
 
@@ -589,11 +677,16 @@ footer.footer{background:#101010}
 <div class="hero-main"><div class="hero-copy"><div class="eyebrow">SONGRIM 03 / REBUILDING PROCESS</div><h1 aria-label="송림3지구 정상화 과정, 모든 주요한 내용에 대한 기록."><span class="hero-line">송림3지구 정상화 과정,</span><span class="hero-line hero-line--muted">모든 주요한 내용에 대한 기록.</span></h1></div></div>
 <div class="hero-bottom-wrap"><div class="hero-bottom"><p>송림3지구 조합 비상대책위원회<br>집행부 재구성과 조합 정상화를 위한 모든 주요 과정과 재정 기록을 한곳에 모았습니다.</p><a href="#home-menu" class="rounded-arrow" aria-label="아래로 스크롤">↓</a></div><div class="hero-meta"><span>REBUILDING TRUST, TOGETHER</span><span id="heroDate">UPDATED — 2026.10.19</span></div></div>
 </section>
-<section id="home-menu" aria-label="전체 메뉴"><div class="container"><div class="launch-head"><div><div class="eyebrow">EXPLORE / CONTENTS</div><h2>송림3지구의 기록을<br>분야별로 확인하세요.</h2></div><p>필요한 내용을 선택해서 확인할 수 있습니다. 모바일에서는 아래로 스크롤해 전체 내용을 순서대로 볼 수 있습니다.</p></div><div class="launch-grid"><a class="launch-card" href="#about"><span class="launch-index">01 / INTRODUCTION</span><strong class="launch-name">비대위 설립 취지</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#roadmap"><span class="launch-index">02 / ROADMAP</span><strong class="launch-name">선거 로드맵</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#progress"><span class="launch-index">03 / UPDATES</span><strong class="launch-name">진행 현황</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#finance"><span class="launch-index">04 / FINANCE</span><strong class="launch-name">수입·지출 및 잔액</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#donors"><span class="launch-index">05 / SUPPORTERS</span><strong class="launch-name">후원자 명단</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rights"><span class="launch-index">06 / MEMBER RIGHTS</span><strong class="launch-name">조합원 권리</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#committee"><span class="launch-index">07 / PEOPLE</span><strong class="launch-name">비대위 소개</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rules"><span class="launch-index">08 / REFERENCE</span><strong class="launch-name">정관·선거관리규정</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card launch-card--legal" href="#lawfirm"><span class="launch-index">09 / LEGAL PARTNER</span><strong class="launch-name">법무법인 지산앤파트너스 · 법률자문</strong><span class="launch-arrow" aria-hidden="true">↗</span></a></div><p class="launch-foot">TAKEOVER PROCESS · SONGrIM 03</p></div></section>
+<section id="home-menu" aria-label="전체 메뉴"><div class="container"><div class="launch-head"><div><div class="eyebrow">EXPLORE / CONTENTS</div><h2>송림3지구의 기록을<br>분야별로 확인하세요.</h2></div><p>필요한 내용을 선택해서 확인할 수 있습니다. 모바일에서는 아래로 스크롤해 전체 내용을 순서대로 볼 수 있습니다.</p></div><div class="launch-grid"><a class="launch-card" href="#about"><span class="launch-index">01 / INTRODUCTION</span><strong class="launch-name">소개·비대위</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#roadmap"><span class="launch-index">02 / ROADMAP</span><strong class="launch-name">선거 로드맵</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#progress"><span class="launch-index">03 / UPDATES</span><strong class="launch-name">진행 현황</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#finance"><span class="launch-index">04 / FINANCE</span><strong class="launch-name">수입·지출 및 잔액</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#donors"><span class="launch-index">05 / SUPPORTERS</span><strong class="launch-name">후원자 명단</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rights"><span class="launch-index">06 / MEMBER RIGHTS</span><strong class="launch-name">조합원 권리</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rules"><span class="launch-index">07 / REFERENCE</span><strong class="launch-name">정관·선거관리규정</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card launch-card--legal" href="#lawfirm"><span class="launch-index">08 / LEGAL PARTNER</span><strong class="launch-name">법무법인 지산앤파트너스 · 법률자문</strong><span class="launch-arrow" aria-hidden="true">↗</span></a></div><p class="launch-foot">TAKEOVER PROCESS · SONGrIM 03</p></div></section>
 <section id="about" class="statement"><div class="container reveal"><div class="eyebrow">WHY WE ARE HERE</div><h2><span class="statement-line">누군가를 비난하기 위해서가 아니라,</span><span class="statement-line">조합의 미래를 조합원 스스로 결정하기 위해.</span></h2><p id="mission"></p><div class="statement-figures" aria-label="2026년 10월 19일 기준 주요 현황">
 <div class="figure"><span class="stat-label">해임총회 가결일</span><strong class="stat-value stat-date">2026.10.16</strong><p class="stat-description">조합장 1명 및 이사 4명·감사 1명 해임 가결</p></div>
 <div class="figure"><span class="stat-label">조합원 수</span><strong class="stat-value">433<small>명</small></strong><p class="stat-description">2026년 10월 19일 기준</p></div>
 <div class="figure"><span class="stat-label">해임안 찬성률</span><strong class="stat-value">99.21<small>%</small></strong><p class="stat-description">찬성 252표 · 반대 2표 / 찬반 유효표 254표 기준</p></div>
+</div>
+<div class="about-team">
+ <div class="about-team-head"><div><div class="eyebrow">THE COMMITTEE / PEOPLE</div><h3>송림3지구 비상대책위원회</h3></div><p>2026년 9월 17일 설립 · 함께 움직이는 비대위 운영진</p></div>
+ <div id="people" class="committee-grid reveal"></div>
+ <div id="committeeMore" class="committee-more reveal"></div>
 </div></div></section>
 
 <!-- 전용 안내 섹션: 업로드된 3개 인포그래픽의 핵심 개념을 HTML/CSS 도식으로 재구성 -->
@@ -604,9 +697,36 @@ footer.footer{background:#101010}
 
 <section id="progress" class="section tint"><div class="container progress-area"><div class="progress-main reveal"><div class="eyebrow">02 / PROGRESS</div><h2>우리가 걸어온<br>과정의 기록.</h2><p>중요 의결과 실행 결과를 사실에 따라 기록합니다. 예정된 업무는 계획으로, 완료된 업무는 완료일과 업데이트일을 구분합니다.</p><div class="progress-meta"><div><strong id="progressCounter">—</strong><br><span>총 공개 기록</span></div><div><strong id="progressUpdated">—</strong><br><span>최종 수정일</span></div></div></div><div class="reveal"><div class="eyebrow" style="margin-bottom:23px">ACTIVITY LOG</div><div id="historyList" class="update-list"></div></div></div></section>
 
-<section id="finance" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">03 / TRANSPARENCY</div><h2>수입과 지출,<br>숫자로 투명하게.</h2></div><p>확정된 회계 기록을 기준으로 수입·지출·잔액을 표시하며, 예정 지출은 잔액에서 차감하지 않습니다.</p></div><div class="finance-top reveal"><div class="balance"><small id="balanceTitle">현재 집계 잔액</small><strong id="balanceTotal">—</strong><span class="pill" id="balanceState">기초금액 검증 전</span></div><div class="finance-metrics"><div><span>총수입(기초금액 포함)</span><strong id="incomeTotal">—</strong></div><div><span>확정 지출</span><strong id="expenseTotal">—</strong></div></div></div><div class="tabs reveal"><button class="on" data-finance-tab="all">전체 거래</button><button data-finance-tab="income">수입</button><button data-finance-tab="expense">지출</button></div><div class="reveal"><table class="ledger"><thead><tr><th>일자</th><th>구분</th><th>내역</th><th>금액</th></tr></thead><tbody id="ledgerRows"></tbody></table><div id="financeNote" class="finance-caution"></div></div></div></section>
+<section id="finance" class="section">
+<div class="container">
+ <div class="section-head reveal">
+  <div><div class="eyebrow">03 / TRANSPARENCY</div><h2>수입과 지출,<br>숫자로 투명하게.</h2></div>
+  <p>2026년 9월부터 10월 19일까지의 출금 내역을 한눈에 볼 수 있도록 정리했습니다. 상계·정산 내역은 실제 사용액과 구분합니다.</p>
+ </div>
+ <div class="finance-top reveal">
+  <div class="balance"><small id="balanceTitle">현재 잔액 · 2026.10.19 기준</small><strong id="balanceTotal">—</strong><span class="pill" id="balanceState">집계 확인 중</span></div>
+  <div class="finance-metrics"><div><span>실입금액</span><strong id="incomeTotal">—</strong></div><div><span>실제 사용액</span><strong id="expenseTotal">—</strong></div></div>
+ </div>
+ <div class="finance-bridge reveal" aria-label="입출금 및 상계처리 집계">
+   <div><small>입금액 · 총액</small><strong id="grossIncome">—</strong></div>
+   <div><small>상계처리 · 입출금 합계</small><strong id="offsetAmount">—</strong></div>
+   <div><small>전체 출금액</small><strong id="grossWithdrawal">—</strong></div>
+ </div>
+ <div class="cost-analysis reveal">
+   <div class="cost-head"><div><div class="eyebrow">COST BREAKDOWN / 2026.09 – 10.19</div><h3>2026년 9월부터 사용내역</h3></div><p>실제 사용액에 포함된 비용만 집계 · 전체 기간 합산</p></div>
+   <div class="cost-visual">
+     <div class="cost-chart" id="expenseDonut" aria-label="항목별 지출 비중 도넛 차트"></div>
+     <div class="cost-legend" id="expenseBreakdown"></div>
+   </div>
+   <div class="cost-foot">오입금 환불 1,200,000원 및 별도 정산 항목 20,000원은 계좌 출금 내역에 포함되지만, 실제 사용액과 차트에서는 제외했습니다.</div>
+ </div>
+ <div class="expense-head reveal"><div><div class="eyebrow">TRANSACTION RECORDS</div><h3>전체 거래내역</h3></div><span id="transactionCount">지출 37건</span></div>
+ <div class="tabs reveal"><button class="on" data-finance-tab="all">전체 거래</button><button data-finance-tab="income">입금</button><button data-finance-tab="expense">출금</button></div>
+ <div class="reveal ledger-scroll"><table class="ledger"><thead><tr><th>날짜</th><th>계정</th><th>내용</th><th>금액</th></tr></thead><tbody id="ledgerRows"></tbody></table></div>
+ <div id="financeNote" class="finance-caution reveal"></div>
+</div></section>
 
-<section id="donors" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">04 / SUPPORTERS</div><h2>함께해 주신<br>소중한 마음.</h2></div><p>후원은 자율적·자발적으로만 진행합니다.<br>후원자 이름은 공개 동의가 확인된 경우에만 표시합니다.</p></div><div class="donor-hero reveal"><div><span class="eyebrow" style="margin-bottom:14px">THANK YOU</span><strong id="donorCount">후원자 명단 준비 중</strong></div><p id="donationPolicy"></p></div><div class="donation-account reveal" aria-label="후원 계좌 안내"><div><p class="account-eyebrow">후원 계좌</p><dl><dt>예금주</dt><dd>이인섭</dd><dt>계좌번호</dt><dd id="donationAccountNumber">010-9929-1171</dd></dl></div><button type="button" class="copy-account" id="copyDonationAccount" aria-label="후원 계좌번호 복사">계좌번호 복사</button></div><div id="donorGrid" class="donor-grid reveal"></div></div></section>
+<section id="donors" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">04 / SUPPORTERS</div><h2>함께해 주신<br>소중한 마음.</h2></div><p>후원은 자율적·자발적으로만 진행합니다.<br>후원자 성함은 식별을 줄이기 위해 첫 글자와 마지막 글자만 표시합니다.</p></div><div class="donor-hero reveal"><div><span class="eyebrow" style="margin-bottom:14px">THANK YOU</span><strong id="donorCount">후원자 명단 준비 중</strong></div><p id="donationPolicy"></p></div><div class="donation-account reveal" aria-label="후원 계좌 안내"><div><p class="account-eyebrow">후원 계좌</p><dl><dt>예금주</dt><dd>이인섭</dd><dt>계좌번호</dt><dd id="donationAccountNumber">010-9929-1171</dd></dl></div><button type="button" class="copy-account" id="copyDonationAccount" aria-label="후원 계좌번호 복사">계좌번호 복사</button></div><div class="donor-directory-wrap reveal"><div class="donor-directory-head"><h3>후원자 명단 <span>총 179명</span></h3><p>표시용 익명화 명칭 · 중복 표기는 원본 뒤 숫자 유지</p></div><div id="donorGrid" class="donor-grid donor-directory"></div></div></div></section>
 
 <section id="rights" class="section rights-section">
  <div class="container">
@@ -685,9 +805,6 @@ footer.footer{background:#101010}
   </article>
  </div>
 </section>
-
-
-<section id="committee" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">05 / PEOPLE</div><h2>비대위를<br>소개합니다.</h2></div><p>송림3지구 조합 비상대책위원회<br>2026년 9월 17일 설립 · 핵심 인물 4인</p></div><div id="people" class="committee-grid reveal"></div><div id="committeeMore" class="committee-more reveal"></div></div></section>
 
 
 <section id="lawfirm" class="section" aria-labelledby="law-firm-heading">
@@ -830,7 +947,7 @@ window.SONGRIM_FINANCE = {
   updatedAt:"2026-10-19"
 };
 </script>
-<script src="./data.js?v=20261019-committee-v3"></script><script src="./updates.js?v=20261019-final"></script><script src="./finance.js?v=20261019-fix2"></script><script>
+<script src="./data.js?v=20261019-committee-v3"></script><script src="./updates.js?v=20261019-final"></script><script src="./finance.js?v=20261019-finance-179-ledger-v1"></script><script>
 (()=>{'use strict';const d=window.SONGRIM,f=window.SONGRIM_FINANCE;if(!d||!f){document.body.insertAdjacentHTML('afterbegin','<p style="padding:20px">데이터 파일을 불러오지 못했습니다.</p>');return}const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const kr=n=>new Intl.NumberFormat('ko-KR').format(n),won=n=>kr(n)+'원';const dateString=t=>{const a=String(t).split('-');return Number(a[1])+'/'+Number(a[2])};const dateAdd=(start,days)=>{const x=new Date(start+'T12:00:00Z');x.setUTCDate(x.getUTCDate()+days);return x.toISOString().slice(0,10)};const range=s=>{const start=dateAdd(d.info.startDate,(s.weekStart-1)*7),end=dateAdd(d.info.startDate,s.weekEnd*7-1);return dateString(start)+'–'+dateString(end)+' 예상'};const statLabel=s=>({planned:'예정',active:'진행 중',done:'완료',hold:'보류'})[s]||'예정';$('#heroDate').textContent='PLANNING UPDATED — '+d.info.lastReviewed;$('#mission').textContent=d.info.mission;
 let selected='s1',selectedWeek=null;
 function renderRoad(){
@@ -851,10 +968,39 @@ people.innerHTML=d.committee.map((p,i)=>'<article class="committee-card"><div cl
 const more=d.committeeMore||{operations:17,note:"그 외 17명의 운영진이 함께 참여하고 있습니다."};
 $('#committeeMore').innerHTML='<div class="member-overview"><span class="member-overview-label">OPERATIONS</span><strong>운영진 '+esc(more.operations)+'명</strong><p>'+esc(more.note)+'</p></div>'+(more.realEstateAdvisor?'<div class="member-overview ancillary"><span class="member-overview-label">RELATED ADVISORY</span><strong>부동산 자문 · '+esc(more.realEstateAdvisor)+'</strong><p>'+esc(more.realEstateAdvisorAffiliation||'')+'</p></div>':'');
 $('#ruleList').innerHTML=d.references.map((r,i)=>'<div class="rule"><button aria-expanded="false" aria-controls="r'+i+'"><div><div class="small">'+esc(r.category)+' · '+esc(r.article)+'</div><h3>'+esc(r.title)+'</h3></div><span class="plus">＋</span></button><div id="r'+i+'" class="rule-detail">'+esc(r.summary)+'</div></div>').join('');$$('.rule button').forEach(b=>b.onclick=()=>{const root=b.parentElement;root.classList.toggle('open');b.setAttribute('aria-expanded',root.classList.contains('open'))});
-const transactions=f.transactions.filter(x=>typeof x.amount==='number'&&x.amount>=0),approved=transactions.filter(x=>x.status==='확정'),extraIn=approved.filter(x=>x.type==='income').reduce((sum,x)=>sum+x.amount,0),spent=approved.filter(x=>x.type==='expense').reduce((sum,x)=>sum+x.amount,0),opening=f.base.amount,totalIncome=opening+extraIn,balance=totalIncome-spent;
-$('#balanceTotal').textContent=f.base.verified?won(balance):'정산 중';$('#incomeTotal').textContent=won(totalIncome);$('#expenseTotal').textContent=f.base.verified?won(spent):'집계 대기';$('#balanceState').textContent=f.base.verified?'기초금액 확인됨':'기초금액 검증 전';$('#financeNote').textContent=(f.base.verified?'기초잔액 확인됨. ':'주의: 기초 집계금액 미검증. ')+f.base.note+' / '+f.policy.accounting;
-let financeTab='all';function showLedger(){$$('[data-finance-tab]').forEach(b=>b.classList.toggle('on',b.dataset.financeTab===financeTab));const rows=[{date:f.base.date,type:'income',description:f.base.label+' · '+(f.base.verified?'확정':'미검증'),amount:opening,isBase:true},...transactions].filter(x=>financeTab==='all'||x.type===financeTab).sort((a,b)=>String(b.date).localeCompare(String(a.date)));$('#ledgerRows').innerHTML=rows.length?rows.map(x=>'<tr><td>'+esc(x.date)+'</td><td>'+((x.type==='income')?'수입':'지출')+'</td><td>'+esc(x.description)+(x.status&&x.status!=='확정'?' (미확정)':'')+'</td><td class="amount '+(x.type==='expense'?'neg':'')+'">'+(x.type==='expense'?'−':'+')+won(x.amount)+'</td></tr>').join(''):'<tr><td colspan="4" class="quiet">등록된 거래 내역이 없습니다.</td></tr>'}$$('[data-finance-tab]').forEach(b=>b.onclick=()=>{financeTab=b.dataset.financeTab;showLedger()});showLedger();
-const donors=f.donors.filter(x=>x.publicName&&x.amount>=0),dn=f.donors.length;$('#donorCount').textContent=dn?'후원 '+kr(dn)+'건 기록':'후원자 명단 준비 중';$('#donationPolicy').textContent=f.policy.donation+' '+f.policy.disclosure;$('#donorGrid').innerHTML=donors.length?donors.map(x=>'<article class="donor-card"><span class="name">'+esc(x.consented?x.publicName:'익명')+'</span><div><small>'+esc(x.date)+'</small><div class="amount">'+won(x.amount)+'</div></div></article>').join(''):'<p class="quiet">공개된 후원자 명단이 아직 없습니다. 동의 확인 후 순차적으로 업데이트 예정.</p>';
+
+const transactions=f.transactions.filter(x=>typeof x.amount==='number'&&x.amount>=0);
+const financeCash=f.cash||{}, grossWithdrawal=transactions.filter(x=>x.type==='expense').reduce((s,x)=>s+x.amount,0);
+const grossIncome=financeCash.grossIncome??f.base.amount;
+const actualSpend=transactions.filter(x=>x.treatment==='operating'&&x.type==='expense').reduce((s,x)=>s+x.amount,0);
+const balance=grossIncome-grossWithdrawal,netIncome=grossIncome-(financeCash.refund||0);
+$('#balanceTotal').textContent=won(balance);$('#incomeTotal').textContent=won(netIncome);$('#expenseTotal').textContent=won(actualSpend);
+$('#grossIncome').textContent=won(grossIncome);$('#offsetAmount').textContent=won(financeCash.offsetDoubleSided||0);
+$('#grossWithdrawal').textContent=won(grossWithdrawal);
+$('#balanceState').textContent=(balance===financeCash.reportedBalance&&actualSpend===financeCash.actualSpend)?'입출금 대조 완료':'집계 차이 확인 필요';
+$('#transactionCount').textContent='출금 '+transactions.filter(x=>x.type==='expense').length+'건';
+$('#financeNote').textContent='현재 잔액 = 입금액 '+won(grossIncome)+' − 전체 출금액 '+won(grossWithdrawal)+' = '+won(balance)+'. 실입금액은 오입금 환불 '+won(financeCash.refund||0)+' 차감 후 '+won(netIncome)+'. 실제 사용액은 전체 출금 중 환불 '+won(financeCash.refund||0)+' 및 청약19001(56) '+won(financeCash.otherAdjustment||0)+' 제외 후 '+won(actualSpend)+'. 상계처리 '+won(financeCash.offsetDoubleSided||0)+'은 입금·출금 양방향 기준이며 재차 차감하지 않습니다.';
+const spendColors=['#86BC25','#B9E76A','#608F14','#D7E3C1','#8EAE61','#829181','#D9D9D9'];
+const groups=new Map();
+for(const t of transactions.filter(x=>x.type==='expense'&&x.treatment==='operating'))groups.set(t.group||t.category,(groups.get(t.group||t.category)||0)+t.amount);
+const breakdown=[...groups.entries()].sort((a,b)=>b[1]-a[1]);
+const svgC=2*Math.PI*101;let offset=0;
+const slices=breakdown.map(([name,amt],i)=>{const part=amt/actualSpend,seg=svgC*part,ret='<circle cx="160" cy="160" r="101" fill="none" stroke="'+spendColors[i%spendColors.length]+'" stroke-width="57" stroke-dasharray="'+seg.toFixed(4)+' '+(svgC-seg).toFixed(4)+'" stroke-dashoffset="'+(-offset).toFixed(4)+'" transform="rotate(-90 160 160)"><title>'+esc(name)+' · '+won(amt)+' · '+(100*part).toFixed(2)+'%</title></circle>';offset+=seg;return ret}).join('');
+$('#expenseDonut').innerHTML=actualSpend?'<svg viewBox="0 0 320 320" role="img" aria-label="법무비, 총회비 등 사용액의 항목별 비중"><circle cx="160" cy="160" r="101" fill="none" stroke="#333" stroke-width="57"/>'+slices+'<text x="160" y="145" text-anchor="middle" fill="#bdbdbd" font-size="14" font-weight="500">실제 사용액</text><text x="160" y="177" text-anchor="middle" fill="#fff" font-size="25" font-weight="750">'+kr(actualSpend)+'</text><text x="160" y="199" text-anchor="middle" fill="#a6d879" font-size="12">KRW · 100%</text></svg>':'<p>등록된 비용이 없습니다.</p>';
+$('#expenseBreakdown').innerHTML=breakdown.map(([name,amt],i)=>'<div class="cost-legend-row"><span class="cost-dot" style="background:'+spendColors[i%spendColors.length]+'"></span><span class="cost-cat">'+esc(name)+'</span><b class="cost-money">'+won(amt)+'</b><strong class="cost-pct">'+(100*amt/actualSpend).toFixed(2)+'%</strong></div>').join('');
+let financeTab='all';
+function showLedger(){
+ $$('[data-finance-tab]').forEach(b=>b.classList.toggle('on',b.dataset.financeTab===financeTab));
+ const baseRow={date:f.base.date,type:'income',category:'후원금',description:'입금액 누계 · 2026.09~10.19',amount:grossIncome,isBase:true};
+ const rows=[baseRow,...transactions].filter(x=>financeTab==='all'||x.type===financeTab).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+ $('#ledgerRows').innerHTML=rows.length?rows.map(x=>'<tr><td>'+esc(x.date)+'</td><td><span class="ledger-cat">'+esc(x.category||'—')+'</span></td><td>'+esc(x.description)+(x.treatment==='refund'?' <span class="ledger-exception">환불·상계</span>':x.treatment==='adjustment'?' <span class="ledger-exception">별도정산</span>':'')+'</td><td class="amount '+(x.type==='expense'?'neg':'')+'">'+(x.type==='expense'?'−':'+')+won(x.amount)+'</td></tr>').join(''):'<tr><td colspan="4" class="quiet">등록된 거래가 없습니다.</td></tr>';
+}
+$$('[data-finance-tab]').forEach(b=>b.onclick=()=>{financeTab=b.dataset.financeTab;showLedger()});showLedger();
+
+const supporters=f.donors.filter(x=>typeof x.publicName==='string'&&x.publicName.trim());
+$('#donorCount').textContent='총 '+kr(financeCash.donorCount||supporters.length)+'명';
+$('#donationPolicy').textContent=f.policy.donation;
+$('#donorGrid').innerHTML=supporters.length?supporters.map((x,i)=>'<div class="donor-name"><span class="donor-num">'+String(i+1).padStart(3,'0')+'</span><strong>'+esc(x.publicName)+'</strong></div>').join(''):'<p class="quiet">후원자 명단 준비 중</p>';
 const seed=d.history;
 function historyRow(x){return '<article class="update-item"><div class="update-head"><h3>'+esc(x.title)+'</h3><span class="date">'+esc(x.date)+'</span></div><p>'+esc(x.detail)+'</p><div class="sm">'+(x.status==='done'?'확정 완료':x.status==='planned'?'예정':'진행 기록')+'</div></article>';}
 function renderHistory(){const merged=[...seed].sort((a,b)=>b.date.localeCompare(a.date));$('#historyList').innerHTML=merged.length?merged.slice(0,12).map(historyRow).join(''):'<p class="quiet">공개된 진행 기록이 없습니다.</p>';$('#progressCounter').textContent=merged.length+'건';$('#progressUpdated').textContent=merged[0]?.date||'—'}
@@ -865,9 +1011,9 @@ const io=('IntersectionObserver'in window)?new IntersectionObserver(entries=>ent
 })();
 </script><script>
 (function(){
-const ids=['about','roadmap','progress','finance','donors','rights','committee','lawfirm','rules'];
+const ids=['about','roadmap','progress','finance','donors','rights','lawfirm','rules'];
 const mq=window.matchMedia('(max-width:970px)');
-const target=()=>decodeURIComponent(location.hash.slice(1));
+const target=()=>{const id=decodeURIComponent(location.hash.slice(1));return id==='committee'?'about':id};
 function display(){
 const id=target(),desktop=!mq.matches,valid=ids.includes(id);
 document.body.classList.toggle('is-detail',desktop&&valid);
