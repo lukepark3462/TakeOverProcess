@@ -868,8 +868,24 @@ header .menu-toggle{flex:0 0 auto}
   header .header-identity .logo{font-size:14.5px!important}
 }
 </style>
+<style id="header-overlap-dots-v19">
+header .logo,header .logo:visited{color:#FFFFFF!important}
+header .logo .logo-dots{
+ position:relative;display:inline-block;box-sizing:border-box;
+ width:.75em;height:.69em;margin-left:.07em;vertical-align:-.02em;
+}
+header .logo .logo-dots::before,
+header .logo .logo-dots::after{
+ content:"";position:absolute;display:block;width:.46em;height:.46em;
+ border-radius:50%;bottom:.05em;box-sizing:border-box;
+}
+header .logo .logo-dots::before{left:0;background:#86BC25}
+header .logo .logo-dots::after{
+ left:.135em;background:#64B6E7;opacity:.94;
+}
+</style>
 </head><body>
-<header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<span class="logo-dot" aria-hidden="true">.</span></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
+<header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<span class="logo-dots" aria-hidden="true"></span></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
 <section id="home" class="hero container">
 
@@ -898,7 +914,7 @@ header .menu-toggle{flex:0 0 auto}
 <div class="hero-bottom-wrap"><div class="hero-bottom"><p class="hero-description"><span>송림3지구 조합 비상대책위원회는 그동안의 문제점부터 집행부 재구성, 그리고 조합원의 권리와 궁금증까지 여기서 모두 답변해드립니다.</span><span>투명하고 철저한 관리로 여러분에게 신뢰를 드리는 조합을 만들어가겠습니다.</span></p><a href="#home-menu" class="rounded-arrow" aria-label="아래로 스크롤">↓</a></div><div class="hero-meta"><span>조합원과 함께하는 정상화</span></div></div>
 </section>
 
-<section id="home-menu" aria-label="전체 메뉴"><div class="container"><div class="launch-head"><div><div class="eyebrow">송림3지구 · 공식 기록</div><h2>송림3지구의 기록을<br>분야별로 확인하세요.</h2></div><p>필요한 내용을 선택해서 확인할 수 있습니다. 모바일에서는 아래로 스크롤해 전체 내용을 순서대로 볼 수 있습니다.</p></div><div class="launch-grid"><a class="launch-card" href="#about"><span class="launch-index">01 · 송림3지구</span><strong class="launch-name">비대위소개</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#roadmap"><span class="launch-index">02 · 송림3지구</span><strong class="launch-name">임원선출계획</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#finance"><span class="launch-index">03 · 송림3지구</span><strong class="launch-name">재무현황</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#past"><span class="launch-index">04 · 송림3지구</span><strong class="launch-name">과거 사건</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#lawfirm"><span class="launch-index">05 · 송림3지구</span><strong class="launch-name">법률자문</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rights"><span class="launch-index">06 · 송림3지구</span><strong class="launch-name">조합원 권리</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#donors"><span class="launch-index">07 · 송림3지구</span><strong class="launch-name">후원자</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rules"><span class="launch-index">08 · 송림3지구</span><strong class="launch-name">정관·규정</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#contact"><span class="launch-index">09 · 송림3지구</span><strong class="launch-name">연락처</strong><span class="launch-arrow" aria-hidden="true">↗</span></a></div><p class="launch-foot">송림3지구 정상화 기록</p></div></section>
+<section id="home-menu" aria-label="전체 메뉴"><div class="container"><div class="launch-head"><div><div class="eyebrow">홈페이지 분야별 안내</div><h2>송림3지구의 기록을<br>분야별로 확인하세요.</h2></div><p>필요한 내용을 선택해서 확인할 수 있습니다. 모바일에서는 아래로 스크롤해 전체 내용을 순서대로 볼 수 있습니다.</p></div><div class="launch-grid"><a class="launch-card" href="#about"><span class="launch-index">01 · 송림3지구</span><strong class="launch-name">비대위소개</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#roadmap"><span class="launch-index">02 · 송림3지구</span><strong class="launch-name">임원선출계획</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#finance"><span class="launch-index">03 · 송림3지구</span><strong class="launch-name">재무현황</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#past"><span class="launch-index">04 · 송림3지구</span><strong class="launch-name">과거 사건</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#lawfirm"><span class="launch-index">05 · 송림3지구</span><strong class="launch-name">법률자문</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rights"><span class="launch-index">06 · 송림3지구</span><strong class="launch-name">조합원 권리</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#donors"><span class="launch-index">07 · 송림3지구</span><strong class="launch-name">후원자</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rules"><span class="launch-index">08 · 송림3지구</span><strong class="launch-name">정관·규정</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#contact"><span class="launch-index">09 · 송림3지구</span><strong class="launch-name">연락처</strong><span class="launch-arrow" aria-hidden="true">↗</span></a></div><p class="launch-foot">송림3지구 정상화 기록</p></div></section>
 
 <section id="about" class="statement"><div class="container reveal"><div class="eyebrow">01 · 비대위소개</div><h2><span class="statement-line">누군가를 비난하기 위해서가 아니라,</span><span class="statement-line">조합의 미래를 조합원 스스로 결정하기 위해.</span></h2><p id="mission"></p><div class="statement-figures" aria-label="2026년 10월 19일 기준 주요 현황">
 <div class="figure"><span class="stat-label">해임총회 가결일</span><strong class="stat-value stat-date">2026.10.16</strong><p class="stat-description">조합장 1명 및 이사 4명·감사 1명 해임 가결</p></div>
@@ -906,12 +922,12 @@ header .menu-toggle{flex:0 0 auto}
 <div class="figure"><span class="stat-label">해임안 찬성률</span><strong class="stat-value">99.21<small>%</small></strong><p class="stat-description">찬성 252표 · 반대 2표 / 찬반 유효표 254표 기준</p></div>
 </div>
 <div class="committee-history reveal" aria-labelledby="committeeHistoryTitle">
-<div class="committee-history-head"><div><div class="eyebrow">주요 일정과 변화</div><h3 id="committeeHistoryTitle">현재진행상황</h3></div><p>2026년 9월 17일 설립 이후의 주요 과정을 날짜별로 정리했습니다.</p></div>
+<div class="committee-history-head"><div><div class="eyebrow">정상화 추진 경과</div><h3 id="committeeHistoryTitle">진행 상황</h3></div><p>2026년 9월 17일 설립 이후의 주요 과정을 날짜별로 정리했습니다.</p></div>
 <ol class="committee-timeline"><li class="committee-timeline-item"><time datetime="2026-09-17">2026.09.17</time><div><h4>비상대책위원회 설립</h4><p>조합원 비상대책위원회 설립총회 개최. 운영진 구성과 정상화 활동의 출발점.</p></div></li><li class="committee-timeline-item"><time datetime="2026-09-22">2026.09.22</time><div><h4>조합 측 총회 최초 공지</h4><p>조합 측 총회 일정 공지. 이후 양측 총회 일정과 장소를 둘러싼 쟁점이 발생.</p></div></li><li class="committee-timeline-item"><time datetime="2026-09-23">2026.09.23</time><div><h4>비대위 해임총회 공지</h4><p>비대위가 임원 해임총회 일정 및 절차를 조합원에게 안내.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-01">2026.10.01</time><div><h4>해임총회 준비 본격화</h4><p>조합원 서면결의·참석 안내와 총회 현장 준비 등 실무 절차 진행.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-02">2026.10.02</time><div><h4>조합 측 총회 일정 변경 공지</h4><p>조합 측이 10월 16일 총회 개최를 공지하면서 일정 중복 논란 심화.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-15">2026.10.15</time><div><h4>조합 측 총회 개최금지 가처분 승소</h4><p>조합 측 총회 개최의 적법성이 문제 된 가처분 사건에서 비대위 측 법적 대응이 성공해 조합 측 총회가 취소되었습니다. <strong>총회 개최의 위법성 관련 쟁점이 법원에서 다뤄졌으며</strong>, 가처분 결정은 본안의 위법 확정판결과는 구별됩니다.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-16">2026.10.16</time><div><h4>비대위 임원 해임총회 가결</h4><p>조합장 1명, 이사 4명, 감사 1명 해임안 가결. 찬성 252표·반대 2표.</p></div></li></ol>
 
 </div>
 <div class="about-team">
- <div class="about-team-head"><div><div class="eyebrow">송림3지구 · 공식 기록</div><h3>송림3지구 비상대책위원회</h3></div><p>2026년 9월 17일 설립 · 조합 정상화를 함께 추진하는 운영진</p></div>
+ <div class="about-team-head"><div><div class="eyebrow">비대위 구성과 운영진</div><h3>송림3지구 비상대책위원회</h3></div><p>2026년 9월 17일 설립 · 조합 정상화를 함께 추진하는 운영진</p></div>
  <div id="people" class="committee-grid reveal"></div>
  <div id="committeeMore" class="committee-more reveal"></div>
 </div></div></section>
@@ -933,14 +949,14 @@ header .menu-toggle{flex:0 0 auto}
   <div class="finance-metrics finance-equation"><div><span>수입</span><strong id="incomeTotal">—</strong></div><div><span>지출</span><strong id="expenseTotal">—</strong></div></div>
  </div>
  <div class="cost-analysis reveal">
-   <div class="cost-head"><div><div class="eyebrow">송림3지구 · 공식 기록</div><h3>2026년 9월부터 사용내역</h3></div><p>실제 사용액에 포함된 비용만 집계 · 전체 기간 합산</p></div>
+   <div class="cost-head"><div><div class="eyebrow">재무현황 · 지출 항목별 분석</div><h3>2026년 9월부터 사용내역</h3></div><p>실제 사용액에 포함된 비용만 집계 · 전체 기간 합산</p></div>
    <div class="cost-visual">
      <div class="cost-chart" id="expenseDonut" aria-label="항목별 지출 비중 도넛 차트"></div>
      <div class="cost-legend" id="expenseBreakdown"></div>
    </div>
    <div class="cost-foot">비용 비중은 실제 사용액을 기준으로 집계했습니다.</div>
  </div>
- <div class="expense-head reveal"><div><div class="eyebrow">송림3지구 · 공식 기록</div><h3>전체 거래내역</h3></div><p class="table-caption" id="transactionCount">월별 지출 합계 · 클릭하여 세부 계정 펼쳐보기</p></div>
+ <div class="expense-head reveal"><div><div class="eyebrow">재무현황 · 전체 거래내역</div><h3>전체 거래내역</h3></div><p class="table-caption" id="transactionCount">월별 지출 합계 · 클릭하여 세부 계정 펼쳐보기</p></div>
  <div class="reveal monthly-scroll"><table class="ledger monthly-ledger" aria-label="2026년 9월부터 월별·계정별 입출금 요약 및 누적 잔액"><thead><tr><th scope="col">월</th><th scope="col">계정</th><th scope="col">내용에 대한 설명</th><th scope="col">금액</th><th scope="col">잔액</th></tr></thead><tbody id="ledgerRows"></tbody><tfoot><tr><td colspan="4">최종 잔액 <span class="ledger-summary-note">2026년 10월 19일 기준</span></td><td class="balance-cell" id="ledgerFinalBalance">—</td></tr></tfoot></table></div>
 </div></section>
 
@@ -963,7 +979,7 @@ header .menu-toggle{flex:0 0 auto}
 <section id="lawfirm" class="section" aria-labelledby="law-firm-heading">
 <div class="container">
  <div class="law-head reveal">
-  <div><div class="eyebrow">송림3지구 · 공식 기록</div><h2 id="law-firm-heading">정상화의 과정에<br>법률적 전문성을 더합니다.</h2></div>
+  <div><div class="eyebrow">법률자문 · 협력기관</div><h2 id="law-firm-heading">정상화의 과정에<br>법률적 전문성을 더합니다.</h2></div>
   <p>송림3지구 비대위의 법률자문 협력기관과 담당 변호사, 건설·부동산 분야 업무를 소개합니다. 법률 지원 내용은 공식 공개 자료에 확인되는 범위로 정리했습니다.</p>
  </div>
  <div class="law-panel reveal">
@@ -977,7 +993,7 @@ header .menu-toggle{flex:0 0 auto}
   <div class="law-field"><span class="law-field-num">04 / 소송·분쟁</span><b>하자·민사 분쟁</b></div>
  </div>
  <div class="law-person-title reveal">
-  <div><div class="eyebrow">송림3지구 · 공식 기록</div><h3>함께하는 변호사를 소개합니다.</h3></div>
+  <div><div class="eyebrow">법률자문 · 담당 변호사</div><h3>함께하는 변호사를 소개합니다.</h3></div>
   <p>공식 홈페이지에 송림3지구재개발조합 비상대책위원회 자문변호사로 소개된 담당 변호사입니다.</p>
  </div>
  <article class="law-profile reveal">
@@ -1000,7 +1016,7 @@ header .menu-toggle{flex:0 0 auto}
 <section id="rights" class="section rights-section">
  <div class="container">
   <div class="section-head reveal rights-lead">
-   <div><div class="eyebrow">송림3지구 · 공식 기록</div><h2>조합원 권리 안내</h2></div>
+   <div><div class="eyebrow">조합원 권리 · 공사비·유치권·분담금</div><h2>조합원 권리 안내</h2></div>
    <p>공사비 채무의 상대방, 입주 후 점유와 유치권, 개인별 2,500만원 납부 요구를 세 가지 주제로 정리했습니다.</p>
   </div>
   <div class="rights-principle reveal">
