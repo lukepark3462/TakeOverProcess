@@ -637,3 +637,233 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
   #home .hero-bottom p{font-size:12.5px!important}
   #home .hero-meta{font-size:10px!important}
 }
+
+/* v14 — rights: section number/topic leads smaller explainer title, 1–3 consistently. */
+#rights .rights-chapter-heading{align-items:center}
+#rights .rights-chapter-num{
+ display:flex!important;align-items:center;
+ font-family:'Noto Sans KR','DM Sans',sans-serif!important;
+ font-size:clamp(31px,3.25vw,43px)!important;
+ font-weight:800!important;
+ letter-spacing:-.055em!important;
+ line-height:1.35!important;
+ color:#d6edb7!important;
+ margin:0 0 8px;
+ word-break:keep-all;
+ overflow-wrap:anywhere;
+}
+#rights .rights-chapter-num:before{
+ content:"";display:block;width:5px;min-width:5px;height:clamp(26px,2.8vw,37px);
+ border:0;border-radius:5px;background:var(--sg-brand-green);margin-right:12px;
+}
+#rights .rights-chapter-heading h3{
+ font-size:clamp(21px,1.95vw,29px)!important;
+ line-height:1.48!important;
+ letter-spacing:-.035em!important;
+ font-weight:610!important;
+ color:#f3f4f2!important;
+ margin:0 0 6px!important;
+ word-break:keep-all;
+}
+#rights .rights-chapter-heading>p{font-size:14px!important;max-width:370px;line-height:1.8}
+#rights .rights-chapter-heading>div{min-width:0;flex:1 1 auto}
+#rights .rights-payment-grid{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch;
+}
+#rights .rights-payment-panel{
+ min-width:0;display:flex;flex-direction:column;align-items:flex-start;
+ gap:15px;padding:clamp(22px,3vw,36px);border:1px solid #49534d;border-radius:9px;
+ background:linear-gradient(155deg,#212926 0%,#1d211e 100%);
+}
+#rights .rights-payment-panel.payment-contact{
+ border-color:#557244;background:linear-gradient(155deg,#252d21,#1d241c);
+}
+#rights .payment-eyebrow{
+ display:inline-block;color:var(--sg-teal-light);font-size:14px;line-height:1.4;font-weight:750;
+}
+#rights .payment-contact .payment-eyebrow{color:var(--sg-green-light)}
+#rights .payment-amount{
+ display:block;color:#fff;font-size:clamp(56px,6vw,89px);letter-spacing:-.07em;line-height:1.08;
+ font-weight:850;font-variant-numeric:tabular-nums;
+}
+#rights .payment-amount span{
+ font-size:clamp(25px,2.3vw,34px);font-weight:750;letter-spacing:-.035em;margin-left:7px;
+}
+#rights .rights-payment-panel h4{
+ font-size:clamp(21px,2vw,29px);font-weight:760;letter-spacing:-.04em;line-height:1.4;
+ color:#f4f6f3;margin:0;
+}
+#rights .rights-payment-panel p{font-size:15px;color:#cbd2ca;line-height:1.9;margin:0}
+#rights .payment-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:8px;width:100%}
+#rights .payment-actions a{
+ text-decoration:none;display:inline-flex;align-items:center;justify-content:center;
+ padding:13px 17px;border-radius:6px;font-size:14px;font-weight:800;line-height:1.5;
+}
+#rights .payment-actions .payment-primary{color:#121d0c;background:var(--sg-brand-green)}
+#rights .payment-actions .payment-secondary{color:#edf2eb;border:1px solid #68885b;background:#202921}
+#rights .payment-actions a:focus-visible{outline:2px solid #f2f6ed;outline-offset:3px}
+#rights .rights-ribbon b{font-size:16px!important;letter-spacing:-.025em;color:var(--sg-green-light)!important}
+#rights .rights-ribbon span{font-size:15px!important;line-height:1.85}
+#rights .rights-note{font-size:14px!important;line-height:1.85!important}
+@media(max-width:1050px){
+ #rights .rights-chapter-heading{display:block}
+ #rights .rights-chapter-heading>p{max-width:760px;padding-top:9px}
+}
+@media(max-width:760px){
+ #rights .rights-chapter-num{font-size:clamp(26px,6.7vw,36px)!important;line-height:1.35!important}
+ #rights .rights-chapter-num:before{width:4px;min-width:4px;height:31px;margin-right:10px}
+ #rights .rights-chapter-heading h3{font-size:clamp(19px,4.8vw,25px)!important;line-height:1.55!important}
+ #rights .rights-payment-grid{grid-template-columns:1fr;gap:12px}
+ #rights .rights-payment-panel{padding:22px}
+ #rights .payment-amount{font-size:62px}
+ #rights .rights-payment-panel p{font-size:14px}
+ #rights .payment-actions a{flex:1 1 auto}
+}
+/* v14 — slightly distinguished charcoal hero tone, two desktop lines without clipping. */
+#home.hero{
+ background:linear-gradient(118deg,#111413 0%,#151917 55%,#1a1f1b 100%)!important;
+ border-bottom:1px solid rgba(255,255,255,.10);
+}
+#home .hero-bottom p.hero-description{
+ width:100%!important;max-width:none!important;min-width:0!important;flex:1 1 auto;
+ font-size:clamp(12.5px,1vw,17px)!important;line-height:1.85!important;
+ letter-spacing:-.035em!important;color:#eff2ed!important;margin:0;
+}
+#home .hero-description>span{display:block}
+@media(min-width:1101px){
+ #home .hero-description>span{white-space:nowrap}
+}
+@media(max-width:1100px){
+ #home .hero-bottom p.hero-description{font-size:clamp(13px,1.4vw,16px)!important}
+ #home .hero-description>span{white-space:normal;overflow-wrap:break-word;word-break:keep-all}
+}
+@media(max-width:760px){
+ #home .hero-bottom p.hero-description{font-size:14px!important;line-height:1.8!important}
+}
+
+/* v14b — Korean word wrapping: keep each eojeol (space-separated unit) intact. */
+body,main,footer.footer{word-break:keep-all}
+main p,main h1,main h2,main h3,main h4,main li,
+main dt,main dd,main span,main strong,
+footer.footer h2,footer.footer p{
+ word-break:keep-all;
+ overflow-wrap:break-word;
+}
+/* Election roadmap: increase compact detail text for desktop/mobile reading. */
+#roadmap #scenarioDesc{
+ font-size:clamp(16px,1.25vw,19px)!important;
+ line-height:1.95!important;
+ letter-spacing:-.025em;
+ color:#e1e7e1!important;
+ word-break:keep-all;
+}
+#roadmap .road-steps .road-step .details p{
+ font-size:clamp(15px,1.13vw,17px)!important;
+ line-height:1.9!important;
+ color:#e0e1dd!important;
+ word-break:keep-all;
+}
+#roadmap .road-steps .road-step .small,
+#roadmap .road-steps .road-step .week .small{
+ font-size:clamp(14px,.99vw,16px)!important;
+ line-height:1.75!important;
+ color:#cbd3cb!important;
+ word-break:keep-all;
+}
+#roadmap .road-steps .road-step .week{
+ font-size:clamp(15px,1.1vw,17px)!important;
+ line-height:1.7!important;
+ color:var(--sg-green-light)!important;
+}
+#roadmap .road-steps .road-step h3{
+ font-size:clamp(21px,1.8vw,27px)!important;
+ line-height:1.5!important;
+ word-break:keep-all;
+}
+#roadmap .road-steps .road-step .status{
+ font-size:13px!important;
+ padding:7px 11px!important;
+}
+#roadmap .segment button{font-size:clamp(14px,1vw,16px)!important;line-height:1.6!important}
+#roadmap #weekAxis button{font-size:clamp(13px,1vw,15px)!important;min-height:43px}
+#roadmap .road-metrics span{font-size:14px!important}
+#roadmap .road-metrics strong{font-size:clamp(30px,3vw,39px)!important}
+#roadmap .road-overview .road-metrics strong,
+#roadmap .road-overview .road-metrics #scenarioWeeks{
+ color:var(--sg-data-blue-light)!important; /* Colorstream #64B6E7 */
+}
+#roadmap .track-footer{font-size:14px!important;line-height:1.75!important}
+/* Footer: a single heading line and a single explanatory line on desktop. */
+footer.footer .footer-grid{
+ display:block!important;
+ width:100%;
+ min-width:0;
+ padding-bottom:35px!important;
+}
+footer.footer .footer-grid h2{
+ display:block;
+ margin:0 0 12px!important;
+ font-size:clamp(30px,3vw,40px)!important;
+ font-weight:720!important;
+ letter-spacing:-.06em;
+ line-height:1.36!important;
+ color:#f8f8f8!important;
+}
+footer.footer .footer-grid p{
+ display:block;
+ max-width:none!important;
+ width:100%;
+ font-size:clamp(16px,1.35vw,19px)!important;
+ line-height:1.8!important;
+ color:#cfd7d1!important;
+ margin:0!important;
+ letter-spacing:-.02em;
+}
+@media(min-width:1101px){
+ footer.footer .footer-grid h2,
+ footer.footer .footer-grid p{white-space:nowrap}
+}
+@media(max-width:1100px){
+ footer.footer .footer-grid h2,
+ footer.footer .footer-grid p{white-space:normal}
+}
+@media(max-width:760px){
+ #roadmap #scenarioDesc{font-size:16px!important}
+ #roadmap .road-steps .road-step .details p{font-size:15px!important}
+ #roadmap .road-steps .road-step .small{font-size:14px!important}
+ #roadmap .road-steps .road-step .week{font-size:15px!important}
+ #roadmap .road-steps .road-step h3{font-size:21px!important}
+ #roadmap #weekAxis button{min-height:42px;font-size:12px!important}
+ footer.footer .footer-grid h2{font-size:clamp(27px,6.3vw,34px)!important}
+ footer.footer .footer-grid p{font-size:16px!important}
+}
+/* Donors: participant count and thanks share the same visual heading. */
+#donors .donor-hero .donor-participation-line{
+ display:flex;align-items:baseline;gap:12px 26px;flex-wrap:wrap;
+ max-width:100%;
+}
+#donors .donor-hero .donor-participation-line>strong{
+ font-size:clamp(29px,3.15vw,45px)!important;
+ font-weight:800;white-space:nowrap;line-height:1.32;
+ color:#f3f6ef!important;
+}
+#donors .donor-hero .donor-thanks{
+ font-size:clamp(20px,2.05vw,29px)!important;
+ font-weight:750;color:var(--sg-green-light)!important;
+ letter-spacing:-.04em;line-height:1.55;
+ word-break:keep-all;
+}
+#donors .donation-hope .donation-policy{
+ margin:13px 0 0!important;
+ font-size:clamp(15px,1.28vw,18px)!important;
+ line-height:1.85!important;
+ color:#d9e2d5!important;
+ max-width:unset;
+ word-break:keep-all;
+}
+@media(max-width:760px){
+ #donors .donor-hero .donor-participation-line{gap:5px}
+ #donors .donor-hero .donor-participation-line>strong{font-size:30px!important}
+ #donors .donor-hero .donor-thanks{font-size:19px!important}
+ #donors .donation-hope .donation-policy{font-size:15px!important}
+}
