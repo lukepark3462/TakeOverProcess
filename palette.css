@@ -96,3 +96,95 @@ body.is-detail main{background:var(--sg-black)}
 #finance table.monthly-ledger td:nth-child(4){line-height:1.7}
 #finance table.monthly-ledger tfoot td:nth-child(1){padding-left:0}
 #finance table.monthly-ledger tfoot td:nth-child(2){color:var(--sg-brand-green)}
+
+/* 2026-10-19: simplified cash overview & expandable monthly expenditure */
+#finance .finance-top-simple{
+ display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+ align-items:end;gap:35px;
+ margin-bottom:56px;padding:42px 0 40px;border-bottom:1px solid #454545;
+}
+#finance .finance-top-simple .balance strong{
+ color:var(--sg-brand-green);font-variant-numeric:tabular-nums;
+ font-size:clamp(37px,4.5vw,65px);letter-spacing:-.06em
+}
+#finance .finance-top-simple .finance-formula{
+ color:var(--sg-neutral-gray-light);font-size:13px;line-height:1.8;margin-top:15px
+}
+#finance .finance-equation{
+ display:grid;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr);
+ align-items:center;gap:18px
+}
+#finance .finance-equation>div:not(.finance-minus){
+ min-width:0;padding-left:21px;border-left:1px solid #494949;
+}
+#finance .finance-equation span{color:var(--sg-neutral-gray-light);font-size:12px}
+#finance .finance-equation strong{
+ display:block;margin-top:7px;color:#fff;white-space:nowrap;
+ font-size:clamp(18px,2.15vw,30px);font-variant-numeric:tabular-nums;
+ letter-spacing:-.055em;font-weight:620
+}
+#finance .finance-equation>div:first-child strong{color:var(--sg-brand-green)}
+#finance .finance-equation>div:last-child strong{color:#f08b83}
+#finance .finance-minus{
+ font-size:23px;color:var(--sg-neutral-gray-mid);font-weight:400;
+ text-align:center
+}
+#finance .monthly-ledger .month-total-row{
+ background:#1b1b1b;border-top:1px solid #5d5d5d
+}
+#finance .monthly-ledger .month-total-row .account{
+ color:#fff;font-weight:760
+}
+#finance .monthly-ledger .month-total-row .balance-cell{
+ color:var(--sg-data-blue-light)
+}
+#finance .monthly-ledger .month-total-row:last-of-type .balance-cell{
+ color:var(--sg-green-light)
+}
+#finance .monthly-ledger .ledger-expand{
+ display:inline-flex;align-items:center;gap:7px;
+ margin-left:7px;padding:7px 12px;
+ border:1px solid #5a7650;border-radius:5px;
+ background:#252f21;color:var(--sg-green-light);
+ font-size:12px;font-weight:750;white-space:nowrap;
+ transition:background .18s,border-color .18s
+}
+#finance .monthly-ledger .ledger-expand:hover,
+#finance .monthly-ledger .ledger-expand:focus-visible{
+ background:#354c26;border-color:var(--sg-brand-green)
+}
+#finance .monthly-ledger .expand-arrow{font-size:16px;line-height:1}
+#finance .monthly-ledger tr[hidden]{display:none!important}
+#finance .monthly-ledger .monthly-detail-row{
+ background:#121713
+}
+#finance .monthly-ledger .monthly-detail-row td{
+ border-bottom:1px solid #273127;padding-top:13px;padding-bottom:13px
+}
+#finance .monthly-ledger .monthly-detail-row .account{
+ font-size:12px;color:#c9c9c9;font-weight:540
+}
+#finance .monthly-ledger .monthly-detail-row .description{
+ color:#a9b8a9;font-size:12px
+}
+#finance .monthly-ledger .month-detail-label{
+ color:var(--sg-strategic-teal);text-align:center;font-size:15px
+}
+#finance .monthly-ledger .monthly-detail-row .amount-number{
+ font-size:13px;color:#d78d88
+}
+#finance .monthly-ledger .monthly-detail-row .balance-cell{
+ font-size:12px;color:#a4cce0
+}
+#finance .monthly-ledger .monthly-detail-row td:first-child{padding-left:13px}
+@media(max-width:1050px){
+ #finance .finance-top-simple{grid-template-columns:1fr;gap:25px}
+ #finance .finance-equation{max-width:580px}
+}
+@media(max-width:700px){
+ #finance .finance-top-simple{padding:29px 0 28px;margin-bottom:35px}
+ #finance .finance-equation{gap:9px;grid-template-columns:minmax(0,1fr) 12px minmax(0,1fr)}
+ #finance .finance-equation>div:not(.finance-minus){padding-left:10px}
+ #finance .finance-equation strong{font-size:clamp(15px,4.7vw,23px)}
+ #finance .monthly-ledger .ledger-expand{margin-left:0;margin-top:5px;padding:6px 9px}
+}
