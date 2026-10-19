@@ -793,6 +793,13 @@ header nav{gap:clamp(8px,1.3vw,20px)}header nav a{font-size:clamp(11px,.9vw,14px
 
 #lawfirm .law-member-text .law-mini-link{display:inline-block;margin-top:12px;font-size:12px;color:#bbdf8e;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:760px){#lawfirm .law-member-text h4{font-size:21px}#lawfirm .law-member-text p{font-size:12px;line-height:1.65}}
+
+/* 충분한 화면 너비에서는 조합원 권리 등 모든 메뉴를 상단에 직접 표시 */
+@media (min-width:1101px) and (max-width:1330px){
+ header .menu-toggle{display:none}
+ header nav{display:flex;position:static;padding:0;border:0;background:transparent;flex-direction:row;align-items:center;gap:clamp(7px,.8vw,11px);max-height:none;overflow:visible}
+ header nav a{font-size:13px}
+}
 </style><link rel="stylesheet" href="./palette.css?v=20261019-photo-final-v5"></head><body>
 <header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">소개</a><a href="#rights">조합원 권리</a><a href="#progress">진행 현황</a><a href="#roadmap">임원선출계획</a><a href="#finance">재정현황</a><a href="#donors">후원자</a><a href="#lawfirm">법률자문</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
