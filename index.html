@@ -318,6 +318,248 @@ footer.footer{background:#101010;color:#fff}
  #home-menu .launch-card .launch-name{font-size:clamp(16px,4.4vw,19px)}
 }
 
+
+/* ═══════════════════════════════════════════════════════════════════
+   GLOBAL DARK THEME v2 — applies to ALL detail views, not only hero.
+   ═══════════════════════════════════════════════════════════════════ */
+:root{
+ --bg:#101010;--ink:#f5f5f5;--muted:#b9b9b9;
+ --line:#393939;--green:#86BC25;--green-light:#26331e;
+ --sand:#202020;--rust:#eda28f;
+}
+html,body,main{background:#101010;color:#f5f5f5}
+body.is-detail main{background:#101010;color:#f5f5f5}
+#about, #roadmap, #progress, #finance, #donors, #rights, #committee, #lawfirm, #rules{
+ background:#101010!important;color:#f5f5f5!important;
+}
+#progress, #donors, #rights, #lawfirm{background:#181818!important}
+#home,#home-menu{color:#f5f5f5}
+header{background:#101010;color:#fff}
+.detail-back{color:#e5e5e5;border-color:#656565}
+.detail-back:hover{background:#252525;color:#86BC25}
+.section-head h2,.law-head h2,.rights-chapter-heading h3,
+.law-person-title h3,.rights-chapter h4{color:#f8f8f8}
+.section-head p,.law-head p,.law-person-title p,.rights-chapter-heading>p,
+#rules .more-info,.track-footer,.law-source,.law-head .eyebrow{color:#bdbdbd}
+.section-head p{padding-top:6px;max-width:450px}
+.section-head{align-items:end}
+.eyebrow{color:#a9d66a}
+.eyebrow:before{background:#86BC25}
+.section p,.section .small,.section .quiet{color:#c4c4c4}
+a:focus-visible,button:focus-visible{outline-color:#86BC25}
+
+/* about: labels before values, clear rule under each record */
+#about.statement{padding:62px 0 64px;background:#101010}
+#about .container{max-width:1240px}
+#about.statement h2{margin:27px 0 24px;line-height:1.38;overflow:visible}
+#about.statement p#mission{max-width:930px;line-height:1.9;color:#c7c7c7}
+#about .statement-figures{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:30px;margin-top:43px;border-top:1px solid #555;
+}
+#about .statement-figures .figure{
+ min-width:0;display:flex;flex-direction:column;align-items:flex-start;
+ padding:22px 0 23px;margin:0;gap:9px;
+ border-bottom:1px solid #545454;overflow:visible;
+}
+#about .figure .stat-label{display:block;font-size:13px;color:#b4d978;font-weight:730;line-height:1.55;letter-spacing:-.01em}
+#about .figure .stat-value{display:block;font-size:clamp(36px,4.1vw,57px);letter-spacing:-.058em;font-weight:550;line-height:1.18;color:#f7f7f7;white-space:nowrap;max-width:none}
+#about .figure .stat-date{font-size:clamp(27px,3.4vw,48px);letter-spacing:-.065em}
+#about .figure .stat-value small{font-size:.47em;color:#86BC25;letter-spacing:-.02em;padding-left:4px}
+#about .figure .stat-description{font-size:12px;line-height:1.65;color:#c4c4c4;margin-top:auto}
+#about .figure .stat-description::first-letter{text-transform:none}
+
+/* more compact footer: avoid a visually empty oversized lower block */
+.footer{background:#101010;color:#f5f5f5;padding:33px 0 18px;border-top:1px solid #303030}
+.footer-grid{padding-bottom:29px;gap:35px;align-items:center}
+.footer-grid h2{font-size:clamp(24px,2.7vw,37px);line-height:1.37;color:#fff}
+.footer-grid p,.footer p{color:#bdbdbd;font-size:12px}
+.footer-bottom{color:#989898;border-color:#383838}
+
+/* roadmap: switcher, week axis, steps and labels */
+#roadmap .segment{background:#242424;border:1px solid #363636}
+#roadmap .segment button{color:#c4c4c4}
+#roadmap .segment button.on{background:#86BC25;color:#141414;box-shadow:none}
+#roadmap .road-overview{border-top-color:#555;border-bottom-color:#393939}
+#roadmap .road-overview h3,#roadmap .road-metrics strong,#roadmap .road-step h3{color:#f3f3f3}
+#roadmap .road-overview p,#roadmap .road-metrics span,
+#roadmap .road-step p,#roadmap .road-step .small,
+#roadmap .track-footer{color:#bdbdbd}
+#roadmap #weekAxis>button{background:#242424;border:1px solid #454545;color:#d9d9d9}
+#roadmap #weekAxis>button.chosen{background:#86BC25;border-color:#86BC25;color:#151515;font-weight:800}
+#roadmap .road-step{border-bottom:1px solid #343434}
+#roadmap .road-step .week{color:#add273}
+#roadmap .road-step.week-selected{background:#273021;border-left:4px solid #86BC25}
+#roadmap .road-step.week-muted{opacity:.38}
+#roadmap .road-step.task-active{background:#1e261a}
+#roadmap .road-step.task-done{background:#202020;color:#a5a5a5;filter:none;opacity:.66}
+#roadmap .road-step.task-done h3{color:#c9c9c9}
+#roadmap .status{border-color:#565656;color:#cfcfcf;background:#292929}
+#roadmap .status.done,#roadmap .road-step.task-done .status{background:#35462e;border-color:#547b38;color:#c3ea8b}
+#roadmap .status.active,#roadmap .road-step.task-active .status{background:#334321;border-color:#709d3a;color:#d6f9a0}
+#roadmap .status.hold{color:#e5aca2;border-color:#9d6a63}
+#roadmap .road-axis{border-bottom:1px solid #383838}
+
+/* progress and journal */
+#progress .progress-main h2{color:#fff}
+#progress .progress-main p,#progress .progress-meta span,
+#progress .update-item p,#progress .update-head .date,
+#progress .update-item .sm{color:#bdbdbd}
+#progress .progress-meta{border-color:#4a4a4a}
+#progress .update-list{border-color:#505050}
+#progress .update-item{border-bottom-color:#383838}
+#progress .update-head h3{color:#f2f2f2}
+#progress .progress-meta strong{color:#fff}
+
+/* finance and donation: dark accounting surfaces */
+#finance .finance-top{border-top:1px solid #555}
+#finance .balance strong{color:#86BC25}
+#finance .balance small,#finance .finance-metrics span{color:#bcbcbc}
+#finance .finance-metrics strong{color:#fff}
+#finance .finance-metrics div{border-color:#424242}
+#finance .pill{background:#262626;color:#d7d7d7;border-color:#484848}
+#finance .tabs{border-color:#494949}
+#finance .tabs button{color:#c2c2c2}
+#finance .tabs button.on{color:#86BC25;border-color:#86BC25}
+#finance .ledger th{color:#b9b9b9;border-color:#4d4d4d}
+#finance .ledger td{color:#ededed;border-color:#393939}
+#finance .ledger .amount{color:#bfe18e}
+#finance .ledger .neg{color:#eeb1a2}
+#finance .finance-caution{background:#242424;border:1px solid #393939;color:#c6c6c6}
+#finance .quiet{color:#bcbcbc}
+#donors .donor-hero{border-color:#555}
+#donors .donor-hero strong{color:#f7f7f7}
+#donors .donor-hero p{color:#c1c1c1}
+#donors .donation-account{background:#242424;border-color:#464646;box-shadow:0 12px 30px #0003;color:#eee}
+#donors .donation-account .account-eyebrow{color:#accf7d}
+#donors .donation-account dt{color:#bfbfbf}
+#donors .donation-account dd{color:#fff}
+#donors .donation-account .copy-account{background:#86BC25;border-color:#86BC25;color:#151515}
+#donors .donation-account .copy-account:hover{background:#a7d657}
+#donors .donor-card{background:#222;border-color:#414141;color:#fff}
+#donors .donor-card small{color:#bdbdbd}
+#donors .donor-card .amount{color:#b9e881}
+
+/* member rights: all infographic components are legible on charcoal */
+#rights .rights-principle{border-color:#494949}
+#rights .rights-principle strong{color:#eff6e6}
+#rights .rights-principle span,#rights .rights-chapter-num,
+#rights .rights-case .case-index{color:#a8d473}
+#rights .rights-principle p,#rights .rights-chapter-heading>p{color:#c4c4c4}
+#rights .rights-chapter+.rights-chapter{border-color:#393939}
+#rights .rights-actor,#rights .rights-phase,#rights .rights-case{
+ background:#252525;border:1px solid #474747;color:#f6f6f6;
+}
+#rights .rights-actor.union,#rights .rights-phase.after,
+#rights .rights-case:first-child{background:#242d21;border-color:#536846}
+#rights .rights-actor .rlabel,#rights .rights-phase .phase-top small{color:#add47d}
+#rights .rights-actor strong,#rights .rights-phase .phase-top strong,
+#rights .rights-case h4{color:#f6f6f6}
+#rights .rights-actor small,#rights .rights-phase li,
+#rights .rights-case .rstep,#rights .rights-case p{color:#c6c6c6}
+#rights .rights-connector span,#rights .rights-mini{color:#c9c9c9}
+#rights .rights-noauto{background:#262626;color:#f2f2f2;border:1px solid #444}
+#rights .rights-noauto .short,#rights .rights-noauto .short b{color:#f4f4f4}
+#rights .rights-noauto .individual{border-color:#454545}
+#rights .rights-noauto .individual strong{color:#fff}
+#rights .rights-noauto .individual small{color:#c4c4c4}
+#rights .rights-phase .phase-top{border-color:#4c4c4c}
+#rights .rights-transition,#rights .rights-transition span{color:#afd47c}
+#rights .rights-case .rstep span{color:#bde589;border-color:#789e55}
+#rights .rights-ribbon{background:#101010;border:1px solid #404040;color:#f2f2f2}
+#rights .rights-ribbon b{color:#a9d773}
+#rights .rights-note{background:#242424;border-left-color:#86BC25;color:#d0d0d0}
+#rights .rights-note b,#rights .rights-note a{color:#bce47f}
+
+/* committee and profiles */
+#committee .committee-grid{background:#474747;border-color:#474747}
+#committee .committee-card{background:#242424;color:#fff}
+#committee .committee-card .role{color:#a6d16d}
+#committee .committee-card h3{color:#fff}
+#committee .committee-card p,.committee-card .profile-affiliation,
+#committee .career-list li,.committee-card .profile-pending span{color:#c5c5c5}
+#committee .career-list li,#committee .profile-pending i{border-color:#4c4c4c}
+#committee .member-overview,#committee .member-overview.ancillary{
+ background:#252525;border:1px solid #434343;color:#f4f4f4;
+}
+#committee .member-overview strong{color:#f6f6f6}
+#committee .member-overview-label{color:#b1d781}
+#committee .member-overview p{color:#c7c7c7}
+
+/* law firm - main panel, lawyer cards, credentials */
+#lawfirm .law-head{border-color:#5c5c5c}
+#lawfirm .law-head p,#lawfirm .law-person-title p{color:#c7c7c7}
+#lawfirm .law-panel{background:#101010;border:1px solid #454545;color:#fff}
+#lawfirm .law-panel p{color:#dedede}
+#lawfirm .law-panel .law-panel-right span{color:#e1e1e1}
+#lawfirm .law-field{background:#252525;border-color:#474747}
+#lawfirm .law-field .law-field-num{color:#a8d673}
+#lawfirm .law-field b{color:#f5f5f5}
+#lawfirm .law-profile{background:#242424;border-color:#454545}
+#lawfirm .law-profile-content h4{color:#fff}
+#lawfirm .law-profile-tag{color:#b0dc79}
+#lawfirm .law-profile-content p{color:#cecece}
+#lawfirm .law-profile-list{color:#d0d0d0}
+#lawfirm .law-profile-list span{border-color:#484848}
+#lawfirm .law-career{border-color:#505050}
+#lawfirm .law-career h5{color:#fff}
+#lawfirm .law-career div{border-color:#444}
+#lawfirm .law-career div span{color:#b6dd83}
+#lawfirm .law-career div b,#lawfirm .law-career p{color:#d5d5d5}
+#lawfirm .law-member{background:#242424;border-color:#474747}
+#lawfirm .law-member-portrait{background:linear-gradient(140deg,#303030,#515151)}
+#lawfirm .law-member-text h4{color:#fff}
+#lawfirm .law-member-text .r{color:#aed67c}
+#lawfirm .law-member-text p{color:#c9c9c9}
+#lawfirm .law-link{color:#d0eca5;border-color:#689746}
+#lawfirm .law-link:hover{background:#343d2c}
+#lawfirm .law-link.primary{background:#86BC25;border-color:#86BC25;color:#151515}
+#lawfirm .law-link.primary:hover{background:#addc64}
+#lawfirm .law-source,#lawfirm .law-source a{color:#bebebe}
+
+/* reference / accordion */
+#rules .rules-list{border-top-color:#555}
+#rules .rule{border-bottom-color:#3e3e3e}
+#rules .rule button{color:#f5f5f5}
+#rules .rule button:hover h3{color:#bde98b}
+#rules .rule .small{color:#b0d47c}
+#rules .rule .plus{color:#86BC25}
+#rules .rule-detail{color:#c7c7c7}
+#rules .more-info{color:#b9b9b9}
+
+/* footers, responsive headings and spacing */
+footer.footer{background:#101010}
+@media(min-width:971px){
+ #about.statement .container{width:min(1240px,89%)}
+ #about.statement h2{font-size:clamp(25px,3.05vw,44px)}
+ #about.statement h2 .statement-line{white-space:nowrap}
+}
+@media(max-width:970px){
+ #about .statement-figures{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+ #about .figure .stat-date{font-size:clamp(23px,3.6vw,34px)}
+ #about .figure .stat-value{font-size:clamp(30px,5.3vw,46px)}
+ #about .figure .stat-description{font-size:11px}
+}
+@media(max-width:700px){
+ #about.statement{padding:48px 0 55px}
+ #about .statement-figures{grid-template-columns:1fr;gap:0;margin-top:30px}
+ #about .statement-figures .figure{padding:18px 0;gap:7px}
+ #about .figure .stat-date{font-size:clamp(30px,8vw,40px)}
+ #about .figure .stat-value{font-size:clamp(35px,9vw,49px)}
+ #about .figure .stat-description{font-size:12px}
+ #about.statement h2 .statement-line{white-space:normal}
+ .footer-grid{display:block;padding-bottom:23px}
+ .footer-grid h2{font-size:26px;margin-bottom:11px}
+ .footer{padding:27px 0 18px}
+ #roadmap .road-step.week-selected{padding-left:10px}
+ #rights .rights-actor.union,#rights .rights-phase.after{background:#252e21}
+ #lawfirm .law-member{background:#252525}
+}
+@media print{
+ html,body{background:#fff!important;color:#000!important}
+ main>section{background:#fff!important;color:#000!important}
+}
+
 </style></head><body>
 <header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav><a href="#about">소개</a><a href="#rights">조합원 권리</a><a href="#roadmap">실행 로드맵</a><a href="#progress">진행 현황</a><a href="#finance">재정 현황</a><a href="#donors">후원자</a><a href="#committee">비대위</a><a href="#lawfirm">법률자문</a><a href="#rules">정관·규정</a></nav></header>
 <main>
@@ -348,7 +590,11 @@ footer.footer{background:#101010;color:#fff}
 <div class="hero-bottom-wrap"><div class="hero-bottom"><p>송림3지구 조합 비상대책위원회<br>집행부 재구성과 조합 정상화를 위한 모든 주요 과정과 재정 기록을 한곳에 모았습니다.</p><a href="#home-menu" class="rounded-arrow" aria-label="아래로 스크롤">↓</a></div><div class="hero-meta"><span>REBUILDING TRUST, TOGETHER</span><span id="heroDate">UPDATED — 2026.10.19</span></div></div>
 </section>
 <section id="home-menu" aria-label="전체 메뉴"><div class="container"><div class="launch-head"><div><div class="eyebrow">EXPLORE / CONTENTS</div><h2>송림3지구의 기록을<br>분야별로 확인하세요.</h2></div><p>필요한 내용을 선택해서 확인할 수 있습니다. 모바일에서는 아래로 스크롤해 전체 내용을 순서대로 볼 수 있습니다.</p></div><div class="launch-grid"><a class="launch-card" href="#about"><span class="launch-index">01 / INTRODUCTION</span><strong class="launch-name">비대위 설립 취지</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#roadmap"><span class="launch-index">02 / ROADMAP</span><strong class="launch-name">선거 로드맵</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#progress"><span class="launch-index">03 / UPDATES</span><strong class="launch-name">진행 현황</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#finance"><span class="launch-index">04 / FINANCE</span><strong class="launch-name">수입·지출 및 잔액</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#donors"><span class="launch-index">05 / SUPPORTERS</span><strong class="launch-name">후원자 명단</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rights"><span class="launch-index">06 / MEMBER RIGHTS</span><strong class="launch-name">조합원 권리</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#committee"><span class="launch-index">07 / PEOPLE</span><strong class="launch-name">비대위 소개</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rules"><span class="launch-index">08 / REFERENCE</span><strong class="launch-name">정관·선거관리규정</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card launch-card--legal" href="#lawfirm"><span class="launch-index">09 / LEGAL PARTNER</span><strong class="launch-name">법무법인 지산앤파트너스 · 법률자문</strong><span class="launch-arrow" aria-hidden="true">↗</span></a></div><p class="launch-foot">TAKEOVER PROCESS · SONGrIM 03</p></div></section>
-<section id="about" class="statement"><div class="container reveal"><div class="eyebrow">WHY WE ARE HERE</div><h2><span class="statement-line">누군가를 비난하기 위해서가 아니라,</span><span class="statement-line">조합의 미래를 조합원 스스로 결정하기 위해.</span></h2><p id="mission"></p><div class="statement-figures"><div class="figure"><strong>433</strong><span>조합원 수 · 10.19 기준</span></div><div class="figure"><strong>10.16</strong><span>해임총회 개최일</span></div><div class="figure"><strong>99.21<small>%</small></strong><span>해임안 찬성률 · 찬성 252 / 반대 2</span></div></div></div></section>
+<section id="about" class="statement"><div class="container reveal"><div class="eyebrow">WHY WE ARE HERE</div><h2><span class="statement-line">누군가를 비난하기 위해서가 아니라,</span><span class="statement-line">조합의 미래를 조합원 스스로 결정하기 위해.</span></h2><p id="mission"></p><div class="statement-figures" aria-label="2026년 10월 19일 기준 주요 현황">
+<div class="figure"><span class="stat-label">해임총회 가결일</span><strong class="stat-value stat-date">2026.10.16</strong><p class="stat-description">조합장 1명 및 이사 4명·감사 1명 해임 가결</p></div>
+<div class="figure"><span class="stat-label">조합원 수</span><strong class="stat-value">433<small>명</small></strong><p class="stat-description">2026년 10월 19일 기준</p></div>
+<div class="figure"><span class="stat-label">해임안 찬성률</span><strong class="stat-value">99.21<small>%</small></strong><p class="stat-description">찬성 252표 · 반대 2표 / 찬반 유효표 254표 기준</p></div>
+</div></div></section>
 
 <!-- 전용 안내 섹션: 업로드된 3개 인포그래픽의 핵심 개념을 HTML/CSS 도식으로 재구성 -->
 
