@@ -30,8 +30,8 @@ window.SONGRIM_FINANCE = {
     {
       "id": "tx-001",
       "date": "2026-09-14",
-      "category": "대관료",
-      "group": "대관료",
+      "category": "총회비",
+      "group": "총회비",
       "description": "대관료 0914 비대위 미팅",
       "amount": 95000,
       "type": "expense",
@@ -52,8 +52,8 @@ window.SONGRIM_FINANCE = {
     {
       "id": "tx-003",
       "date": "2026-09-14",
-      "category": "대관료",
-      "group": "대관료",
+      "category": "총회비",
+      "group": "총회비",
       "description": "대관료 0914 비대위 미팅",
       "amount": 20000,
       "type": "expense",
@@ -74,8 +74,8 @@ window.SONGRIM_FINANCE = {
     {
       "id": "tx-005",
       "date": "2026-09-28",
-      "category": "대관료",
-      "group": "대관료",
+      "category": "총회비",
+      "group": "총회비",
       "description": "대관료 1016 비대위 미팅",
       "amount": 115000,
       "type": "expense",
@@ -206,7 +206,7 @@ window.SONGRIM_FINANCE = {
     {
       "id": "tx-017",
       "date": "2026-10-06",
-      "category": "총회물품비",
+      "category": "총회비",
       "group": "총회비",
       "description": "총회 물품 구입",
       "amount": 10000,
@@ -316,8 +316,8 @@ window.SONGRIM_FINANCE = {
     {
       "id": "tx-027",
       "date": "2026-10-16",
-      "category": "식대",
-      "group": "식대",
+      "category": "기타",
+      "group": "기타",
       "description": "식대",
       "amount": 34000,
       "type": "expense",
@@ -327,8 +327,8 @@ window.SONGRIM_FINANCE = {
     {
       "id": "tx-028",
       "date": "2026-10-16",
-      "category": "선물·경조사",
-      "group": "선물·경조사",
+      "category": "기타",
+      "group": "기타",
       "description": "구청 선물 - 복지약국",
       "amount": 6500,
       "type": "expense",
@@ -382,8 +382,8 @@ window.SONGRIM_FINANCE = {
     {
       "id": "tx-033",
       "date": "2026-10-19",
-      "category": "식대",
-      "group": "식대",
+      "category": "기타",
+      "group": "기타",
       "description": "변호사 식대",
       "amount": 490000,
       "type": "expense",
@@ -1335,7 +1335,7 @@ window.SONGRIM_FINANCE = {
   "policy": {
     "disclosure": "후원자 성함은 첫 글자·끝 글자만 남겨 익명화하였으며, 별도 공개 동의 여부는 확인되지 않았습니다. 후원 금액은 개별 공개하지 않습니다.",
     "donation": "후원은 자발적·자율적으로만 진행하며, 금액 범위는 0원~300,000원. 미후원으로 인한 불이익 없음.",
-    "accounting": "총출금은 반환·정산성 거래까지 포함한 현금 유출. 파이차트에는 실사용 비용만 표시하며 오입금 환불 1,200,000원과 청약19001(56) 20,000원은 제외.",
+    "accounting": "2026.09~10.19 실제 사용내역 35건 기준. 오입금 환불 1,200,000원과 청약19001(56) 20,000원은 실사용 목록·지출 비중에서 제외하고 총출금액 산정에만 반영.",
     "proof": "2026.10.19 제공된 입·출금 집계 기준. 증빙 원본·계좌 내역과 별도 대조 가능.",
     "dateScope": "2026.09.14~2026.10.19"
   },
