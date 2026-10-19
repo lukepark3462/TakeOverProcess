@@ -529,3 +529,38 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
  #home h1{font-size:clamp(27px,7.1vw,34px)!important}
  #home .hero-shortcuts>a{gap:9px}
 }
+
+/* Landing banner v12 — almost-black base, discreet white architectural lines.
+   Keep Colorstream green as a small typographic accent only. */
+#home.hero{
+ background:linear-gradient(116deg,#080a09 0%,#0b0d0c 54%,#141715 100%)!important;
+}
+#home.hero:before{
+ content:"";position:absolute;inset:0 0 0 auto;width:65%;height:100%;z-index:0;pointer-events:none;
+ background:
+  linear-gradient(to bottom,transparent,rgba(255,255,255,.18),transparent) 79% 8%/1px 75% no-repeat,
+  linear-gradient(to right,transparent,rgba(255,255,255,.18),transparent) 60% 24%/74% 1px no-repeat,
+  linear-gradient(to right,transparent,rgba(255,255,255,.11),transparent) 74% 80%/67% 1px no-repeat;
+ opacity:.54;
+}
+#home.hero:after{background:linear-gradient(90deg,rgba(255,255,255,.42),transparent)!important;opacity:.5!important}
+#home .hero-architecture{
+ opacity:.21!important;filter:grayscale(1)!important;
+ mix-blend-mode:normal!important;z-index:0!important;
+}
+#home .hero-architecture g[stroke]{stroke:#e8ebe8!important}
+#home .hero-architecture rect[fill="url(#archTint)"],
+#home .hero-architecture ellipse[fill="url(#archGlow)"]{opacity:0!important}
+#home .hero-side-ornament{border-left-color:rgba(255,255,255,.21);border-bottom-color:rgba(255,255,255,.1)}
+#home .hero-side-ornament .ornament-circle{background:#e6ebe5!important;border-color:#e6ebe5!important;box-shadow:none!important}
+#home .hero-copy:before{background:linear-gradient(to bottom,rgba(255,255,255,.5),rgba(255,255,255,.2),transparent)!important}
+#home h1 .hero-line--muted{color:#f0f2ef!important}
+#home .hero-bottom-wrap{border-top-color:rgba(255,255,255,.18)!important}
+#home .hero-meta span:first-child:before{background:#e0e6df!important}
+#home .hero-kicker-rule{background:#e3e8e1!important;box-shadow:none!important}
+#home .hero-shortcuts{display:none!important}
+@media(max-width:760px){
+ #home.hero:before{width:88%;opacity:.24}
+ #home .hero-architecture{opacity:.13!important}
+ #home .hero-side-ornament{display:none!important}
+}
