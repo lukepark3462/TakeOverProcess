@@ -564,3 +564,76 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
  #home .hero-architecture{opacity:.13!important}
  #home .hero-side-ornament{display:none!important}
 }
+
+/* v13 — Full-bleed hero only; retain 1240px containment for all content sections.
+   Correct mobile overflow caused by .hero.container width and 100vw-translated SVG. */
+#home.hero.container{
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  padding-left:clamp(24px,5.5vw,112px)!important;
+  padding-right:clamp(24px,5.5vw,112px)!important;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+#home.hero .hero-architecture{
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:100%!important;
+  transform:none!important;
+}
+#home .hero-main,
+#home .hero-bottom-wrap,
+#home .hero-bottom,
+#home .hero-meta{
+  min-width:0;
+  max-width:100%;
+}
+#home .hero-main{width:100%;flex:1 1 auto}
+#home .hero-copy{width:100%;min-width:0;max-width:min(100%,1080px)!important}
+#home .hero-bottom-wrap{width:100%}
+#home .hero-bottom p{min-width:0;max-width:min(100%,920px);overflow-wrap:break-word}
+#home .hero-bottom .rounded-arrow{flex:0 0 auto}
+#home .hero-meta{flex-wrap:wrap;gap:5px 18px}
+@media(max-width:760px){
+  #home.hero.container{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+  #home .hero-main{width:100%;min-width:0;min-height:34svh}
+  #home .hero-copy{width:100%;max-width:100%!important;min-width:0}
+  #home h1{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    font-size:clamp(23px,6.7vw,42px)!important;
+    line-height:1.33!important;
+    word-break:keep-all;
+    overflow-wrap:anywhere;
+  }
+  #home h1 .hero-line{
+    display:block;
+    max-width:100%;
+    white-space:normal!important;
+    overflow-wrap:anywhere;
+    word-break:keep-all;
+  }
+  #home .hero-bottom{width:100%;min-width:0;gap:12px;align-items:flex-end}
+  #home .hero-bottom p{min-width:0;max-width:100%;font-size:clamp(13px,3.5vw,15px)!important}
+  #home .hero-architecture{left:0!important;transform:none!important;width:100%!important}
+  #home .hero-bottom-wrap{max-width:100%;min-width:0}
+}
+@media(max-width:360px){
+  #home.hero.container{padding-left:16px!important;padding-right:16px!important}
+  #home h1{font-size:clamp(22px,6.5vw,26px)!important}
+  #home .hero-bottom p{font-size:12.5px!important}
+  #home .hero-meta{font-size:10px!important}
+}
