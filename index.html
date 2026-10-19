@@ -844,7 +844,7 @@ header nav{gap:clamp(8px,1.3vw,20px)}header nav a{font-size:clamp(11px,.9vw,14px
 }
 }
 </style>
-<style id="header-green-20261019">header .logo,header .logo:visited{color:#FFFFFF!important}header .menu-toggle{color:#86BC25!important}header .logo .logo-dot{color:#86BC25!important;display:inline-block;font-size:1.65em;font-weight:900;letter-spacing:0;line-height:0;vertical-align:baseline;margin-left:1px}</style>
+<style id="header-green-20261019">header .logo,header .logo:visited{color:#FFFFFF!important}header .menu-toggle{color:#86BC25!important}</style>
 
 <style id="header-logo-size-20261019">
 header .header-identity{display:flex;align-items:center;min-width:0;flex:0 1 auto}
@@ -868,26 +868,7 @@ header .menu-toggle{flex:0 0 auto}
   header .header-identity .logo{font-size:14.5px!important}
 }
 </style>
-<style id="header-overlap-dots-v20">
-/* Subtle two-tone signature: transparent sky-blue behind the foreground green. */
-header .logo,header .logo:visited{color:#FFFFFF!important}
-header .logo .logo-dots{
- position:relative;display:inline-block;box-sizing:border-box;
- width:.69em;height:.66em;margin-left:.065em;vertical-align:-.015em;
-}
-header .logo .logo-dots::before,
-header .logo .logo-dots::after{
- content:"";position:absolute;display:block;
- width:.43em;height:.43em;border-radius:50%;box-sizing:border-box;
- bottom:.06em;
-}
-header .logo .logo-dots::before{
- left:.115em;background:#64B6E7;opacity:.46;z-index:1;
-}
-header .logo .logo-dots::after{
- left:0;background:#86BC25;z-index:2;
-}
-</style>
+
 <style id="home-menu-compact-grid-v21">
 /* Preserve card styling; move circled arrows to the right of titles. */
 #home-menu .launch-card{
@@ -938,8 +919,25 @@ header .logo .logo-dots::after{
  #home-menu .launch-card .launch-arrow{width:26px!important;height:26px!important;font-size:16px!important}
 }
 </style>
+<style id="header-ring-logo-v22">
+header .header-identity .logo{
+ display:inline-flex!important;align-items:center!important;gap:7px!important;
+ color:#fff!important;text-decoration:none;white-space:nowrap;
+}
+header .header-identity .logo-ring-mark{
+ display:block;width:37px;height:34px;object-fit:contain;
+ flex:0 0 auto;vertical-align:middle;
+}
+@media(max-width:700px){
+ header .header-identity .logo{gap:5px!important}
+ header .header-identity .logo-ring-mark{width:31px;height:29px}
+}
+@media(max-width:360px){
+ header .header-identity .logo-ring-mark{width:27px;height:25px}
+}
+</style>
 </head><body>
-<header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<span class="logo-dots" aria-hidden="true"></span></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
+<header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings.webp?v=20261020" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
 <section id="home" class="hero container">
 
