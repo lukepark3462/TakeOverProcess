@@ -24,17 +24,11 @@ window.SONGRIM = {
     {role:"위원장",name:"이인섭",description:"해천이앤씨 과장",career:[]},
     {role:"감사",name:"최천호",description:"",career:[]},
     {role:"위원",name:"송병일",description:"",career:[]},
-    {role:"자문위원",name:"박종인",description:"",career:[
-      "전 미국 Deloitte 회계법인 · 회계감사",
-      "전 한국 삼정KPMG 회계법인 · 인수합병",
-      "현 제약사 전략기획 및 투자심사팀"
-    ]}
+    {role:"회계감사 및 자문",name:"박종인",description:"회계감사·운영 관련 자문",career:[]}
   ],
   committeeMore:{
     operations:17,
-    note:"그 외 17명의 운영진이 함께 참여하고 있습니다.",
-    realEstateAdvisor:"정슬기",
-    realEstateAdvisorAffiliation:"삼정회계법인 · 부동산 자문"
+    note:"그 외 17명의 운영진이 함께 참여하고 있습니다."
   },
   scenarios:[
     {id:"s1",label:"시나리오 01",title:"김명숙 이사 사퇴",condition:"임원 전원 공석 · 조합원 소집청구 경로",weeks:"6–8주",summary:"조합원 연명 87명 → 대의원회 소집권 확보 → 선관위 구성 → 보궐선임 → 직무대행 체계 → 조합장 선출",signature:"조합원 87명 이상",directors:5,auditors:1,
