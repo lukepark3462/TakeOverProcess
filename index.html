@@ -809,7 +809,42 @@ header nav{gap:clamp(8px,1.3vw,20px)}header nav a{font-size:clamp(11px,.9vw,14px
   opacity:1;filter:none;image-rendering:auto;
 }
 @media(max-width:560px){#about .committee-grid img.committee-portrait{margin-left:0}}
-</style><link rel="stylesheet" href="./palette.css?v=20261019-one-line-summary-v18"></head><body>
+</style><link rel="stylesheet" href="./palette.css?v=20261019-one-line-summary-v18"><style id="summary-desktop-singleline-v18">
+/* On desktop keep four requested summaries on one line, independent of titles. */
+@media(min-width:1024px){
+#finance .section-head,#past .section-head,#rights .section-head.rights-lead{
+ display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:12px!important;
+}
+#finance .section-head>div,#past .section-head>div,#rights .section-head.rights-lead>div{
+ min-width:0;width:100%!important;
+}
+#finance .section-head>p,#past .section-head>p,#rights .section-head.rights-lead>p{
+ width:100%!important;max-width:none!important;min-width:0!important;
+ align-self:stretch!important;margin:0!important;padding:0!important;
+ font-size:clamp(12px,1.08vw,15px)!important;line-height:1.8!important;
+ white-space:nowrap!important;word-break:keep-all!important;
+}
+#rights .rights-chapter[aria-labelledby="rights-title-2"] .rights-chapter-heading{
+ display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:10px!important;
+}
+#rights .rights-chapter[aria-labelledby="rights-title-2"] .rights-chapter-heading>div{
+ width:100%!important;flex:none!important;
+}
+#rights .rights-chapter[aria-labelledby="rights-title-2"] .rights-chapter-heading>p{
+ width:100%!important;max-width:none!important;min-width:0!important;
+ align-self:stretch!important;padding:0!important;margin:0!important;
+ font-size:clamp(12px,1.06vw,15px)!important;line-height:1.8!important;
+ white-space:nowrap!important;word-break:keep-all!important;
+}
+}
+@media(max-width:1023px){
+#finance .section-head>p,#past .section-head>p,#rights .section-head.rights-lead>p,
+#rights .rights-chapter[aria-labelledby="rights-title-2"] .rights-chapter-heading>p{
+ max-width:100%!important;white-space:normal!important;word-break:keep-all!important;overflow-wrap:break-word!important;
+}
+}
+</style>
+</head><body>
 <header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
 <section id="home" class="hero container">
@@ -1010,7 +1045,7 @@ header nav{gap:clamp(8px,1.3vw,20px)}header nav a{font-size:clamp(11px,.9vw,14px
       </div>
     </div>
   </div>
-  <div class="rights-note"><b>해석 포인트.</b> 적법한 총회 결의 등 개인별 부담 근거가 확인되지 않은 상태에서 납부를 서두를 필요는 없습니다. 다만 개별 약정이나 보증 등 별도의 법률관계가 존재하는지는 사안별로 확인해야 합니다.</div>
+  
  </article>
  </div>
 </section>
