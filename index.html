@@ -723,7 +723,7 @@ header nav{gap:clamp(8px,1.3vw,20px)}header nav a{font-size:clamp(11px,.9vw,14px
 #about .committee-card h3{font-size:clamp(24px,2.35vw,33px);margin:12px 0 3px}
 #about .committee-card .role{font-size:13px;line-height:1.6;letter-spacing:0;font-weight:750}
 #about .committee-card .profile-affiliation{font-size:14px;min-height:64px;margin:12px 0;color:#cde5b4}
-#about .committee-portrait{width:min(100%,144px);aspect-ratio:1;border-radius:50%;margin:0 auto 20px;background:#2e392c url('./assets/committee-portraits-2026.webp') no-repeat;background-size:720px 144px;background-position:calc(var(--portrait-index) * -144px) center;color:transparent;display:grid;place-items:center;font-size:48px;font-weight:750}
+#about .committee-portrait{width:min(100%,144px);aspect-ratio:1;border-radius:50%;margin:0 auto 20px;background:#2e392c none no-repeat;background-size:720px 144px;background-position:calc(var(--portrait-index) * -144px) center;color:transparent;display:grid;place-items:center;font-size:48px;font-weight:750}
 #about .committee-born{font-size:12px;color:#b7b7b7}
 #about .committee-line{border-top:1px solid #454545;padding-top:15px;margin-top:16px}
 #about .committee-line b{display:block;color:#afd57f;font-size:12px;margin-bottom:8px}
@@ -754,7 +754,7 @@ header nav{gap:clamp(8px,1.3vw,20px)}header nav a{font-size:clamp(11px,.9vw,14px
 #about .committee-grid .committee-card h3{font-size:clamp(23px,2vw,28px);margin:11px 0 3px;line-height:1.28;color:#fff}
 #about .committee-grid .committee-card .committee-born{font-size:12px;color:#bbb}
 #about .committee-grid .committee-card .profile-affiliation{font-size:12px;min-height:4.1em;line-height:1.8;margin:14px 0 8px;color:#d5e8bc}
-#about .committee-grid .committee-portrait{display:block;width:min(160px,100%);height:auto;aspect-ratio:1/1;margin:0 auto 19px;border-radius:50%;background-color:transparent;background-image:url('./assets/committee-portraits-final.webp');background-repeat:no-repeat;background-size:500% 100%;background-position:var(--portrait-position,0%) center;color:transparent;font-size:0;flex-shrink:0}
+#about .committee-grid .committee-portrait{display:block;width:min(160px,100%);height:auto;aspect-ratio:1/1;margin:0 auto 19px;border-radius:50%;background-color:transparent;background-image:none;background-repeat:no-repeat;background-size:500% 100%;background-position:var(--portrait-position,0%) center;color:transparent;font-size:0;flex-shrink:0}
 #about .committee-grid .committee-line{padding-top:13px;margin-top:13px;border-top:1px solid #464c43}
 #about .committee-grid .committee-line b{font-size:13px;color:#b9e28b;margin-bottom:8px}
 #about .committee-grid .committee-line ul{padding-left:14px;margin:0;display:grid;gap:6px}
@@ -800,6 +800,15 @@ header nav{gap:clamp(8px,1.3vw,20px)}header nav a{font-size:clamp(11px,.9vw,14px
  header nav{display:flex;position:static;padding:0;border:0;background:transparent;flex-direction:row;align-items:center;gap:clamp(7px,.8vw,11px);max-height:none;overflow:visible}
  header nav a{font-size:13px}
 }
+
+/* 2026-10-19: five separate original-resolution headshots; no sprite compression */
+#about .committee-grid img.committee-portrait{
+  display:block;width:min(170px,100%);height:auto;aspect-ratio:1/1;
+  margin:0 auto 19px;object-fit:contain;object-position:center;
+  border-radius:50%;border:0;background:none!important;
+  opacity:1;filter:none;image-rendering:auto;
+}
+@media(max-width:560px){#about .committee-grid img.committee-portrait{margin-left:0}}
 </style><link rel="stylesheet" href="./palette.css?v=20261019-photo-final-v5"></head><body>
 <header><a class="logo" href="#home">송림3지구 조합 비상대책위원회</a><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">소개</a><a href="#rights">조합원 권리</a><a href="#progress">진행 현황</a><a href="#roadmap">임원선출계획</a><a href="#finance">재정현황</a><a href="#donors">후원자</a><a href="#lawfirm">법률자문</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
@@ -1123,12 +1132,13 @@ const people=$('#people');
 const order=['박종인','송병일','이인섭','최천호','박형철'];
 const teamMap=new Map([...(d.advisors||[]),...(d.committee||[])].map(p=>[p.name,p]));
 const team=order.map(name=>teamMap.get(name)).filter(Boolean);
+const portraitFiles={'박종인':'park-jong-in.webp','송병일':'song-byeong-il.webp','이인섭':'lee-in-seop.webp','최천호':'choi-cheon-ho.webp','박형철':'park-hyeong-cheol.webp'};
 people.innerHTML=team.map((p,i)=>{
  const education=Array.isArray(p.education)?p.education:(p.education?[p.education]:[]);
  const career=Array.isArray(p.career)?p.career:[];
  const advisor=(p.name==='박종인');
  return '<article class="committee-card'+(advisor?' advisor-card':'')+'">'+
- '<div class="committee-portrait" role="img" aria-label="'+esc(p.name)+' 프로필 사진" style="--portrait-position:'+Number(p.photo||0)*25+'%"></div>'+
+ '<img class="committee-portrait" src="./assets/people/'+esc(portraitFiles[p.name]||'')+'?v=20261019-original-quality" alt="'+esc(p.name)+' 프로필 사진" width="240" height="240" loading="lazy" decoding="async">'+
  '<div class="role">'+esc(p.role)+(advisor?' · 별도 자문':'')+'</div>'+
  '<h3>'+esc(p.name)+'</h3><div class="committee-born">'+esc(p.born||'')+'</div>'+
  (p.description?'<p class="profile-affiliation">'+esc(p.description)+'</p>':'')+
