@@ -1035,3 +1035,11 @@ footer.footer .footer-grid p{
  width:100%;
 }
 #finance .section-head>p .finance-intro-second{margin-top:5px}
+
+/* v25: Reserve two academic lines on every committee profile.
+   Choi Cheon-ho has two distinct education entries. Keep the same
+   vertical space below the academic label for one-entry profiles,
+   without inventing a second qualification or inserting a fake list item. */
+#about .committee-grid .committee-card .committee-line ul.profile-list{
+  min-height:53px!important;
+}
