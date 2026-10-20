@@ -1306,7 +1306,7 @@ function renderRoad(){
  $('#weekAxis').innerHTML=Array.from({length:n},(_,i)=>'<button type="button" data-week="'+(i+1)+'" aria-pressed="'+(selectedWeek===i+1)+'" class="'+(selectedWeek===i+1?'chosen':'')+'">W'+(i+1)+'</button>').join('');
  $('#roadSteps').innerHTML=t.steps.map((raw,i)=>{const o=overrides[raw.id]||{},step={...raw,...o},match=selectedWeek===null||(step.weekStart<=selectedWeek&&step.weekEnd>=selectedWeek),highlight=selectedWeek!==null&&match,css=(selectedWeek===null?'':(highlight?' week-selected':' week-muted'))+(step.status==='done'?' task-done':step.status==='active'?' task-active':'');
  return '<article class="road-step'+css+'"><div class="week">W'+step.weekStart+(step.weekEnd!==step.weekStart?'~'+step.weekEnd+'주':'')+'<div class="small">'+esc(range(step))+'</div></div><h3>'+String(i+1).padStart(2,'0')+'. '+esc(step.title)+'</h3><div class="details"><p>'+esc(step.body)+'</p><div class="small">'+esc(step.owner)+' · '+esc(step.basis.join(' / '))+'</div><div class="small">실제 업데이트: '+esc(step.updatedAt||'미등록')+'</div>'+(step.note?'<div class="small">기록: '+esc(step.note)+'</div>':'')+'</div><div><span class="status '+esc(step.status)+'">'+statLabel(step.status)+'</span></div></article>'}).join('');
- $('[data-week]').forEach(b=>b.onclick=()=>{
+ $$('[data-week]').forEach(b=>b.onclick=()=>{
    const w=Number(b.dataset.week);
    selectedWeek=selectedWeek===w?null:w;
    renderRoad();
