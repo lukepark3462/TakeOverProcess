@@ -227,11 +227,6 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
 #about .committee-grid .chair-card .role{color:#c8ed92!important}
 #about .committee-grid .chair-card h3{color:#f6fff0}
 #about .committee-grid .chair-card img.committee-portrait{outline:2px solid #86bc25;outline-offset:5px}
-#about .committee-grid .chair-card:before{
- content:"비대위원장";font-size:11px;font-weight:800;letter-spacing:.01em;
- color:#c7ee94;display:block;align-self:start;padding:5px 10px;
- border:1px solid #577c33;border-radius:999px;margin:0 0 17px;
-}
 #about .committee-history{margin:50px 0 18px;padding:28px 30px 32px;background:#1d201e;border:1px solid #424a3c;border-radius:10px}
 #about .committee-history-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:32px}
 #about .committee-history-head h3{font-size:clamp(25px,2.8vw,39px);color:#fff;line-height:1.3;margin:0}
@@ -1032,3 +1027,11 @@ footer.footer .footer-grid p{
   font-size:14px!important;
  }
 }
+
+/* Finance section — two clearly separated introduction lines. */
+#finance .section-head>p .finance-intro-first,
+#finance .section-head>p .finance-intro-second{
+ display:block;
+ width:100%;
+}
+#finance .section-head>p .finance-intro-second{margin-top:5px}
