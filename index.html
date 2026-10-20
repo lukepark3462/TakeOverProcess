@@ -1381,6 +1381,77 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 @media(max-width:700px){
  #journey .journey-achievements-head{margin-bottom:20px}
 }
+</style><style id="payment-notice-and-ledger-spacing-v42">
+/* Finance table: leave air beyond cell text, so row shading does not abruptly end at the glyphs. */
+#finance .monthly-scroll{
+ padding:8px clamp(12px,1.6vw,22px) 7px!important;
+ border:1px solid #354238;
+ border-radius:10px;
+ background:linear-gradient(180deg,rgba(41,52,43,.34),rgba(22,28,23,.20));
+ box-shadow:0 8px 28px rgba(0,0,0,.13);
+}
+#finance table.monthly-ledger thead th,
+#finance table.monthly-ledger tbody td,
+#finance table.monthly-ledger tfoot td{
+ padding-left:clamp(12px,1.25vw,18px)!important;
+ padding-right:clamp(12px,1.25vw,18px)!important;
+}
+#finance table.monthly-ledger thead th:first-child,
+#finance table.monthly-ledger tbody td:first-child,
+#finance table.monthly-ledger tfoot td:first-child{
+ padding-left:18px!important;
+}
+#finance table.monthly-ledger thead th:last-child,
+#finance table.monthly-ledger tbody td:last-child,
+#finance table.monthly-ledger tfoot td:last-child{
+ padding-right:18px!important;
+}
+#finance table.monthly-ledger .month-total-row{
+ background:linear-gradient(90deg,#1d251e,#1c211d 55%,#1b221c);
+}
+#finance table.monthly-ledger .monthly-detail-row{
+ background:#151c17;
+}
+@media(max-width:700px){
+ #finance .monthly-scroll{padding:5px 10px 6px!important;border-radius:8px}
+ #finance table.monthly-ledger thead th:first-child,
+ #finance table.monthly-ledger tbody td:first-child,
+ #finance table.monthly-ledger tfoot td:first-child{padding-left:14px!important}
+ #finance table.monthly-ledger thead th:last-child,
+ #finance table.monthly-ledger tbody td:last-child,
+ #finance table.monthly-ledger tfoot td:last-child{padding-right:14px!important}
+}
+
+/* Main-entry modal: dark editorial presentation in the site's brand palette. */
+#paymentNotice[hidden]{display:none!important}
+#paymentNotice{position:fixed;inset:0;z-index:10050;display:grid;place-items:center;padding:clamp(14px,4vw,30px);background:rgba(0,0,0,.74);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);overflow-y:auto}
+#paymentNotice .payment-notice-panel{
+ position:relative;box-sizing:border-box;
+ width:min(100%,560px);max-height:calc(100dvh - 28px);overflow-y:auto;
+ background:linear-gradient(148deg,#222A24,#181D19 67%);
+ color:#FFFFFF;border:1px solid #516047;border-top:4px solid #86BC25;border-radius:12px;
+ padding:clamp(23px,4vw,39px);box-shadow:0 30px 100px rgba(0,0,0,.58);
+}
+#paymentNotice .payment-notice-eyebrow{color:#64B6E7;font-size:12px;letter-spacing:.095em;font-weight:800;line-height:1.45;margin-bottom:16px}
+#paymentNotice h2{margin:0 0 18px;color:#FFF;font-size:clamp(25px,4.5vw,36px);line-height:1.36;letter-spacing:-.045em;word-break:keep-all;font-weight:800}
+#paymentNotice h2 em{font-style:normal;color:#86BC25;white-space:nowrap}
+#paymentNotice .payment-notice-copy{margin:0;color:#E2E8E1;font-size:clamp(14px,2.5vw,16px);line-height:1.85;word-break:keep-all}
+#paymentNotice .payment-notice-reminder{margin-top:18px;padding:15px 17px;background:#2A352C;border-left:3px solid #86BC25;border-radius:3px;color:#FFF;font-weight:750;font-size:15px;line-height:1.6;word-break:keep-all}
+#paymentNotice .payment-notice-contact{font-size:13px;color:#BFCABF;line-height:1.75;margin:16px 0 22px}
+#paymentNotice .payment-notice-contact a{color:#BDE48D;text-decoration:underline;text-underline-offset:3px}
+#paymentNotice .payment-notice-primary{display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:none;color:#10160D;background:#86BC25;border:1px solid #86BC25;border-radius:6px;padding:15px 18px;font-weight:800;font-size:15px}
+#paymentNotice .payment-notice-primary:hover,#paymentNotice .payment-notice-primary:focus-visible{background:#A1CF58;border-color:#A1CF58}
+#paymentNotice .payment-notice-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:16px}
+#paymentNotice .payment-notice-actions button{font:inherit;font-size:12px;font-weight:700;line-height:1.4;cursor:pointer;border:1px solid #58635B;padding:12px 4px;border-radius:6px;background:#29312B;color:#E4ECE4;white-space:nowrap}
+#paymentNotice .payment-notice-actions button:hover{border-color:#86BC25;color:#FFFFFF;background:#343F36}
+#paymentNotice .payment-notice-actions #paymentNoticeClose{background:#414A43;border-color:#7B887E;color:#FFFFFF}
+#paymentNotice a:focus-visible,#paymentNotice button:focus-visible{outline:2px solid #B4E66C;outline-offset:3px}
+@media(max-width:430px){
+ #paymentNotice .payment-notice-panel{padding:22px 19px}
+ #paymentNotice .payment-notice-actions{gap:6px}
+ #paymentNotice .payment-notice-actions button{font-size:11px;padding:12px 2px}
+}
+@media(prefers-reduced-motion:reduce){#paymentNotice *{scroll-behavior:auto!important}}
 </style></head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
@@ -1672,6 +1743,21 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 <section id="contact" class="section" aria-labelledby="contact-title"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">조합원 문의</div><h2 id="contact-title">연락처</h2></div><p class="contact-intro-single-line" style="white-space:nowrap;font-size:clamp(9px,2.45vw,16px)">조합 운영 정상화 관련 문의는 비상대책위원장에게 전달해 주시기 바랍니다.</p></div>
 <div class="contact-solo reveal"><span class="contact-solo-role">송림3지구 조합원 비상대책위원회 위원장</span><h3>이인섭</h3><div class="contact-solo-phone"><span>휴대전화</span><a href="tel:01099291171">010-9929-1171</a></div><div class="contact-actions"><a class="contact-call" href="tel:01099291171">전화 걸기 ↗</a><a class="contact-message" href="sms:01099291171">문자 보내기 ↗</a></div><p>문의 목적 외 사용을 삼가 주시기 바랍니다.</p></div></div></section>
 </main><footer class="footer"><div class="container"><div class="footer-grid"><h2>함께 만드는 송림3지구의 다음.</h2><p>조합원 한 사람 한 사람의 권리를 존중하고, 주요 의사결정과 진행 경과를 투명하게 기록하겠습니다.</p></div><div class="footer-bottom"><span>송림3지구 조합원 비상대책위원회</span><span>송림3지구 정상화과정 · 2026</span></div></div></footer>
+<div id="paymentNotice" hidden aria-hidden="true">
+  <section class="payment-notice-panel" role="dialog" aria-modal="true" aria-labelledby="paymentNoticeTitle" aria-describedby="paymentNoticeDescription" tabindex="-1">
+    <div class="payment-notice-eyebrow">IMPORTANT NOTICE · 조합원 안내</div>
+    <h2 id="paymentNoticeTitle"><em>2,500만원</em>을 납부하신 조합원이 계십니까?</h2>
+    <p class="payment-notice-copy" id="paymentNoticeDescription">조합원 개인별 2,500만원 납부 요구와 관련하여, 혹시라도 이미 해당 금액을 납부하신 분이 있다면 비상대책위원회에 알려주시기 바랍니다.</p>
+    <div class="payment-notice-reminder">납부하신 조합원께서는 비대위에 연락해 주십시오.</div>
+    <p class="payment-notice-contact">입금 일자·금액 및 당시 안내받은 내용을 확인하고자 합니다.<br>비대위 연락처: <a href="tel:01099291171">010-9929-1171</a><br>개인정보·입금 자료는 공개 게시판에 올리지 마십시오.</p>
+    <a class="payment-notice-primary" id="paymentNoticeRights" href="#rights"><span>조합원 권리 바로가기</span><span aria-hidden="true">→</span></a>
+    <div class="payment-notice-actions" aria-label="공지 팝업 표시 설정">
+      <button type="button" id="paymentNoticeToday">오늘 보지 않기</button>
+      <button type="button" id="paymentNoticeForever">영구 보지 않기</button>
+      <button type="button" id="paymentNoticeClose">닫기</button>
+    </div>
+  </section>
+</div>
 <!-- Embedded snapshot: site stays functional when GitHub Pages serves stale or missing JS assets. External files override this snapshot when reachable. -->
 <script>
 /* 송림3지구 홈페이지 데이터
@@ -1946,5 +2032,58 @@ else if(id&&document.getElementById(id))requestAnimationFrame(()=>document.getEl
 }
 ids.forEach(id=>{const s=document.getElementById(id),place=s?.querySelector('.container');if(place){const b=document.createElement('a');b.className='detail-back';b.href='#home-menu';b.textContent='← 전체 메뉴로 돌아가기';place.prepend(b)}});
 window.addEventListener('hashchange',display);mq.addEventListener('change',display);display();
+})();
+</script><script id="payment-notice-behavior-v42">
+(function(){
+  'use strict';
+  const modal=document.getElementById('paymentNotice');
+  if(!modal)return;
+  const panel=modal.querySelector('.payment-notice-panel');
+  const key='songnim3-payment-notice-v1';
+  const today=()=>{
+    const d=new Date();
+    return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  };
+  const safeRead=()=>{
+    try{return window.localStorage.getItem(key)||''}catch(_){return ''}
+  };
+  const safeSave=(value)=>{
+    try{window.localStorage.setItem(key,value)}catch(_){/* Storage can be disabled in private mode. */}
+  };
+  let lastFocused=null;
+  const close=()=>{
+    if(modal.hidden)return;
+    modal.hidden=true;
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow=modal.dataset.previousOverflow||'';
+    window.removeEventListener('keydown',onKeydown);
+    if(lastFocused && lastFocused.isConnected && typeof lastFocused.focus==='function')lastFocused.focus({preventScroll:true});
+  };
+  const onKeydown=(event)=>{
+    if(event.key==='Escape'){event.preventDefault();close();return}
+    if(event.key!=='Tab')return;
+    const focusables=[...modal.querySelectorAll('a[href],button:not([disabled])')].filter(el=>el.getClientRects().length);
+    if(!focusables.length){event.preventDefault();panel.focus();return}
+    const first=focusables[0],last=focusables[focusables.length-1];
+    if(event.shiftKey && (document.activeElement===first||document.activeElement===panel)){event.preventDefault();last.focus()}
+    else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus()}
+  };
+  const open=()=>{
+    lastFocused=document.activeElement;
+    modal.dataset.previousOverflow=document.body.style.overflow||'';
+    modal.hidden=false;
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    window.addEventListener('keydown',onKeydown);
+    panel.focus({preventScroll:true});
+  };
+  document.getElementById('paymentNoticeToday').addEventListener('click',()=>{safeSave('today:'+today());close()});
+  document.getElementById('paymentNoticeForever').addEventListener('click',()=>{safeSave('forever');close()});
+  document.getElementById('paymentNoticeClose').addEventListener('click',close);
+  document.getElementById('paymentNoticeRights').addEventListener('click',close);
+  const fragment=window.location.hash;
+  const isMainEntry=fragment===''||fragment==='#home'||fragment==='#home-menu';
+  const preference=safeRead();
+  if(isMainEntry && preference!=='forever' && preference!=='today:'+today())open();
 })();
 </script></body></html>
