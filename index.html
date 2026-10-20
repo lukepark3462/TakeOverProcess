@@ -1452,54 +1452,57 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
  #paymentNotice .payment-notice-actions button{font-size:11px;padding:12px 2px}
 }
 @media(prefers-reduced-motion:reduce){#paymentNotice *{scroll-behavior:auto!important}}
-</style><style id="journey-double-event-oct02-v43">
-/* Two events under one date: reuse existing timeline typography, no additional cards. */
+</style><style id="journey-oct02-balanced-columns-v46">
+/* Oct 2: two plain timeline entries, same typography, closer together, one unobtrusive separator. */
 #journey .committee-timeline-item.journey-double-event .journey-event-pair{
- display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
- gap:clamp(22px,3vw,38px);min-width:0;align-items:start;
+ display:grid;
+ grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr);
+ gap:0;
+ min-width:0;
+ align-items:start;
 }
 #journey .committee-timeline-item.journey-double-event .journey-event-part{
  min-width:0;
 }
 #journey .committee-timeline-item.journey-double-event .journey-event-part + .journey-event-part{
  border-left:1px solid #526358;
- padding-left:clamp(22px,3vw,38px);
+ padding-left:18px;
 }
-@media(max-width:760px){
+#journey .committee-timeline-item.journey-double-event .journey-event-part h4{
+ font-size:clamp(17px,1.65vw,22px)!important;
+ font-weight:750;
+ letter-spacing:-.055em;
+ white-space:nowrap;
+}
+#journey .committee-timeline-item.journey-double-event .journey-event-part p{
+ font-size:clamp(13px,1.08vw,15px)!important;
+ letter-spacing:-.02em;
+ line-height:1.85;
+ white-space:normal;
+}
+#journey .committee-timeline-item.journey-double-event .journey-event-part:nth-child(2) p{
+ white-space:nowrap;
+}
+@media(max-width:970px){
  #journey .committee-timeline-item.journey-double-event .journey-event-pair{
-   grid-template-columns:minmax(0,1fr);gap:21px
+  grid-template-columns:minmax(0,1fr);
+  gap:20px;
  }
  #journey .committee-timeline-item.journey-double-event .journey-event-part + .journey-event-part{
-   border-left:none;border-top:1px solid #526358;
-   padding:19px 0 0
+  border-left:0;
+  border-top:1px solid #526358;
+  padding:18px 0 0;
+ }
+ #journey .committee-timeline-item.journey-double-event .journey-event-part h4{
+  font-size:clamp(13px,2.1vw,18px)!important;
  }
 }
-</style><style id="journey-oct02-heading-singleline-v44">
-/* Fit the original full-length resignation statement in one line without changing its wording. */
-#journey .journey-double-event .journey-event-pair{
- grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);
-}
-#journey .journey-double-event .journey-event-part:nth-child(2) h4{
- white-space:nowrap;
- font-size:clamp(14px,1.3vw,19px)!important;
- letter-spacing:-.055em;
-}
-@media(max-width:760px){
- #journey .journey-double-event .journey-event-pair{grid-template-columns:minmax(0,1fr)}
- #journey .journey-double-event .journey-event-part:nth-child(2) h4{
-   font-size:clamp(10.5px,3vw,15px)!important;
+@media(max-width:430px){
+ #journey .committee-timeline-item.journey-double-event .journey-event-part h4{
+  font-size:clamp(11.5px,3.1vw,13px)!important;
  }
-}
-</style><style id="journey-oct02-caption-singleline-v45">
-/* Short, one-line description for Oct 2's second event; retain the original 2-column format. */
-#journey .journey-double-event .journey-event-part:nth-child(2) p{
-  white-space:nowrap;
-  font-size:clamp(12px,1.04vw,14px);
-  letter-spacing:-.035em;
-}
-@media(max-width:760px){
- #journey .journey-double-event .journey-event-part:nth-child(2) p{
-  font-size:clamp(11px,2.9vw,13px);
+ #journey .committee-timeline-item.journey-double-event .journey-event-part p{
+  font-size:12px!important;
  }
 }
 </style></head><body>
