@@ -1340,6 +1340,30 @@ header .header-identity .logo-ring-mark{
 </style><style id="header-brand-divider-v37">
 /* Brand green hairline replaces the grey boundary between navigation and page. */
 header{border-bottom:1px solid rgba(134,188,37,.8)!important}
+</style><style id="journey-future-tasks-disclosure-v39">
+/* Future tasks: only the roadmap shortcut navigates; task list is open by default and independently collapsible. */
+#journey .journey-forward{margin-top:48px;border-top:1px solid #485247;border-bottom:1px solid #485247;padding:27px 0 32px;min-width:0}
+#journey .journey-forward-head{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:24px}
+#journey .journey-forward-heading{display:flex;flex-direction:column;gap:12px;min-width:0}
+#journey .journey-forward-heading small{font-size:12px;line-height:1.35;letter-spacing:.1em;font-weight:800;color:#64B6E7}
+#journey .journey-forward-heading strong{font-size:clamp(19px,2.3vw,30px);line-height:1.4;letter-spacing:-.04em;color:#FFFFFF;word-break:keep-all}
+#journey .journey-forward-link{display:inline-flex;align-items:center;gap:5px;flex:none;font-size:14px;font-weight:800;line-height:1.6;color:#86BC25;text-decoration:none;white-space:nowrap;padding:10px 0}
+#journey .journey-forward-link:hover,#journey .journey-forward-link:focus-visible{color:#B6E47A;text-decoration:underline;text-underline-offset:4px}
+#journey .journey-forward-link:focus-visible{outline:2px solid #86BC25;outline-offset:3px}
+#journey .journey-future-disclosure{display:block}
+#journey .journey-future-disclosure>.journey-toggle{margin:0 0 17px;padding:12px 0 18px;border-top:1px solid #334137;border-bottom:1px solid #3b4d48}
+#journey .journey-future-disclosure:not([open])>.journey-toggle{margin-bottom:0;border-bottom:0}
+#journey .journey-future-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#journey .journey-future-item{min-width:0;display:flex;align-items:center;gap:19px;padding:24px 22px;background:#202922;border:1px solid #3f5545;border-left:3px solid #86BC25;border-radius:5px}
+#journey .journey-future-number{display:block;flex:none;color:#86BC25;font-size:clamp(21px,2.3vw,27px);font-weight:800;font-variant-numeric:tabular-nums}
+#journey .journey-future-item strong{min-width:0;color:#FFFFFF;font-size:clamp(17px,1.65vw,23px);line-height:1.5;letter-spacing:-.03em;word-break:keep-all}
+@media(max-width:700px){
+ #journey .journey-forward{margin-top:34px;padding:23px 0}
+ #journey .journey-forward-head{flex-direction:column;align-items:flex-start;gap:13px;margin-bottom:20px}
+ #journey .journey-forward-link{padding:2px 0}
+ #journey .journey-future-items{grid-template-columns:minmax(0,1fr);gap:10px}
+ #journey .journey-future-item{padding:20px 17px;gap:15px}
+}
 </style></head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
@@ -1389,7 +1413,22 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 <div class="journey-period reveal"><span class="journey-period-label">전체 추진 경과</span> 2026.09.17 <span aria-hidden="true">—</span> PRESENT</div>
 <div class="committee-history journey-history reveal" aria-label="정상화 추진 경과 타임라인"><details class="journey-timeline-disclosure" open><summary class="journey-toggle"><span class="journey-toggle-title">설립부터 해임까지 <small>7개 주요 기록</small></span><span class="journey-toggle-action"><span class="journey-toggle-open">접기</span><span class="journey-toggle-closed">펼쳐보기</span><span aria-hidden="true" class="journey-chevron">⌃</span></span></summary><ol class="committee-timeline"><li class="committee-timeline-item"><time datetime="2026-09-17">2026.09.17</time><div><h4>비상대책위원회 설립</h4><p>조합원 비상대책위원회 설립총회 개최. 운영진 구성과 정상화 활동의 출발점.</p></div></li><li class="committee-timeline-item"><time datetime="2026-09-22">2026.09.22</time><div><h4>조합 측 총회 최초 공지</h4><p>조합 측 총회 일정 공지. 이후 양측 총회 일정과 장소를 둘러싼 쟁점이 발생.</p></div></li><li class="committee-timeline-item"><time datetime="2026-09-23">2026.09.23</time><div><h4>비대위 해임총회 공지</h4><p>비대위가 임원 해임총회 일정 및 절차를 조합원에게 안내.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-01">2026.10.01</time><div><h4>해임총회 준비 본격화</h4><p>조합원 서면결의·참석 안내와 총회 현장 준비 등 실무 절차 진행.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-02">2026.10.02</time><div><h4>조합 측 총회 일정 변경 공지</h4><p>조합 측이 10월 16일 총회 개최를 공지하면서 일정 중복 논란 심화.</p></div></li><li class="committee-timeline-item journey-legal"><time datetime="2026-10-15">2026.10.15</time><div><h4>조합 측 총회 개최금지 가처분 승소</h4><p>조합 측 총회 개최의 적법성이 문제 된 가처분 사건에서 비대위 측 법적 대응이 성공해 조합 측 총회가 취소되었습니다. <strong>총회 개최의 위법성 관련 쟁점이 법원에서 다뤄졌으며</strong>, 가처분 결정은 본안의 위법 확정판결과는 구별됩니다.</p></div></li><li class="committee-timeline-item journey-milestone"><time datetime="2026-10-16">2026.10.16</time><div><h4>비대위 임원 해임총회 가결</h4><p>조합장 1명, 이사 4명, 감사 1명 해임안 가결.</p><div class="journey-result"><span class="journey-result-label">2026.10.16 · KEY MILESTONE</span><div class="journey-metrics"><div class="journey-metric"><strong>252<small>표 찬성</small></strong><span>찬성 득표</span></div><div class="journey-metric journey-metric-rate"><strong>99.21<small>%</small></strong><span>찬반 유효표 기준 찬성률</span></div></div><p><span class="journey-result-note">반대 2표 · 찬반 유효표 254표 기준 (252 ÷ 254)</span></p></div></div></li></ol></details>
 </div>
-<a class="journey-next" href="#roadmap"><span><small>NEXT CHAPTER</small><strong>새로운 집행부 구성과 조합 정상화</strong></span><span>임원선출계획 바로가기 →</span></a>
+<section class="journey-forward reveal" aria-label="새로운 집행부 구성과 정상화 및 향후 과제">
+  <div class="journey-forward-head">
+    <div class="journey-forward-heading"><small>NEXT CHAPTER</small><strong>새로운 집행부 구성과 정상화</strong></div>
+    <a class="journey-forward-link" href="#roadmap">임원선출계획 바로가기 →</a>
+  </div>
+  <details class="journey-future-disclosure" open>
+    <summary class="journey-toggle">
+      <span class="journey-toggle-title">향후 과제 <small>2개 핵심 과제</small></span>
+      <span class="journey-toggle-action"><span class="journey-toggle-open">접기</span><span class="journey-toggle-closed">펼쳐보기</span><span aria-hidden="true" class="journey-chevron">⌃</span></span>
+    </summary>
+    <div class="journey-future-items">
+      <article class="journey-future-item"><span class="journey-future-number">01</span><strong>새로운 조합 운영진 선임</strong></article>
+      <article class="journey-future-item"><span class="journey-future-number">02</span><strong>빠른 등기 추진</strong></article>
+    </div>
+  </details>
+</section>
 </div></section>
 
 <section id="roadmap" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">임원선출계획</div><h2>새로운 집행부 선출을 위한<br>임원선출계획</h2></div><p>2026.10.26(월)부터 시작하는 목표 일정.<br>월·일은 모두 <strong>예상</strong>이며, 실제 확정일과 업데이트일은 따로 기록합니다.</p></div>
