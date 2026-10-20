@@ -1206,6 +1206,46 @@ header .header-identity .logo-ring-mark{
 #contact .section-head > div:first-child > .eyebrow{
   color:#BDBDBD!important;
 }
+</style><style id="rights-claim-routes-v33">
+/* Contractual claim, blocked direct personal claim, and conditional member assessment.
+   Separate responsive rows keep arrows and labels apart on small screens. */
+#rights .rights-claim-routes{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-top:24px}
+#rights .rights-claim-route{min-width:0;padding:19px 22px 23px;border:1px solid #435249;border-radius:7px;background:#232a27}
+#rights .rights-claim-route .route-kind{font-size:13px;line-height:1.6;color:#c9d3cd;font-weight:750;margin-bottom:16px}
+#rights .rights-claim-route .route-chain{display:grid;grid-template-columns:minmax(135px,1fr) minmax(175px,1fr) minmax(135px,1fr);gap:clamp(14px,2.4vw,34px);align-items:center}
+#rights .rights-claim-route .route-party{min-width:0;min-height:94px;border:1px solid #53615a;background:#2a3430;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 12px;gap:6px;text-align:center}
+#rights .rights-claim-route .route-party small{font-size:12px;color:#c5d0c9;line-height:1.5}
+#rights .rights-claim-route .route-party strong{font-size:clamp(19px,2vw,27px);color:#fff;line-height:1.25;letter-spacing:-.04em;word-break:keep-all}
+#rights .rights-claim-route .route-connection{display:flex;flex-direction:column;justify-content:center;align-items:center;min-width:0;gap:23px;padding:12px 2px}
+#rights .rights-claim-route .route-message{font-size:clamp(12px,1.1vw,15px);color:#cbd8d2;line-height:1.5;font-weight:750;text-align:center;word-break:keep-all}
+#rights .rights-claim-route .route-arrow{width:100%;height:2px;background:#64B6E7;position:relative;margin:0}
+#rights .rights-claim-route .route-arrow:after{content:"";position:absolute;right:0;top:-5px;width:10px;height:10px;border-top:2px solid #64B6E7;border-right:2px solid #64B6E7;transform:rotate(45deg)}
+#rights .route-contract{border-left:3px solid #64B6E7}
+#rights .route-contract .route-kind,#rights .route-contract .route-message{color:#64B6E7}
+#rights .route-blocked{border-left:3px solid #E12211}
+#rights .route-blocked .route-kind,#rights .route-blocked .route-message{color:#F17B71}
+#rights .route-blocked .route-arrow{background:linear-gradient(90deg,#F17B71 0 43%,transparent 43% 57%,#F17B71 57% 100%)}
+#rights .route-blocked .route-arrow:after{border-color:#F17B71}
+#rights .route-stop{display:grid;place-items:center;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;width:31px;height:31px;border-radius:50%;border:2px solid #E12211;background:#7c211b;color:white;font-size:22px;font-weight:800;line-height:1}
+#rights .route-conditional{border-left:3px solid #8E9D93}
+#rights .route-conditional .route-kind{color:#e1e7e2}
+#rights .route-conditional .route-arrow{background:repeating-linear-gradient(90deg,#acbab0 0 9px,transparent 9px 16px)}
+#rights .route-conditional .route-arrow:after{border-color:#acbab0}
+#rights .route-condition{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-block;z-index:1;background:#35423b;border:1px solid #95a69b;border-radius:4px;padding:7px 10px;color:#fff;font-weight:750;font-size:11px;line-height:1.2;white-space:nowrap}
+#rights .rights-personal-heading{margin-bottom:20px}
+@media(max-width:760px){
+  #rights .rights-claim-route{padding:18px 15px 22px}
+  #rights .rights-claim-route .route-chain{grid-template-columns:minmax(0,1fr);gap:14px}
+  #rights .rights-claim-route .route-party{min-height:78px}
+  #rights .rights-claim-route .route-party strong{font-size:22px}
+  #rights .rights-claim-route .route-connection{gap:16px;padding:10px 0 15px}
+  #rights .rights-claim-route .route-message{font-size:13px}
+  #rights .rights-claim-route .route-arrow{width:2px;height:61px;background:#64B6E7}
+  #rights .rights-claim-route .route-arrow:after{left:-5px;right:auto;top:auto;bottom:0;transform:rotate(135deg)}
+  #rights .route-blocked .route-arrow{background:linear-gradient(180deg,#F17B71 0 42%,transparent 42% 58%,#F17B71 58% 100%)}
+  #rights .route-conditional .route-arrow{background:repeating-linear-gradient(180deg,#acbab0 0 9px,transparent 9px 16px)}
+}
+@media(prefers-reduced-motion:reduce){#rights .rights-claim-route *{transition:none!important}}
 </style></head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
@@ -1361,20 +1401,34 @@ header .header-identity .logo-ring-mark{
     <div class="rights-connector" aria-label="두산건설의 공사비 채권과 조합의 공사비 채무"><span class="rights-claim-label">공사비 채권</span><div class="arrows" aria-hidden="true"></div><span class="rights-debt-label">공사비 채무</span></div>
     <div class="rights-actor union"><div class="rlabel">사업 주체</div><strong>조합</strong><small>계약상 공사비 채무의 부담 주체</small></div>
    </div>
-   <div class="rights-personal-claim" role="group" aria-label="두산건설의 조합원 개인에 대한 자동 직접청구가 성립하지 않는 구조">
+   <div class="rights-personal-claim" role="group" aria-label="시공사에서 조합으로의 계약상 청구, 조합원에 대한 자동 직접청구 차단, 별도 분담 절차가 필요한 세 경로">
     <div class="rights-personal-heading">
       <div><span class="rights-personal-kicker">조합 채무 ≠ 조합원 개인 채무</span><h4>조합원 개인에게 곧바로 청구할 수 있는가?</h4></div>
       <span class="rights-personal-status"><span aria-hidden="true">×</span> 자동 직접청구 아님</span>
     </div>
-    <div class="rights-personal-flow" aria-label="두산건설에서 조합원 개인으로 향하는 직접청구 경로 차단">
-      <div class="rights-personal-source"><small>청구 주체</small><strong>두산건설</strong></div>
-      <div class="rights-personal-path"><span class="rights-personal-path-label">조합원 개인에 대한 직접청구</span><div class="rights-personal-path-line" aria-hidden="true"><span>×</span></div><small>자동으로 연결되지 않음</small></div>
-      <div class="rights-personal-member-group">
-        <span class="rights-personal-group-label">개별 조합원</span>
-        <div class="rights-personal-members">
-          <div><strong>조합원 A</strong><small>개인 채무 자동 발생 아님</small></div>
-          <div><strong>조합원 B</strong><small>별도의 법적 근거 확인</small></div>
-          <div><strong>기타 조합원</strong><small>적법한 분담 절차 등 필요</small></div>
+    <div class="rights-claim-routes" aria-label="계약상 청구 경로와 개인 분담 절차">
+      <div class="rights-claim-route route-contract">
+        <div class="route-kind">계약상 공사비 청구 상대방</div>
+        <div class="route-chain">
+          <div class="route-party"><small>공사비 채권자</small><strong>두산건설</strong></div>
+          <div class="route-connection"><span class="route-message">조합에 공사비 청구</span><div class="route-arrow" aria-hidden="true"></div></div>
+          <div class="route-party"><small>계약상 채무자</small><strong>조합</strong></div>
+        </div>
+      </div>
+      <div class="rights-claim-route route-blocked">
+        <div class="route-kind">개인에게 자동 직접청구되는 경로 아님</div>
+        <div class="route-chain">
+          <div class="route-party"><small>시공사</small><strong>두산건설</strong></div>
+          <div class="route-connection"><span class="route-message">직접청구 자동 발생 아님</span><div class="route-arrow" aria-hidden="true"><span class="route-stop">×</span></div></div>
+          <div class="route-party"><small>개인별 채무 별도 판단</small><strong>조합원 개인</strong></div>
+        </div>
+      </div>
+      <div class="rights-claim-route route-conditional">
+        <div class="route-kind">조합을 통한 추가 분담은 별도 법적 근거·절차 필요</div>
+        <div class="route-chain">
+          <div class="route-party"><small>계약상 채무자</small><strong>조합</strong></div>
+          <div class="route-connection"><span class="route-message">총회 결의 등 적법한 분담 절차 필요</span><div class="route-arrow" aria-hidden="true"><span class="route-condition">절차 필요</span></div></div>
+          <div class="route-party"><small>분담금 채무 자동 성립 아님</small><strong>조합원 개인</strong></div>
         </div>
       </div>
     </div>
@@ -1385,7 +1439,7 @@ header .header-identity .logo-ring-mark{
 
   <article class="rights-chapter reveal" aria-labelledby="rights-title-2">
    <div class="rights-chapter-heading">
-    <div><div class="rights-chapter-num">03 / 입주 전과 입주 후</div><h3 id="rights-title-2">입주 이후, 협상과 점유 상황이 달라집니다.</h3></div>
+    <div><div class="rights-chapter-num">02 / 입주 전과 입주 후</div><h3 id="rights-title-2">입주 이후, 협상과 점유 상황이 달라집니다.</h3></div>
     <p>‘집을 인도받기 전’과 ‘이미 인도받아 거주하는 상태’는 시공사가 행사할 수 있는 점유 기반 권리와 압박의 실효성에 차이를 만듭니다.</p>
    </div>
    <div class="rights-compare">
@@ -1405,7 +1459,7 @@ header .header-identity .logo-ring-mark{
 
   <article class="rights-chapter rights-chapter-payment reveal" aria-labelledby="rights-title-3">
   <div class="rights-chapter-heading">
-    <div><div class="rights-chapter-num">04 / 2,500만원 직접 납부 요구</div><h3 id="rights-title-3">조합원 개인에게 요구한 2,500만원, 법적 근거는?</h3></div>
+    <div><div class="rights-chapter-num">03 / 2,500만원 직접 납부 요구</div><h3 id="rights-title-3">조합원 개인에게 요구한 2,500만원, 법적 근거는?</h3></div>
     <p>두산건설의 공사비 채권과 조합원 개인의 직접 납부의무는 별개의 문제입니다.</p>
   </div>
   <div class="rights-payment-grid">
