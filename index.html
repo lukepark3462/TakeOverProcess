@@ -937,10 +937,10 @@ header .header-identity .logo-ring-mark{
 }
 </style>
 <style id="hero-logo-spacing-v28">
-/* Increase clearance by the same extra height as the enlarged hero-only ring mark. */
-#home.hero .hero-main{padding-top:132px!important}
-@media(max-width:700px){#home.hero .hero-main{padding-top:94px!important}}
-@media(max-width:380px){#home.hero .hero-main{padding-top:90px!important}}
+/* Keep the hero copy below the absolutely positioned ring mark. */
+#home.hero .hero-main{align-items:flex-start!important;padding-top:225px!important}
+@media(max-width:700px){#home.hero .hero-main{padding-top:140px!important}}
+@media(max-width:380px){#home.hero .hero-main{padding-top:125px!important}}
 </style>
 <style id="hero-logo-placement-v23">
 /* Approved desktop/mobile mockup: ring insignia in the dark top-left hero whitespace. */
