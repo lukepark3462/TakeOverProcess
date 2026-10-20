@@ -936,10 +936,42 @@ header .header-identity .logo-ring-mark{
  header .header-identity .logo-ring-mark{width:27px;height:25px}
 }
 </style>
+<style id="hero-logo-placement-v23">
+/* Approved desktop/mobile mockup: ring insignia in the dark top-left hero whitespace. */
+#home.hero .hero-brand-mark{
+  position:absolute!important;
+  top:56px!important;
+  left:clamp(30px,5.5vw,90px)!important;
+  display:block!important;
+  width:146px!important;
+  height:129px!important;
+  object-fit:contain!important;
+  opacity:.86;
+  filter:drop-shadow(0 5px 25px rgba(4,6,4,.25));
+  z-index:3;
+  pointer-events:none;
+}
+@media(max-width:700px){
+  #home.hero .hero-brand-mark{
+    top:38px!important;
+    left:20px!important;
+    width:104px!important;
+    height:94px!important;
+    opacity:.84;
+  }
+}
+@media(max-width:380px){
+  #home.hero .hero-brand-mark{
+    width:96px!important;
+    height:89px!important;
+  }
+}
+</style>
 </head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings.webp?v=20261020" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
 <section id="home" class="hero container">
+<img class="hero-brand-mark" src="./assets/songnim-brush-rings.webp?v=20261020" alt="" aria-hidden="true" width="146" height="129" decoding="async">
 
 <svg class="hero-architecture" viewBox="0 0 1600 830" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
 <defs>
