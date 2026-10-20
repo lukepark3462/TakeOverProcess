@@ -967,6 +967,12 @@ header .header-identity .logo-ring-mark{
   }
 }
 </style>
+<style id="roadmap-week-autoscroll-v27">
+/* Keep the selected week below the sticky navigation after automatic scrolling. */
+#roadmap #roadSteps .road-step.week-selected{
+ scroll-margin-top:clamp(90px,10vh,122px);
+}
+</style>
 </head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
@@ -1300,7 +1306,18 @@ function renderRoad(){
  $('#weekAxis').innerHTML=Array.from({length:n},(_,i)=>'<button type="button" data-week="'+(i+1)+'" aria-pressed="'+(selectedWeek===i+1)+'" class="'+(selectedWeek===i+1?'chosen':'')+'">W'+(i+1)+'</button>').join('');
  $('#roadSteps').innerHTML=t.steps.map((raw,i)=>{const o=overrides[raw.id]||{},step={...raw,...o},match=selectedWeek===null||(step.weekStart<=selectedWeek&&step.weekEnd>=selectedWeek),highlight=selectedWeek!==null&&match,css=(selectedWeek===null?'':(highlight?' week-selected':' week-muted'))+(step.status==='done'?' task-done':step.status==='active'?' task-active':'');
  return '<article class="road-step'+css+'"><div class="week">W'+step.weekStart+(step.weekEnd!==step.weekStart?'~'+step.weekEnd+'주':'')+'<div class="small">'+esc(range(step))+'</div></div><h3>'+String(i+1).padStart(2,'0')+'. '+esc(step.title)+'</h3><div class="details"><p>'+esc(step.body)+'</p><div class="small">'+esc(step.owner)+' · '+esc(step.basis.join(' / '))+'</div><div class="small">실제 업데이트: '+esc(step.updatedAt||'미등록')+'</div>'+(step.note?'<div class="small">기록: '+esc(step.note)+'</div>':'')+'</div><div><span class="status '+esc(step.status)+'">'+statLabel(step.status)+'</span></div></article>'}).join('');
- $$('[data-week]').forEach(b=>b.onclick=()=>{const w=Number(b.dataset.week);selectedWeek=selectedWeek===w?null:w;renderRoad()});
+ $('[data-week]').forEach(b=>b.onclick=()=>{
+   const w=Number(b.dataset.week);
+   selectedWeek=selectedWeek===w?null:w;
+   renderRoad();
+   if(selectedWeek!==null){
+     const target=$('#roadSteps .road-step.week-selected');
+     if(target){
+       const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+       target.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'start',inline:'nearest'});
+     }
+   }
+ });
 }
 $$('[data-scenario]').forEach(b=>b.onclick=()=>{selected=b.dataset.scenario;selectedWeek=null;renderRoad()});renderRoad();
 const people=$('#people');
