@@ -1287,6 +1287,55 @@ header .header-identity .logo-ring-mark{
 #about .statement-figures .figure .stat-value small{
  color:#FFFFFF!important;
 }
+</style><style id="home-triangle-journey-white-v36">
+/* Home navigation cue: white words + one white arrow. */
+#home-menu .launch-head .eyebrow{color:#FFFFFF!important;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#home-menu .launch-head .eyebrow:before{background:#FFFFFF!important}
+#home-menu .launch-head .launch-cue-arrow{display:inline-block;color:#FFFFFF!important;font-size:18px;font-weight:800;line-height:1}
+/* Approval rate: white value and percent sign, including journey milestone. */
+#journey .journey-metric-rate strong,
+#journey .journey-metric-rate strong small,
+#about .statement-figures .figure .stat-value,
+#about .statement-figures .figure .stat-value small{color:#FFFFFF!important}
+
+/* Desktop infographic: one triangle instead of duplicate linear routes. */
+#rights .rights-triangle{background:#202423;border:1px solid #48584D;border-radius:10px;padding:clamp(20px,2.8vw,34px);min-width:0;margin-top:18px}
+#rights .rights-triangle-head{margin-bottom:14px}
+#rights .rights-triangle-kicker{color:#64B6E7;font-weight:800;font-size:13px;line-height:1.5;letter-spacing:.01em}
+#rights .rights-triangle-head h4{font-size:clamp(22px,2.7vw,35px);color:#FFFFFF;letter-spacing:-.045em;line-height:1.4;margin:8px 0}
+#rights .rights-triangle-head p{font-size:clamp(12px,1.15vw,15px);color:#CBD6CD;line-height:1.8;margin:0;word-break:keep-all}
+#rights .rights-triangle-pc{display:block;width:100%;max-width:1050px;height:auto;margin:0 auto;overflow:visible;font-family:'Noto Sans KR','Pretendard','Apple SD Gothic Neo',sans-serif}
+#rights .rights-triangle-mobile{display:none}
+#rights .rights-triangle-caveat{border-top:1px solid #46564B;color:#D0DAD1;padding-top:18px;margin:10px 0 0;font-size:12px;line-height:1.8;word-break:keep-all}
+
+/* Phone/tablet: three vertical routes, same relationships and caveats. */
+@media(max-width:860px){
+ #rights .rights-triangle{padding:18px 14px}
+ #rights .rights-triangle-pc{display:none}
+ #rights .rights-triangle-mobile{display:grid;grid-template-columns:minmax(0,1fr);gap:13px;margin-top:22px}
+ #rights .rt-mobile-route{min-width:0;border:1px solid #536057;border-left:3px solid #B6C3B9;border-radius:7px;background:#252D29;padding:17px 16px;display:flex;flex-direction:column;align-items:stretch}
+ #rights .rt-mobile-route-title{font-size:13px;color:#E6ECE6;line-height:1.6;font-weight:800;margin-bottom:14px}
+ #rights .rt-mobile-party{padding:14px 12px;border-radius:6px;border:1px solid #52635A;display:flex;align-items:center;flex-direction:column;gap:5px;text-align:center;min-height:70px;justify-content:center;background:#2A3630}
+ #rights .rt-mobile-party small{font-size:11px;line-height:1.45;color:#C5D3C8}
+ #rights .rt-mobile-party strong{color:#FFFFFF;font-size:clamp(19px,4.8vw,24px);line-height:1.35;word-break:keep-all}
+ #rights .rt-mobile-connector{display:flex;align-items:center;flex-direction:column;gap:16px;padding:15px 0 20px}
+ #rights .rt-mobile-connector>span{font-size:13px;font-weight:750;color:#E1E8E2;text-align:center;line-height:1.6;word-break:keep-all}
+ #rights .rt-mobile-arrow{height:62px;width:3px;display:block;position:relative;background:#64B6E7;flex:none}
+ #rights .rt-mobile-arrow:after{content:"";position:absolute;bottom:0;left:-5px;width:11px;height:11px;border-right:3px solid #64B6E7;border-bottom:3px solid #64B6E7;transform:rotate(45deg)}
+ #rights .rt-mobile-contract{border-left-color:#64B6E7}
+ #rights .rt-mobile-contract .rt-mobile-route-title,
+ #rights .rt-mobile-contract .rt-mobile-connector>span{color:#64B6E7}
+ #rights .rt-mobile-blocked{border-left-color:#E12211}
+ #rights .rt-mobile-blocked .rt-mobile-route-title,
+ #rights .rt-mobile-blocked .rt-mobile-connector>span{color:#F17B71}
+ #rights .rt-mobile-blocked .rt-mobile-arrow{background:linear-gradient(180deg,#F17B71 0 40%,transparent 40% 60%,#F17B71 60% 100%)}
+ #rights .rt-mobile-blocked .rt-mobile-arrow:after{border-color:#F17B71}
+ #rights .rt-mobile-arrow-x b{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:28px;height:28px;border:2px solid #E12211;border-radius:50%;display:grid;place-items:center;background:#84241F;color:white;font-size:21px;line-height:1;font-style:normal}
+ #rights .rt-mobile-conditional .rt-mobile-arrow{background:repeating-linear-gradient(180deg,#B6C3B9 0 8px,transparent 8px 15px)}
+ #rights .rt-mobile-conditional .rt-mobile-arrow:after{border-color:#B6C3B9}
+ #rights .rt-mobile-arrow-conditional b{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;padding:6px 9px;background:#344239;border-radius:4px;border:1px solid #A8B8AC;font-size:11px;color:#FFFFFF;white-space:nowrap;font-style:normal}
+ #rights .rights-triangle-caveat{margin-top:20px}
+}
 </style></head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
@@ -1318,7 +1367,7 @@ header .header-identity .logo-ring-mark{
 <div class="hero-bottom-wrap"><div class="hero-bottom"><p class="hero-description"><span>송림3지구 조합 비상대책위원회는 그동안의 문제점부터 집행부 재구성, 그리고 조합원의 권리와 궁금증까지 여기서 모두 답변해드립니다.</span><span>투명하고 철저한 관리로 여러분에게 신뢰를 드리는 조합을 만들어가겠습니다.</span></p><a href="#home-menu" class="rounded-arrow" aria-label="아래로 스크롤">↓</a></div><div class="hero-meta"><span>조합원과 함께하는 정상화</span></div></div>
 </section>
 
-<section id="home-menu" aria-label="전체 메뉴"><div class="container"><div class="launch-head"><div><div class="eyebrow">홈페이지 분야별 안내</div><h2>송림3지구의 기록을<br>분야별로 확인하세요.</h2></div><p>필요한 내용을 선택해서 확인할 수 있습니다. 모바일에서는 아래로 스크롤해 전체 내용을 순서대로 볼 수 있습니다.</p></div><div class="launch-grid"><a class="launch-card" href="#about"><span class="launch-index">01 · 송림3지구</span><strong class="launch-name">비대위소개</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#journey"><span class="launch-index">02 · 송림3지구</span><strong class="launch-name">정상화 추진 경과</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#roadmap"><span class="launch-index">03 · 송림3지구</span><strong class="launch-name">임원선출계획</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#finance"><span class="launch-index">04 · 송림3지구</span><strong class="launch-name">재무현황</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#past"><span class="launch-index">05 · 송림3지구</span><strong class="launch-name">과거 사건</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#lawfirm"><span class="launch-index">06 · 송림3지구</span><strong class="launch-name">법률자문</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rights"><span class="launch-index">07 · 송림3지구</span><strong class="launch-name">조합원 권리</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#donors"><span class="launch-index">08 · 송림3지구</span><strong class="launch-name">후원자</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rules"><span class="launch-index">09 · 송림3지구</span><strong class="launch-name">정관·규정</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#contact"><span class="launch-index">10 · 송림3지구</span><strong class="launch-name">연락처</strong><span class="launch-arrow" aria-hidden="true">↗</span></a></div><p class="launch-foot">송림3지구 정상화 기록</p></div></section>
+<section id="home-menu" aria-label="전체 메뉴"><div class="container"><div class="launch-head"><div><div class="eyebrow">분야별 안내 바로가기 <span class="launch-cue-arrow" aria-hidden="true">→</span></div><h2>송림3지구의 기록을<br>분야별로 확인하세요.</h2></div><p>필요한 내용을 선택해서 확인할 수 있습니다. 모바일에서는 아래로 스크롤해 전체 내용을 순서대로 볼 수 있습니다.</p></div><div class="launch-grid"><a class="launch-card" href="#about"><span class="launch-index">01 · 송림3지구</span><strong class="launch-name">비대위소개</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#journey"><span class="launch-index">02 · 송림3지구</span><strong class="launch-name">정상화 추진 경과</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#roadmap"><span class="launch-index">03 · 송림3지구</span><strong class="launch-name">임원선출계획</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#finance"><span class="launch-index">04 · 송림3지구</span><strong class="launch-name">재무현황</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#past"><span class="launch-index">05 · 송림3지구</span><strong class="launch-name">과거 사건</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#lawfirm"><span class="launch-index">06 · 송림3지구</span><strong class="launch-name">법률자문</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rights"><span class="launch-index">07 · 송림3지구</span><strong class="launch-name">조합원 권리</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#donors"><span class="launch-index">08 · 송림3지구</span><strong class="launch-name">후원자</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#rules"><span class="launch-index">09 · 송림3지구</span><strong class="launch-name">정관·규정</strong><span class="launch-arrow" aria-hidden="true">↗</span></a><a class="launch-card" href="#contact"><span class="launch-index">10 · 송림3지구</span><strong class="launch-name">연락처</strong><span class="launch-arrow" aria-hidden="true">↗</span></a></div><p class="launch-foot">송림3지구 정상화 기록</p></div></section>
 
 <section id="about" class="statement"><div class="container reveal"><div class="eyebrow">비대위소개</div><h2><span class="statement-line">누군가를 비난하기 위해서가 아니라,</span><span class="statement-line">조합의 미래를 조합원 스스로 결정하기 위해.</span></h2><p id="mission"></p><div class="statement-figures" aria-label="2026년 10월 19일 기준 주요 현황">
 <div class="figure"><span class="stat-label">해임총회 가결일</span><strong class="stat-value stat-date">2026.10.16</strong><p class="stat-description">조합장 1명 및 이사 4명·감사 1명 해임 가결</p></div>
@@ -1437,43 +1486,72 @@ header .header-identity .logo-ring-mark{
     <div><div class="rights-chapter-num">01 / 기본채무구조</div><h3 id="rights-title-1">누가 공사비 채무를 부담하는가?</h3></div>
     <p>시공사의 공사대금채권이 곧 조합원 개개인에 대한 직접 청구권을 뜻하지는 않습니다.</p>
    </div>
-   <div class="rights-actor-diagram" role="group" aria-label="두산건설의 공사비 채권과 조합의 공사비 채무 관계">
-    <div class="rights-actor"><div class="rlabel">시공사</div><strong>두산건설</strong><small>공사비 청구의 계약 당사자</small></div>
-    <div class="rights-connector" aria-label="두산건설의 공사비 채권과 조합의 공사비 채무"><span class="rights-claim-label">공사비 채권</span><div class="arrows" aria-hidden="true"></div><span class="rights-debt-label">공사비 채무</span></div>
-    <div class="rights-actor union"><div class="rlabel">사업 주체</div><strong>조합</strong><small>계약상 공사비 채무의 부담 주체</small></div>
-   </div>
-   <div class="rights-personal-claim" role="group" aria-label="시공사에서 조합으로의 계약상 청구, 조합원에 대한 자동 직접청구 차단, 별도 분담 절차가 필요한 세 경로">
-    <div class="rights-personal-heading">
-      <div><span class="rights-personal-kicker">조합 채무 ≠ 조합원 개인 채무</span><h4>조합원 개인에게 곧바로 청구할 수 있는가?</h4></div>
-      <span class="rights-personal-status"><span aria-hidden="true">×</span> 자동 직접청구 아님</span>
+   <div class="rights-triangle" role="group" aria-label="두산건설, 조합, 조합원 개인 사이의 공사비 청구와 분담 절차 관계">
+    <div class="rights-triangle-head">
+      <div class="rights-triangle-kicker">조합의 채무 ≠ 조합원 개인의 채무</div>
+      <h4>공사비 채권은 어디로 연결되는가?</h4>
+      <p>시공사의 계약상 청구 상대방은 조합임. 조합원 개인에 대한 직접청구 및 추가분담은 별도 법적 근거와 절차로 판단함.</p>
     </div>
-    <div class="rights-claim-routes" aria-label="계약상 청구 경로와 개인 분담 절차">
-      <div class="rights-claim-route route-contract">
-        <div class="route-kind">계약상 공사비 청구 상대방</div>
-        <div class="route-chain">
-          <div class="route-party"><small>공사비 채권자</small><strong>두산건설</strong></div>
-          <div class="route-connection"><span class="route-message">조합에 공사비 청구</span><div class="route-arrow" aria-hidden="true"></div></div>
-          <div class="route-party"><small>계약상 채무자</small><strong>조합</strong></div>
-        </div>
+
+    <svg class="rights-triangle-pc" viewBox="0 0 960 548" role="img" aria-labelledby="rightsTriangleTitle rightsTriangleDesc" xmlns="http://www.w3.org/2000/svg">
+      <title id="rightsTriangleTitle">공사비 채권·채무 삼각관계도</title>
+      <desc id="rightsTriangleDesc">두산건설에서 조합으로 파란색 실선 화살표가 연결되며 이는 계약상 공사비 청구 관계임. 두산건설에서 조합원 개인에게 가는 빨간색 선은 X로 차단되어 자동 직접청구가 성립하지 않음을 표시함. 조합에서 조합원 개인으로 가는 회색 점선은 총회 결의 등 별도의 적법한 분담 절차가 필요함을 의미함.</desc>
+      <defs>
+        <marker id="rightsTriangleBlueArrow" viewBox="0 0 10 10" markerWidth="9" markerHeight="9" refX="8" refY="5" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#64B6E7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="rightsTriangleGrayArrow" viewBox="0 0 10 10" markerWidth="9" markerHeight="9" refX="8" refY="5" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#B6C3B9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+      </defs>
+      <path d="M413 151 L267 404" stroke="#64B6E7" stroke-width="3.5" stroke-linecap="round" fill="none" marker-end="url(#rightsTriangleBlueArrow)"/>
+      <path d="M547 151 L693 404" stroke="#F17B71" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+      <path d="M330 459 H628" stroke="#B6C3B9" stroke-width="3" stroke-dasharray="10 9" fill="none" marker-end="url(#rightsTriangleGrayArrow)"/>
+
+      <rect x="365" y="40" width="230" height="111" rx="10" fill="#27332D" stroke="#86BC25" stroke-width="2.5"/>
+      <text x="480" y="79" fill="#C2D3C8" font-size="16" font-weight="650" text-anchor="middle">시공사 · 공사비 채권자</text>
+      <text x="480" y="121" fill="#FFFFFF" font-size="31" font-weight="800" text-anchor="middle">두산건설</text>
+
+      <rect x="80" y="405" width="250" height="108" rx="10" fill="#25312D" stroke="#64B6E7" stroke-width="2.5"/>
+      <text x="205" y="447" fill="#C2D8E4" font-size="16" font-weight="650" text-anchor="middle">계약상 공사비 채무자</text>
+      <text x="205" y="487" fill="#FFFFFF" font-size="32" font-weight="800" text-anchor="middle">조합</text>
+      <rect x="630" y="405" width="250" height="108" rx="10" fill="#25312D" stroke="#A8B8AC" stroke-width="2.5"/>
+      <text x="755" y="447" fill="#D1DCD3" font-size="16" font-weight="650" text-anchor="middle">개인 채무 별도 판단</text>
+      <text x="755" y="487" fill="#FFFFFF" font-size="28" font-weight="800" text-anchor="middle">조합원 개인</text>
+
+      <rect x="52" y="207" width="237" height="79" rx="7" fill="#1C292C" stroke="#365A6B" stroke-width="1"/>
+      <text x="170" y="237" fill="#64B6E7" font-size="17" font-weight="800" text-anchor="middle">① 계약상 공사비 청구</text>
+      <text x="170" y="266" fill="#E0EDF2" font-size="14" text-anchor="middle">청구 상대방 = 조합</text>
+
+      <rect x="671" y="207" width="237" height="79" rx="7" fill="#2C2322" stroke="#76413C" stroke-width="1"/>
+      <text x="789" y="237" fill="#F17B71" font-size="17" font-weight="800" text-anchor="middle">② 자동 직접청구 아님</text>
+      <text x="789" y="266" fill="#F2DEDA" font-size="14" text-anchor="middle">개인 채무 자동 발생 아님</text>
+      <circle cx="641" cy="313" r="21" fill="#942B22" stroke="#E12211" stroke-width="2.5"/>
+      <text x="641" y="322" fill="#FFFFFF" font-size="31" font-weight="800" text-anchor="middle">×</text>
+
+      <rect x="344" y="341" width="272" height="76" rx="7" fill="#323C35" stroke="#7C8B80" stroke-width="1"/>
+      <text x="480" y="370" fill="#FFFFFF" font-size="17" font-weight="800" text-anchor="middle">③ 별도 적법 절차 필요</text>
+      <text x="480" y="396" fill="#D6E0D8" font-size="14" text-anchor="middle">총회 결의 등 법적 근거</text>
+      <text x="480" y="491" fill="#C6D2C9" font-size="13" text-anchor="middle">분담금 채무 자동 성립 아님</text>
+    </svg>
+
+    <div class="rights-triangle-mobile" aria-label="청구와 분담의 세 가지 관계">
+      <div class="rt-mobile-route rt-mobile-contract">
+        <div class="rt-mobile-route-title">01 · 계약상 공사비 청구</div>
+        <div class="rt-mobile-party"><small>시공사 · 공사비 채권자</small><strong>두산건설</strong></div>
+        <div class="rt-mobile-connector"><span>조합에 공사비 청구</span><i class="rt-mobile-arrow" aria-hidden="true"></i></div>
+        <div class="rt-mobile-party"><small>계약상 공사비 채무자</small><strong>조합</strong></div>
       </div>
-      <div class="rights-claim-route route-blocked">
-        <div class="route-kind">개인에게 자동 직접청구되는 경로 아님</div>
-        <div class="route-chain">
-          <div class="route-party"><small>시공사</small><strong>두산건설</strong></div>
-          <div class="route-connection"><span class="route-message">직접청구 자동 발생 아님</span><div class="route-arrow" aria-hidden="true"><span class="route-stop">×</span></div></div>
-          <div class="route-party"><small>개인별 채무 별도 판단</small><strong>조합원 개인</strong></div>
-        </div>
+      <div class="rt-mobile-route rt-mobile-blocked">
+        <div class="rt-mobile-route-title">02 · 개인에게 자동 직접청구 아님</div>
+        <div class="rt-mobile-party"><small>시공사</small><strong>두산건설</strong></div>
+        <div class="rt-mobile-connector"><span>개인 채무 자동 발생 아님</span><i class="rt-mobile-arrow rt-mobile-arrow-x" aria-hidden="true"><b>×</b></i></div>
+        <div class="rt-mobile-party"><small>개인 채무 별도 판단</small><strong>조합원 개인</strong></div>
       </div>
-      <div class="rights-claim-route route-conditional">
-        <div class="route-kind">조합을 통한 추가 분담은 별도 법적 근거·절차 필요</div>
-        <div class="route-chain">
-          <div class="route-party"><small>계약상 채무자</small><strong>조합</strong></div>
-          <div class="route-connection"><span class="route-message">총회 결의 등 적법한 분담 절차 필요</span><div class="route-arrow" aria-hidden="true"><span class="route-condition">절차 필요</span></div></div>
-          <div class="route-party"><small>분담금 채무 자동 성립 아님</small><strong>조합원 개인</strong></div>
-        </div>
+      <div class="rt-mobile-route rt-mobile-conditional">
+        <div class="rt-mobile-route-title">03 · 별도 적법한 분담 절차 필요</div>
+        <div class="rt-mobile-party"><small>계약상 공사비 채무자</small><strong>조합</strong></div>
+        <div class="rt-mobile-connector"><span>총회 결의 등 법적 근거 필요</span><i class="rt-mobile-arrow rt-mobile-arrow-conditional" aria-hidden="true"><b>절차 필요</b></i></div>
+        <div class="rt-mobile-party"><small>분담금 채무 자동 성립 아님</small><strong>조합원 개인</strong></div>
       </div>
     </div>
-    <p class="rights-personal-caveat">별도의 적법한 분담 절차나 개별 약정·보증 등 법적 근거가 확인되는 경우 책임 여부는 달라질 수 있음.</p>
+    <p class="rights-triangle-caveat">개별 약정·보증이나 적법한 분담 절차 등 별도의 법적 근거가 확인되는 경우 책임 여부는 달라질 수 있음.</p>
    </div>
    <div class="rights-note"><b>해석 포인트.</b> 시공사는 원칙적으로 계약 상대방인 조합에 미지급 공사비를 청구하여야 합니다. 총회 결의 등 적법한 분담 절차 없이 조합원 개인에게 공사비를 곧바로 직접 청구할 수는 없습니다. 다만 개별 약정·보증 등 별도의 법적 근거가 있다면 달리 판단될 수 있습니다.</div>
   </article>
