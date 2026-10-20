@@ -1287,7 +1287,7 @@ window.SONGRIM_FINANCE = {
   updatedAt:"2026-10-19"
 };
 </script>
-<script src="./data.js?v=20261020-team-finance-v24"></script><script src="./updates.js?v=20261019-photo-final-v5"></script><script src="./finance.js?v=20261019-photo-final-v5"></script><script>
+<script src="./data.js?v=20261020-team-bio-corrected-v26"></script><script src="./updates.js?v=20261019-photo-final-v5"></script><script src="./finance.js?v=20261019-photo-final-v5"></script><script>
 (()=>{'use strict';const d=window.SONGRIM,f=window.SONGRIM_FINANCE;if(!d||!f){document.body.insertAdjacentHTML('afterbegin','<p style="padding:20px">데이터 파일을 불러오지 못했습니다.</p>');return}const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const kr=n=>new Intl.NumberFormat('ko-KR').format(n),won=n=>kr(n)+'원';const dateString=t=>{const a=String(t).split('-');return Number(a[1])+'/'+Number(a[2])};const dateAdd=(start,days)=>{const x=new Date(start+'T12:00:00Z');x.setUTCDate(x.getUTCDate()+days);return x.toISOString().slice(0,10)};const range=s=>{const start=dateAdd(d.info.startDate,(s.weekStart-1)*7),end=dateAdd(d.info.startDate,s.weekEnd*7-1);return dateString(start)+'–'+dateString(end)+' 예상'};const statLabel=s=>({planned:'예정',active:'진행 중',done:'완료',hold:'보류'})[s]||'예정';$('#mission').textContent=d.info.mission;
 let selected='s1',selectedWeek=null;
 function renderRoad(){
