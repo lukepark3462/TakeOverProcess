@@ -1505,6 +1505,34 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
   font-size:12px!important;
  }
 }
+</style><style id="journey-oct02-description-single-line-v47">
+/* Oct 2: let the first sentence occupy its full natural width and shift the second event right. */
+@media(min-width:1281px){
+ #journey .committee-timeline-item.journey-double-event .journey-event-pair{
+  grid-template-columns:max-content minmax(0,1fr);
+ }
+ #journey .committee-timeline-item.journey-double-event .journey-event-part:first-child p{
+  white-space:nowrap;
+  max-width:none;
+ }
+}
+/* A narrow desktop cannot fit both full Korean lines side by side. */
+@media(min-width:971px) and (max-width:1280px){
+ #journey .committee-timeline-item.journey-double-event .journey-event-pair{
+  grid-template-columns:minmax(0,1fr);
+  gap:18px;
+ }
+ #journey .committee-timeline-item.journey-double-event .journey-event-part:first-child p{
+  white-space:nowrap;
+  max-width:none;
+ }
+ #journey .committee-timeline-item.journey-double-event .journey-event-part + .journey-event-part{
+  border-left:0;
+  border-top:1px solid #526358;
+  padding:18px 0 0;
+ }
+}
+/* The existing mobile layout retains natural wrapping without horizontal overflow. */
 </style></head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
