@@ -1009,6 +1009,35 @@ header .header-identity .logo-ring-mark{
 #journey .journey-next span:last-child{font-size:14px;color:#a6d476;white-space:nowrap}
 @media(max-width:700px){#journey .journey-heading{display:block}#journey .journey-heading p{margin-top:18px}#journey .journey-period{margin:30px 0 25px}#journey .committee-timeline{padding-left:20px}#journey .committee-timeline:before{left:7px}#journey .committee-timeline-item{grid-template-columns:minmax(0,1fr);gap:6px;padding:0 0 28px 20px}#journey .committee-timeline-item:before{left:-19px}#journey .journey-milestone:before{left:-21px}#journey .journey-result{margin:8px 0 0 36px;padding:20px 18px}#journey .journey-next{flex-direction:column;align-items:flex-start}#journey .journey-next span:last-child{white-space:normal}}
 @media(prefers-reduced-motion:reduce){#journey .reveal{transition:none!important;animation:none!important}}
+</style><style id="journey-milestone-toggle-v2">
+#journey .journey-timeline-disclosure{display:block}
+#journey .journey-toggle{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:15px;list-style:none;padding:16px 0 22px;margin:0 0 20px;border-bottom:1px solid #3b4d48;color:#f5f9f5}
+#journey .journey-toggle::-webkit-details-marker{display:none}
+#journey .journey-toggle-title{font-weight:750;font-size:clamp(16px,1.5vw,20px)}
+#journey .journey-toggle-title small{font-size:12px;margin-left:12px;color:#91c8df;font-weight:600;white-space:nowrap}
+#journey .journey-toggle-action{display:flex;align-items:center;gap:12px;white-space:nowrap;color:#a9dceb;font-size:14px;font-weight:750}
+#journey .journey-toggle-closed{display:none}
+#journey .journey-chevron{font-size:22px;line-height:1;transition:transform .2s}
+#journey details:not([open]) .journey-toggle-open{display:none}
+#journey details:not([open]) .journey-toggle-closed{display:inline}
+#journey details:not([open]) .journey-chevron{transform:rotate(180deg)}
+#journey .journey-toggle:focus-visible{outline:2px solid #91d6ed;outline-offset:4px}
+#journey .journey-result{margin:32px 0 0 0;max-width:100%;padding:clamp(24px,3.5vw,43px);background:linear-gradient(110deg,#19291f,#16242a);border-left:4px solid #86bc25;text-align:left}
+#journey .journey-result-label{display:block;color:#91d6ed!important;font-weight:800!important;letter-spacing:.09em}
+#journey .journey-metrics{display:flex;gap:clamp(24px,5vw,85px);align-items:flex-end;flex-wrap:wrap;padding:18px 0 23px;border-bottom:1px solid #3d544e}
+#journey .journey-metric{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+#journey .journey-metric strong{font-size:clamp(54px,7vw,94px);margin:0;color:#fff;white-space:nowrap;line-height:1.1}
+#journey .journey-metric strong small{font-size:clamp(20px,2.2vw,29px);margin-left:9px;color:#e8f1e7}
+#journey .journey-metric-rate strong{color:#91d6ed}
+#journey .journey-metric-rate strong small{color:#91d6ed}
+#journey .journey-metric>span{color:#aabeb7;font-size:13px}
+#journey .journey-result p{margin:22px 0 0!important;text-align:left;color:#e3eee7;font-size:clamp(15px,1.3vw,18px);line-height:1.9}
+#journey .journey-result-note{color:#a7c9d4;font-size:clamp(12px,1vw,14px)}
+#journey .journey-period span{color:#91d6ed}
+#journey .committee-timeline-item time{color:#9fcde0}
+#journey .journey-milestone time{color:#86bc25}
+@media(max-width:700px){#journey .journey-toggle-title small{display:block;margin:5px 0 0}#journey .journey-result{margin:22px 0 0;padding:22px 18px}#journey .journey-metrics{gap:22px}#journey .journey-metric strong{font-size:clamp(43px,10vw,64px)}#journey .journey-metric strong small{font-size:19px}}
+@media(prefers-reduced-motion:reduce){#journey .journey-chevron{transition:none}}
 </style></head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
@@ -1056,8 +1085,8 @@ header .header-identity .logo-ring-mark{
 <section id="journey" class="section journey-section" aria-labelledby="journey-title"><div class="container">
 <div class="section-head journey-heading reveal"><div><div class="eyebrow">02 / OUR JOURNEY</div><h2 id="journey-title">정상화를 향한 기록.</h2></div><p>2026년 9월 17일 비상대책위원회 설립부터 현재까지, 조합 정상화를 위해 추진한 주요 활동과 그 결과를 기록합니다.</p></div>
 <div class="journey-period reveal">2026.09.17 <span aria-hidden="true">—</span> PRESENT</div>
-<div class="committee-history journey-history reveal" aria-label="정상화 추진 경과 타임라인"><ol class="committee-timeline"><li class="committee-timeline-item"><time datetime="2026-09-17">2026.09.17</time><div><h4>비상대책위원회 설립</h4><p>조합원 비상대책위원회 설립총회 개최. 운영진 구성과 정상화 활동의 출발점.</p></div></li><li class="committee-timeline-item"><time datetime="2026-09-22">2026.09.22</time><div><h4>조합 측 총회 최초 공지</h4><p>조합 측 총회 일정 공지. 이후 양측 총회 일정과 장소를 둘러싼 쟁점이 발생.</p></div></li><li class="committee-timeline-item"><time datetime="2026-09-23">2026.09.23</time><div><h4>비대위 해임총회 공지</h4><p>비대위가 임원 해임총회 일정 및 절차를 조합원에게 안내.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-01">2026.10.01</time><div><h4>해임총회 준비 본격화</h4><p>조합원 서면결의·참석 안내와 총회 현장 준비 등 실무 절차 진행.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-02">2026.10.02</time><div><h4>조합 측 총회 일정 변경 공지</h4><p>조합 측이 10월 16일 총회 개최를 공지하면서 일정 중복 논란 심화.</p></div></li><li class="committee-timeline-item journey-legal"><time datetime="2026-10-15">2026.10.15</time><div><h4>조합 측 총회 개최금지 가처분 승소</h4><p>조합 측 총회 개최의 적법성이 문제 된 가처분 사건에서 비대위 측 법적 대응이 성공해 조합 측 총회가 취소되었습니다. <strong>총회 개최의 위법성 관련 쟁점이 법원에서 다뤄졌으며</strong>, 가처분 결정은 본안의 위법 확정판결과는 구별됩니다.</p></div></li><li class="committee-timeline-item journey-milestone"><time datetime="2026-10-16">2026.10.16</time><div><h4>비대위 임원 해임총회 가결</h4><p>조합장 1명, 이사 4명, 감사 1명 해임안 가결. 찬성 252표·반대 2표.</p></div></li></ol>
-<div class="journey-result"><span>2026.10.16 · KEY MILESTONE</span><strong>252<small>표 찬성</small></strong><p>반대 2표 · 찬반 유효표 254표 기준<br>조합장 1명, 이사 4명, 감사 1명 해임안 가결</p></div>
+<div class="committee-history journey-history reveal" aria-label="정상화 추진 경과 타임라인"><details class="journey-timeline-disclosure" open><summary class="journey-toggle"><span class="journey-toggle-title">전체 추진 경과 <small>7개 주요 기록</small></span><span class="journey-toggle-action"><span class="journey-toggle-open">접기</span><span class="journey-toggle-closed">펼쳐보기</span><span aria-hidden="true" class="journey-chevron">⌃</span></span></summary><ol class="committee-timeline"><li class="committee-timeline-item"><time datetime="2026-09-17">2026.09.17</time><div><h4>비상대책위원회 설립</h4><p>조합원 비상대책위원회 설립총회 개최. 운영진 구성과 정상화 활동의 출발점.</p></div></li><li class="committee-timeline-item"><time datetime="2026-09-22">2026.09.22</time><div><h4>조합 측 총회 최초 공지</h4><p>조합 측 총회 일정 공지. 이후 양측 총회 일정과 장소를 둘러싼 쟁점이 발생.</p></div></li><li class="committee-timeline-item"><time datetime="2026-09-23">2026.09.23</time><div><h4>비대위 해임총회 공지</h4><p>비대위가 임원 해임총회 일정 및 절차를 조합원에게 안내.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-01">2026.10.01</time><div><h4>해임총회 준비 본격화</h4><p>조합원 서면결의·참석 안내와 총회 현장 준비 등 실무 절차 진행.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-02">2026.10.02</time><div><h4>조합 측 총회 일정 변경 공지</h4><p>조합 측이 10월 16일 총회 개최를 공지하면서 일정 중복 논란 심화.</p></div></li><li class="committee-timeline-item journey-legal"><time datetime="2026-10-15">2026.10.15</time><div><h4>조합 측 총회 개최금지 가처분 승소</h4><p>조합 측 총회 개최의 적법성이 문제 된 가처분 사건에서 비대위 측 법적 대응이 성공해 조합 측 총회가 취소되었습니다. <strong>총회 개최의 위법성 관련 쟁점이 법원에서 다뤄졌으며</strong>, 가처분 결정은 본안의 위법 확정판결과는 구별됩니다.</p></div></li><li class="committee-timeline-item journey-milestone"><time datetime="2026-10-16">2026.10.16</time><div><h4>비대위 임원 해임총회 가결</h4><p>조합장 1명, 이사 4명, 감사 1명 해임안 가결. 찬성 252표·반대 2표.</p></div></li></ol></details>
+<div class="journey-result"><span class="journey-result-label">2026.10.16 · KEY MILESTONE</span><div class="journey-metrics"><div class="journey-metric"><strong>252<small>표 찬성</small></strong><span>찬성 득표</span></div><div class="journey-metric journey-metric-rate"><strong>99.21<small>%</small></strong><span>찬반 유효표 기준 찬성률</span></div></div><p>조합장 1명, 이사 4명, 감사 1명 해임안 가결<br><span class="journey-result-note">반대 2표 · 찬반 유효표 254표 기준 (252 ÷ 254)</span></p></div>
 </div>
 <a class="journey-next" href="#roadmap"><span><small>NEXT CHAPTER</small><strong>새로운 집행부 구성과 조합 정상화</strong></span><span>임원선출계획 바로가기 →</span></a>
 </div></section>
