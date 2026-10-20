@@ -1150,6 +1150,47 @@ header .header-identity .logo-ring-mark{
  #rights .rights-personal-members small{font-size:10px}
  #rights .rights-personal-status{font-size:12px}
 }
+</style><style id="risk-red-semantic-accents-v31">
+/* Risk red is reserved for a blocked route, unverified payment demand,
+   personal-data warning, accounting outflows and document-validity caution.
+   All ordinary titles, history events, positive results and business status retain their colors. */
+:root{--sg-risk-red:#E12211;--sg-risk-red-readable:#F17B71}
+#rights .rights-personal-status{
+  border-color:rgba(225,34,17,.56)!important;
+  color:#FFE3DF!important;
+  background:rgba(225,34,17,.13)!important
+}
+#rights .rights-personal-status>span{color:var(--sg-risk-red-readable)!important}
+#rights .rights-personal-path-line>span{
+  color:#FFFFFF!important;
+  background:#9D251C!important;
+  border-color:var(--sg-risk-red)!important;
+  box-shadow:0 0 0 4px #202423
+}
+#rights .rights-personal-path-label{color:var(--sg-risk-red-readable)!important}
+#rights .rights-personal-path>small{color:#FFD6D1!important}
+#rights .rights-chapter-payment .payment-eyebrow{color:var(--sg-risk-red-readable)!important}
+#rights .rights-chapter-payment .payment-amount{color:var(--sg-risk-red-readable)!important}
+#rights .rights-chapter-payment .payment-amount span{color:#FFFFFF!important}
+#rights .rights-chapter-payment .rights-payment-panel:first-child{
+  border-top:3px solid var(--sg-risk-red)!important
+}
+#rights .payment-privacy-warning{color:var(--sg-risk-red-readable)!important;font-weight:800}
+#finance .monthly-ledger .amount-cell.outflow .amount-sign,
+#finance .monthly-ledger .amount-cell.outflow .amount-number{
+  color:var(--sg-risk-red-readable)!important
+}
+#finance .finance-equation>div:last-child strong{color:var(--sg-risk-red-readable)!important}
+#finance .monthly-ledger .monthly-detail-row .amount-cell.outflow .amount-number{color:var(--sg-risk-red-readable)!important}
+#rules .more-info{
+  border-left:3px solid var(--sg-risk-red)!important;
+  padding-left:16px!important;
+  color:#DEDEDE
+}
+@media(max-width:760px){
+ #rights .rights-chapter-payment .payment-amount{font-size:clamp(50px,14vw,75px)!important}
+ #rules .more-info{padding-left:12px!important}
+}
 </style></head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
@@ -1362,7 +1403,7 @@ header .header-identity .logo-ring-mark{
     <div class="rights-payment-panel payment-contact">
       <div class="payment-eyebrow">이미 입금하셨습니까?</div>
       <h4>두산건설에 2,500만원을 입금한 경우 비대위에 알려주시기 바랍니다.</h4>
-      <p>입금 여부와 일자·금액, 당시 안내받은 내용을 공유해 주시면 사실관계를 정리하는 데 도움이 됩니다. 공개 게시판에 계좌번호 등 개인정보를 올리지 마십시오.</p>
+      <p>입금 여부와 일자·금액, 당시 안내받은 내용을 공유해 주시면 사실관계를 정리하는 데 도움이 됩니다. <strong class="payment-privacy-warning">공개 게시판에 계좌번호 등 개인정보를 올리지 마십시오.</strong></p>
       <div class="payment-actions">
         <a href="sms:01099291171" class="payment-primary">비대위에 문자 보내기 ↗</a>
         <a href="#contact" class="payment-secondary">연락처 확인 ↗</a>
