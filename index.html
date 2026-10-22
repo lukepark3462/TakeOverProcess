@@ -1761,6 +1761,134 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
  #past.past-v2 .pv-faq-section .pv-section-head{margin-bottom:24px;}
 }
 
+
+
+/* Past events: black canvas, readable copy, aligned toggles. Canonical palette tokens only. */
+#past.past-v2{
+ --ink:var(--sg-white);--muted:var(--sg-neutral-gray-light);
+ --paper:var(--sg-black);--off:var(--sg-black);
+ --rule:color-mix(in srgb,var(--sg-white) 22%,var(--sg-black));
+ --past-card:color-mix(in srgb,var(--sg-white) 7%,var(--sg-black));
+ --past-highlight:color-mix(in srgb,var(--sg-deep-green) 25%,var(--sg-black));
+ --past-panel:color-mix(in srgb,var(--sg-white) 4%,var(--sg-black));
+ background:var(--sg-black)!important;color:var(--sg-white)!important;
+ font-size:16px;
+}
+#past.past-v2 :is(.pv-hero,.pv-section,.pv-metric-band,.pv-roles,.pv-issues-section,.pv-progress-section,.pv-faq-section){
+ background:var(--sg-black)!important;color:var(--sg-white)!important;
+}
+#past.past-v2 .pv-hero .pv-container{padding-top:74px;padding-bottom:75px}
+#past.past-v2 .pv-hero h2{font-size:clamp(49px,5.7vw,76px);line-height:1.18;letter-spacing:-.075em;color:var(--sg-white)!important}
+#past.past-v2 .pv-hero .pv-eyebrow{font-size:13px;color:var(--sg-brand-green)}
+#past.past-v2 .pv-hero .pv-desc{font-size:16px;line-height:1.9;color:var(--sg-neutral-gray-light)!important}
+#past.past-v2 .pv-hero-bottom span{font-size:13px;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-section-lead{font-size:16px;color:var(--sg-neutral-gray-light)}
+#past.past-v2 :is(.pv-section-lead,.pv-issues-intro p) strong{color:var(--sg-white)}
+#past.past-v2 :is(.pv-section-title,.pv-time-card h3,.pv-role h3,.pv-issue-card h3,.pv-issues-intro h2,.pv-process-layout h2){
+ color:var(--sg-white)!important;
+}
+#past.past-v2 .pv-kicker{font-size:13px;color:var(--sg-brand-green)!important;letter-spacing:.08em}
+#past.past-v2 .pv-principle{
+ background:var(--past-panel);border-color:var(--rule);border-left-color:var(--sg-strategic-teal);
+ color:var(--sg-neutral-gray-light);font-size:15px;line-height:1.85;
+}
+#past.past-v2 .pv-principle b{color:var(--sg-green-light)}
+#past.past-v2 :is(.pv-time-card,.pv-role,.pv-issue-card){
+ background:var(--past-card)!important;border-color:var(--rule)!important;color:var(--sg-white)!important;
+}
+#past.past-v2 :is(.pv-time-card:hover,.pv-issue-card:hover){border-color:var(--sg-strategic-teal)!important}
+#past.past-v2 .pv-time-card.pv-high{background:var(--past-highlight)!important;border-color:var(--sg-deep-green)!important}
+#past.past-v2 .pv-time-card.pv-end{
+ background:color-mix(in srgb,var(--sg-white) 10%,var(--sg-black))!important;
+ border:1px solid var(--rule)!important;border-top:2px solid var(--sg-brand-green)!important;
+}
+#past.past-v2 .pv-time-card .pv-n{font-size:12px;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-time-card time{font-size:13px;color:var(--sg-teal-light)}
+#past.past-v2 .pv-time-card h3{font-size:20px;line-height:1.45}
+#past.past-v2 .pv-time-card p{font-size:15px;line-height:1.8;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-metric-band{border-color:var(--rule);padding-top:39px;padding-bottom:39px}
+#past.past-v2 .pv-metric:not(:first-child){border-left-color:var(--rule)}
+#past.past-v2 .pv-metric .pv-mini{font-size:13px;color:var(--sg-neutral-gray-light);letter-spacing:.015em}
+#past.past-v2 .pv-metric .pv-explain{font-size:14px;line-height:1.8;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-metric-note{font-size:13px;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-metric:nth-child(1) .pv-value{color:var(--sg-brand-green)}
+#past.past-v2 .pv-metric:nth-child(2) .pv-value{color:var(--sg-data-blue-light)}
+#past.past-v2 .pv-metric:nth-child(3) .pv-value{color:var(--sg-teal-light)}
+#past.past-v2 .pv-role .pv-role-no{font-size:13px;color:var(--sg-teal-light)}
+#past.past-v2 .pv-role h3{font-size:25px}
+#past.past-v2 .pv-role p{font-size:15px;line-height:1.8;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-role .pv-focus{font-size:14px;line-height:1.7;color:var(--sg-green-light);border-top-color:var(--rule)}
+#past.past-v2 .pv-issues-intro p{font-size:16px;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-issue-legend{font-size:13px;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-toggle-all{font-size:14px;border-color:var(--rule);background:var(--past-card);color:var(--sg-white);padding:11px 16px}
+#past.past-v2 .pv-toggle-all:hover{background:color-mix(in srgb,var(--sg-white) 10%,var(--sg-black))}
+#past.past-v2 .pv-issue-card[open]{border-color:var(--sg-strategic-teal)!important;box-shadow:0 12px 30px rgba(0,0,0,.18)}
+#past.past-v2 .pv-issue-badge{font-size:12px;color:var(--sg-teal-light);background:var(--past-highlight);padding:7px 11px}
+#past.past-v2 .pv-issue-card h3{font-size:23px;line-height:1.45}
+#past.past-v2 .pv-issue-card .pv-short{font-size:15px;line-height:1.8;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-issue-bottom{border-top-color:var(--rule)}
+#past.past-v2 .pv-issue-figure{font-size:14px;color:var(--sg-green-light)}
+#past.past-v2 .pv-issue-action{font-size:13px;color:var(--sg-neutral-gray-light);white-space:nowrap;gap:10px}
+#past.past-v2 .pv-issue-action:after{
+ content:"";display:block;flex:0 0 24px;box-sizing:border-box;
+ width:24px;height:24px;border:1px solid var(--sg-neutral-gray-light);border-radius:50%;
+ background:
+  linear-gradient(var(--sg-green-light),var(--sg-green-light)) center / 12px 2px no-repeat,
+  linear-gradient(var(--sg-green-light),var(--sg-green-light)) center / 2px 12px no-repeat;
+}
+#past.past-v2 .pv-issue-card[open] .pv-issue-action:after{
+ content:"";background:linear-gradient(var(--sg-green-light),var(--sg-green-light)) center / 12px 2px no-repeat;
+}
+#past.past-v2 .pv-issue-body{
+ background:var(--past-panel)!important;border-top-color:var(--rule);padding:27px 28px 29px;
+}
+#past.past-v2 .pv-issue-body h4{font-size:14px;color:var(--sg-green-light);margin-bottom:9px}
+#past.past-v2 .pv-issue-body p{font-size:15px;line-height:1.9;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-issue-body .pv-q{
+ font-size:16px;line-height:1.85;background:var(--past-highlight);color:var(--sg-white);
+ border-left-color:var(--sg-brand-green);padding:16px 18px;
+}
+#past.past-v2 .pv-issue-body ul{font-size:15px;line-height:1.8;color:var(--sg-neutral-gray-light);gap:9px}
+#past.past-v2 .pv-issue-body li::marker{color:var(--sg-brand-green)}
+#past.past-v2 .pv-process-layout .pv-lead{font-size:16px;line-height:1.9;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-process-list li{font-size:15px;color:var(--sg-neutral-gray-light);border-bottom-color:var(--rule);line-height:1.7}
+#past.past-v2 .pv-process-list strong{font-size:14px;color:var(--sg-brand-green)}
+#past.past-v2 .pv-outcome-card{
+ background:color-mix(in srgb,var(--sg-white) 10%,var(--sg-black))!important;
+ border:1px solid var(--rule);color:var(--sg-white);
+}
+#past.past-v2 .pv-outcome-card .pv-cap{font-size:13px;color:var(--sg-green-light);letter-spacing:.06em}
+#past.past-v2 .pv-outcome-stats .pv-v.pv-lime{color:var(--sg-brand-green)}
+#past.past-v2 .pv-outcome-stats small{font-size:13px;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-outcome-card .pv-fine{font-size:14px;line-height:1.85;color:var(--sg-neutral-gray-light)}
+#past.past-v2 .pv-faq-section{background:var(--sg-black)!important}
+#past.past-v2 .past-faq{border-top-color:var(--rule)!important}
+#past.past-v2 .past-faq details{border-bottom-color:var(--rule)!important}
+#past.past-v2 .past-faq summary{
+ font-size:clamp(17px,1.6vw,20px)!important;color:var(--sg-white)!important;line-height:1.65;
+}
+#past.past-v2 .past-faq summary span{font-size:16px;color:var(--sg-brand-green)!important}
+#past.past-v2 .past-faq summary b{color:var(--sg-green-light)!important}
+#past.past-v2 .past-faq details>p{font-size:16px;line-height:1.9;color:var(--sg-neutral-gray-light)!important}
+@media(max-width:640px){
+ #past.past-v2 .pv-hero .pv-container{padding-top:57px;padding-bottom:60px}
+ #past.past-v2 .pv-hero h2{font-size:48px}
+ #past.past-v2 .pv-hero .pv-desc{font-size:15px}
+ #past.past-v2 .pv-hero-bottom span{font-size:12px}
+ #past.past-v2 .pv-section-lead,
+ #past.past-v2 .pv-issues-intro p{font-size:15px}
+ #past.past-v2 .pv-time-card h3{font-size:19px}
+ #past.past-v2 .pv-time-card p,
+ #past.past-v2 .pv-role p,
+ #past.past-v2 .pv-issue-card .pv-short{font-size:14px}
+ #past.past-v2 .pv-issue-card h3{font-size:21px}
+ #past.past-v2 .pv-issue-figure{font-size:13px}
+ #past.past-v2 .pv-issue-body{padding:23px 21px}
+ #past.past-v2 .pv-issue-body .pv-q{font-size:15px}
+ #past.past-v2 .past-faq summary{font-size:17px!important}
+ #past.past-v2 .past-faq details>p{font-size:15px!important}
+}
+
 </style>
 </head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
@@ -1865,8 +1993,8 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 <section id="past" class="section past-section past-v2" aria-labelledby="past-title">
     <section class="pv-hero" id="past-v2-intro">
       <div class="pv-container">
-        <div class="pv-eyebrow"><span class="pv-line"></span> BEFORE THE RESET · 정상화 이전의 기록</div>
-        <h2 id="past-title">과거 사건<em>.</em></h2>
+        <div class="pv-eyebrow"><span class="pv-line"></span> 정상화 이전의 기록</div>
+        <h2 id="past-title">과거 사건</h2>
         <div class="pv-statement">해임안은 왜 제기되었는가.<br/><b>일련의 의사결정과 6가지 핵심 질문.</b></div>
         <p class="pv-desc">조합 자산 매각, 고액 용역비, 공사비 상환과 조합원 부담, 회계·감사 기능에 관한 문제 제기가 누적되었음. 해임안을 둘러싼 주요 사건의 흐름과 비대위가 제기한 질문을 하나의 기록으로 정리함.</p>
         <div class="pv-hero-bottom"><span><b>01</b> 해임안 제기 배경</span><span><i></i><b>02</b> 임원별 책임 구조</span><span><i></i><b>03</b> 6가지 핵심 질문</span><span><i></i><b>04</b> 2026.10.16 해임 의결</span></div>
@@ -1876,17 +2004,17 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
     <section class="pv-section" id="past-v2-background">
       <div class="pv-container">
         <div class="pv-section-head">
-          <div><div class="pv-kicker">01 / BACKGROUND</div><h2 class="pv-section-title">해임안이 제기된 배경</h2></div>
+          <div><div class="pv-kicker">01 / 해임 배경</div><h2 class="pv-section-title">해임안이 제기된 배경</h2></div>
           <p class="pv-section-lead">해임안은 단일 사건에 대한 대응이 아닌, <strong>계약·자금집행·조합원 부담·내부통제</strong>와 관련한 의사결정에 대한 문제 제기가 누적된 결과임.</p>
         </div>
         <div class="pv-principle"><b>기록의 원칙.</b> 확정된 의결 결과와 계약 문서의 내용, 비대위의 의혹 제기, 조합 측 당시 설명을 구분하여 서술함. 해임 결의가 개별 형사 혐의나 민사 책임을 확정하는 것은 아님.</div>
         <div class="pv-chronology">
-          <article class="pv-time-card"><span class="pv-n">BACKGROUND 01</span><time>2023년 · 검증 항목</time><h3>조합장 보수 인상과<br/>의사결정 절차 논란</h3><p>조합장 본인 보수 인상안의 부결·직권상정 경위와 적정한 견제 절차가 있었는지 문제 제기. 관련 표결 원문 재대조 필요.</p></article>
-          <article class="pv-time-card"><span class="pv-n">BACKGROUND 02</span><time>2025.06 — 2026.01</time><h3>상가 52실 매각계약<br/>111억원 규모</h3><p>공개입찰 2회 유찰 후 4개 매수법인과 계약. 조합이 설명한 일괄매각과 호실별 실제 판매 구조의 차이가 쟁점화됨.</p></article>
-          <article class="pv-time-card"><span class="pv-n">BACKGROUND 03</span><time>2026.07.08 — 07.09</time><h3>2,500만원 선납안 상정·<br/>보류지 판매대행계약</h3><p>대의원회 공사비 상환안 찬반동수 후 직권상정, 보류지 17세대 판매대행 수수료율 13% 계약 체결.</p></article>
-          <article class="pv-time-card pv-high"><span class="pv-n">BACKGROUND 04</span><time>2026.08.01</time><h3>조합원 정액 선납안<br/>총회 부결</h3><p>1인당 2,500만원 선납안은 찬성 135표, 반대 211표로 부결. 이후 개인별 납부·추심 관련 논란이 이어짐.</p></article>
-          <article class="pv-time-card"><span class="pv-n">BACKGROUND 05</span><time>2026.09 — 10</time><h3>비대위 설립과<br/>임원 해임안 추진</h3><p>9월 17일 비대위 설립 이후 계약·회계·등기 문제를 중심으로 해임 요구. 총회 일정 변경과 소집 절차를 둘러싼 갈등 발생.</p></article>
-          <article class="pv-time-card pv-end"><span class="pv-n">BACKGROUND 06</span><time>2026.10.16</time><h3>조합 임원 해임안<br/>가결</h3><p>조합장 1명, 이사 4명, 감사 1명에 대한 해임안 가결. 차기 집행부 구성과 운영 정상화 단계로 전환.</p></article>
+          <article class="pv-time-card"><span class="pv-n">주요 경과 01</span><time>2023년 · 검증 항목</time><h3>조합장 보수 인상과<br/>의사결정 절차 논란</h3><p>조합장 본인 보수 인상안의 부결·직권상정 경위와 적정한 견제 절차가 있었는지 문제 제기. 관련 표결 원문 재대조 필요.</p></article>
+          <article class="pv-time-card"><span class="pv-n">주요 경과 02</span><time>2025.06 — 2026.01</time><h3>상가 52실 매각계약<br/>111억원 규모</h3><p>공개입찰 2회 유찰 후 4개 매수법인과 계약. 조합이 설명한 일괄매각과 호실별 실제 판매 구조의 차이가 쟁점화됨.</p></article>
+          <article class="pv-time-card"><span class="pv-n">주요 경과 03</span><time>2026.07.08 — 07.09</time><h3>2,500만원 선납안 상정·<br/>보류지 판매대행계약</h3><p>대의원회 공사비 상환안 찬반동수 후 직권상정, 보류지 17세대 판매대행 수수료율 13% 계약 체결.</p></article>
+          <article class="pv-time-card pv-high"><span class="pv-n">주요 경과 04</span><time>2026.08.01</time><h3>조합원 정액 선납안<br/>총회 부결</h3><p>1인당 2,500만원 선납안은 찬성 135표, 반대 211표로 부결. 이후 개인별 납부·추심 관련 논란이 이어짐.</p></article>
+          <article class="pv-time-card"><span class="pv-n">주요 경과 05</span><time>2026.09 — 10</time><h3>비대위 설립과<br/>임원 해임안 추진</h3><p>9월 17일 비대위 설립 이후 계약·회계·등기 문제를 중심으로 해임 요구. 총회 일정 변경과 소집 절차를 둘러싼 갈등 발생.</p></article>
+          <article class="pv-time-card pv-end"><span class="pv-n">주요 경과 06</span><time>2026.10.16</time><h3>조합 임원 해임안<br/>가결</h3><p>조합장 1명, 이사 4명, 감사 1명에 대한 해임안 가결. 차기 집행부 구성과 운영 정상화 단계로 전환.</p></article>
         </div>
       </div>
     </section>
@@ -1894,9 +2022,9 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
     <div class="pv-metric-band" aria-label="주요 계약 및 비용 규모">
       <div class="pv-container">
         <div class="pv-metric-grid">
-          <div class="pv-metric"><div class="pv-mini">REVIEWED BUDGET</div><div class="pv-value">31<em>억원</em></div><div class="pv-explain">이전고시·등기 관련 비용 승인 추진 규모</div></div>
-          <div class="pv-metric"><div class="pv-mini">COMMERCIAL SALE</div><div class="pv-value">111<em>억원</em></div><div class="pv-explain">상가 52실 매매계약 총액 · 실제 회수액과 구분</div></div>
-          <div class="pv-metric"><div class="pv-mini">AGENCY FEE RATE</div><div class="pv-value">13<em>%</em></div><div class="pv-explain">DH파트너스 판매대행 계약 수수료율 · VAT 별도</div></div>
+          <div class="pv-metric"><div class="pv-mini">등기 관련 예산</div><div class="pv-value">31<em>억원</em></div><div class="pv-explain">이전고시·등기 관련 비용 승인 추진 규모</div></div>
+          <div class="pv-metric"><div class="pv-mini">상가 매매계약</div><div class="pv-value">111<em>억원</em></div><div class="pv-explain">상가 52실 매매계약 총액 · 실제 회수액과 구분</div></div>
+          <div class="pv-metric"><div class="pv-mini">매각대행 수수료율</div><div class="pv-value">13<em>%</em></div><div class="pv-explain">DH파트너스 판매대행 계약 수수료율 · 부가세 별도</div></div>
         </div>
         <p class="pv-metric-note">위 수치는 검토 대상인 예산·계약 금액이며, 조합의 확정 손실 또는 최종 지급액을 의미하지 않음.</p>
       </div>
@@ -1904,7 +2032,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 
     <section class="pv-section pv-roles" id="past-v2-responsibility">
       <div class="pv-container">
-        <div class="pv-section-head"><div><div class="pv-kicker">02 / ACCOUNTABILITY</div><h2 class="pv-section-title">해임안의 책임 구조</h2></div><p class="pv-section-lead">조합장·이사·감사가 동일한 사유로 책임을 지는 것은 아님. 각 직위의 권한, 의사결정 참여, 감독·보고 역할을 구분해 해임 사유를 살펴봄.</p></div>
+        <div class="pv-section-head"><div><div class="pv-kicker">02 / 임원별 책임</div><h2 class="pv-section-title">해임안의 책임 구조</h2></div><p class="pv-section-lead">조합장·이사·감사가 동일한 사유로 책임을 지는 것은 아님. 각 직위의 권한, 의사결정 참여, 감독·보고 역할을 구분해 해임 사유를 살펴봄.</p></div>
         <div class="pv-roles-grid">
           <article class="pv-role"><div class="pv-role-no">제1호 안건</div><h3>조합장</h3><p>주요 계약의 체결, 조합 자산의 처분, 공사비 상환안 제안과 고액 용역비 집행 등 사업 운영과 의사결정을 주도한 책임에 대한 검토.</p><div class="pv-focus">핵심: 집행 결정과 조합원에 대한 설명 책임</div></article>
           <article class="pv-role"><div class="pv-role-no">제2호 안건</div><h3>이사 4명</h3><p>계약·예산·자금 집행에 관한 심의와 견제, 불리한 조건의 사전 검토 및 의결 이후 시정조치가 충분했는지 검토.</p><div class="pv-focus">핵심: 심의·견제 및 시정 요구 책임</div></article>
@@ -1915,12 +2043,12 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 
     <section class="pv-issues-section" id="past-v2-issues">
       <div class="pv-container">
-        <div class="pv-issues-intro"><div class="pv-kicker">03 / SIX CORE QUESTIONS</div><h2>비대위가 제기한<br/>6가지 질문</h2><p>각 항목을 선택하면 당시 경위, 비대위의 문제 제기, 조합 측의 설명, 남아 있는 검증 과제가 펼쳐집니다. 핵심은 금액 자체보다 <strong>계약의 실질, 적법한 의사결정, 자금집행의 책임</strong>입니다.</p></div>
+        <div class="pv-issues-intro"><div class="pv-kicker">03 / 6가지 핵심 질문</div><h2>비대위가 제기한<br/>6가지 질문</h2><p>각 항목을 선택하면 당시 경위, 비대위의 문제 제기, 조합 측의 설명, 남아 있는 검증 과제가 펼쳐집니다. 핵심은 금액 자체보다 <strong>계약의 실질, 적법한 의사결정, 자금집행의 책임</strong>입니다.</p></div>
         <div class="pv-issue-toolbar"><div class="pv-issue-legend">카드를 눌러 주요 쟁점의 상세 내용을 확인할 수 있습니다.</div><button id="past-v2-expand-all" class="pv-toggle-all" type="button" aria-expanded="false">전체 상세 보기 +</button></div>
         <div class="pv-issues-grid">
           <details class="pv-issue-card"><summary><div class="pv-issue-overline"><span class="pv-issue-index">01</span><span class="pv-issue-badge">용역 계약 · 예산</span></div><h3>31억원 등기 관련 용역비</h3><p class="pv-short">이전고시와 등기 관련 예산의 세부 산정내역과 업체 선정·승인 절차는 적정했는가?</p><div class="pv-issue-bottom"><span class="pv-issue-figure">승인 추진 규모 약 31억원</span><span class="pv-issue-action">상세 보기</span></div></summary><div class="pv-issue-body"><h4>당시 진행</h4><p>이전고시·보존등기 관련 비용으로 약 31억원 규모의 예산 승인이 추진되며 적정성 논란이 발생함.</p><h4>비대위의 핵심 질문</h4><div class="pv-q">법무사에게 지급할 순수 용역보수와 세금·공과금·실비를 구분하지 않은 상태에서, 조합원에게 고액 예산 승인을 요청한 이유는 무엇인가?</div><h4>조합 측 당시 설명</h4><p>이전고시와 등기 업무 추진에 필요한 비용이라는 취지의 설명이 있었으나, 항목별 산정 방식과 선정절차에 관한 이견이 제기됨.</p><h4>남아 있는 확인사항</h4><ul><li>법무사 보수·취득 관련 세금·등기 수수료·대납금의 구분</li><li>견적서, 입찰 또는 수의계약 사유, 비교견적 유무</li><li>기존 용역과의 업무 중복 여부, 실제 계약·지급 여부</li></ul></div></details>
           <details class="pv-issue-card"><summary><div class="pv-issue-overline"><span class="pv-issue-index">02</span><span class="pv-issue-badge">자산 매각 · 회수 위험</span></div><h3>상가 52실 매각계약</h3><p class="pv-short">‘통매각’으로 설명한 거래와 4개 법인을 통한 호실별 판매·정산 구조는 실질적으로 같은 거래인가?</p><div class="pv-issue-bottom"><span class="pv-issue-figure">매매계약 총액 111억원</span><span class="pv-issue-action">상세 보기</span></div></summary><div class="pv-issue-body"><h4>당시 진행</h4><p>상가 52실의 공개입찰이 두 차례 유찰된 이후 2026년 1월 4개 법인과 매각계약이 체결됨. 일부 계약 문구에는 호실별 개별 판매와 그에 따른 잔금 지급구조가 나타남.</p><h4>비대위의 핵심 질문</h4><div class="pv-q">조합원에게 일괄매각으로 설명했는데 실제로는 매수법인의 호실별 판매 후 조합에 대금을 지급하는 방식이라면, 처음부터 그 구조와 위험을 설명했어야 하지 않는가?</div><h4>조합 측 당시 설명</h4><p>총회가 승인한 금액의 범위에서 계약을 체결했다는 취지의 설명이 제시됨.</p><h4>남아 있는 확인사항</h4><ul><li>입찰 당시 조건과 최종 매매계약의 실질적 동일성</li><li>계약금·잔금 회수 일정 및 실제 미수금</li><li>매수법인의 재판매 권한, 미분양 위험과 수익의 귀속</li><li>계약체결 전후 의결 및 위임 범위</li></ul></div></details>
-          <details class="pv-issue-card"><summary><div class="pv-issue-overline"><span class="pv-issue-index">03</span><span class="pv-issue-badge">분양대행 · 선지급</span></div><h3>DH파트너스 보류지 17세대</h3><p class="pv-short">수수료 13% 계약의 필요성과 업체 선정, 실제 판매 기여도 및 선지급 조건은 적정했는가?</p><div class="pv-issue-bottom"><span class="pv-issue-figure">13% + VAT · 약 9.39억원 계산상 수수료</span><span class="pv-issue-action">상세 보기</span></div></summary><div class="pv-issue-body"><h4>당시 진행</h4><p>2026년 7월 9일 보류지 17세대의 판매대행계약이 체결됨. 계약서상 수수료는 매매금액의 13%(VAT 별도)이며, 호실별 계약 날인 시 50%, 잔금 완납 시 나머지 50%를 청구하는 구조임.</p><h4>비대위의 핵심 질문</h4><div class="pv-q">업체가 실제로 제공한 판매대행 성과는 무엇이며, 수수료와 선지급금의 예산 편성·선정·의결 근거는 무엇인가?</div><h4>조합 측 당시 설명</h4><p>정해진 매각가격 범위에서 보류지를 판매한다는 취지의 설명이 있었음. 매각가격 승인과 특정 업체의 용역계약 승인은 구분하여 검토할 필요가 있음.</p><h4>남아 있는 확인사항</h4><ul><li>경쟁입찰 실시 여부 및 수의계약 허용 요건</li><li>실제 계약 유치와 대행사가 수행한 업무의 근거</li><li>청구서·세금계산서·지급원장상 지급액 확인</li><li>총회·대의원회 의결 및 추인 여부, 반환 가능성</li></ul></div></details>
+          <details class="pv-issue-card"><summary><div class="pv-issue-overline"><span class="pv-issue-index">03</span><span class="pv-issue-badge">분양대행 · 선지급</span></div><h3>DH파트너스 보류지 17세대</h3><p class="pv-short">수수료 13% 계약의 필요성과 업체 선정, 실제 판매 기여도 및 선지급 조건은 적정했는가?</p><div class="pv-issue-bottom"><span class="pv-issue-figure">수수료 13% · 부가세 포함 약 9.39억원</span><span class="pv-issue-action">상세 보기</span></div></summary><div class="pv-issue-body"><h4>당시 진행</h4><p>2026년 7월 9일 보류지 17세대의 판매대행계약이 체결됨. 계약서상 수수료는 매매금액의 13%(부가세 별도)이며, 호실별 계약 날인 시 50%, 잔금 완납 시 나머지 50%를 청구하는 구조임.</p><h4>비대위의 핵심 질문</h4><div class="pv-q">업체가 실제로 제공한 판매대행 성과는 무엇이며, 수수료와 선지급금의 예산 편성·선정·의결 근거는 무엇인가?</div><h4>조합 측 당시 설명</h4><p>정해진 매각가격 범위에서 보류지를 판매한다는 취지의 설명이 있었음. 매각가격 승인과 특정 업체의 용역계약 승인은 구분하여 검토할 필요가 있음.</p><h4>남아 있는 확인사항</h4><ul><li>경쟁입찰 실시 여부 및 수의계약 허용 요건</li><li>실제 계약 유치와 대행사가 수행한 업무의 근거</li><li>청구서·세금계산서·지급원장상 지급액 확인</li><li>총회·대의원회 의결 및 추인 여부, 반환 가능성</li></ul></div></details>
           <details class="pv-issue-card"><summary><div class="pv-issue-overline"><span class="pv-issue-index">04</span><span class="pv-issue-badge">추가 부담 · 의결</span></div><h3>조합원 2,500만원 선납안</h3><p class="pv-short">총회에서 부결된 정액 선납안과 이후 개인별 납부·채권추심 통보의 법적 근거는 무엇인가?</p><div class="pv-issue-bottom"><span class="pv-issue-figure">431명 기준 합계 107.75억원</span><span class="pv-issue-action">상세 보기</span></div></summary><div class="pv-issue-body"><h4>당시 진행</h4><p>2026년 7월 8일 대의원회에서 해당 안건의 찬반이 동수로 기록된 뒤 총회에 직권상정됨. 8월 1일 총회에서 찬성 135표, 반대 211표로 부결됨. 이후 개인별 납부 및 채권추심 관련 통보를 둘러싼 논쟁이 이어짐.</p><h4>비대위의 핵심 질문</h4><div class="pv-q">조합의 미지급 공사비가 존재한다는 이유만으로 조합원 개인의 확정채무가 성립하는가? 부결된 선납안과 개인별 청구를 연결하는 별도의 법적 근거가 있는가?</div><h4>조합 측 당시 설명</h4><p>공사비 조기 상환을 통해 이자 부담과 등기 지연 위험을 줄이고, 이후 자산 매각과 사업비 정산을 통해 선납금을 정산한다는 취지의 설명이 있었음.</p><h4>남아 있는 확인사항</h4><ul><li>조합 채무와 조합원 개인 채무의 성립 근거</li><li>총회 부결 이후 채권추심 의뢰와 통보의 근거</li><li>채무인수·보증 등 개인별 약정의 존재 여부</li><li>미지급 공사비 상환 재원 및 등기 협조 조건</li></ul></div></details>
           <details class="pv-issue-card"><summary><div class="pv-issue-overline"><span class="pv-issue-index">05</span><span class="pv-issue-badge">보상 계약 · 자금집행</span></div><h3>천광교회 보상금과 보증금</h3><p class="pv-short">기존 협약, 지급명령, 보상항목 및 실제 지급액 사이에 어떤 차이가 존재하는가?</p><div class="pv-issue-bottom"><span class="pv-issue-figure">보증금 5억원 · 영업권 보상 5억원 쟁점</span><span class="pv-issue-action">상세 보기</span></div></summary><div class="pv-issue-body"><h4>당시 진행</h4><p>종교시설 이전·보상과 관련한 과거 협약과 이후 지급 조건, 법원 절차, 조합의 회계 집행을 둘러싸고 추가 설명 요구가 제기됨.</p><h4>비대위의 핵심 질문</h4><div class="pv-q">보증금 5억원과 영업권 보상 5억원은 각각 어떤 계약·의결·지급 사유에 근거한 것인가? 실제 집행액과 법원 절차상 금액의 차이는 무엇인가?</div><h4>조합 측 당시 설명</h4><p>5억원은 보증금이며 별도의 5억원 영업권 보상 또한 승인받았다는 취지의 설명이 제시됨.</p><h4>남아 있는 확인사항</h4><ul><li>협약·보상합의서의 지급 항목과 구분</li><li>법원 지급명령 내용과 실제 집행원장의 대조</li><li>기존 총회 승인 범위 및 추가 보상 의결</li><li>보증금 반환 조건과 회수·정산 여부</li></ul></div></details>
           <details class="pv-issue-card"><summary><div class="pv-issue-overline"><span class="pv-issue-index">06</span><span class="pv-issue-badge">내부통제 · 감독</span></div><h3>과거 횡령과 감사·감독 기능</h3><p class="pv-short">조합자금 관련 사고 이후 회계 검증, 시정조치, 피해 회수 및 감사보고 체계는 실질적으로 작동했는가?</p><div class="pv-issue-bottom"><span class="pv-issue-figure">회계통제 · 사후조치 · 감사 소명</span><span class="pv-issue-action">상세 보기</span></div></summary><div class="pv-issue-body"><h4>당시 진행</h4><p>해임 발의 과정에서 과거 조합자금 횡령 사건과 재발방지 조치의 적정성에 대한 문제가 제기됨. 2026년 9월 28일에는 감사 해임 사유에 관한 사전 소명·의견 제출을 요청하는 통지가 이뤄짐.</p><h4>비대위의 핵심 질문</h4><div class="pv-q">당시 자금 사고를 발견·보고하고 피해금을 회수하기 위해 어떤 독립적인 회계감사와 시정조치를 시행했는가?</div><h4>조합 측 당시 설명</h4><p>과거 사건이라는 취지의 반박이 있었으나, 개별 감사업무 수행내역과 실제 시정조치가 이뤄졌는지는 별도로 확인해야 함.</p><h4>남아 있는 확인사항</h4><ul><li>감사보고서와 이사회·대의원회 보고기록</li><li>지출증빙·계좌잔액·전표의 대조체계</li><li>피해금 회수 내역과 책임자에 대한 후속조치</li><li>감사 소명내용 및 향후 재발방지 체계</li></ul></div></details>
@@ -1931,8 +2059,8 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
     <section class="pv-progress-section" id="past-v2-resolution">
       <div class="pv-container">
         <div class="pv-process-layout">
-          <div><div class="pv-kicker">04 / DECISION & TRANSITION</div><h2>해임안 제기에서<br/>정상화 착수까지</h2><p class="pv-lead">조합 운영에 대한 문제 제기는 임원 해임 결의로 이어졌고, 이후 신임 집행부 구성과 등기 정상화를 위한 준비 단계로 연결됨.</p><ul class="pv-process-list"><li><strong>09.17</strong><span>송림3지구 비상대책위원회 설립</span></li><li><strong>09.23</strong><span>임원 해임 및 직무집행정지 안건 발의</span></li><li><strong>09.28</strong><span>감사 해임 사유에 관한 소명기회 안내</span></li><li><strong>10월 중</strong><span>총회 개최 일정과 소집 적법성을 둘러싼 분쟁</span></li><li><strong>10.16</strong><span>조합장·이사 4명·감사 1명 해임안 가결</span></li></ul></div>
-          <aside class="pv-outcome-card"><div class="pv-cap">DECISION ON 16 OCT 2026</div><h3>조합원이 결정한<br/>집행부 교체</h3><div class="pv-outcome-stats"><div><div class="pv-v pv-lime">252</div><small>해임안 찬성</small></div><div><div class="pv-v">266</div><small>총 참석</small></div></div><p class="pv-fine">반대 2표 · 찬반 유효표 기준 찬성률 99.21%. 기권·무효 등은 별도 집계 대상. 해임 가결 이후에도 각 쟁점의 사실관계 및 법적 책임은 계속 구분하여 확인해야 함.</p></aside>
+          <div><div class="pv-kicker">04 / 해임 의결과 정상화</div><h2>해임안 제기에서<br/>정상화 착수까지</h2><p class="pv-lead">조합 운영에 대한 문제 제기는 임원 해임 결의로 이어졌고, 이후 신임 집행부 구성과 등기 정상화를 위한 준비 단계로 연결됨.</p><ul class="pv-process-list"><li><strong>09.17</strong><span>송림3지구 비상대책위원회 설립</span></li><li><strong>09.23</strong><span>임원 해임 및 직무집행정지 안건 발의</span></li><li><strong>09.28</strong><span>감사 해임 사유에 관한 소명기회 안내</span></li><li><strong>10월 중</strong><span>총회 개최 일정과 소집 적법성을 둘러싼 분쟁</span></li><li><strong>10.16</strong><span>조합장·이사 4명·감사 1명 해임안 가결</span></li></ul></div>
+          <aside class="pv-outcome-card"><div class="pv-cap">2026년 10월 16일 해임 의결</div><h3>조합원이 결정한<br/>집행부 교체</h3><div class="pv-outcome-stats"><div><div class="pv-v pv-lime">252</div><small>해임안 찬성</small></div><div><div class="pv-v">266</div><small>총 참석</small></div></div><p class="pv-fine">반대 2표 · 찬반 유효표 기준 찬성률 99.21%. 기권·무효 등은 별도 집계 대상. 해임 가결 이후에도 각 쟁점의 사실관계 및 법적 책임은 계속 구분하여 확인해야 함.</p></aside>
         </div>
       </div>
     </section>
@@ -1941,8 +2069,8 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
     <section class="pv-faq-section" aria-labelledby="past-v2-faq-title">
       <div class="pv-container">
         <div class="pv-section-head">
-          <div><div class="pv-kicker">05 / QUESTIONS & ANSWERS</div><h2 class="pv-section-title" id="past-v2-faq-title">조합원 질문 10가지 · 쟁점 확인</h2></div>
-          <p class="pv-section-lead">기존 홈페이지의 10가지 질문과 답변은 내용과 순서를 변경하지 않고 그대로 유지합니다.</p>
+          <div><div class="pv-kicker">05 / 조합원 질문</div><h2 class="pv-section-title" id="past-v2-faq-title">조합원 질문 10가지 · 쟁점 확인</h2></div>
+          <p class="pv-section-lead">조합원들이 자주 묻는 질문을 10가지 핵심 쟁점으로 정리했습니다.</p>
         </div>
         <div class="past-faq reveal"><details><summary><span>01</span>시공사가 조합원에게 추가분담금을 직접 청구할 수 있나요?<b aria-hidden="true">＋</b></summary><p>원칙적으로 직접 청구할 수 없습니다. 다만 개인 보증·약정 등 별도 근거가 있다면 달라집니다.</p></details><details><summary><span>02</span>공사비 지연이자는 누가 부담하나요?<b aria-hidden="true">＋</b></summary><p>공사도급계약상 지연이자는 원칙적으로 조합이 부담합니다.</p></details><details><summary><span>03</span>조합 적자를 조합원이 무조건 부담하나요?<b aria-hidden="true">＋</b></summary><p>자동으로 부담하지 않습니다. 적법한 분담 근거가 필요합니다.</p></details><details><summary><span>04</span>임원이 모두 궐위되면 조합장 선출까지 얼마나 걸리나요?<b aria-hidden="true">＋</b></summary><p>약 1~2개월을 목표로 할 수 있으나, 실제 기간은 선거 절차에 따라 달라집니다.</p></details><details><summary><span>05</span>해임 이후에도 선거가 지연될 수 있나요?<b aria-hidden="true">＋</b></summary><p>지연 가능성은 있습니다. 적법한 소집·선거 절차로 대응해야 합니다.</p></details><details><summary><span>06</span>상가 일괄매각은 적법하고 유리한 방식인가요?<b aria-hidden="true">＋</b></summary><p>일괄매각 자체가 위법은 아닙니다. 가격·의결·절차의 적정성을 확인해야 합니다.</p></details><details><summary><span>07</span>보류지는 어떤 기준으로 매각할 수 있나요?<b aria-hidden="true">＋</b></summary><p>정관·관리처분계획과 관련 의결에 따른 적법한 조건으로 매각해야 합니다.</p></details><details><summary><span>08</span>보존등기 관련 용역비는 어떻게 검증하나요?<b aria-hidden="true">＋</b></summary><p>업무 범위와 세대당 단가를 구분해 비교견적·입찰 결과를 확인합니다.</p></details><details><summary><span>09</span>이전고시까지 포함한 용역비는 어떻게 검증하나요?<b aria-hidden="true">＋</b></summary><p>보존등기와 이전고시 업무를 나누어 각각의 비용을 비교합니다.</p></details><details><summary><span>10</span>이전고시·보존등기의 제세공과금은 무엇인가요?<b aria-hidden="true">＋</b></summary><p>취득세·등록면허세·등기수수료 등 해당 항목과 납부 주체를 확인해야 합니다.</p></details></div>
       </div>
