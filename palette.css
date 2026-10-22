@@ -17,6 +17,7 @@
   --sg-data-blue-dark:#035489;
   --sg-strategic-teal:#05767D;
   --sg-teal-light:#9DD5CD;
+  --sg-process:var(--sg-teal-light); /* Procedures and workflow paths: light teal only */
   --sg-neutral-gray:#75797A;
   --sg-neutral-gray-light:#CFCFCF;
   --sg-neutral-gray-mid:#979B9C;
@@ -39,9 +40,9 @@ body.is-detail main{background:var(--sg-black)}
 #progress,#donors,#rights,#lawfirm{background:#111!important}
 #home-menu .launch-card{background:#191919;border-color:var(--sg-neutral-gray-dark)}
 #home-menu .launch-card:hover{border-color:var(--sg-brand-green)}
-#roadmap .road-step.week-selected{border-color:var(--sg-strategic-teal);background:#142927}
+#roadmap .road-step.week-selected{border-color:var(--sg-process);background:#142927}
 #roadmap .road-step.task-active{background:#142927}
-#roadmap .status.active{color:var(--sg-teal-light);border-color:var(--sg-strategic-teal)}
+#roadmap .status.active{color:var(--sg-process);border-color:var(--sg-process)}
 #finance .balance strong,#donors .donor-finance-summary>div:last-child strong{color:var(--sg-brand-green)}
 #finance .finance-metrics strong{color:var(--sg-white)}
 #finance .cost-analysis{background:#121212;border-color:#444}
@@ -362,7 +363,7 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
 #rights .rights-chapter-heading h3,#past .past-subhead h3{font-size:clamp(29px,3vw,42px)!important;line-height:1.28!important;font-weight:760!important}
 #rights .rights-chapter-heading>p,#past .past-subhead p,#about .committee-history-head p{font-size:clamp(14px,1.08vw,17px)!important;line-height:1.85}
 #rights .rights-chapter-num,#past .past-index{font-size:clamp(14px,1.18vw,17px)!important;font-weight:800}
-#roadmap .road-overview{border-top:3px solid var(--sg-strategic-teal)}
+#roadmap .road-overview{border-top:3px solid var(--sg-process)}
 #roadmap .road-metrics strong{color:var(--sg-teal-light)}
 #finance .finance-top-simple{border-top:3px solid var(--sg-data-blue)!important}
 #finance .finance-metrics span,#finance .cost-head .eyebrow,#finance .expense-head .eyebrow{color:var(--sg-data-blue-light)!important}
@@ -378,10 +379,10 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
 #rights .rights-chapter-num{color:var(--sg-teal-light)!important}
 #rights .rights-actor-diagram>.rights-actor:first-child{border-top:3px solid var(--sg-data-blue)}
 #rights .rights-actor-diagram>.rights-actor.union{border-top:3px solid var(--sg-brand-green)}
-#rights .rights-connector .arrows{background:var(--sg-strategic-teal)}
-#rights .rights-connector .arrows:before,#rights .rights-connector .arrows:after{border-color:var(--sg-strategic-teal)}
-#rights .rights-connector span{color:var(--sg-teal-light)}
-#rights .rights-note{border-left:3px solid var(--sg-strategic-teal)!important}
+#rights .rights-connector .arrows{background:var(--sg-process)}
+#rights .rights-connector .arrows:before,#rights .rights-connector .arrows:after{border-color:var(--sg-process)}
+#rights .rights-connector span{color:var(--sg-process)}
+#rights .rights-note{border-left:3px solid var(--sg-process)!important}
 
 /* Donor invitation and consistent three-counsel cards */
 #donors .donation-account{background:linear-gradient(145deg,#202b20,#1d231f)!important;border-top:3px solid var(--sg-growth-green)!important;border-color:#527042}
@@ -419,7 +420,7 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
  #rights .rights-actor-diagram .rights-actor small{font-size:14px}
  #rights .rights-connector{min-height:144px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:15px 5px;gap:12px}
  #rights .rights-connector span:first-child{font-size:15px!important;color:var(--sg-teal-light);line-height:1.45;font-weight:750}
- #rights .rights-connector .arrows{display:block!important;position:relative!important;width:3px!important;height:51px!important;min-height:51px!important;max-width:none!important;background:var(--sg-strategic-teal)!important;margin:0 auto!important}
+ #rights .rights-connector .arrows{display:block!important;position:relative!important;width:3px!important;height:51px!important;min-height:51px!important;max-width:none!important;background:var(--sg-process)!important;margin:0 auto!important}
  #rights .rights-connector .arrows:before,#rights .rights-connector .arrows:after{content:""!important;position:absolute!important;display:block!important;width:10px!important;height:10px!important;border-top:2px solid var(--sg-teal-light)!important;border-right:2px solid var(--sg-teal-light)!important;left:-4.5px!important;right:auto!important}
  #rights .rights-connector .arrows:before{top:0!important;bottom:auto!important;transform:rotate(-45deg)!important}
  #rights .rights-connector .arrows:after{top:auto!important;bottom:0!important;transform:rotate(135deg)!important}
@@ -924,7 +925,7 @@ footer.footer .footer-grid p{
  margin-top:1px!important;
 }
 #rights .rights-chapter .rights-note{
- border-left:3px solid var(--sg-strategic-teal)!important;
+ border-left:3px solid var(--sg-process)!important;
  background:#242424!important;
  color:#d0d0d0!important;
  font-size:14px!important;
@@ -1043,3 +1044,56 @@ footer.footer .footer-grid p{
 #about .committee-grid .committee-card .committee-line ul.profile-list{
   min-height:53px!important;
 }
+
+
+/* Unified brand semantics: existing swatches only, no invented accent colors. */
+:root {
+  --sg-content-max: 1280px;
+  --sg-content-gutter: clamp(20px, 3.5vw, 48px);
+  --sg-card-radius: 10px;
+  --sg-card-outline: color-mix(in srgb, var(--sg-neutral-gray-dark) 74%, var(--sg-black));
+}
+#roadmap #weekAxis button.chosen,
+#roadmap .segment button.on {
+  border-color:var(--sg-process)!important;
+}
+#roadmap .road-step.task-active,
+#roadmap .road-step.week-selected {
+  border-left-color:var(--sg-process)!important;
+}
+#roadmap .road-step .week,
+#roadmap .road-step.week-selected .week {
+  color:var(--sg-process)!important;
+}
+#rights .rights-connector .arrows,
+#rights .rights-connector .arrows::before,
+#rights .rights-connector .arrows::after {
+  border-color:var(--sg-process)!important;
+}
+#rights .rights-connector .arrows{
+  background:var(--sg-process)!important;
+}
+#rights .rights-connector span,
+#rights .rights-chapter-num{
+  color:var(--sg-process)!important;
+}
+#finance .expense-head .eyebrow,
+#finance .finance-metrics span,
+#finance .cost-head .eyebrow{
+  color:var(--sg-data-blue-light)!important;
+}
+#finance .monthly-ledger .transaction-detail-row .month {
+  color:var(--sg-process);
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+#finance .monthly-ledger .transaction-detail-row .description{
+  line-height:1.7;
+  word-break:keep-all;
+}
+@media(max-width:760px){
+ #finance .monthly-ledger .transaction-detail-row .description{
+  min-width:170px;
+ }
+}
+
