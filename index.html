@@ -2073,6 +2073,78 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
  #past.past-v2 .pv-detail-entry p,
  #past.past-v2 .pv-detail-entry li{font-size:14px!important}
 }
+
+
+/* 2026-10-22: Match other page headings: title on left, description on right. */
+#past.past-v2 .pv-hero.pv-hero-standard{
+  background:var(--sg-black)!important;
+  border:0;
+  color:var(--sg-white);
+}
+#past.past-v2 .pv-hero.pv-hero-standard::before,
+#past.past-v2 .pv-hero.pv-hero-standard::after{display:none!important}
+#past.past-v2 .pv-hero.pv-hero-standard .pv-container{
+  padding-top:42px!important;
+  padding-bottom:49px!important;
+}
+#past.past-v2 .pv-hero-heading{
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);
+  gap:50px;
+  align-items:end;
+  border-top:1px solid var(--sg-neutral-gray-dark);
+  padding-top:26px;
+}
+#past.past-v2 .pv-hero-heading-title{min-width:0}
+#past.past-v2 .pv-hero-heading-title .pv-eyebrow{
+  color:var(--sg-brand-green);
+  font-size:12px;
+  line-height:1.65;
+}
+#past.past-v2 .pv-hero-heading-title h2{
+  margin:20px 0 0!important;
+  font-size:clamp(40px,4.6vw,64px)!important;
+  line-height:1.25!important;
+  letter-spacing:-.05em!important;
+  font-weight:780!important;
+  color:var(--sg-white)!important;
+}
+#past.past-v2 .pv-hero-heading>.pv-desc{
+  margin:0 0 3px!important;
+  max-width:460px;
+  font-size:clamp(14px,1.08vw,17px)!important;
+  font-weight:450;
+  line-height:1.85!important;
+  letter-spacing:-.025em;
+  word-break:keep-all;
+  color:var(--sg-neutral-gray-light)!important;
+}
+@media(max-width:900px){
+  #past.past-v2 .pv-hero-heading{
+    grid-template-columns:minmax(0,1fr);
+    gap:17px;
+  }
+  #past.past-v2 .pv-hero-heading>.pv-desc{
+    max-width:650px;
+    margin:0!important;
+  }
+}
+@media(max-width:640px){
+  #past.past-v2 .pv-hero.pv-hero-standard .pv-container{
+    padding-top:29px!important;
+    padding-bottom:39px!important;
+  }
+  #past.past-v2 .pv-hero-heading{padding-top:20px;gap:14px}
+  #past.past-v2 .pv-hero-heading-title h2{
+    font-size:clamp(36px,8.1vw,44px)!important;
+    margin-top:15px!important;
+  }
+  #past.past-v2 .pv-hero-heading>.pv-desc{
+    font-size:14px!important;
+    line-height:1.9!important;
+  }
+}
+
 </style>
 </head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
@@ -2175,13 +2247,15 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 </div></section>
 
 <section id="past" class="section past-section past-v2" aria-labelledby="past-title">
-    <section class="pv-hero" id="past-v2-intro">
+    <section class="pv-hero pv-hero-standard" id="past-v2-intro">
       <div class="pv-container">
-        <div class="pv-eyebrow"><span class="pv-line"></span> 정상화 이전의 기록</div>
-        <h2 id="past-title">과거 사건</h2>
-        <div class="pv-statement">해임안은 왜 제기되었는가.<br/><b>6가지 핵심 질문과 임원별 책임.</b></div>
-        <p class="pv-desc">조합 자산 매각, 고액 용역비, 공사비 상환과 조합원 부담, 회계·감독 기능에 관해 비대위가 제기한 6가지 질문과 당시 임원들의 역할을 구분해 정리함.</p>
-        <div class="pv-hero-bottom"><span><b>01</b> 해임 배경 · 6가지 질문</span><span><i></i><b>02</b> 임원별 책임 구조</span><span><i></i><b>03</b> 해임까지의 주요 일정</span><span><i></i><b>04</b> 조합원 질문 10가지</span></div>
+        <div class="pv-hero-heading">
+          <div class="pv-hero-heading-title">
+            <div class="pv-eyebrow"><span class="pv-line"></span> 정상화 이전의 기록</div>
+            <h2 id="past-title">과거 사건</h2>
+          </div>
+          <p class="pv-desc">조합 자산 매각, 고액 용역비, 공사비 상환과 조합원 부담, 회계·감독 기능에 관해 비대위가 제기한 6가지 질문과 당시 임원들의 역할을 구분해 정리함.</p>
+        </div>
       </div>
     </section>
 
