@@ -2349,6 +2349,39 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 .footer-bottom{flex-wrap:wrap;row-gap:8px}
 .footer-bottom .site-revision{width:100%}
 }
+
+
+/* Workflow finish: light teal for line connectors, selected steps and status labels. */
+#journey .committee-timeline::before{
+ background:var(--sg-process)!important;
+}
+#journey .committee-timeline-item::before{
+ border-color:var(--sg-process)!important;
+}
+#journey .journey-period .journey-period-label,
+#journey .committee-timeline-item time{
+ color:var(--sg-process)!important;
+}
+#roadmap .segment button.on,
+#roadmap #weekAxis>button.chosen{
+ background:color-mix(in srgb,var(--sg-process) 15%,var(--sg-black))!important;
+ border:1px solid var(--sg-process)!important;
+ color:var(--sg-process)!important;
+}
+#roadmap #weekAxis>button.chosen:hover,
+#roadmap .segment button.on:hover{
+ background:color-mix(in srgb,var(--sg-process) 25%,var(--sg-black))!important;
+}
+#roadmap .road-step.task-active .status{
+ color:var(--sg-process)!important;
+ border-color:var(--sg-process)!important;
+ background:color-mix(in srgb,var(--sg-process) 12%,var(--sg-black))!important;
+}
+#rights .rights-connector .arrows::before,
+#rights .rights-connector .arrows::after{
+ border-color:var(--sg-process)!important;
+}
+
 </style>
 </head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
@@ -2774,7 +2807,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 
 <section id="contact" class="section" aria-labelledby="contact-title"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">조합원 문의</div><h2 id="contact-title">연락처</h2></div><p class="contact-intro"><span class="header-copy-line">조합 운영 정상화 관련 문의는</span><span class="header-copy-line">비상대책위원장에게 전달해 주시기 바랍니다.</span></p></div>
 <div class="contact-solo reveal"><span class="contact-solo-role">송림3지구 조합원 비상대책위원회 위원장</span><h3>이인섭</h3><div class="contact-solo-phone"><span>휴대전화</span><a href="tel:01099291171">010-9929-1171</a></div><div class="contact-actions"><a class="contact-call" href="tel:01099291171">전화 걸기 ↗</a><a class="contact-message" href="sms:01099291171">문자 보내기 ↗</a></div><p>문의 목적 외 사용을 삼가 주시기 바랍니다.</p></div></div></section>
-</main><footer class="footer"><div class="container"><div class="footer-grid"><h2>함께 만드는 송림3지구의 다음.</h2><p>조합원 한 사람 한 사람의 권리를 존중하고, 주요 의사결정과 진행 경과를 투명하게 기록하겠습니다.</p></div><div class="footer-bottom"><span>송림3지구 조합원 비상대책위원회</span><span>송림3지구 정상화과정 · 2026</span><span class="site-revision">자료 기준일 2026.10.19 · 홈페이지 수정일 2026.10.22</span></div></div></footer>
+</main><footer class="footer"><div class="container"><div class="footer-grid"><h2>함께 만드는 송림3지구의 다음.</h2><p>조합원 한 사람 한 사람의 권리를 존중하고, 주요 의사결정과 진행 경과를 투명하게 기록하겠습니다.</p></div><div class="footer-bottom"><span>송림3지구 조합원 비상대책위원회</span><span>송림3지구 정상화과정 · 2026</span><span class="site-revision">재무 집계 기준일 2026.10.19 · 홈페이지 수정일 2026.10.22</span></div></div></footer>
 <div id="paymentNotice" hidden aria-hidden="true">
   <section class="payment-notice-panel" role="dialog" aria-modal="true" aria-labelledby="paymentNoticeTitle" aria-describedby="paymentNoticeDescription" tabindex="-1">
     <div class="payment-notice-eyebrow">중요 안내 · 조합원 안내</div>
