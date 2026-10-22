@@ -2145,6 +2145,251 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
   }
 }
 
+
+
+/* 2026-10-22 / EDITORIAL HEADINGS: align details with journey reference image. */
+@media(min-width:1181px){
+  #journey .section-head.consistent-heading,
+  #roadmap .section-head.consistent-heading,
+  #finance .section-head.consistent-heading,
+  #rights .section-head.consistent-heading,
+  #contact .section-head.consistent-heading{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    align-items:end!important;
+    column-gap:clamp(36px,3.5vw,56px)!important;
+  }
+  #journey .consistent-heading>div,
+  #roadmap .consistent-heading>div,
+  #finance .consistent-heading>div,
+  #rights .consistent-heading>div,
+  #contact .consistent-heading>div{
+    width:auto!important;min-width:0!important;
+  }
+}
+#journey .section-head.consistent-heading,
+#roadmap .section-head.consistent-heading,
+#finance .section-head.consistent-heading,
+#rights .section-head.consistent-heading,
+#contact .section-head.consistent-heading{
+  gap:clamp(22px,3.5vw,56px)!important;
+  padding-bottom:41px!important;
+  margin-bottom:36px!important;
+}
+#roadmap .section-head.consistent-heading,
+#finance .section-head.consistent-heading,
+#rights .section-head.consistent-heading,
+#contact .section-head.consistent-heading{
+  border-bottom:1px solid var(--sg-neutral-gray-dark);
+}
+#journey .section-head.consistent-heading{padding-bottom:0!important;margin-bottom:0!important}
+#journey .journey-period{margin-top:45px!important}
+#journey .consistent-heading>p,
+#roadmap .consistent-heading>p,
+#finance .consistent-heading>p,
+#rights .consistent-heading>p,
+#contact .consistent-heading>p{
+  width:100%!important;max-width:none!important;min-width:0!important;
+  justify-self:end!important;align-self:end!important;
+  padding:0!important;margin:0!important;
+  font-size:clamp(13px,1.03vw,15px)!important;
+  line-height:1.95!important;
+  font-weight:450!important;
+  color:var(--sg-neutral-gray-light)!important;
+  white-space:normal!important;word-break:keep-all!important;
+  overflow-wrap:normal;
+}
+#journey .consistent-heading .header-copy-line,
+#roadmap .consistent-heading .header-copy-line,
+#rights .consistent-heading .header-copy-line,
+#contact .consistent-heading .header-copy-line{
+  display:block;
+}
+#finance .consistent-heading>p .finance-intro-first,
+#finance .consistent-heading>p .finance-intro-second{
+  display:block;width:auto;line-height:1.85;
+}
+#finance .consistent-heading>p .finance-intro-second{margin-top:2px}
+@media(min-width:1181px){
+  #journey .consistent-heading .header-copy-line,
+  #roadmap .consistent-heading .header-copy-line,
+  #rights .consistent-heading .header-copy-line,
+  #contact .consistent-heading .header-copy-line{
+    white-space:nowrap;
+  }
+}
+@media(max-width:1180px){
+  #journey .section-head.consistent-heading,
+  #roadmap .section-head.consistent-heading,
+  #finance .section-head.consistent-heading,
+  #rights .section-head.consistent-heading,
+  #contact .section-head.consistent-heading{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:15px!important;
+    align-items:start!important;
+    padding-bottom:31px!important;
+  }
+  #journey .consistent-heading>p,
+  #roadmap .consistent-heading>p,
+  #finance .consistent-heading>p,
+  #rights .consistent-heading>p,
+  #contact .consistent-heading>p{
+    width:100%!important;max-width:100%!important;
+    font-size:14px!important;
+    white-space:normal!important;
+  }
+  #journey .consistent-heading .header-copy-line,
+  #roadmap .consistent-heading .header-copy-line,
+  #rights .consistent-heading .header-copy-line,
+  #contact .consistent-heading .header-copy-line{
+    display:block;white-space:normal;
+  }
+}
+/* Past-page header: screenshot-style backlink, title-left/right-copy, bottom rule. */
+#past.past-v2 .pv-hero.pv-hero-standard .pv-container{
+  padding-top:29px!important;
+  padding-bottom:21px!important;
+}
+#past.past-v2 .pv-detail-back{
+  margin-bottom:24px!important;
+}
+#past.past-v2 .pv-hero-heading{
+  border-top:none!important;
+  border-bottom:1px solid var(--sg-neutral-gray-dark)!important;
+  padding:0 0 43px!important;
+  gap:clamp(36px,3.5vw,56px)!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+}
+#past.past-v2 .pv-hero-heading-title .pv-eyebrow{
+  color:var(--sg-neutral-gray-light)!important;
+  font-size:12px!important;
+}
+#past.past-v2 .pv-hero-heading>.pv-desc{
+  font-size:clamp(13px,1.03vw,15px)!important;
+  line-height:1.95!important;
+  max-width:none!important;
+  margin:0!important;
+  color:var(--sg-neutral-gray-light)!important;
+}
+@media(max-width:1180px){
+  #past.past-v2 .pv-hero-heading{
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:15px!important;
+    padding-bottom:31px!important;
+  }
+  #past.past-v2 .pv-hero-heading>.pv-desc{font-size:14px!important}
+}
+@media(max-width:640px){
+  #past.past-v2 .pv-hero.pv-hero-standard .pv-container{padding-top:22px!important}
+}
+/* Uniform responsibility cards: identical three duty rows and aligned footers. */
+#past.past-v2 .pv-roles-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;
+  gap:15px;
+}
+#past.past-v2 .pv-role.pv-role-enhanced{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  min-height:470px;
+  height:100%;
+  padding:28px 25px 26px;
+  border:1px solid var(--rule)!important;
+  background:var(--past-card)!important;
+}
+#past.past-v2 .pv-role-overline{
+  font-size:13px;
+  font-weight:790;
+  line-height:1.6;
+  letter-spacing:.025em;
+  color:var(--sg-teal-light);
+}
+#past.past-v2 .pv-role.pv-role-enhanced h3{
+  margin:9px 0 12px;
+  color:var(--sg-white)!important;
+  font-size:25px;
+  line-height:1.4;
+}
+#past.past-v2 .pv-role.pv-role-enhanced .pv-role-intro{
+  min-height:74px;
+  font-size:14px;
+  line-height:1.85;
+  color:var(--sg-neutral-gray-light);
+  margin:0 0 15px;
+}
+#past.past-v2 .pv-role-duties{
+  display:grid;
+  grid-template-rows:repeat(3,minmax(0,1fr));
+  gap:0;
+  margin:0;
+  padding:0;
+  flex:1 1 auto;
+}
+#past.past-v2 .pv-role-duty{
+  display:grid;
+  grid-template-columns:76px minmax(0,1fr);
+  gap:11px;
+  align-content:center;
+  align-items:start;
+  padding:14px 0;
+  border-top:1px solid var(--rule);
+  min-width:0;
+}
+#past.past-v2 .pv-role-duty dt{
+  font-size:12px;
+  font-weight:800;
+  line-height:1.7;
+  color:var(--sg-green-light);
+}
+#past.past-v2 .pv-role-duty dd{
+  margin:0;
+  font-size:13px;
+  line-height:1.8;
+  color:var(--sg-neutral-gray-light);
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+#past.past-v2 .pv-role.pv-role-enhanced .pv-focus{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  margin-top:auto;
+  padding-top:17px;
+  border-top:1px solid var(--sg-strategic-teal);
+  color:var(--sg-white);
+}
+#past.past-v2 .pv-role.pv-role-enhanced .pv-focus span{
+  color:var(--sg-teal-light);
+  font-size:12px;
+  font-weight:750;
+}
+#past.past-v2 .pv-role.pv-role-enhanced .pv-focus strong{
+  font-size:15px;
+  font-weight:790;
+  line-height:1.6;
+  color:var(--sg-white);
+}
+#past.past-v2 .pv-role-qualification{
+  font-size:12px;
+  line-height:1.85;
+  color:var(--sg-neutral-gray-light);
+  margin:18px 0 0;
+}
+@media(max-width:1040px){
+  #past.past-v2 .pv-roles-grid{grid-template-columns:minmax(0,1fr)!important}
+  #past.past-v2 .pv-role.pv-role-enhanced{min-height:0;height:auto;padding:24px}
+  #past.past-v2 .pv-role.pv-role-enhanced .pv-role-intro{min-height:0}
+  #past.past-v2 .pv-role-duties{grid-template-rows:none}
+  #past.past-v2 .pv-role-duty{grid-template-columns:90px minmax(0,1fr)}
+}
+@media(max-width:480px){
+  #past.past-v2 .pv-role-duty{grid-template-columns:80px minmax(0,1fr);gap:10px}
+  #past.past-v2 .pv-role-duty dd{font-size:13px}
+}
+
 </style>
 </head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
@@ -2191,7 +2436,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 </div></div></section>
 
 <section id="journey" class="section journey-section" aria-labelledby="journey-title"><div class="container">
-<div class="section-head journey-heading reveal"><div><div class="eyebrow">OUR JOURNEY</div><h2 id="journey-title">정상화를 향한 기록.</h2></div><p>2026년 9월 17일 비상대책위원회 설립부터 현재까지, 조합 정상화를 위해 추진한 주요 활동과 그 결과를 기록합니다.</p></div>
+<div class="section-head journey-heading consistent-heading reveal"><div><div class="eyebrow">OUR JOURNEY</div><h2 id="journey-title">정상화를 향한 기록.</h2></div><p><span class="header-copy-line">2026년 9월 17일 비상대책위원회 설립부터 현재까지,</span><span class="header-copy-line">조합 정상화를 위해 추진한 주요 활동과 그 결과를 기록합니다.</span></p></div>
 <div class="journey-period reveal"><span class="journey-period-label">전체 추진 경과</span> 2026.09.17 <span aria-hidden="true">—</span> PRESENT</div>
 <div class="journey-achievements-head reveal"><small>OUR ACHIEVEMENTS</small><strong>과거 청산 과정</strong></div>
 <div class="committee-history journey-history reveal" aria-label="정상화 추진 경과 타임라인"><details class="journey-timeline-disclosure" open><summary class="journey-toggle"><span class="journey-toggle-title">설립부터 해임까지 <small>2026년 9월부터 10월 간 해임 과정의 9개의 주요 기록</small></span><span class="journey-toggle-action"><span class="journey-toggle-open">접기</span><span class="journey-toggle-closed">펼쳐보기</span><span aria-hidden="true" class="journey-chevron">⌃</span></span></summary><ol class="committee-timeline"><li class="committee-timeline-item"><time datetime="2026-09-17">2026.09.17</time><div><h4>비상대책위원회 설립</h4><p>조합원 비상대책위원회 설립총회 개최. 운영진 구성과 정상화 활동의 출발점.</p></div></li><li class="committee-timeline-item"><time datetime="2026-09-22">2026.09.22</time><div><h4>조합 측 총회 최초 공지</h4><p>조합 측 총회 일정 공지. 이후 양측 총회 일정과 장소를 둘러싼 쟁점이 발생.</p></div></li><li class="committee-timeline-item"><time datetime="2026-09-23">2026.09.23</time><div><h4>비대위 해임총회 공지</h4><p>비대위가 임원 해임총회 일정 및 절차를 조합원에게 안내.</p></div></li><li class="committee-timeline-item"><time datetime="2026-10-01">2026.10.01</time><div><h4>해임총회 준비 본격화</h4><p>조합원 서면결의·참석 안내와 총회 현장 준비 등 실무 절차 진행.</p></div></li><li class="committee-timeline-item journey-double-event"><time datetime="2026-10-02">2026.10.02</time><div class="journey-event-pair">
@@ -2218,7 +2463,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 </section>
 </div></section>
 
-<section id="roadmap" class="section"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">임원선출계획</div><h2>새로운 집행부 선출을 위한<br>임원선출계획</h2></div><p>2026.10.26(월)부터 시작하는 목표 일정.<br>월·일은 모두 <strong>예상</strong>이며, 실제 확정일과 업데이트일은 따로 기록합니다.</p></div>
+<section id="roadmap" class="section"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">임원선출계획</div><h2>새로운 집행부 선출을 위한<br>임원선출계획</h2></div><p><span class="header-copy-line">2026.10.26(월)부터 시작하는 목표 일정.</span><span class="header-copy-line">월·일은 모두 <strong>예상</strong>이며, 실제 확정일과 업데이트일은 따로 기록합니다.</span></p></div>
 <div class="segment reveal"><button class="on" data-scenario="s1">시나리오 1 · 잔류 이사 사퇴 시</button><button data-scenario="s2">시나리오 2 · 잔류 이사 존재 시</button></div><div class="road-overview reveal"><div><div class="eyebrow" id="scenarioLabel"></div><h3 id="scenarioTitle"></h3><div class="road-metrics"><div><strong id="scenarioWeeks"></strong><span>조합장 선출 목표</span></div><div><strong id="scenarioOfficers"></strong><span>이사·감사 보궐선임</span></div></div></div><p id="scenarioDesc"></p></div><div id="weekAxis" class="road-axis reveal"></div><div id="roadSteps" class="road-steps"></div><div class="track-footer">제1주 시작일: 2026.10.26–11.01 · 표시된 날짜는 예상 일정임 · 조합장 선출 후 변경인가·등기 소요기간은 별도.</div>
 </div></section>
 
@@ -2226,7 +2471,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 
 <section id="finance" class="section">
 <div class="container">
- <div class="section-head reveal">
+ <div class="section-head consistent-heading reveal">
   <div><div class="eyebrow">재무현황</div><h2>비대위 재무현황</h2></div>
   <p><span class="finance-intro-first">조합원 분들이 소중히 모아주신 기부금으로 운영되는 단체입니다.</span><span class="finance-intro-second">2026년 9월부터 10월 19일까지의 수입과 비용을 월별로 투명하게 정리했습니다.</span></p>
  </div>
@@ -2249,6 +2494,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 <section id="past" class="section past-section past-v2" aria-labelledby="past-title">
     <section class="pv-hero pv-hero-standard" id="past-v2-intro">
       <div class="pv-container">
+        <a class="detail-back pv-detail-back" href="#home-menu">← 전체 메뉴로 돌아가기</a>
         <div class="pv-hero-heading">
           <div class="pv-hero-heading-title">
             <div class="pv-eyebrow"><span class="pv-line"></span> 정상화 이전의 기록</div>
@@ -2306,12 +2552,43 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 
     <section class="pv-section pv-roles" id="past-v2-responsibility">
       <div class="pv-container">
-        <div class="pv-section-head"><div><div class="pv-kicker">02 / 임원별 책임</div><h2 class="pv-section-title">이사진의 책임 구조</h2></div><p class="pv-section-lead">조합장은 <strong>사업 집행</strong>, 이사는 <strong>심의·견제</strong>, 감사는 <strong>회계·감독</strong>을 담당함. 각 직위가 수행해야 할 역할과 책임을 구분해 정리했습니다.</p></div>
+        <div class="pv-section-head"><div><div class="pv-kicker">02 / 임원별 책임</div><h2 class="pv-section-title">이사진의 책임 구조</h2></div><p class="pv-section-lead">조합장은 <strong>사업 집행</strong>, 이사는 <strong>심의·견제</strong>, 감사는 <strong>회계·감독</strong>을 담당함. 각 직위가 수행해야 할 역할과 점검 책임을 구분해 정리했습니다.</p></div>
         <div class="pv-roles-grid">
-          <article class="pv-role"><div class="pv-role-no">제1호 안건</div><h3>조합장</h3><p>주요 계약 체결, 조합 자산 처분, 공사비 상환안과 고액 용역비 등 사업 집행·의사결정 및 조합원 설명에 관한 책임.</p><div class="pv-focus">핵심: 집행 결정과 조합원에 대한 설명 책임</div></article>
-          <article class="pv-role"><div class="pv-role-no">제2호 안건</div><h3>이사 4명</h3><p>계약·예산·자금 집행에 관한 사전 심의, 집행부 의사결정 견제 및 문제 발견 시 시정 요구에 관한 책임.</p><div class="pv-focus">핵심: 심의·견제 및 시정 요구 책임</div></article>
-          <article class="pv-role"><div class="pv-role-no">제3호 안건</div><h3>감사</h3><p>조합 회계·재산 상태의 독립적 점검, 자금관리 이상 징후에 대한 감사·보고 및 시정조치 요구에 관한 책임.</p><div class="pv-focus">핵심: 독립적 감사와 감독·보고 책임</div></article>
+          <article class="pv-role pv-role-enhanced">
+            <div class="pv-role-overline">집행·의사결정</div>
+            <h3>조합장</h3>
+            <p class="pv-role-intro">사업을 대표·집행하는 지위에서 주요 계약과 조합 재산 관리, 조합원에 대한 설명의 적정성을 확보할 책임.</p>
+            <dl class="pv-role-duties">
+              <div class="pv-role-duty"><dt>계약·예산</dt><dd>고액 용역과 분양대행계약의 필요성·비용·업체 선정 근거를 검토하고 적법한 승인 절차를 거칠 책임.</dd></div>
+              <div class="pv-role-duty"><dt>자산·정산</dt><dd>상가·보류지 매각 조건, 매각대금 회수 및 미지급 공사비 상환계획을 투명하게 관리할 책임.</dd></div>
+              <div class="pv-role-duty"><dt>정보 공개</dt><dd>자금 집행과 조합원 부담에 영향을 미치는 사항을 충분히 알리고 의결 결과에 따라 집행할 책임.</dd></div>
+            </dl>
+            <div class="pv-focus"><span>핵심 책임</span><strong>집행 결정의 적정성과 조합원 설명 책임</strong></div>
+          </article>
+          <article class="pv-role pv-role-enhanced">
+            <div class="pv-role-overline">심의·견제</div>
+            <h3>이사 4명</h3>
+            <p class="pv-role-intro">집행부의 주요 의사결정에 독립적으로 참여하고, 계약·예산·자금 집행을 심의하며 견제할 책임.</p>
+            <dl class="pv-role-duties">
+              <div class="pv-role-duty"><dt>사전 검토</dt><dd>매각계약·용역비·수수료의 합리성, 경쟁입찰 여부와 비용 산출근거를 충분히 검토할 책임.</dd></div>
+              <div class="pv-role-duty"><dt>의결·견제</dt><dd>총회 승인 범위와 이사회·대의원회 절차를 확인하고 논란이 있는 안건에 대해 독립적으로 판단할 책임.</dd></div>
+              <div class="pv-role-duty"><dt>사후 점검</dt><dd>계약 이후 자금 집행과 정산 자료를 확인하고 문제 발견 시 재검토와 시정조치를 요구할 책임.</dd></div>
+            </dl>
+            <div class="pv-focus"><span>핵심 책임</span><strong>계약·예산 심의 및 집행부 견제 책임</strong></div>
+          </article>
+          <article class="pv-role pv-role-enhanced">
+            <div class="pv-role-overline">회계·내부통제</div>
+            <h3>감사</h3>
+            <p class="pv-role-intro">회계와 조합 재산의 관리 실태를 독립적으로 점검하고, 발견한 문제를 기록·보고하도록 요구받는 감독 책임.</p>
+            <dl class="pv-role-duties">
+              <div class="pv-role-duty"><dt>회계 검증</dt><dd>계약서·세금계산서·지출결의서·계좌 자료를 대조해 자금 집행의 적정성을 확인할 책임.</dd></div>
+              <div class="pv-role-duty"><dt>사고 후속조치</dt><dd>과거 자금관리 문제에 대한 피해 회수와 후속조치, 재발방지 체계의 실제 이행 여부를 점검할 책임.</dd></div>
+              <div class="pv-role-duty"><dt>독립적 보고</dt><dd>감사 결과와 미흡 사항을 적정하게 보고하고, 필요한 시정 요구 및 조합원 설명 여부를 확인할 책임.</dd></div>
+            </dl>
+            <div class="pv-focus"><span>핵심 책임</span><strong>독립적 회계감사·보고와 내부통제 책임</strong></div>
+          </article>
         </div>
+        <p class="pv-role-qualification">위 내용은 각 직위에서 확인해야 할 주요 역할과 책임을 설명한 것으로, 개별 임원의 법적 책임이 확정되었다는 의미는 아닙니다.</p>
       </div>
     </section>
 
@@ -2402,9 +2679,9 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 
 <section id="rights" class="section rights-section">
  <div class="container">
-  <div class="section-head reveal rights-lead">
+  <div class="section-head consistent-heading reveal rights-lead">
    <div><div class="eyebrow">조합원 권리 · 공사비·유치권·분담금</div><h2>조합원 권리 안내</h2></div>
-   <p>공사비 채무의 상대방, 입주 후 점유와 유치권, 개인별 2,500만원 납부 요구를 세 가지 주제로 정리했습니다.</p>
+   <p><span class="header-copy-line">공사비 채무의 상대방, 입주 후 점유와 유치권,</span><span class="header-copy-line">개인별 2,500만원 납부 요구를 세 가지 주제로 정리했습니다.</span></p>
   </div>
   <div class="rights-principle reveal">
    <div><span>핵심 원칙</span><strong>조합의 채무와 조합원 개인의 책임은 구분됩니다.</strong></div>
@@ -2539,7 +2816,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 
 <section id="rules" class="section tint"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">정관·규정</div><h2>진행의 근거를<br>확인할 수 있도록.</h2></div><p>정관과 선거관리규정의 주요 조항을 업무별로 구분해 정리했습니다. 조항을 누르면 관련 설명이 펼쳐집니다.</p></div><div id="ruleList" class="rules-list reveal"></div><p class="more-info">제공받은 정관(안)·선거관리규정 변경(안)의 요약임. 실제 시행본과의 일치 여부 및 법적 효력은 별도 확인 필요.</p></div></section>
 
-<section id="contact" class="section" aria-labelledby="contact-title"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">조합원 문의</div><h2 id="contact-title">연락처</h2></div><p class="contact-intro-single-line" style="white-space:nowrap;font-size:clamp(9px,2.45vw,16px)">조합 운영 정상화 관련 문의는 비상대책위원장에게 전달해 주시기 바랍니다.</p></div>
+<section id="contact" class="section" aria-labelledby="contact-title"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">조합원 문의</div><h2 id="contact-title">연락처</h2></div><p class="contact-intro"><span class="header-copy-line">조합 운영 정상화 관련 문의는</span><span class="header-copy-line">비상대책위원장에게 전달해 주시기 바랍니다.</span></p></div>
 <div class="contact-solo reveal"><span class="contact-solo-role">송림3지구 조합원 비상대책위원회 위원장</span><h3>이인섭</h3><div class="contact-solo-phone"><span>휴대전화</span><a href="tel:01099291171">010-9929-1171</a></div><div class="contact-actions"><a class="contact-call" href="tel:01099291171">전화 걸기 ↗</a><a class="contact-message" href="sms:01099291171">문자 보내기 ↗</a></div><p>문의 목적 외 사용을 삼가 주시기 바랍니다.</p></div></div></section>
 </main><footer class="footer"><div class="container"><div class="footer-grid"><h2>함께 만드는 송림3지구의 다음.</h2><p>조합원 한 사람 한 사람의 권리를 존중하고, 주요 의사결정과 진행 경과를 투명하게 기록하겠습니다.</p></div><div class="footer-bottom"><span>송림3지구 조합원 비상대책위원회</span><span>송림3지구 정상화과정 · 2026</span></div></div></footer>
 <div id="paymentNotice" hidden aria-hidden="true">
