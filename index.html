@@ -2557,6 +2557,249 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
   #past.past-v2 .pv-role.pv-role-enhanced .pv-focus{min-height:0}
 }
 
+
+
+/* FINAL UNIFIED SITE DESIGN 20261022
+   Single set of page-width, headings, accents, cards and responsive rules.
+   Retains the existing green, blue, light teal and neutral palette. */
+#journey>.container,
+#roadmap>.container,
+#finance>.container,
+#lawfirm>.container,
+#rights>.container,
+#donors>.container,
+#rules>.container,
+#contact>.container,
+#home-menu>.container,
+#about>.container{
+  width:min(1240px,89%)!important;
+  max-width:none!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+#past.past-v2 .pv-container{
+  width:min(1240px,89%)!important;
+  max-width:none!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+}
+#journey .section-head.consistent-heading,
+#roadmap .section-head.consistent-heading,
+#finance .section-head.consistent-heading,
+#rights .section-head.consistent-heading,
+#contact .section-head.consistent-heading,
+#donors .section-head.consistent-heading,
+#rules .section-head.consistent-heading,
+#lawfirm .law-head.consistent-heading,
+#past.past-v2 .pv-hero-heading{
+  border-top:0!important;
+  border-bottom:1px solid var(--sg-neutral-gray-dark)!important;
+  padding-top:0!important;
+  padding-bottom:39px!important;
+  margin-bottom:34px!important;
+  align-items:end!important;
+}
+#past.past-v2 .pv-hero-heading{margin-bottom:0!important}
+#lawfirm .law-head.consistent-heading{margin-top:0!important}
+#journey .section-head.consistent-heading{margin-bottom:0!important}
+#journey .journey-period{margin-top:31px!important}
+#journey .consistent-heading>p,
+#roadmap .consistent-heading>p,
+#finance .consistent-heading>p,
+#rights .consistent-heading>p,
+#contact .consistent-heading>p,
+#donors .consistent-heading>p,
+#rules .consistent-heading>p,
+#lawfirm .consistent-heading>p,
+#past.past-v2 .pv-hero-heading>.pv-desc{
+  align-self:end!important;
+  justify-self:stretch!important;
+  padding:0!important;
+  margin:0!important;
+  max-width:none!important;
+  font-size:clamp(13px,1.03vw,15px)!important;
+  line-height:1.88!important;
+  color:var(--sg-neutral-gray-light)!important;
+  word-break:keep-all;
+}
+@media(min-width:1181px){
+ #journey .section-head.consistent-heading,
+ #roadmap .section-head.consistent-heading,
+ #finance .section-head.consistent-heading,
+ #rights .section-head.consistent-heading,
+ #contact .section-head.consistent-heading,
+ #donors .section-head.consistent-heading,
+ #rules .section-head.consistent-heading,
+ #lawfirm .law-head.consistent-heading,
+ #past.past-v2 .pv-hero-heading{
+   display:grid!important;
+   grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)!important;
+   column-gap:48px!important;
+   align-items:end!important;
+ }
+ #roadmap .section-head.consistent-heading{
+   grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)!important;
+ }
+}
+@media(max-width:1180px){
+ #journey .section-head.consistent-heading,
+ #roadmap .section-head.consistent-heading,
+ #finance .section-head.consistent-heading,
+ #rights .section-head.consistent-heading,
+ #contact .section-head.consistent-heading,
+ #donors .section-head.consistent-heading,
+ #rules .section-head.consistent-heading,
+ #lawfirm .law-head.consistent-heading,
+ #past.past-v2 .pv-hero-heading{
+   display:grid!important;
+   grid-template-columns:minmax(0,1fr)!important;
+   row-gap:15px!important;
+   align-items:start!important;
+   padding-bottom:30px!important;
+ }
+ #journey .consistent-heading>p,
+ #roadmap .consistent-heading>p,
+ #finance .consistent-heading>p,
+ #rights .consistent-heading>p,
+ #contact .consistent-heading>p,
+ #donors .consistent-heading>p,
+ #rules .consistent-heading>p,
+ #lawfirm .consistent-heading>p,
+ #past.past-v2 .pv-hero-heading>.pv-desc{
+   font-size:14px!important;
+ }
+}
+@media(max-width:700px){
+ #journey>.container,
+ #roadmap>.container,
+ #finance>.container,
+ #lawfirm>.container,
+ #rights>.container,
+ #donors>.container,
+ #rules>.container,
+ #contact>.container,
+ #home-menu>.container,
+ #about>.container,
+ #past.past-v2 .pv-container{
+   width:calc(100% - 38px)!important;
+ }
+}
+#past.past-v2 .pv-issue-card,
+#past.past-v2 .pv-role.pv-role-enhanced,
+#lawfirm .law-members>.law-member,
+#rights .rights-actor,
+#rights .rights-phase,
+#rights .rights-case{
+ border-radius:var(--sg-card-radius)!important;
+ border-color:var(--sg-card-outline)!important;
+}
+#past.past-v2 .pv-issues-grid{
+ align-items:stretch!important;
+}
+#past.past-v2 .pv-issue-card{height:100%;display:flex;flex-direction:column}
+#past.past-v2 .pv-issue-card>summary{flex:0 0 auto}
+#past.past-v2 .pv-issue-card[open]>.pv-issue-body{flex:1 1 auto}
+#past.past-v2 .pv-issues-grid.pv-all-expanded{
+ grid-auto-rows:minmax(0,1fr)!important;
+ align-items:stretch!important;
+}
+#past.past-v2 .pv-issues-grid.pv-all-expanded>.pv-issue-card{height:100%!important}
+#past.past-v2 .pv-issues-grid.pv-all-expanded .pv-detail-entry{min-height:0}
+#past.past-v2 .pv-governance-note{
+ margin:27px 0 0;
+ padding:25px 27px 22px;
+ background:color-mix(in srgb,var(--sg-white) 7%,var(--sg-black));
+ border:1px solid var(--sg-card-outline);
+ border-left:3px solid var(--sg-data-blue);
+ border-radius:var(--sg-card-radius);
+ color:var(--sg-neutral-gray-light);
+}
+#past.past-v2 .pv-governance-head{
+ display:flex;align-items:center;gap:18px;margin:0 0 14px;flex-wrap:wrap;
+}
+#past.past-v2 .pv-governance-head span{
+ font:800 13px/1.6 'DM Sans','Noto Sans KR',sans-serif;
+ color:var(--sg-data-blue-light);
+}
+#past.past-v2 .pv-governance-head strong{
+ font-size:clamp(18px,2vw,23px);
+ color:var(--sg-white);line-height:1.45;
+}
+#past.past-v2 .pv-governance-note p{
+ font-size:14px;line-height:1.85;margin:0;
+ color:var(--sg-neutral-gray-light);
+ word-break:keep-all;
+}
+#past.past-v2 .pv-governance-note p strong{color:var(--sg-white)}
+#past.past-v2 .pv-governance-note .pv-governance-check{
+ margin-top:15px;padding-top:14px;
+ border-top:1px solid var(--sg-neutral-gray-dark);
+ color:var(--sg-data-blue-light);
+}
+#past.past-v2 .pv-status-note{
+ padding:17px 20px;margin-top:14px;
+ border:1px solid var(--sg-card-outline);
+ border-radius:var(--sg-card-radius);
+ background:color-mix(in srgb,var(--sg-white) 4%,var(--sg-black));
+}
+#past.past-v2 .pv-status-note strong{
+ display:block;margin-bottom:6px;
+ color:var(--sg-process);
+ font-size:13px;line-height:1.7;
+}
+#past.past-v2 .pv-status-note p{
+ color:var(--sg-neutral-gray-light);
+ font-size:13px;line-height:1.85;
+}
+#past.past-v2 .pv-issue-card .pv-issue-figure{color:var(--sg-data-blue-light)!important}
+/* Only genuinely procedural markers use the light teal. Figures remain blue. */
+#journey .committee-timeline-item time,
+#journey .journey-milestone time,
+#journey .journey-period .journey-period-label,
+#journey .journey-period>span[aria-hidden],
+#roadmap .road-step .week,
+#roadmap .road-step.week-selected .week,
+#roadmap .status.active,
+#roadmap .road-step.task-active .status{
+  color:var(--sg-process)!important;
+}
+#journey .committee-timeline-item:before{
+  border-color:var(--sg-process)!important;
+  box-shadow:0 0 0 5px color-mix(in srgb,var(--sg-process) 12%,transparent)!important;
+}
+#journey .committee-timeline,
+#journey .committee-timeline:before{
+  border-color:var(--sg-process)!important;
+}
+#roadmap .road-overview{border-top-color:var(--sg-process)!important}
+#roadmap .road-step.week-selected{border-left-color:var(--sg-process)!important}
+#roadmap .status.active,
+#roadmap .road-step.task-active .status{border-color:var(--sg-process)!important}
+#roadmap #weekAxis button.chosen{border-color:var(--sg-process)!important}
+#rights .rights-connector .arrows{
+ background:var(--sg-process)!important;
+}
+#rights .rights-connector .arrows::before,
+#rights .rights-connector .arrows::after{
+ border-color:var(--sg-process)!important;
+}
+#rights .rights-connector span{color:var(--sg-process)!important}
+#finance .transaction-detail-row .month{
+ color:var(--sg-process)!important;
+ font-variant-numeric:tabular-nums;
+ white-space:nowrap;
+}
+#finance .transaction-detail-row .description{
+ word-break:keep-all;line-height:1.75;
+}
+.footer-bottom .site-revision{color:var(--sg-neutral-gray-light);font-size:11px}
+@media(max-width:820px){
+ .footer-bottom{flex-wrap:wrap;row-gap:8px}
+ .footer-bottom .site-revision{width:100%}
+}
+
 </style>
 </head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">임원선출계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
