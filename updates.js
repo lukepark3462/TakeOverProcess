@@ -1,11 +1,14 @@
-/* 진행 상태만 바꾸는 파일: 알려주신 실제 완료일/진행일만 입력합니다.
-예시:
-steps: {"s1-1": {status:"done", updatedAt:"2026-10-29", note:"연명서 접수 완료"}}
-status = planned(예정) / active(진행중) / done(완료) / hold(보류)
-logs: [{date:"2026-10-29", title:"...", detail:"...", status:"done", track:"s1"}]
-*/
+/* 송림3지구 정상화 실행계획: 2026-10-23 기준 실제 진행 기록.
+ * 연명서 접수 예정일: 10월 23·24·26일(일요일 제외).
+ * 주차별 예상 일정은 2026-10-26(W1)부터이며, 접수 인원·제출 완료는 확인 후 반영.
+ * status: planned | active | done | hold
+ */
 window.SONGRIM_UPDATES = {
-  lastUpdated:"2026-10-19",
-  steps:{},
-  logs:[]
+  lastUpdated:"2026-10-23",
+  steps:{
+    "s1-1":{status:"active",updatedAt:"2026-10-23",note:"연명서 접수 일정 공지 및 준비 진행 중. 확보 서명 인원 및 소집요구서 제출 여부는 미확인."}
+  },
+  logs:[
+    {date:"2026-10-23",title:"조합원 연명서 접수 일정 안내",detail:"잔류 이사의 직접 소집에 의존하지 않는 대의원회·총회 소집요구 추진 방향을 안내하고 10월 23·24·26일 접수 계획을 공지.",status:"active",track:"s1"}
+  ]
 };
