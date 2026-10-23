@@ -1153,3 +1153,20 @@ footer.footer .footer-grid p{
  #roadmap .road-context-events li{padding-top:13px}
  #roadmap .road-context-events p{font-size:14px}
 }
+
+/* Post-dismissal records, followed by permanent final goals. */
+#journey .journey-current-timeline{
+ --journey-risk:color-mix(in srgb,var(--sg-risk-red) 72%,var(--sg-white));
+ margin-top:8px;
+}
+#journey .committee-timeline-item.journey-risk time,
+#journey .committee-timeline-item.journey-risk h4{color:var(--journey-risk)!important}
+#journey .committee-timeline-item.journey-risk::before{
+ border-color:var(--journey-risk)!important;
+ box-shadow:0 0 0 5px color-mix(in srgb,var(--sg-risk-red) 12%,transparent)!important;
+}
+#journey .committee-timeline-item.journey-current h4{color:var(--sg-brand-green)}
+#journey .journey-goals{margin-top:24px;padding-top:24px;border-top:1px solid var(--sg-neutral-gray-dark)}
+#journey .journey-goals h3{margin:0 0 16px;color:var(--sg-brand-green);font-size:20px;font-weight:750;line-height:1.5}
+#journey .journey-goals .journey-future-item{padding:8px 0;background:none;border:0;border-radius:0}
+#roadmap .road-signature-appeal strong{color:var(--sg-white);font-weight:700}
