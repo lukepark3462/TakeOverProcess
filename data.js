@@ -42,7 +42,7 @@ window.SONGRIM = {
        {id:"s1-3",weekStart:3,weekEnd:4,title:"대의원회 공고 및 통지",body:"대의원회 안건 확정, 소집 통지 및 선관위원 후보자 3~5명 사전 확보.",owner:"소집청구인 대표",basis:["정관(안) 제24조⑦"],status:"planned",updatedAt:""},
        {id:"s1-4",weekStart:4,weekEnd:4,title:"선관위원 선임",body:"1차 대의원회에서 선관위원 3~5명 우선 선임. 위원회 자체 회의에서 위원장 1명·간사 1명 선출.",owner:"대의원회·선관위",basis:["선거관리규정 변경(안) 제2·3조"],status:"planned",updatedAt:""},
        {id:"s1-5",weekStart:4,weekEnd:5,title:"임원 후보 등록·심사",body:"조합장·이사·감사 후보 등록 공고. 후보별 추천서와 피선거권 요건 확인. 추천인 계획: 조합장 50명, 이사·감사 각 20명 이상.",owner:"선거관리위원회",basis:["선거관리규정 변경(안) 제4·6조"],status:"planned",updatedAt:""},
-       {id:"s1-6",weekStart:5,weekEnd:6,title:"이사·감사 보궐선임",body:"2차 대의원회에서 해임으로 궐위된 이사 4명 및 감사 1명을 후보별 의결로 보궐선임 추진. 실제 궐위·정족수 및 선임 권한은 시행 정관 확인 필요.",owner:"대의원회",basis:["정관(안) 제15조②·제25조①·제26조"],status:"planned",updatedAt:""},
+       {id:"s1-6",weekStart:5,weekEnd:6,title:"이사·감사 보궐선임",body:"2차 대의원회에서 해임으로 궐위된 이사 4명 및 감사 1명 보궐선임 추진. 김** 이사가 향후 별도로 사퇴하여 추가 궐위가 발생하면 해당 이사 1명은 후속 대의원회에서 별도 보궐선임을 추진할 예정. 실제 궐위·의결정족수·선임 권한은 시행 정관 확인 필요.",owner:"대의원회",basis:["정관(안) 제15조②·제25조①·제26조"],status:"planned",updatedAt:""},
        {id:"s1-7",weekStart:6,weekEnd:7,title:"총회 소집권 확인·선거 준비",body:"잔류 이사 및 보궐선임 임원에 관한 직무대행·총회 소집권을 시행 정관과 관할관청을 통해 확인. 선거인명부·후보공고·투표 및 개표 절차 준비.",owner:"보궐선임 임원·선관위",basis:["정관(안) 제16조⑥·제20조⑦"],status:"planned",updatedAt:""},
        {id:"s1-8",weekStart:7,weekEnd:8,title:"조합장 선출총회",body:"적법한 총회 소집·통지 절차를 거쳐 신임 조합장 1명 선출. 선관위에서 투표·개표 및 당선 결과 공고.",owner:"총회·선관위",basis:["정관(안) 제21조·선거관리규정 변경(안) 제10~12조"],status:"planned",updatedAt:""},
        {id:"s1-9",weekStart:8,weekEnd:8,title:"변경인가·등기 착수",body:"조합장 선출 이후 변경인가·임원 변경등기 및 업무 인수인계 착수. 완료 기간은 별도.",owner:"신임 집행부",basis:["정관(안) 제18조②"],status:"planned",updatedAt:""}
