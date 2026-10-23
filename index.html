@@ -1452,6 +1452,33 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
  #paymentNotice .payment-notice-actions button{font-size:11px;padding:12px 2px}
 }
 @media(prefers-reduced-motion:reduce){#paymentNotice *{scroll-behavior:auto!important}}
+</style><style id="signature-notice-v1">
+#signatureNotice[hidden]{display:none!important}
+#signatureNotice{position:fixed;inset:0;z-index:10051;display:grid;place-items:center;padding:clamp(12px,3vw,28px);background:rgba(0,0,0,.78);backdrop-filter:blur(7px);overflow-y:auto}
+#signatureNotice .sn-panel{box-sizing:border-box;width:min(100%,640px);max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain;background:linear-gradient(150deg,#242C25,#171D19 70%);color:#fff;border:1px solid #516047;border-top:4px solid var(--sg-brand-green,#86BC25);border-radius:12px;padding:clamp(20px,3.3vw,34px);box-shadow:0 30px 100px rgba(0,0,0,.6)}
+#signatureNotice .sn-eyebrow{font-size:11px;letter-spacing:.1em;font-weight:800;color:var(--sg-data-blue-light,#64B6E7);margin-bottom:12px}
+#signatureNotice h2{margin:0 0 18px;color:#fff;font-size:clamp(22px,3.7vw,30px);line-height:1.38;font-weight:800;letter-spacing:-.045em;word-break:keep-all}
+#signatureNotice h2 strong{color:var(--sg-brand-green,#86BC25)}
+#signatureNotice .sn-body{color:#E1E8DF;font-size:clamp(13px,2.4vw,14px);line-height:1.85;word-break:keep-all}
+#signatureNotice .sn-body p+p{margin-top:12px}
+#signatureNotice .sn-steps{background:#20352F;border-left:3px solid var(--sg-teal-light,#9DD5CD);margin:13px 0 0;padding:14px 16px;border-radius:4px}
+#signatureNotice .sn-steps ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+#signatureNotice .sn-steps li{font-size:13px;line-height:1.55;font-weight:680;color:#fff}
+#signatureNotice .sn-steps b{color:var(--sg-teal-light,#9DD5CD);margin-right:5px}
+#signatureNotice .sn-details{display:grid;gap:13px;border-top:1px solid #516047;margin-top:18px;padding-top:17px}
+#signatureNotice .sn-label{display:block;color:#FF8A80;font-size:12px;font-weight:800;margin-bottom:4px}
+#signatureNotice .sn-value{font-size:14px;font-weight:680;color:#fff;line-height:1.7;word-break:keep-all}
+#signatureNotice .sn-emphasis{color:#FF8A80;font-weight:800}
+#signatureNotice .sn-sub{color:#E7BCB8;font-size:12px;line-height:1.6;margin-top:2px}
+#signatureNotice a{color:#BDE48D;text-decoration:underline;text-underline-offset:3px}
+#signatureNotice .sn-privacy{font-size:11px;color:#C6D0C3;line-height:1.6;margin-top:4px}
+#signatureNotice .sn-appeal{margin-top:17px;padding:13px 15px;background:#2A352C;border-left:3px solid var(--sg-brand-green,#86BC25);font-size:14px;line-height:1.6;font-weight:800;color:#fff}
+#signatureNotice .sn-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:16px}
+#signatureNotice .sn-actions button{font:inherit;font-size:12px;font-weight:700;background:#29312B;border:1px solid #58635B;border-radius:6px;padding:12px 4px;cursor:pointer;color:#E4ECE4;white-space:nowrap}
+#signatureNotice .sn-actions button:hover{border-color:var(--sg-brand-green,#86BC25);color:#fff}
+#signatureNotice .sn-actions #signatureNoticeClose{background:#414A43;border-color:#7B887E;color:#fff}
+#signatureNotice a:focus-visible,#signatureNotice button:focus-visible{outline:2px solid var(--sg-green-light,#E6EE94);outline-offset:3px}
+@media(max-width:430px){#signatureNotice .sn-panel{padding:19px 16px}#signatureNotice .sn-steps ol{grid-template-columns:1fr}#signatureNotice .sn-actions{gap:5px}#signatureNotice .sn-actions button{font-size:11px;padding:12px 2px}}
 </style><style id="journey-oct02-balanced-columns-v46">
 /* Oct 2: two plain timeline entries, same typography, closer together, one unobtrusive separator. */
 #journey .committee-timeline-item.journey-double-event .journey-event-pair{
@@ -2807,7 +2834,37 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 
 <section id="contact" class="section" aria-labelledby="contact-title"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">조합원 문의</div><h2 id="contact-title">연락처</h2></div><p class="contact-intro"><span class="header-copy-line">조합 운영 정상화 관련 문의는</span><span class="header-copy-line">비상대책위원장에게 전달해 주시기 바랍니다.</span></p></div>
 <div class="contact-solo reveal"><span class="contact-solo-role">송림3지구 조합원 비상대책위원회 위원장</span><h3>이인섭</h3><div class="contact-solo-phone"><span>휴대전화</span><a href="tel:01099291171">010-9929-1171</a></div><div class="contact-actions"><a class="contact-call" href="tel:01099291171">전화 걸기 ↗</a><a class="contact-message" href="sms:01099291171">문자 보내기 ↗</a></div><p>문의 목적 외 사용을 삼가 주시기 바랍니다.</p></div></div></section>
-</main><footer class="footer"><div class="container"><div class="footer-grid"><h2>함께 만드는 송림3지구의 다음.</h2><p>조합원 한 사람 한 사람의 권리를 존중하고, 주요 의사결정과 진행 경과를 투명하게 기록하겠습니다.</p></div><div class="footer-bottom"><span>송림3지구 조합원 비상대책위원회</span><span>송림3지구 정상화과정 · 2026</span><span class="site-revision">재무 집계 기준일 2026.10.19 · 홈페이지 수정일 2026.10.22</span></div></div></footer>
+</main><footer class="footer"><div class="container"><div class="footer-grid"><h2>함께 만드는 송림3지구의 다음.</h2><p>조합원 한 사람 한 사람의 권리를 존중하고, 주요 의사결정과 진행 경과를 투명하게 기록하겠습니다.</p></div><div class="footer-bottom"><span>송림3지구 조합원 비상대책위원회</span><span>송림3지구 정상화과정 · 2026</span><span class="site-revision">재무 집계 기준일 2026.10.19 · 홈페이지 수정일 2026.10.23</span></div></div></footer>
+<div id="signatureNotice" hidden aria-hidden="true">
+  <section class="sn-panel" role="dialog" aria-modal="true" aria-labelledby="signatureNoticeTitle" aria-describedby="signatureNoticeDescription" tabindex="-1">
+    <div class="sn-eyebrow">중요 공지 · 조합 정상화</div>
+    <h2 id="signatureNoticeTitle">김명숙 이사 면담 불발 및<br><strong>조합 정상화 연명서 안내</strong></h2>
+    <div class="sn-body" id="signatureNoticeDescription">
+      <p>10월 18일 김명숙 이사는 사퇴를 유보하면서 향후 조합 운영 방향을 함께 논의할 의사를 밝혔고, 10월 22일 면담을 약속하였습니다.</p>
+      <p>비대위에 따르면, 약속 당일 서울에서 검단까지 왕복 120km 이상을 이동하고 현장에서 3시간을 기다렸으나, 면담이 어렵다는 통보 이후 추가 연락이 닿지 않아 면담은 성사되지 않았습니다.</p>
+      <p>조합의 운명이 걸린 중대한 시기에 약속된 면담이 이뤄지지 않고 후속 설명도 받지 못한 점에 깊은 실망과 유감을 표합니다.</p>
+      <p>더 이상 김명숙 이사 한 사람의 결정과 연락을 기다리며 432명 조합원의 권익과 조합 정상화를 지연시킬 수 없습니다.</p>
+      <p>이에 김명숙 이사의 협조 여부와 관계없이 다음 절차를 추진하기 위한 연명서를 작성합니다.</p>
+      <div class="sn-steps"><ol>
+        <li><b>①</b> 대의원회 소집</li>
+        <li><b>②</b> 선거관리위원회 구성</li>
+        <li><b>③</b> 이사·감사 보궐선거</li>
+        <li><b>④</b> 신임 조합장 선출 총회 개최</li>
+      </ol></div>
+    </div>
+    <div class="sn-details">
+      <div><span class="sn-label">접수 기간</span><p class="sn-value sn-emphasis">10월 23일(금) ~ 10월 26일(월)</p><p class="sn-sub">일요일 제외 · 23일(금), 24일(토), 26일(월)</p></div>
+      <div><span class="sn-label">접수 장소</span><p class="sn-value sn-emphasis">인천 제물포구 샛골로162번길 45, 송림두산위브더센트럴아파트</p><p class="sn-sub">상세 동·호수는 비대위로 문의</p></div>
+      <div><span class="sn-label">준비물 · 문의</span><p class="sn-value">신분증 사본 / 문의: <a href="tel:01099291171">010-9929-1171</a></p><p class="sn-privacy">신분증 사본의 주민등록번호 뒷자리 등 불필요한 개인정보는 가려서 준비해 주십시오.</p></div>
+    </div>
+    <p class="sn-appeal">조합원 여러분의 적극적인 참여를 부탁드립니다.</p>
+    <div class="sn-actions" aria-label="공지 팝업 표시 설정">
+      <button type="button" id="signatureNoticeToday">오늘 보지 않기</button>
+      <button type="button" id="signatureNoticeForever">영구 보지 않기</button>
+      <button type="button" id="signatureNoticeClose">닫기</button>
+    </div>
+  </section>
+</div>
 <div id="paymentNotice" hidden aria-hidden="true">
   <section class="payment-notice-panel" role="dialog" aria-modal="true" aria-labelledby="paymentNoticeTitle" aria-describedby="paymentNoticeDescription" tabindex="-1">
     <div class="payment-notice-eyebrow">중요 안내 · 조합원 안내</div>
@@ -3150,5 +3207,50 @@ window.addEventListener('hashchange',display);mq.addEventListener('change',displ
   const isMainEntry=fragment===''||fragment==='#home'||fragment==='#home-menu';
   const preference=safeRead();
   if(isMainEntry && preference!=='forever' && preference!=='today:'+today())open();
+})();
+</script><script id="signature-notice-behavior-v1">
+(function(){
+  'use strict';
+  const hash=window.location.hash;
+  if(hash!==''&&hash!=='#home'&&hash!=='#home-menu')return;
+  const modal=document.getElementById('signatureNotice');
+  const panel=modal&&modal.querySelector('.sn-panel');
+  if(!modal||!panel)return;
+  const date=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+  const day=date(),key='songnim3-signature-notice-20261023-v1';
+  if(day<'2026-10-23'||day>'2026-10-26')return;
+  let saved='';
+  try{saved=window.localStorage.getItem(key)||''}catch(_){}
+  if(saved==='forever'||saved==='today:'+day)return;
+  const payment=document.getElementById('paymentNotice');
+  const hasPayment=!!payment&&!payment.hidden;
+  const previousOverflow=document.body.style.overflow||'';
+  const lastFocus=document.activeElement;
+  if(hasPayment){payment.hidden=true;payment.setAttribute('aria-hidden','true')}
+  const onKeydown=(event)=>{
+    if(event.key==='Escape'){event.preventDefault();event.stopImmediatePropagation();close();return}
+    if(event.key!=='Tab')return;
+    event.stopImmediatePropagation();
+    const elems=[...modal.querySelectorAll('a[href],button:not([disabled])')].filter(el=>el.getClientRects().length);
+    if(!elems.length){event.preventDefault();panel.focus();return}
+    const first=elems[0],last=elems[elems.length-1];
+    if(event.shiftKey&&(document.activeElement===first||document.activeElement===panel)){event.preventDefault();last.focus()}
+    else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}
+  };
+  function close(){
+    if(modal.hidden)return;
+    modal.hidden=true;modal.setAttribute('aria-hidden','true');
+    window.removeEventListener('keydown',onKeydown,true);
+    if(hasPayment){payment.hidden=false;payment.setAttribute('aria-hidden','false');payment.querySelector('.payment-notice-panel')?.focus({preventScroll:true})}
+    else{document.body.style.overflow=previousOverflow;if(lastFocus?.isConnected&&typeof lastFocus.focus==='function')lastFocus.focus({preventScroll:true})}
+  }
+  const save=value=>{try{window.localStorage.setItem(key,value)}catch(_){}close()};
+  document.getElementById('signatureNoticeToday').addEventListener('click',()=>save('today:'+date()));
+  document.getElementById('signatureNoticeForever').addEventListener('click',()=>save('forever'));
+  document.getElementById('signatureNoticeClose').addEventListener('click',close);
+  modal.hidden=false;modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  window.addEventListener('keydown',onKeydown,true);
+  panel.focus({preventScroll:true});
 })();
 </script></body></html>
