@@ -1121,6 +1121,7 @@ footer.footer .footer-grid p{
 
 /* 2026-10-23: single elected-leadership plan, with dated transition evidence. */
 #roadmap .road-context{
+ --road-context-risk:color-mix(in srgb,var(--sg-risk-red) 72%,var(--sg-white));
  margin:0 0 clamp(25px,3vw,42px);
  padding:clamp(24px,3vw,34px) 0 0;
  border:0;
@@ -1130,7 +1131,7 @@ footer.footer .footer-grid p{
  color:var(--sg-white);
 }
 #roadmap .road-context-heading{display:flex;align-items:start;justify-content:space-between;gap:15px}
-#roadmap .road-context h3{margin:0;color:var(--sg-white);font-size:clamp(21px,2.6vw,30px);font-weight:750;line-height:1.45;word-break:keep-all}
+#roadmap .road-context h3{margin:0;color:var(--road-context-risk);font-size:clamp(21px,2.6vw,30px);font-weight:750;line-height:1.45;word-break:keep-all}
 #roadmap .road-context-asof{font-size:11px;white-space:nowrap;font-weight:650;color:var(--sg-neutral-gray-light);padding-top:5px}
 #roadmap .road-context-lead{font-size:clamp(14px,1.2vw,16px);color:var(--sg-neutral-gray-light);line-height:1.9;margin-top:18px;word-break:keep-all}
 #roadmap .road-context-lead strong{color:var(--sg-white);font-weight:760}
@@ -1138,6 +1139,11 @@ footer.footer .footer-grid p{
 #roadmap .road-context-events li{min-width:0;border-top:1px solid var(--sg-neutral-gray-dark);padding:16px 2px 0}
 #roadmap .road-context-events time{display:block;font:800 13px 'DM Sans','Noto Sans KR',sans-serif;color:var(--sg-process);letter-spacing:.06em;margin-bottom:11px}
 #roadmap .road-context-events strong{display:block;color:var(--sg-white);font-size:clamp(15px,1.2vw,18px);font-weight:750;line-height:1.5;word-break:keep-all}
+/* Red marks the failed meeting; ongoing procedure dates retain process teal. */
+#roadmap .road-context-risk-text{color:var(--road-context-risk)}
+#roadmap .road-context-events .road-context-event-risk{border-top-color:var(--road-context-risk)}
+#roadmap .road-context-events .road-context-event-risk>time,
+#roadmap .road-context-events .road-context-event-risk>strong{color:var(--road-context-risk)}
 #roadmap .road-context-events p{font-size:clamp(13px,1vw,15px);line-height:1.8;color:var(--sg-neutral-gray-light);margin-top:9px;word-break:keep-all}
 #roadmap .road-context-note{font-size:12px;line-height:1.7;color:var(--sg-neutral-gray-mid);margin-top:20px;word-break:keep-all}
 @media(max-width:760px){
