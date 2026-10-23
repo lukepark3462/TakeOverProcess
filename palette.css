@@ -363,7 +363,7 @@ header nav a{font-size:clamp(12px,.87vw,14px)!important;letter-spacing:-.022em}
 #rights .rights-chapter-heading h3,#past .past-subhead h3{font-size:clamp(29px,3vw,42px)!important;line-height:1.28!important;font-weight:760!important}
 #rights .rights-chapter-heading>p,#past .past-subhead p,#about .committee-history-head p{font-size:clamp(14px,1.08vw,17px)!important;line-height:1.85}
 #rights .rights-chapter-num,#past .past-index{font-size:clamp(14px,1.18vw,17px)!important;font-weight:800}
-#roadmap .road-overview{border-top:3px solid var(--sg-process)}
+#roadmap .road-overview{border-top:1px solid var(--sg-neutral-gray-dark)}
 #roadmap .road-metrics strong{color:var(--sg-teal-light)}
 #finance .finance-top-simple{border-top:3px solid var(--sg-data-blue)!important}
 #finance .finance-metrics span,#finance .cost-head .eyebrow,#finance .expense-head .eyebrow{color:var(--sg-data-blue-light)!important}
@@ -1098,24 +1098,44 @@ footer.footer .footer-grid p{
 }
 
 
+/* Signature participation details: open layout with no decorative box. */
+#roadmap .road-signature-notice{margin:0 0 clamp(28px,3.5vw,44px);padding:0}
+#roadmap .road-signature-kicker{margin:0;color:var(--sg-neutral-gray-light);font-size:12px;font-weight:650}
+#roadmap .road-signature-notice h3{margin:9px 0 0;color:var(--sg-brand-green);font-size:clamp(25px,3vw,36px);font-weight:780;line-height:1.35;letter-spacing:-.035em;word-break:keep-all}
+#roadmap .road-signature-intro,#roadmap .road-signature-appeal{color:var(--sg-neutral-gray-light);font-size:clamp(14px,1.1vw,16px);line-height:1.85;word-break:keep-all;overflow-wrap:anywhere}
+#roadmap .road-signature-intro{margin:14px 0 0}
+#roadmap .road-signature-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 40px;margin:26px 0 0}
+#roadmap .road-signature-details>div{min-width:0}
+#roadmap .road-signature-details dt{color:var(--sg-neutral-gray-mid);font-size:12px;font-weight:650;line-height:1.6}
+#roadmap .road-signature-details dd{margin:6px 0 0;color:var(--sg-white);font-size:clamp(14px,1.1vw,16px);line-height:1.8;word-break:keep-all;overflow-wrap:anywhere}
+#roadmap .road-signature-details dd>small,#roadmap .road-signature-place dd>span{display:block;color:var(--sg-neutral-gray-light);font-size:13px;line-height:1.85;margin-top:3px}
+#roadmap .road-signature-place{grid-column:1/-1}
+#roadmap .road-signature-details a{color:var(--sg-white);text-decoration:underline;text-underline-offset:4px}
+#roadmap .road-signature-details a:hover{color:var(--sg-brand-green)}
+#roadmap .road-signature-details a:focus-visible{outline:2px solid var(--sg-brand-green);outline-offset:4px}
+#roadmap .road-signature-appeal{margin:24px 0 0}
+@media(max-width:600px){
+ #roadmap .road-signature-details{grid-template-columns:1fr;gap:18px}
+ #roadmap .road-signature-place{grid-column:auto}
+}
+
 /* 2026-10-23: single elected-leadership plan, with dated transition evidence. */
 #roadmap .road-context{
  margin:0 0 clamp(25px,3vw,42px);
- padding:clamp(22px,3vw,36px);
- border:1px solid var(--sg-neutral-gray-dark);
- border-left:4px solid var(--sg-process);
- border-radius:var(--sg-card-radius,10px);
- background:linear-gradient(145deg,#171717,var(--sg-black));
+ padding:clamp(24px,3vw,34px) 0 0;
+ border:0;
+ border-top:1px solid var(--sg-neutral-gray-dark);
+ border-radius:0;
+ background:none;
  color:var(--sg-white);
 }
 #roadmap .road-context-heading{display:flex;align-items:start;justify-content:space-between;gap:15px}
-#roadmap .road-context-eyebrow{font-size:11px;font-weight:800;letter-spacing:.09em;color:var(--sg-data-blue-light)}
-#roadmap .road-context h3{margin:9px 0 0;color:var(--sg-white);font-size:clamp(21px,2.6vw,30px);font-weight:750;line-height:1.45;word-break:keep-all}
+#roadmap .road-context h3{margin:0;color:var(--sg-white);font-size:clamp(21px,2.6vw,30px);font-weight:750;line-height:1.45;word-break:keep-all}
 #roadmap .road-context-asof{font-size:11px;white-space:nowrap;font-weight:650;color:var(--sg-neutral-gray-light);padding-top:5px}
 #roadmap .road-context-lead{font-size:clamp(14px,1.2vw,16px);color:var(--sg-neutral-gray-light);line-height:1.9;margin-top:18px;word-break:keep-all}
 #roadmap .road-context-lead strong{color:var(--sg-white);font-weight:760}
 #roadmap .road-context-events{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;margin:22px 0 0;padding:0}
-#roadmap .road-context-events li{min-width:0;border-top:2px solid var(--sg-process);padding:16px 2px 0}
+#roadmap .road-context-events li{min-width:0;border-top:1px solid var(--sg-neutral-gray-dark);padding:16px 2px 0}
 #roadmap .road-context-events time{display:block;font:800 13px 'DM Sans','Noto Sans KR',sans-serif;color:var(--sg-process);letter-spacing:.06em;margin-bottom:11px}
 #roadmap .road-context-events strong{display:block;color:var(--sg-white);font-size:clamp(15px,1.2vw,18px);font-weight:750;line-height:1.5;word-break:keep-all}
 #roadmap .road-context-events p{font-size:clamp(13px,1vw,15px);line-height:1.8;color:var(--sg-neutral-gray-light);margin-top:9px;word-break:keep-all}

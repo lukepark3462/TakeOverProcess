@@ -809,7 +809,7 @@ header nav{gap:clamp(8px,1.3vw,20px)}header nav a{font-size:clamp(11px,.9vw,14px
   opacity:1;filter:none;image-rendering:auto;
 }
 @media(max-width:560px){#about .committee-grid img.committee-portrait{margin-left:0}}
-</style><link rel="stylesheet" href="./palette.css?v=20261023-one-plan-v1"><style id="summary-desktop-singleline-v18">
+</style><link rel="stylesheet" href="./palette.css?v=20261023-signature-notice-v2"><style id="summary-desktop-singleline-v18">
 /* On desktop keep four requested summaries on one line, independent of titles. */
 @media(min-width:1024px){
 #finance .section-head,#past .section-head,#rights .section-head.rights-lead{
@@ -1315,21 +1315,13 @@ header .header-identity .logo-ring-mark{
 #journey .journey-result{
  border-left:4px solid #86BC25!important;
 }
-/* Scenario summary provides a stable visual anchor; active/selected steps keep the same mark. */
-#roadmap .road-overview{
- border-left:4px solid #86BC25;
- padding-left:clamp(14px,2vw,24px);
-}
+/* Active and selected steps retain a functional state marker. */
 #roadmap #roadSteps .road-step.week-selected,
 #roadmap #roadSteps .road-step.task-active{
  border-left:4px solid #86BC25!important;
  padding-left:clamp(14px,2vw,24px);
 }
-#finance .finance-top-simple > .balance{
- border-left:4px solid #86BC25;
- padding-left:clamp(14px,2vw,24px);
- min-width:0;
-}
+#finance .finance-top-simple > .balance{min-width:0}
 /* Journey period: entire phrase, dates, dash and PRESENT are white. */
 #journey .journey-period,
 #journey .journey-period .journey-period-label,
@@ -1338,8 +1330,6 @@ header .header-identity .logo-ring-mark{
 }
 @media(max-width:700px){
  #about.statement h2{padding-left:14px}
- #roadmap .road-overview{padding-left:14px}
- #finance .finance-top-simple > .balance{padding-left:14px}
 }
 </style><style id="about-stat-unit-white-v35">
 /* Keep the member count and approval rate units visually consistent with their numeric values. */
@@ -1539,11 +1529,11 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 #signatureNotice a:focus-visible,#signatureNotice button:focus-visible{outline:2px solid var(--sg-green-light,#E6EE94);outline-offset:3px}
 @media(max-width:430px){#signatureNotice .sn-panel{padding:19px 16px}#signatureNotice .sn-steps ol{grid-template-columns:1fr}#signatureNotice .sn-actions{gap:5px}#signatureNotice .sn-actions button{font-size:11px;padding:12px 2px}}
 </style><style id="road-future-vacancy-v1">
-#roadmap .road-future-vacancy{display:grid;grid-template-columns:minmax(150px,.36fr) 1fr;gap:12px 22px;align-items:start;padding:18px 20px;margin:18px 0 24px;border-left:3px solid var(--sg-process,#9DD5CD);background:rgba(157,213,205,.06);border-radius:4px;color:#fff}
+#roadmap .road-future-vacancy{display:grid;grid-template-columns:minmax(150px,.36fr) 1fr;gap:12px 22px;align-items:start;padding:18px 0;margin:0 0 24px;border:0;border-bottom:1px solid var(--sg-neutral-gray-dark);background:none;border-radius:0;color:var(--sg-white)}
 #roadmap .road-future-vacancy strong{font-size:14px;font-weight:800;line-height:1.65;color:var(--sg-process,#9DD5CD);word-break:keep-all}
 #roadmap .road-future-vacancy p{font-size:clamp(13px,1vw,15px);line-height:1.85;color:#DFE7DF;word-break:keep-all}
 #roadmap .road-future-vacancy b{font-weight:800;color:#FFF}
-@media(max-width:700px){#roadmap .road-future-vacancy{grid-template-columns:1fr;gap:6px;padding:16px}}
+@media(max-width:700px){#roadmap .road-future-vacancy{grid-template-columns:1fr;gap:6px;padding:16px 0}}
 </style><style id="journey-oct02-balanced-columns-v46">
 /* Oct 2: two plain timeline entries, same typography, closer together, one unobtrusive separator. */
 #journey .committee-timeline-item.journey-double-event .journey-event-pair{
@@ -2417,7 +2407,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 #journey .committee-timeline, #journey .committee-timeline:before{
   border-color:var(--sg-process)!important;
 }
-#roadmap .road-overview{border-top-color:var(--sg-process)!important}
+#roadmap .road-overview{border-top-color:var(--sg-neutral-gray-dark)!important}
 #roadmap .road-step.week-selected{border-left-color:var(--sg-process)!important}
 #roadmap .status.active, #roadmap .road-step.task-active .status{border-color:var(--sg-process)!important}
 #roadmap #weekAxis button.chosen{border-color:var(--sg-process)!important}
@@ -2552,9 +2542,37 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 </div></section>
 
 <section id="roadmap" class="section"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">정상화 실행계획</div><h2 class="roadmap-exact-two-line"><span>새로운 집행부 선출을 위한</span><span>정상화 실행계획</span></h2></div><p><span class="header-copy-line">연명서 접수: 10.23·24·26 / 주차별 추진: 10.26(월)부터.</span><span class="header-copy-line">월·일은 모두 <strong>예상</strong>이며, 실제 확정일과 업데이트일은 따로 기록합니다.</span></p></div>
+<section class="road-signature-notice reveal" aria-labelledby="roadSignatureTitle">
+  <p class="road-signature-kicker">조합원 참여 안내</p>
+  <h3 id="roadSignatureTitle">지금 연명서 작성중!</h3>
+  <p class="road-signature-intro">대의원회 소집과 새로운 집행부 구성을 위한 연명서를 작성하고 있습니다. 아래 일정을 확인하시고 참여해 주세요.</p>
+  <dl class="road-signature-details">
+    <div>
+      <dt>작성 날짜</dt>
+      <dd>2026년 <time datetime="2026-10-23">10월 23일(금)</time> · <time datetime="2026-10-24">24일(토)</time> · <time datetime="2026-10-26">26일(월)</time><small>일요일 제외</small></dd>
+    </div>
+    <div>
+      <dt>작성 시간</dt>
+      <dd>오후 8시부터</dd>
+    </div>
+    <div class="road-signature-place">
+      <dt>작성 장소</dt>
+      <dd><strong>이인섭 비대위원장 자택</strong><span>인천 제물포구 샛골로162번길 45, 송림두산위브더센트럴아파트 107동 2104호</span></dd>
+    </div>
+    <div>
+      <dt>준비물</dt>
+      <dd>신분증 사본</dd>
+    </div>
+    <div>
+      <dt>문의</dt>
+      <dd><a href="tel:01099291171">010-9929-1171</a></dd>
+    </div>
+  </dl>
+  <p class="road-signature-appeal">조합원 한 분 한 분의 참여가 조합 정상화의 힘이 됩니다. 신분증 사본을 준비해 방문해 주시고, 주변 조합원께도 일정을 알려주세요.</p>
+</section>
 <section class="road-context reveal" aria-labelledby="roadContextTitle">
   <div class="road-context-heading">
-    <div><span class="road-context-eyebrow">추진 경로 전환 배경</span><h3 id="roadContextTitle">김** 이사 협의 경위와 연명 추진 결정</h3></div>
+    <h3 id="roadContextTitle">김** 이사와의 협상 결과</h3>
     <span class="road-context-asof">2026.10.23 기준</span>
   </div>
   <p class="road-context-lead">비대위는 잔류 이사의 협조를 통해 신속히 대의원회를 소집하는 방안도 검토했으나,<br>예정된 면담이 성사되지 않아 <strong>특정 이사의 협조 여부와 관계없이 조합원의 소집요구 절차를 추진</strong>하기로 했습니다.</p>
@@ -2936,6 +2954,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
     </div>
     <div class="sn-details">
       <div><span class="sn-label">접수 기간</span><p class="sn-value sn-emphasis">10월 23일(금) ~ 10월 26일(월)</p><p class="sn-sub">일요일 제외 · 23일(금), 24일(토), 26일(월)</p></div>
+      <div><span class="sn-label">접수 시간</span><p class="sn-value sn-emphasis">오후 8시부터</p></div>
       <div><span class="sn-label">접수 장소</span><p class="sn-value sn-emphasis">인천 제물포구 샛골로162번길 45, 송림두산위브더센트럴아파트 107동 2104호 (이인섭 자택)</p></div>
       <div><span class="sn-label">준비물 · 문의</span><p class="sn-value">신분증 사본 / 문의: <a href="tel:01099291171">010-9929-1171</a></p></div>
     </div>
