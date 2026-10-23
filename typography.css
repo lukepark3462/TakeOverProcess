@@ -1,0 +1,130 @@
+/* SG3-DS-001 v1.0: final, shared type scale for every page and viewport.
+ * Important declarations in this layer take precedence over legacy unlayered
+ * important declarations, without increasing selector specificity per section.
+ * SVG diagrams retain their viewBox typography and their existing mobile views.
+ */
+@layer sg-typography {
+  :root {
+    --sg-font-page: clamp(40px, 4.4vw, 64px);
+    --sg-font-heading: clamp(24px, 2vw, 32px);
+    --sg-font-body: clamp(16px, 1.25vw, 18px);
+    --sg-font-caption: 14px;
+    --sg-font-metric: clamp(40px, 3vw, 64px);
+  }
+
+  body,
+  body :where(*):not(svg, svg *) {
+    font-size: var(--sg-font-body) !important;
+  }
+
+  :where(h1, h2, h3, h4, p, li, dd, dt, a, button, summary),
+  :where(h1, h2, h3, h4, p) :where(span, strong, em, b) {
+    white-space: normal !important;
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+  }
+
+  :where(p, li, dd, dt) {
+    line-height: 1.8 !important;
+  }
+
+  :is(h2, h3, h4, .launch-name, .journey-toggle-title,
+      .journey-achievements-head > strong, .journey-forward-heading > strong,
+      .journey-future-item > strong, .road-context-events li > strong,
+      .road-future-vacancy > strong, .donor-summary),
+  :is(h2, h3, h4, .launch-name, .journey-toggle-title,
+      .journey-achievements-head > strong, .journey-forward-heading > strong,
+      .journey-future-item > strong, .road-context-events li > strong,
+      .road-future-vacancy > strong, .donor-summary) :where(span, strong, em, b) {
+    font-size: var(--sg-font-heading) !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  :is(#home h1, .section-head h2, .launch-head h2, #about.statement h2,
+      #lawfirm .law-head h2, #past-title),
+  :is(#home h1, .section-head h2, .launch-head h2, #about.statement h2,
+      #lawfirm .law-head h2, #past-title) :where(span, strong, em, b) {
+    font-size: var(--sg-font-page) !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  :is(small, .small, .eyebrow, .stat-label, .stat-description, .hero-meta,
+      .ornament-caption, .launch-index, .launch-foot, .member-overview-label,
+      .role, .pill, .status, .cost-pct, .cost-foot, .table-caption,
+      .ledger-summary-note, .track-footer, .road-context-asof, .road-context-note,
+      .road-signature-kicker, .road-signature-details dt,
+      .hero-signature-destination, .donor-num, .footer-bottom,
+      .site-revision, .pv-kicker, .pv-eyebrow, .pv-issue-overline,
+      .pv-issue-action, .pv-issue-figure, .pv-role-overline, .pv-role-duty dt,
+      .pv-role-assessment-heading, .rights-chapter-num, .rights-triangle-kicker,
+      .rights-triangle-caveat, .law-label, .law-profile-tag, .law-source,
+      .more-info, .sn-eyebrow, .sn-label, .sn-sub, .payment-notice-eyebrow),
+  :is(.small, .eyebrow, .stat-label, .stat-description, .hero-meta,
+      .ornament-caption, .launch-index, .launch-foot, .member-overview-label,
+      .role, .pill, .status, .cost-pct, .cost-foot, .table-caption,
+      .ledger-summary-note, .track-footer, .road-context-asof, .road-context-note,
+      .road-signature-kicker, .road-signature-details dt,
+      .hero-signature-destination, .donor-num, .footer-bottom,
+      .site-revision, .pv-kicker, .pv-eyebrow, .pv-issue-overline,
+      .pv-issue-action, .pv-issue-figure, .pv-role-overline, .pv-role-duty dt,
+      .pv-role-assessment-heading, .rights-chapter-num, .rights-triangle-kicker,
+      .rights-triangle-caveat, .law-label, .law-profile-tag, .law-source,
+      .more-info, .sn-eyebrow, .sn-label, .sn-sub, .payment-notice-eyebrow)
+      :where(span, strong, em, b, a, button) {
+    font-size: var(--sg-font-caption) !important;
+    line-height: 1.65 !important;
+  }
+
+  :is(.stat-value, .balance > strong, .finance-metrics strong,
+      .journey-metric > strong, .road-metrics strong, .member-overview > strong,
+      .donor-finance-summary > div > strong) {
+    font-size: var(--sg-font-metric) !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .hero-description > span,
+  .header-copy-line,
+  .journey-event-part p,
+  .rights-chapter-heading > p {
+    white-space: normal !important;
+  }
+
+  .monthly-ledger :is(.amount-cell, .balance-cell, .month),
+  .monthly-ledger :is(.amount-cell, .balance-cell, .month) * {
+    white-space: nowrap !important;
+  }
+
+  .journey-event-pair,
+  .section-head > *,
+  .consistent-heading > *,
+  .law-head > *,
+  .pv-hero-heading > * {
+    min-width: 0 !important;
+  }
+
+  /* Keep automatic focus scrolling inside the table's own scroll area. */
+  main {
+    overflow-x: clip !important;
+    overflow-y: visible !important;
+  }
+
+  @media (max-width: 700px) {
+    .journey-event-pair { grid-template-columns: minmax(0, 1fr) !important; }
+    #past.past-v2 .pv-issue-toolbar {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+    #past.past-v2 .pv-toggle-all { white-space: nowrap !important; }
+  }
+
+  @media (max-width: 380px) {
+    #home.hero .hero-brand-mark { width: 132px !important; height: 124px !important; }
+    #home.hero .hero-signature-link { left: 164px !important; top: 40px !important; }
+  }
+}
