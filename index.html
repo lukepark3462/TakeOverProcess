@@ -972,6 +972,65 @@ header .header-identity .logo-ring-mark{
     height:151px!important;
   }
 }
+
+/* Signature status shortcut beside the hero logo. */
+#home.hero .hero-signature-link{
+  position:absolute;
+  top:126px;
+  left:calc(clamp(30px,5.5vw,90px) + 276px);
+  z-index:4;
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  width:max-content;
+  max-width:calc(100% - clamp(30px,5.5vw,90px) - 300px);
+  padding:14px 18px;
+  box-sizing:border-box;
+  border:1px solid var(--sg-brand-green);
+  border-radius:10px;
+  background:color-mix(in srgb,var(--sg-brand-green) 8%,var(--sg-black));
+  color:var(--sg-white);
+  text-decoration:none;
+  line-height:1.45;
+  transition:background-color .18s;
+}
+#home.hero .hero-signature-link:hover{
+  background:color-mix(in srgb,var(--sg-brand-green) 18%,var(--sg-black));
+}
+#home.hero .hero-signature-link:focus-visible{
+  outline:3px solid var(--sg-white);
+  outline-offset:4px;
+}
+#home .hero-signature-status{display:flex;align-items:flex-start;gap:8px}
+#home .hero-signature-status:before{
+  content:"";flex:none;width:7px;height:7px;margin-top:.6em;
+  border-radius:50%;background:var(--sg-brand-green);
+}
+#home .hero-signature-status strong{
+  min-width:0;font-size:clamp(16px,1.35vw,19px);font-weight:750;
+  word-break:keep-all;overflow-wrap:anywhere;
+}
+#home .hero-signature-destination{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  color:var(--sg-brand-green);font-size:13px;font-weight:650;
+  word-break:keep-all;overflow-wrap:anywhere;
+}
+#home .hero-signature-destination>span{flex:none;font-size:18px}
+@media(max-width:700px){
+  #home.hero .hero-signature-link{
+    top:57px;left:209px;right:20px;width:auto;max-width:240px;
+    padding:12px 10px;gap:6px;
+  }
+  #home .hero-signature-status{gap:6px}
+  #home .hero-signature-status strong{font-size:14px}
+  #home .hero-signature-destination{font-size:12px;gap:8px}
+  #home .hero-signature-destination>span{font-size:16px}
+}
+@media(max-width:380px){
+  #home.hero .hero-signature-link{top:50px;left:195px;right:16px}
+  #home .hero-signature-status strong{font-size:13px}
+  #home .hero-signature-destination{font-size:11px}
+}
 </style>
 <style id="roadmap-week-autoscroll-v27">
 /* Keep the selected week below the sticky navigation after automatic scrolling. */
@@ -2421,6 +2480,10 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 <main>
 <section id="home" class="hero container">
 <img class="hero-brand-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="248" height="219" decoding="async">
+<a class="hero-signature-link" href="#roadmap" aria-label="현재 연명서 작성중! 정상화 실행계획 바로가기">
+  <span class="hero-signature-status"><strong>현재 연명서 작성중!</strong></span>
+  <span class="hero-signature-destination">정상화 실행계획 <span aria-hidden="true">→</span></span>
+</a>
 
 <svg class="hero-architecture" viewBox="0 0 1600 830" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
 <defs>
