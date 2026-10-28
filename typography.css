@@ -224,3 +224,41 @@
     }
   }
 }
+
+/* 2026-10-28: compact member-rights beacon typography in the hero. */
+@layer sg-typography {
+  #home .hero-rights-beacon-eyebrow {
+    font-size:11px!important;
+    line-height:1.25!important;
+    white-space:nowrap!important;
+  }
+  #home .hero-rights-beacon-title {
+    font-size:clamp(17px,1.65vw,22px)!important;
+    line-height:1.35!important;
+    white-space:nowrap!important;
+    word-break:keep-all!important;
+  }
+  #home .hero-rights-beacon-action {
+    font-size:13px!important;
+    line-height:1.4!important;
+    white-space:nowrap!important;
+  }
+  #home .hero-rights-beacon-arrow {
+    font-size:19px!important;
+    line-height:1!important;
+  }
+  @media(max-width:700px){
+    #home .hero-rights-beacon-eyebrow{font-size:9px!important}
+    #home .hero-rights-beacon-title{
+      font-size:13px!important;
+      line-height:1.45!important;
+      white-space:normal!important;
+      word-break:keep-all!important;
+    }
+    #home .hero-rights-beacon-action{font-size:11px!important}
+    #home .hero-rights-beacon-arrow{font-size:15px!important}
+  }
+  @media(max-width:380px){
+    #home .hero-rights-beacon-title{font-size:12px!important}
+  }
+}
