@@ -2465,13 +2465,39 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 }
 
 </style>
-<link rel="stylesheet" href="./typography.css?v=20261023-sg3-type-v1"></head><body>
+<link rel="stylesheet" href="./typography.css?v=20261023-sg3-type-v1"><style id="sg3-progress-finance-fix-20261028">
+#roadmap .road-result,#roadmap .road-wait{color:#fff;background:#132421;border:1px solid #385650;border-left:4px solid #86BC25;padding:24px 28px;margin:18px 0}
+#roadmap .road-wait{border-left-color:#9DD5CD;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:20px}
+#roadmap .road-result-kicker{font-size:13px!important;color:#9DD5CD;font-weight:800}
+#roadmap .road-result h3,#roadmap .road-wait h3{font-size:clamp(21px,2vw,28px)!important;color:#fff;line-height:1.4!important;margin:9px 0 17px}
+#roadmap .road-result-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:18px 0}
+#roadmap .road-result-metrics div{border-top:1px solid #4b5c54;padding-top:12px}
+#roadmap .road-result-metrics span{display:block;font-size:13px!important;color:#b8cdc2}
+#roadmap .road-result-metrics strong{display:block;color:#86BC25;font-size:clamp(25px,3vw,40px)!important;white-space:nowrap!important}
+#roadmap .road-result>p:not(.road-result-kicker),#roadmap .road-wait p:not(.road-result-kicker){font-size:14px!important;line-height:1.8!important;color:#e5ebe7}
+#roadmap .road-result>small{display:block;color:#adbbaf;font-size:12px!important;margin-top:11px}
+#roadmap .road-wait-counter{text-align:right;min-width:130px}
+#roadmap .road-wait-counter strong{font-size:clamp(27px,3vw,42px)!important;color:#9DD5CD;display:block;white-space:nowrap}
+#roadmap .road-wait-counter span{font-size:12px!important;color:#c3d2cc}
+#roadmap .road-step{grid-template-columns:minmax(70px,.65fr) minmax(170px,1.6fr) minmax(0,3fr) 94px!important;gap:clamp(9px,1.9vw,22px)!important}
+#roadmap .road-step h3{font-size:clamp(17px,1.5vw,21px)!important;line-height:1.5!important;overflow-wrap:anywhere}
+#roadmap .road-step .details p{font-size:clamp(13px,1.1vw,15px)!important;line-height:1.85!important}
+#roadmap .road-step .small{font-size:12px!important;line-height:1.7!important;overflow-wrap:anywhere}
+#roadmap .road-step.task-done{opacity:1!important;filter:none!important}
+#roadmap .road-step.task-done .status.done{color:#86BC25!important;border-color:#86BC25!important;background:transparent!important}
+#donors .donor-finance-single{display:block!important;background:transparent;border:0;margin:12px 0 22px}
+#donors .donor-finance-single>div{background:transparent;border-top:1px solid #52614f;padding:24px 0}
+#donors .donor-finance-single span{font-size:14px!important;color:#adbaae}
+#donors .donor-finance-single strong{font-size:clamp(34px,4vw,58px)!important;line-height:1.3!important;color:#86BC25!important;white-space:normal!important;overflow-wrap:anywhere}
+@media(max-width:900px){#roadmap .road-step{grid-template-columns:65px minmax(0,1fr) 80px!important}#roadmap .road-step .details{grid-column:2/4;grid-row:2}}
+@media(max-width:600px){#roadmap .road-result,#roadmap .road-wait{padding:18px 15px}#roadmap .road-wait{grid-template-columns:1fr}#roadmap .road-wait-counter{text-align:left}#roadmap .road-step{grid-template-columns:56px minmax(0,1fr) 73px!important;gap:8px!important}}
+</style></head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">정상화 실행계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
 <section id="home" class="hero container">
 <img class="hero-brand-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="248" height="219" decoding="async">
-<a class="hero-signature-link" href="#roadmap" aria-label="현재 연명서 작성중! 정상화 실행계획 바로가기">
-  <span class="hero-signature-status"><strong>현재 연명서 작성중!</strong></span>
+<a class="hero-signature-link" href="#roadmap" aria-label="연명서 125명 제출 완료! 정상화 실행계획 바로가기">
+  <span class="hero-signature-status"><strong>연명서 125명 제출 완료!</strong></span>
   <span class="hero-signature-destination">정상화 실행계획 <span aria-hidden="true">→</span></span>
 </a>
 
@@ -2543,49 +2569,13 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 </section>
 </div></section>
 
-<section id="roadmap" class="section"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">정상화 실행계획</div><h2 class="roadmap-exact-two-line"><span>새로운 집행부 선출을 위한</span><span>정상화 실행계획</span></h2></div><p><span class="header-copy-line">연명서 작성: 10.23 착수 / 주차별 추진: 10.23(금)부터.</span><span class="header-copy-line">연명서 작성은 진행 중이며, 이후 일정은 <strong>예상</strong>입니다.</span></p></div>
-<section class="road-signature-notice reveal" aria-labelledby="roadSignatureTitle">
-  <p class="road-signature-kicker">조합원 참여 안내</p>
-  <h3 id="roadSignatureTitle">지금 연명서 작성중!</h3>
-  <p class="road-signature-intro">대의원회 소집과 새로운 집행부 구성을 위한 연명서를 작성하고 있습니다. 단지 내에 계신 조합원께서는 아래 일정을 확인해 주세요.</p>
-  <dl class="road-signature-details">
-    <div>
-      <dt>작성 날짜</dt>
-      <dd>2026년 <time datetime="2026-10-23">10월 23일(금)</time> · <time datetime="2026-10-24">24일(토)</time> · <time datetime="2026-10-26">26일(월)</time><small>일요일 제외</small></dd>
-    </div>
-    <div>
-      <dt>작성 시간</dt>
-      <dd>오후 8시부터</dd>
-    </div>
-    <div class="road-signature-place">
-      <dt>작성 장소</dt>
-      <dd><strong>이인섭 비대위원장 자택</strong><span>인천 제물포구 샛골로162번길 45, 송림두산위브더센트럴아파트 107동 2104호</span></dd>
-    </div>
-    <div>
-      <dt>준비물</dt>
-      <dd>신분증 사본</dd>
-    </div>
-    <div>
-      <dt>문의</dt>
-      <dd><a href="tel:01099291171">010-9929-1171</a></dd>
-    </div>
-  </dl>
-  <p class="road-signature-appeal"><strong>단지 내에 계신 조합원 여러분의 최대한 적극적인 참여를 부탁드립니다.</strong> 신분증 사본을 준비해 방문해 주시기 바랍니다.<br>외부에 계신 조합원 여러분께는 추후 별도로 안내드리겠습니다.</p>
-</section>
-<section class="road-context reveal" aria-labelledby="roadContextTitle">
-  <div class="road-context-heading">
-    <h3 id="roadContextTitle">김** 이사와의 협상 결과</h3>
-    <span class="road-context-asof">2026.10.23 기준</span>
-  </div>
-  <p class="road-context-lead">비대위는 잔류 이사의 협조를 통해 신속히 대의원회를 소집하는 방안도 검토했으나,<br><span class="road-context-risk-text">예정된 면담이 성사되지 않아</span> <strong>특정 이사의 협조 여부와 관계없이 조합원의 소집요구 절차를 추진</strong>하기로 했습니다.</p>
-  <ol class="road-context-events">
-    <li><time datetime="2026-10-18">10.18</time><strong>사퇴 유보 및 협의 의사</strong><p>10월 18일 김** 이사가 사퇴를 유보하면서 향후 조합 운영 방향을 논의할 의사를 밝혔고, 10월 23일 만나기로 약속했습니다.</p></li>
-    <li class="road-context-event-risk"><time datetime="2026-10-22">10.22</time><strong>김** 이사의 면담 취소 통보</strong><p>10월 22일 김** 이사가 면담 취소를 통보했습니다. 이후 연락이 닿지 않아 조합 운영 방향에 대한 협의가 이루어지지 않았습니다.</p></li>
-    <li><time datetime="2026-10-23">10.23</time><strong>조합원 연명 추진</strong><p>10월 23일부터 연명서 작성을 시작했습니다. 조합원 연명에 기반한 대의원회 소집·선관위 구성·이사 및 감사 보궐선임·조합장 선출총회 준비를 추진합니다.</p></li>
-  </ol>
-  <p class="road-context-note">※ 협의·면담 경위는 비대위 설명에 기반한 기록입니다. 실제 소집 권한과 선임 절차는 시행 정관 및 관할관청 확인에 따라 진행합니다.</p>
-</section>
-<div class="road-overview reveal"><div><div class="eyebrow" id="scenarioLabel"></div><h3 id="scenarioTitle"></h3><div class="road-metrics"><div><strong id="scenarioWeeks"></strong><span>조합장 선출 목표</span></div><div><strong id="scenarioOfficers"></strong><span>이사·감사 보궐선임</span></div></div></div><p id="scenarioDesc"></p></div><div class="road-future-vacancy reveal" role="note"><strong>추후 김** 이사 사퇴 시</strong><p>현재 이사 4명·감사 1명 보궐선임 계획은 유지합니다. 김** 이사가 추진 도중 사퇴하면 추가로 발생하는 이사 1석은 <b>별도 후속 대의원회에서 보궐선임 추진</b> 예정입니다. 시행 정관에 따른 소집·의결 절차를 확인해 진행합니다.</p></div><div id="weekAxis" class="road-axis reveal"></div><div id="roadSteps" class="road-steps"></div><div class="track-footer">제1주: 2026.10.23–10.29 · 연명서 작성은 10.23 착수 · 이후 일정은 예상이며, 조합장 선출 후 변경인가·등기 소요기간은 별도.</div>
+<section id="roadmap" class="section"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">정상화 실행계획</div><h2 class="roadmap-exact-two-line"><span>새로운 집행부 선출을 위한</span><span>정상화 실행계획</span></h2></div><p><span class="header-copy-line">연명서 125명 제출 완료: 10.27 / 조합원 433명 중 28.9% 참여.</span><span class="header-copy-line">현재 대의원회 소집 여부 확인 중이며, 이후 일정은 <strong>예상</strong>입니다.</span></p></div>
+<section class="road-result reveal" aria-labelledby="roadSignatureTitle">
+<p class="road-result-kicker">W1 · 2026.10.27 진행 완료</p><h3 id="roadSignatureTitle">연명서 125명 제출 완료</h3>
+<div class="road-result-metrics"><div><span>전체 조합원</span><strong>433명</strong></div><div><span>제출 인원</span><strong>125명</strong></div><div><span>참여율</span><strong>28.9%</strong></div></div>
+<p>2026년 10월 27일 대의원회 및 조합장 선출총회 소집요구서 제출 완료. 정관(안) 제24조 제5항에 따른 대의원회 소집요구(44명 이상) 및 제20조 제4항에 따른 총회 소집요구(87명 이상)의 인원 요건을 충족함.</p><small>※ 정관(안)상 인원 요건 충족 기준. 최종 법적 유효성은 시행 정관·제출서류·접수 여부 등에 따라 별도 판단.</small></section>
+<section class="road-wait reveal"><div><p class="road-result-kicker">W2 · 진행 중</p><h3>대의원회 소집 여부 확인</h3><p>10월 27일 소집요구 제출 · 정관(안) 제24조 제5·6항 · 14일 기준 확인 중</p></div><div class="road-wait-counter"><strong id="convocationDay">1일째</strong><span id="convocationAsOf">2026.10.28 기준</span></div></section>
+<div class="road-overview reveal"><div><div class="eyebrow" id="scenarioLabel"></div><h3 id="scenarioTitle"></h3><div class="road-metrics"><div><strong id="scenarioWeeks"></strong><span>조합장 선출 목표</span></div><div><strong id="scenarioOfficers"></strong><span>이사·감사 보궐선임</span></div></div></div><p id="scenarioDesc"></p></div><div id="weekAxis" class="road-axis reveal"></div><div id="roadSteps" class="road-steps"></div><div class="track-footer">제1주: 2026.10.23–10.29 · 10.27 연명서 제출 완료 · 현재 대의원회 소집 여부 확인 중 · 이후 일정은 예상.</div>
 </div></section>
 
 
@@ -2930,7 +2920,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
  </div>
 </section>
 
-<section id="donors" class="section tint"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">후원자</div><h2>함께해 주신<br>소중한 마음.</h2></div><p>후원은 자율적·자발적으로만 진행합니다.</p></div><div class="donor-hero reveal"><div class="donor-participation-line"><strong id="donorCount">총 179명</strong><span class="donor-thanks">자발적인 참여에 감사드립니다</span></div></div><div class="donor-finance-summary reveal" aria-label="후원금 수입·지출·잔액 요약"><div><span>수입</span><strong id="donorNetIncome">—</strong></div><div><span>지출</span><strong id="donorActualSpend">—</strong></div><div><span>현재 잔액</span><strong id="donorBalance">—</strong></div></div><div class="donation-account reveal" aria-label="후원 계좌 안내"><div><div class="donation-hope"><strong>작은 마음이 모여, 송림3지구의 새로운 시작을 만듭니다.</strong><p id="donationPolicy" class="donation-policy">후원은 조합원 여러분의 자발적인 참여로 이루어지며, 금액은 0원부터 30만원까지 자유롭게 선택하실 수 있습니다.<br>후원 여부와 관계없이 모든 조합원의 권리는 동등하게 존중됩니다.</p></div><p class="account-eyebrow">후원 계좌</p><dl><dt>은행</dt><dd>IBK기업은행</dd><dt>예금주</dt><dd>이인섭</dd><dt>계좌번호</dt><dd id="donationAccountNumber">010-9929-1171</dd></dl></div><button type="button" class="copy-account" id="copyDonationAccount" aria-label="후원 계좌번호 복사">계좌번호 복사</button></div><details class="donor-directory-wrap reveal" id="donorDetails"><summary class="donor-summary">후원자 명단 펼쳐보기 <span aria-hidden="true">⌄</span></summary><div><div class="donor-directory-head"><h3>후원자 명단 <span>총 179명</span></h3><p>공개 명칭만 표시합니다. 명단은 펼쳐보기를 누르면 확인할 수 있습니다.</p></div><div id="donorGrid" class="donor-grid donor-directory"></div></div></details></section>
+<section id="donors" class="section tint"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">후원자</div><h2>함께해 주신<br>소중한 마음.</h2></div><p>후원은 자율적·자발적으로만 진행합니다.</p></div><div class="donor-hero reveal"><div class="donor-participation-line"><strong id="donorCount">총 179명</strong><span class="donor-thanks">자발적인 참여에 감사드립니다</span></div></div><div class="donor-finance-summary donor-finance-single reveal" aria-label="총 후원금액"><div><span>총 후원금액 · 2026.10.19 기준</span><strong id="donorNetIncome">—</strong></div></div><div class="donation-account reveal" aria-label="후원 계좌 안내"><div><div class="donation-hope"><strong>작은 마음이 모여, 송림3지구의 새로운 시작을 만듭니다.</strong><p id="donationPolicy" class="donation-policy">후원은 조합원 여러분의 자발적인 참여로 이루어지며, 금액은 0원부터 30만원까지 자유롭게 선택하실 수 있습니다.<br>후원 여부와 관계없이 모든 조합원의 권리는 동등하게 존중됩니다.</p></div><p class="account-eyebrow">후원 계좌</p><dl><dt>은행</dt><dd>IBK기업은행</dd><dt>예금주</dt><dd>이인섭</dd><dt>계좌번호</dt><dd id="donationAccountNumber">010-9929-1171</dd></dl></div><button type="button" class="copy-account" id="copyDonationAccount" aria-label="후원 계좌번호 복사">계좌번호 복사</button></div><details class="donor-directory-wrap reveal" id="donorDetails"><summary class="donor-summary">후원자 명단 펼쳐보기 <span aria-hidden="true">⌄</span></summary><div><div class="donor-directory-head"><h3>후원자 명단 <span>총 179명</span></h3><p>공개 명칭만 표시합니다. 명단은 펼쳐보기를 누르면 확인할 수 있습니다.</p></div><div id="donorGrid" class="donor-grid donor-directory"></div></div></details></section>
 
 <section id="rules" class="section tint"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">정관·규정</div><h2>진행의 근거를<br>확인할 수 있도록.</h2></div><p>정관과 선거관리규정의 주요 조항을 업무별로 구분해 정리했습니다. 조항을 누르면 관련 설명이 펼쳐집니다.</p></div><div id="ruleList" class="rules-list reveal"></div><p class="more-info">제공받은 정관(안)·선거관리규정 변경(안)의 요약임. 실제 시행본과의 일치 여부 및 법적 효력은 별도 확인 필요.</p></div></section>
 
@@ -3003,9 +2993,9 @@ window.SONGRIM = {
     mission:"투명한 의사결정과 책임 있는 집행을 통해 조합 운영을 정상화하고, 신임 집행부 구성과 신속한 등기 추진의 기반을 마련합니다. 그리고 우여곡절과 의심정황이 많았던 과거 집행부의 해임을 이끌어 냈습니다.",
     founded:"2026-09-17",
     meetingDate:"2026-10-16",
-    members:432,
+    members:433,
     startDate:"2026-10-23",
-    lastReviewed:"2026-10-23",
+    lastReviewed:"2026-10-28",
     updateLabel:"연명 기반 실행계획",
     meeting:{
       turnout:266,forVotes:252,againstVotes:2,
@@ -3027,14 +3017,14 @@ window.SONGRIM = {
     note:"비대위 운영진 4명과 그 외 운영진 16명, 총 20명이 참여합니다."
   },
   scenarios:[
-    {id:"s1",label:"현재 추진 경로",title:"조합원 연명 기반 정상화 추진",condition:"잔류 이사의 소집 협조 여부와 관계없이 조합원 소집요구 절차 추진",weeks:"6–8주",summary:"연명서 접수(10.23·24·26) → 대의원회 소집요구 → 선관위 구성 → 이사·감사 보궐선임 → 총회 소집·신임 조합장 선출",signature:"대의원회 44명 이상 · 총회 87명 이상",directors:4,auditors:1,
+    {id:"s1",label:"현재 추진 경로",title:"조합원 연명 기반 정상화 추진",condition:"2026.10.27 연명서 125명 제출 완료, 현재 대의원회 소집 여부 확인 중",weeks:"6–8주",summary:"연명서 제출 완료 → 소집 여부 확인 → 선관위 구성 → 이사·감사 보궐선임 → 총회 소집·신임 조합장 선출",signature:"대의원회 44명 이상 · 총회 87명 이상",directors:4,auditors:1,
      steps:[
-       {id:"s1-1",weekStart:1,weekEnd:1,title:"연명서 작성·소집요구",startedAt:"2026-10-23",body:"10월 23일부터 연명서 작성 착수. 23일·24일·26일(일요일 제외) 오후 8시부터 단지 내 거주 조합원 참여. 외부 거주 조합원은 추후 별도 안내. 조합원 432명 기준 대의원회 소집요구는 44명 이상(10분의 1), 조합장 선출 총회 소집요구는 87명 이상(5분의 1)을 목표로 각각의 안건을 명시해 제출 준비.",owner:"소집청구인 대표",basis:["정관(안) 제20조④","정관(안) 제24조⑤"],status:"active",updatedAt:"2026-10-23"},
-       {id:"s1-2",weekStart:1,weekEnd:3,title:"대의원회 소집 절차 추진",body:"소집요구 후 정관상 14일 이내 소집 여부 확인. 미소집 시 관할 구청장 승인에 따른 청구인 대표 소집 경로를 정관·관할관청과 확인하여 추진.",owner:"소집청구인 대표",basis:["정관(안) 제24조⑤·⑥"],status:"planned",updatedAt:""},
+       {id:"s1-1",weekStart:1,weekEnd:1,title:"연명서 작성·소집요구",startedAt:"2026-10-23",body:"2026년 10월 27일, 전체 조합원 433명 중 125명(28.9%)의 연명서를 확보하여 대의원회 및 조합장 선출총회 소집요구서를 제출 완료. 정관(안) 제24조 제5항의 대의원회 기준 44명(10분의 1), 제20조 제4항의 총회 기준 87명(5분의 1)을 모두 충족함.",owner:"소집청구인 대표",basis:["정관(안) 제20조④","정관(안) 제24조⑤"],status:"done",updatedAt:"2026-10-27"},
+       {id:"s1-2",weekStart:1,weekEnd:3,title:"대의원회 소집 여부 확인",startedAt:"2026-10-28",body:"10월 27일 제출한 소집요구서에 대한 대의원회 소집 여부 확인 중. 정관(안) 제24조 제5·6항에 따른 14일 소집 기한을 기준으로 진행 상황을 점검. 미소집 시 관할 구청장 승인 등에 따른 후속 절차 검토. 확인 경과일은 제출 다음 날부터 산정.",owner:"소집청구인 대표",basis:["정관(안) 제24조⑤·⑥"],status:"active",updatedAt:"2026-10-28"},
        {id:"s1-3",weekStart:3,weekEnd:4,title:"대의원회 공고 및 통지",body:"대의원회 안건 확정, 소집 통지 및 선관위원 후보자 3~5명 사전 확보.",owner:"소집청구인 대표",basis:["정관(안) 제24조⑦"],status:"planned",updatedAt:""},
        {id:"s1-4",weekStart:4,weekEnd:4,title:"선관위원 선임",body:"1차 대의원회에서 선관위원 3~5명 우선 선임. 위원회 자체 회의에서 위원장 1명·간사 1명 선출.",owner:"대의원회·선관위",basis:["선거관리규정 변경(안) 제2·3조"],status:"planned",updatedAt:""},
        {id:"s1-5",weekStart:4,weekEnd:5,title:"임원 후보 등록·심사",body:"조합장·이사·감사 후보 등록 공고. 후보별 추천서와 피선거권 요건 확인. 추천인 계획: 조합장 50명, 이사·감사 각 20명 이상.",owner:"선거관리위원회",basis:["선거관리규정 변경(안) 제4·6조"],status:"planned",updatedAt:""},
-       {id:"s1-6",weekStart:5,weekEnd:6,title:"이사·감사 보궐선임",body:"2차 대의원회에서 해임으로 궐위된 이사 4명 및 감사 1명 보궐선임 추진. 김** 이사가 향후 별도로 사퇴하여 추가 궐위가 발생하면 해당 이사 1명은 후속 대의원회에서 별도 보궐선임을 추진할 예정. 실제 궐위·의결정족수·선임 권한은 시행 정관 확인 필요.",owner:"대의원회",basis:["정관(안) 제15조②·제25조①·제26조"],status:"planned",updatedAt:""},
+       {id:"s1-6",weekStart:5,weekEnd:6,title:"이사·감사 보궐선임",body:"2차 대의원회에서 해임으로 궐위된 이사 4명 및 감사 1명 보궐선임 추진. 이후 추가 궐위가 발생하는 경우 해당 보궐선임은 별도 후속 절차로 추진. 실제 궐위·의결정족수·선임 권한은 시행 정관 확인 필요.",owner:"대의원회",basis:["정관(안) 제15조②·제25조①·제26조"],status:"planned",updatedAt:""},
        {id:"s1-7",weekStart:6,weekEnd:7,title:"총회 소집권 확인·선거 준비",body:"잔류 이사 및 보궐선임 임원에 관한 직무대행·총회 소집권을 시행 정관과 관할관청을 통해 확인. 선거인명부·후보공고·투표 및 개표 절차 준비.",owner:"보궐선임 임원·선관위",basis:["정관(안) 제16조⑥·제20조⑦"],status:"planned",updatedAt:""},
        {id:"s1-8",weekStart:7,weekEnd:8,title:"조합장 선출총회",body:"적법한 총회 소집·통지 절차를 거쳐 신임 조합장 1명 선출. 선관위에서 투표·개표 및 당선 결과 공고.",owner:"총회·선관위",basis:["정관(안) 제21조·선거관리규정 변경(안) 제10~12조"],status:"planned",updatedAt:""},
        {id:"s1-9",weekStart:8,weekEnd:8,title:"변경인가·등기 착수",body:"조합장 선출 이후 변경인가·임원 변경등기 및 업무 인수인계 착수. 완료 기간은 별도.",owner:"신임 집행부",basis:["정관(안) 제18조②"],status:"planned",updatedAt:""}
@@ -3047,7 +3037,9 @@ window.SONGRIM = {
     {date:"2026-10-18",title:"김** 이사와 조합 운영 방향 협의 약속",detail:"향후 조합 운영 방향을 논의하기 위해 10월 23일 김** 이사와 만나기로 약속.",status:"done",track:"s1"},
     {date:"2026-10-19",title:"집행부 재구성 경로 검토",detail:"잔류 이사 직접 소집 가능성과 조합원 연명 소집요구 경로를 검토. 당초 10월 26일 착수 계획을 검토했으며, 이후 실제 연명서 작성 착수일인 10월 23일로 제1주 기준을 조정.",status:"done",track:"common"},
     {date:"2026-10-22",title:"김** 이사의 면담 취소 통보",detail:"10월 23일로 약속한 면담에 대해 김** 이사가 10월 22일 취소를 통보. 이후 협의가 이루어지지 않음.",status:"done",track:"s1"},
-    {date:"2026-10-23",title:"조합원 연명서 작성 착수",detail:"김** 이사와의 면담 취소 이후 조합원 연명 소집요구 절차를 추진하기 위해 10월 23일 연명서 작성 착수. 단지 내 조합원은 23·24·26일 오후 8시부터 참여, 외부 거주 조합원은 추후 별도 안내.",status:"active",track:"s1"}
+    {date:"2026-10-23",title:"조합원 연명서 작성 착수",detail:"조합원 소집요구를 위한 연명서 작성 착수.",status:"done",track:"s1"},
+    {date:"2026-10-27",title:"조합원 125명 연명서 제출 완료",detail:"전체 조합원 433명 중 125명(28.9%)이 연명한 대의원회 및 총회 소집요구서 제출 완료. 정관(안)상 인원 요건 충족.",status:"done",track:"s1"},
+    {date:"2026-10-28",title:"대의원회 소집 여부 확인 시작",detail:"10월 27일 제출된 소집요구에 대한 14일 소집 여부 확인 중.",status:"active",track:"s1"}
   ],
   references:[
     {category:"정관",article:"제15조 제2항",title:"궐위 임원 보궐선임",summary:"임기 중 궐위된 이사·감사는 대의원회에서 보궐선임하는 구조.",usedFor:"임원 보궐선임"},
@@ -3082,8 +3074,8 @@ window.SONGRIM_FINANCE = {
   updatedAt:"2026-10-19"
 };
 </script>
-<script src="./data.js?v=20261023-start-progress-v3"></script><script src="./updates.js?v=20261023-start-progress-v2"></script><script src="./finance.js?v=20261020-donation-legend-v27"></script><script>
-(()=>{'use strict';const d=window.SONGRIM,f=window.SONGRIM_FINANCE;if(!d||!f){document.body.insertAdjacentHTML('afterbegin','<p style="padding:20px">데이터 파일을 불러오지 못했습니다.</p>');return}const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const kr=n=>new Intl.NumberFormat('ko-KR').format(n),won=n=>kr(n)+'원';const dateString=t=>{const a=String(t).split('-');return Number(a[1])+'/'+Number(a[2])};const dateAdd=(start,days)=>{const x=new Date(start+'T12:00:00Z');x.setUTCDate(x.getUTCDate()+days);return x.toISOString().slice(0,10)};const range=s=>{const start=dateAdd(d.info.startDate,(s.weekStart-1)*7),end=dateAdd(d.info.startDate,s.weekEnd*7-1);return s.startedAt?dateString(s.startedAt)+' 착수 · '+dateString(end)+'까지 예상':dateString(start)+'–'+dateString(end)+' 예상'};const statLabel=s=>({planned:'예정',active:'진행 중',done:'완료',hold:'보류'})[s]||'예정';$('#mission').textContent=d.info.mission;
+<script src="./data.js?v=20261028-signatures-v1"></script><script src="./updates.js?v=20261028-signatures-v1"></script><script src="./finance.js?v=20261020-donation-legend-v27"></script><script>
+(()=>{'use strict';const d=window.SONGRIM,f=window.SONGRIM_FINANCE;if(!d||!f){document.body.insertAdjacentHTML('afterbegin','<p style="padding:20px">데이터 파일을 불러오지 못했습니다.</p>');return}const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const kr=n=>new Intl.NumberFormat('ko-KR').format(n),won=n=>kr(n)+'원';const dateString=t=>{const a=String(t).split('-');return Number(a[1])+'/'+Number(a[2])};const dateAdd=(start,days)=>{const x=new Date(start+'T12:00:00Z');x.setUTCDate(x.getUTCDate()+days);return x.toISOString().slice(0,10)};const range=s=>{const start=dateAdd(d.info.startDate,(s.weekStart-1)*7),end=dateAdd(d.info.startDate,s.weekEnd*7-1);return s.startedAt?dateString(s.startedAt)+' 착수 · '+dateString(end)+'까지 예상':dateString(start)+'–'+dateString(end)+' 예상'};const statLabel=s=>({planned:'예정',active:'진행 중',done:'진행 완료',hold:'보류'})[s]||'예정';$('#mission').textContent=d.info.mission;
 let selectedWeek=null;
 function renderRoad(){
  const t=d.scenarios[0],updates=window.SONGRIM_UPDATES||{steps:{}},overrides=updates.steps||{};
@@ -3093,7 +3085,7 @@ function renderRoad(){
  $('#weekAxis').style.gridTemplateColumns='repeat('+n+',1fr)';
  $('#weekAxis').innerHTML=Array.from({length:n},(_,i)=>'<button type="button" data-week="'+(i+1)+'" aria-pressed="'+(selectedWeek===i+1)+'" class="'+(selectedWeek===i+1?'chosen':'')+'">W'+(i+1)+'</button>').join('');
  $('#roadSteps').innerHTML=t.steps.map((raw,i)=>{const o=overrides[raw.id]||{},step={...raw,...o},match=selectedWeek===null||(step.weekStart<=selectedWeek&&step.weekEnd>=selectedWeek),highlight=selectedWeek!==null&&match,css=(selectedWeek===null?'':(highlight?' week-selected':' week-muted'))+(step.status==='done'?' task-done':step.status==='active'?' task-active':'');
- return '<article class="road-step'+css+'"><div class="week">W'+step.weekStart+(step.weekEnd!==step.weekStart?'~'+step.weekEnd+'주':'')+'<div class="small">'+esc(range(step))+'</div></div><h3>'+String(i+1).padStart(2,'0')+'. '+esc(step.title)+'</h3><div class="details"><p>'+esc(step.body)+'</p><div class="small">'+esc(step.owner)+' · '+esc(step.basis.join(' / '))+'</div><div class="small">실제 업데이트: '+esc(step.updatedAt||'미등록')+'</div>'+(step.note?'<div class="small">기록: '+esc(step.note)+'</div>':'')+'</div><div><span class="status '+esc(step.status)+'">'+statLabel(step.status)+'</span></div></article>'}).join('');
+ return '<article class="road-step'+css+'"><div class="week">W'+step.weekStart+(step.weekEnd!==step.weekStart?'~'+step.weekEnd+'주':'')+'<div class="small">'+esc(range(step))+'</div></div><h3>'+String(i+1).padStart(2,'0')+'. '+esc(step.title)+'</h3><div class="details"><p>'+esc(step.body)+'</p><div class="small">'+esc(step.owner)+' · '+esc(step.basis.join(' / '))+'</div><div class="small">실제 업데이트: '+esc(step.updatedAt||'미등록')+'</div>'+(step.waitingSince?'<div class="small">소집 여부 확인 <strong>'+Math.max(1,Math.floor((new Date().setHours(0,0,0,0)-new Date(step.waitingSince+'T00:00:00').getTime())/86400000))+'일째</strong> · 10월 27일 제출 기준</div>':'')+(step.note?'<div class="small">기록: '+esc(step.note)+'</div>':'')+'</div><div><span class="status '+esc(step.status)+'">'+statLabel(step.status)+'</span></div></article>'}).join('');
  $$('[data-week]').forEach(b=>b.onclick=()=>{
    const w=Number(b.dataset.week);
    selectedWeek=selectedWeek===w?null:w;
@@ -3108,6 +3100,7 @@ function renderRoad(){
  });
 }
 renderRoad();
+const wait=document.getElementById('convocationDay');if(wait){const days=Math.max(1,Math.floor((new Date().setHours(0,0,0,0)-new Date('2026-10-27T00:00:00').getTime())/86400000));wait.textContent=days+'일째';document.getElementById('convocationAsOf').textContent=new Date().toLocaleDateString('ko-KR')+' 기준';}
 const people=$('#people');
 const order=['이인섭','박형철','최천호','박종인','송병일'];
 const teamMap=new Map([...(d.advisors||[]),...(d.committee||[])].map(p=>[p.name,p]));
@@ -3140,8 +3133,8 @@ $('#balanceTotal').textContent=won(balance);
 $('#incomeTotal').textContent=won(grossIncome);
 $('#expenseTotal').textContent=won(actualSpend);
 $('#donorNetIncome').textContent=won(grossIncome);
-$('#donorActualSpend').textContent=won(actualSpend);
-$('#donorBalance').textContent=won(balance);
+
+
 const spendColors=['#86BC25','#0272A6','#05767D','#979B9C','#245034'];
 const groups=new Map();
 for(const t of transactions.filter(x=>x.type==='expense'&&x.treatment==='operating'))groups.set(t.group||t.category,(groups.get(t.group||t.category)||0)+t.amount);
