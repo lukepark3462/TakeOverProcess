@@ -262,3 +262,40 @@
     #home .hero-rights-beacon-title{font-size:12px!important}
   }
 }
+
+/* 2026-10-28 | Past issue expanded-detail typography.
+ * Keep question/answer section labels and body copy compact.
+ * Place overrides in the shared important layer so generic heading
+ * and body size rules do not enlarge them.
+ */
+@layer sg-typography {
+  #past.past-v2 .pv-issue-body .pv-detail-entry h4 {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    font-weight: 780 !important;
+    white-space: normal !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+  }
+  #past.past-v2 .pv-issue-body .pv-detail-entry p,
+  #past.past-v2 .pv-issue-body .pv-detail-entry li {
+    font-size: 14px !important;
+    line-height: 1.75 !important;
+    font-weight: 450;
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+  }
+  #past.past-v2 .pv-issue-body .pv-detail-entry :is(p, li) :is(strong, b, span, a) {
+    font-size: inherit !important;
+    line-height: inherit !important;
+  }
+  @media (max-width: 640px) {
+    #past.past-v2 .pv-issue-body .pv-detail-entry h4 {
+      font-size: 13px !important;
+    }
+    #past.past-v2 .pv-issue-body .pv-detail-entry p,
+    #past.past-v2 .pv-issue-body .pv-detail-entry li {
+      font-size: 14px !important;
+    }
+  }
+}
