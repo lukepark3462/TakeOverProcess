@@ -1170,3 +1170,30 @@ footer.footer .footer-grid p{
 #journey .journey-goals h3{margin:0 0 16px;color:var(--sg-brand-green);font-size:20px;font-weight:750;line-height:1.5}
 #journey .journey-goals .journey-future-item{padding:8px 0;background:none;border:0;border-radius:0}
 #roadmap .road-signature-appeal strong{color:var(--sg-white);font-weight:700}
+
+
+/* 2026-10-28 | Unified committee profile rows
+ * All five profile cards share the same row tracks: portrait, role,
+ * name, birth year, statement, education, career and closing summary.
+ * The longest profile (Park Jong-in) sets the necessary section height;
+ * shorter profiles receive matching internal whitespace, not filler text.
+ * Each wrapped row (tablet) aligns within its own peer group.
+ */
+@supports (grid-template-rows: subgrid) {
+  #about .committee-grid {
+    grid-auto-flow: row;
+    align-items: stretch;
+  }
+  #about .committee-grid > .committee-card {
+    display: grid !important;
+    grid-row: span 8;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+    align-items: start;
+    height: auto;
+  }
+  #about .committee-grid > .committee-card > .committee-intro {
+    margin-top: 12px;
+    align-self: stretch;
+  }
+}
