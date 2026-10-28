@@ -973,63 +973,113 @@ header .header-identity .logo-ring-mark{
   }
 }
 
-/* Signature status shortcut beside the hero logo. */
-#home.hero .hero-signature-link{
+/* Member-rights beacon: single evergreen hero shortcut. */
+#home.hero .hero-rights-beacon{
   position:absolute;
   top:126px;
   left:calc(clamp(30px,5.5vw,90px) + 276px);
   z-index:4;
-  display:flex;
-  flex-direction:column;
-  gap:7px;
+  display:inline-flex;
+  align-items:center;
+  gap:15px;
   width:max-content;
-  max-width:calc(100% - clamp(30px,5.5vw,90px) - 300px);
-  padding:14px 18px;
-  box-sizing:border-box;
-  border:1px solid var(--sg-brand-green);
-  border-radius:10px;
-  background:color-mix(in srgb,var(--sg-brand-green) 8%,var(--sg-black));
-  color:var(--sg-white);
+  max-width:calc(100% - clamp(30px,5.5vw,90px) - 304px);
+  min-height:76px;
+  padding:14px 20px;
+  border:1px solid color-mix(in srgb,var(--sg-process,#9DD5CD) 55%,transparent);
+  border-left:3px solid var(--sg-brand-green,#86BC25);
+  border-radius:8px;
+  background:linear-gradient(110deg,#11201d 0%,#0c1514 100%);
+  box-shadow:0 10px 32px #00000055,inset 0 0 0 1px #ffffff08;
   text-decoration:none;
-  line-height:1.45;
-  transition:background-color .18s;
+  color:var(--sg-white,#fff);
+  transition:border-color .2s,background-color .2s,transform .2s;
 }
-#home.hero .hero-signature-link:hover{
-  background:color-mix(in srgb,var(--sg-brand-green) 18%,var(--sg-black));
+#home.hero .hero-rights-beacon:hover{
+  border-color:var(--sg-process,#9DD5CD);
+  transform:translateY(-2px);
 }
-#home.hero .hero-signature-link:focus-visible{
-  outline:3px solid var(--sg-white);
+#home.hero .hero-rights-beacon:focus-visible{
+  outline:2px solid var(--sg-process,#9DD5CD);
   outline-offset:4px;
 }
-#home .hero-signature-status{display:flex;align-items:flex-start;gap:8px}
-#home .hero-signature-status:before{
-  content:"";flex:none;width:7px;height:7px;margin-top:.6em;
-  border-radius:50%;background:var(--sg-brand-green);
+#home .hero-rights-beacon-signal{
+  position:relative;
+  display:grid;
+  place-items:center;
+  flex:0 0 27px;
+  width:27px;height:27px;
+  border:1px solid #86BC2566;
+  border-radius:50%;
+  background:#86BC2510;
+  box-shadow:0 0 0 5px #86BC2508;
 }
-#home .hero-signature-status strong{
-  min-width:0;font-size:clamp(16px,1.35vw,19px);font-weight:750;
-  word-break:keep-all;overflow-wrap:anywhere;
+#home .hero-rights-beacon-signal::before{
+  content:"";
+  display:block;
+  width:8px;height:8px;
+  border-radius:50%;
+  background:var(--sg-brand-green,#86BC25);
+  box-shadow:0 0 13px #86BC2580;
 }
-#home .hero-signature-destination{
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  color:var(--sg-brand-green);font-size:13px;font-weight:650;
-  word-break:keep-all;overflow-wrap:anywhere;
+#home .hero-rights-beacon-copy{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  min-width:0;
 }
-#home .hero-signature-destination>span{flex:none;font-size:18px}
+#home .hero-rights-beacon-eyebrow{
+  color:var(--sg-process,#9DD5CD);
+  letter-spacing:.13em;
+  font-weight:750;
+}
+#home .hero-rights-beacon-title{
+  display:block;
+  color:#fff;
+  font-weight:800;
+  letter-spacing:-.045em;
+}
+#home .hero-rights-beacon-action{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  flex:none;
+  margin-left:13px;
+  padding-left:16px;
+  border-left:1px solid #47635b;
+  color:var(--sg-data-blue-light,#64B6E7);
+  font-weight:700;
+  white-space:nowrap;
+}
+#home .hero-rights-beacon-arrow{font-size:19px;line-height:1}
 @media(max-width:700px){
-  #home.hero .hero-signature-link{
-    top:57px;left:209px;right:20px;width:auto;max-width:240px;
-    padding:12px 10px;gap:6px;
+  #home.hero .hero-rights-beacon{
+    top:49px;left:202px;right:14px;
+    width:auto;max-width:none;
+    min-height:112px;
+    padding:12px 10px;
+    gap:8px;
+    flex-wrap:wrap;
+    align-content:center;
+    border-radius:7px;
   }
-  #home .hero-signature-status{gap:6px}
-  #home .hero-signature-status strong{font-size:14px}
-  #home .hero-signature-destination{font-size:12px;gap:8px}
-  #home .hero-signature-destination>span{font-size:16px}
+  #home .hero-rights-beacon-signal{
+    flex-basis:18px;width:18px;height:18px;
+    box-shadow:none;
+  }
+  #home .hero-rights-beacon-signal::before{width:6px;height:6px}
+  #home .hero-rights-beacon-copy{flex:1 1 calc(100% - 27px)}
+  #home .hero-rights-beacon-action{
+    border:0;padding:0;margin:2px 0 0 27px;
+    flex:1 1 100%;
+  }
 }
 @media(max-width:380px){
-  #home.hero .hero-signature-link{top:50px;left:195px;right:16px}
-  #home .hero-signature-status strong{font-size:13px}
-  #home .hero-signature-destination{font-size:11px}
+  #home.hero .hero-rights-beacon{left:189px;right:10px;padding:11px 9px;gap:6px}
+  #home .hero-rights-beacon-action{margin-left:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  #home.hero .hero-rights-beacon{transition:none}
 }
 </style>
 <style id="roadmap-week-autoscroll-v27">
@@ -2424,7 +2474,7 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 }
 
 </style>
-<link rel="stylesheet" href="./typography.css?v=20261028-history-nowrap-v3"><style id="sg3-progress-finance-fix-20261028">
+<link rel="stylesheet" href="./typography.css?v=20261028-rights-beacon-v4"><style id="sg3-progress-finance-fix-20261028">
 #roadmap .road-result,#roadmap .road-wait{color:#fff;background:#132421;border:1px solid #385650;border-left:4px solid #86BC25;padding:24px 28px;margin:18px 0}
 #roadmap .road-wait{border-left-color:#9DD5CD;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:20px}
 #roadmap .road-result-kicker{font-size:13px!important;color:#9DD5CD;font-weight:800}
@@ -2478,9 +2528,13 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 <main>
 <section id="home" class="hero container">
 <img class="hero-brand-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="248" height="219" decoding="async">
-<a class="hero-signature-link" href="#roadmap" aria-label="연명서 125명 제출 완료! 정상화 실행계획 바로가기">
-  <span class="hero-signature-status"><strong>연명서 125명 제출 완료!</strong></span>
-  <span class="hero-signature-destination">정상화 실행계획 <span aria-hidden="true">→</span></span>
+<a class="hero-rights-beacon" href="#rights" aria-label="조합원 권리에 대하여 바로가기">
+  <span class="hero-rights-beacon-signal" aria-hidden="true"></span>
+  <span class="hero-rights-beacon-copy">
+    <span class="hero-rights-beacon-eyebrow">MEMBER RIGHTS</span>
+    <span class="hero-rights-beacon-title">조합원 권리에 대하여</span>
+  </span>
+  <span class="hero-rights-beacon-action" aria-hidden="true">바로가기 <span class="hero-rights-beacon-arrow">→</span></span>
 </a>
 
 <svg class="hero-architecture" viewBox="0 0 1600 830" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
