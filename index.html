@@ -1534,87 +1534,46 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 #roadmap .road-future-vacancy p{font-size:clamp(13px,1vw,15px);line-height:1.85;color:#DFE7DF;word-break:keep-all}
 #roadmap .road-future-vacancy b{font-weight:800;color:#FFF}
 @media(max-width:700px){#roadmap .road-future-vacancy{grid-template-columns:1fr;gap:6px;padding:16px 0}}
-</style><style id="journey-oct02-balanced-columns-v46">
-/* Oct 2: two plain timeline entries, same typography, closer together, one unobtrusive separator. */
+</style><style id="journey-oct02-equal-gutters-v48">
+/* 10/02: equal inner spacing and appropriately sized side-by-side headings. */
 #journey .committee-timeline-item.journey-double-event .journey-event-pair{
- display:grid;
- grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr);
- gap:0;
- min-width:0;
- align-items:start;
+  display:grid;
+  grid-template-columns:minmax(0,40fr) minmax(0,60fr);
+  gap:0;
+  width:100%;
+  min-width:0;
+  align-items:start;
 }
 #journey .committee-timeline-item.journey-double-event .journey-event-part{
- min-width:0;
+  min-width:0;
+  box-sizing:border-box;
 }
-#journey .committee-timeline-item.journey-double-event .journey-event-part + .journey-event-part{
- border-left:1px solid #526358;
- padding-left:18px;
+#journey .committee-timeline-item.journey-double-event .journey-event-part:first-child{
+  padding-right:clamp(12px,1.5vw,22px);
+}
+#journey .committee-timeline-item.journey-double-event .journey-event-part+ .journey-event-part{
+  border-left:1px solid #526358;
+  padding-left:clamp(12px,1.5vw,22px);
 }
 #journey .committee-timeline-item.journey-double-event .journey-event-part h4{
- font-size:clamp(17px,1.65vw,22px)!important;
- font-weight:750;
- letter-spacing:-.055em;
- white-space:nowrap;
+  font-weight:750;
+  letter-spacing:-.045em;
 }
 #journey .committee-timeline-item.journey-double-event .journey-event-part p{
- font-size:clamp(13px,1.08vw,15px)!important;
- letter-spacing:-.02em;
- line-height:1.85;
- white-space:normal;
-}
-#journey .committee-timeline-item.journey-double-event .journey-event-part:nth-child(2) p{
- white-space:nowrap;
+  font-size:clamp(12px,1vw,15px)!important;
+  line-height:1.8;
+  max-width:100%;
+  white-space:normal;
 }
 @media(max-width:970px){
- #journey .committee-timeline-item.journey-double-event .journey-event-pair{
-  grid-template-columns:minmax(0,1fr);
-  gap:20px;
- }
- #journey .committee-timeline-item.journey-double-event .journey-event-part + .journey-event-part{
-  border-left:0;
-  border-top:1px solid #526358;
-  padding:18px 0 0;
- }
- #journey .committee-timeline-item.journey-double-event .journey-event-part h4{
-  font-size:clamp(13px,2.1vw,18px)!important;
- }
+  #journey .committee-timeline-item.journey-double-event .journey-event-pair{grid-template-columns:minmax(0,1fr);row-gap:18px}
+  #journey .committee-timeline-item.journey-double-event .journey-event-part:first-child{padding-right:0}
+  #journey .committee-timeline-item.journey-double-event .journey-event-part+ .journey-event-part{
+    border-left:0;
+    border-top:1px solid #526358;
+    padding:18px 0 0;
+  }
 }
-@media(max-width:430px){
- #journey .committee-timeline-item.journey-double-event .journey-event-part h4{
-  font-size:clamp(11.5px,3.1vw,13px)!important;
- }
- #journey .committee-timeline-item.journey-double-event .journey-event-part p{
-  font-size:12px!important;
- }
-}
-</style><style id="journey-oct02-description-single-line-v47">
-/* Oct 2: let the first sentence occupy its full natural width and shift the second event right. */
-@media(min-width:1281px){
- #journey .committee-timeline-item.journey-double-event .journey-event-pair{
-  grid-template-columns:max-content minmax(0,1fr);
- }
- #journey .committee-timeline-item.journey-double-event .journey-event-part:first-child p{
-  white-space:nowrap;
-  max-width:none;
- }
-}
-/* A narrow desktop cannot fit both full Korean lines side by side. */
-@media(min-width:971px) and (max-width:1280px){
- #journey .committee-timeline-item.journey-double-event .journey-event-pair{
-  grid-template-columns:minmax(0,1fr);
-  gap:18px;
- }
- #journey .committee-timeline-item.journey-double-event .journey-event-part:first-child p{
-  white-space:nowrap;
-  max-width:none;
- }
- #journey .committee-timeline-item.journey-double-event .journey-event-part + .journey-event-part{
-  border-left:0;
-  border-top:1px solid #526358;
-  padding:18px 0 0;
- }
-}
-/* The existing mobile layout retains natural wrapping without horizontal overflow. */
 </style><style id="past-v2-theme">/* Past section styles: unused components removed; canonical design rules retained. */
 #past.past-v2{
   --lime:var(--sg-brand-green);--forest:var(--sg-deep-green);
@@ -2500,6 +2459,20 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 #finance .finance-top .balance>strong{font-size:clamp(29px,3.5vw,53px)!important;white-space:nowrap!important}
 @media(max-width:1050px){#finance .finance-top.finance-top-simple{grid-template-columns:1fr!important}#finance .finance-top .finance-equation strong{font-size:clamp(18px,3.3vw,29px)!important}}
 @media(max-width:550px){#finance .finance-top .finance-equation{grid-template-columns:1fr 1fr!important}#finance .finance-top .finance-equation strong{font-size:clamp(16px,4vw,23px)!important}#finance .finance-top .balance>strong{font-size:clamp(31px,7vw,45px)!important}}
+</style><style id="sg3-weekly-progress-inline-20261028">
+#roadmap #roadSteps .road-inline-progress{
+ display:flex;flex-wrap:wrap;gap:8px 18px;
+ margin-top:15px;padding:12px 15px;
+ background:color-mix(in srgb,var(--sg-process,#9DD5CD) 7%,#111c1a);
+ border-left:3px solid var(--sg-process,#9DD5CD);
+ color:#d8e5dc;line-height:1.6;
+}
+#roadmap #roadSteps .road-inline-progress.done{border-left-color:var(--sg-brand-green,#86BC25)}
+#roadmap #roadSteps .road-inline-progress span{font-size:clamp(12px,1vw,14px)!important;white-space:normal;overflow-wrap:anywhere}
+#roadmap #roadSteps .road-inline-progress b{color:#fff;font-weight:750}
+#roadmap #roadSteps .road-inline-progress.done b{color:#bce486}
+#roadmap #roadSteps .road-inline-progress.active b{color:#9DD5CD}
+@media(max-width:560px){#roadmap #roadSteps .road-inline-progress{gap:8px 12px;padding:11px 12px}}
 </style></head><body>
 <header><div class="header-identity"><a class="logo" href="#home">송림3지구 비상대책위원회<img class="logo-ring-mark" src="./assets/songnim-brush-rings-hq.webp?v=20261020-hq-v1" alt="" aria-hidden="true" width="37" height="34" decoding="async"></a></div><button class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button><nav aria-label="전체 메뉴"><a href="#about">비대위소개</a><a href="#journey">정상화 추진 경과</a><a href="#roadmap">정상화 실행계획</a><a href="#finance">재무현황</a><a href="#past">과거 사건</a><a href="#lawfirm">법률자문</a><a href="#rights">조합원 권리</a><a href="#donors">후원자</a><a href="#rules">정관·규정</a><a href="#contact">연락처</a></nav></header>
 <main>
@@ -2579,11 +2552,6 @@ header{border-bottom:1px solid rgba(134,188,37,.8)!important}
 </div></section>
 
 <section id="roadmap" class="section"><div class="container"><div class="section-head consistent-heading reveal"><div><div class="eyebrow">정상화 실행계획</div><h2 class="roadmap-exact-two-line"><span>새로운 집행부 선출을 위한</span><span>정상화 실행계획</span></h2></div><p><span class="header-copy-line">연명서 125명 제출 완료: 10.27 / 조합원 433명 중 28.9% 참여.</span><span class="header-copy-line">현재 대의원회 소집 여부 확인 중이며, 이후 일정은 <strong>예상</strong>입니다.</span></p></div>
-<section class="road-result reveal" aria-labelledby="roadSignatureTitle">
-<p class="road-result-kicker">W1 · 2026.10.27 진행 완료</p><h3 id="roadSignatureTitle">연명서 125명 제출 완료</h3>
-<div class="road-result-metrics"><div><span>전체 조합원</span><strong>433명</strong></div><div><span>제출 인원</span><strong>125명</strong></div><div><span>참여율</span><strong>28.9%</strong></div></div>
-<p>2026년 10월 27일 대의원회 및 조합장 선출총회 소집요구서 제출 완료. 정관(안) 제24조 제5항에 따른 대의원회 소집요구(44명 이상) 및 제20조 제4항에 따른 총회 소집요구(87명 이상)의 인원 요건을 충족함.</p><small>※ 정관(안)상 인원 요건 충족 기준. 최종 법적 유효성은 시행 정관·제출서류·접수 여부 등에 따라 별도 판단.</small></section>
-<section class="road-wait reveal"><div><p class="road-result-kicker">W2 · 진행 중</p><h3>대의원회 소집 여부 확인</h3><p>10월 27일 소집요구 제출 · 정관(안) 제24조 제5·6항 · 14일 기준 확인 중</p></div><div class="road-wait-counter"><strong id="convocationDay">1일째</strong><span id="convocationAsOf">2026.10.28 기준</span></div></section>
 <div class="road-overview reveal"><div><div class="eyebrow" id="scenarioLabel"></div><h3 id="scenarioTitle"></h3><div class="road-metrics"><div><strong id="scenarioWeeks"></strong><span>조합장 선출 목표</span></div><div><strong id="scenarioOfficers"></strong><span>이사·감사 보궐선임</span></div></div></div><p id="scenarioDesc"></p></div><div id="weekAxis" class="road-axis reveal"></div><div id="roadSteps" class="road-steps"></div><div class="track-footer">제1주: 2026.10.23–10.29 · 10.27 연명서 제출 완료 · 현재 대의원회 소집 여부 확인 중 · 이후 일정은 예상.</div>
 </div></section>
 
@@ -3094,7 +3062,7 @@ function renderRoad(){
  $('#weekAxis').style.gridTemplateColumns='repeat('+n+',1fr)';
  $('#weekAxis').innerHTML=Array.from({length:n},(_,i)=>'<button type="button" data-week="'+(i+1)+'" aria-pressed="'+(selectedWeek===i+1)+'" class="'+(selectedWeek===i+1?'chosen':'')+'">W'+(i+1)+'</button>').join('');
  $('#roadSteps').innerHTML=t.steps.map((raw,i)=>{const o=overrides[raw.id]||{},step={...raw,...o},match=selectedWeek===null||(step.weekStart<=selectedWeek&&step.weekEnd>=selectedWeek),highlight=selectedWeek!==null&&match,css=(selectedWeek===null?'':(highlight?' week-selected':' week-muted'))+(step.status==='done'?' task-done':step.status==='active'?' task-active':'');
- return '<article class="road-step'+css+'"><div class="week">W'+step.weekStart+(step.weekEnd!==step.weekStart?'~'+step.weekEnd+'주':'')+'<div class="small">'+esc(range(step))+'</div></div><h3>'+String(i+1).padStart(2,'0')+'. '+esc(step.title)+'</h3><div class="details"><p>'+esc(step.body)+'</p><div class="small">'+esc(step.owner)+' · '+esc(step.basis.join(' / '))+'</div><div class="small">실제 업데이트: '+esc(step.updatedAt||'미등록')+'</div>'+(step.waitingSince?'<div class="small">소집 여부 확인 <strong>'+Math.max(1,Math.floor((new Date().setHours(0,0,0,0)-new Date(step.waitingSince+'T00:00:00').getTime())/86400000))+'일째</strong> · 10월 27일 제출 기준</div>':'')+(step.note?'<div class="small">기록: '+esc(step.note)+'</div>':'')+'</div><div><span class="status '+esc(step.status)+'">'+statLabel(step.status)+'</span></div></article>'}).join('');
+ return '<article class="road-step'+css+'"><div class="week">W'+step.weekStart+(step.weekEnd!==step.weekStart?'~'+step.weekEnd+'주':'')+'<div class="small">'+esc(range(step))+'</div></div><h3>'+String(i+1).padStart(2,'0')+'. '+esc(step.title)+'</h3><div class="details"><p>'+esc(step.body)+'</p><div class="small">'+esc(step.owner)+' · '+esc(step.basis.join(' / '))+'</div><div class="small">실제 업데이트: '+esc(step.updatedAt||'미등록')+'</div>'+(step.id==='s1-1'?'<div class="road-inline-progress done"><span>제출일 <b>10.27</b></span><span>연명 <b>125 / 433명 (28.9%)</b></span><span>정관상 인원 요건 <b>충족</b></span></div>':step.id==='s1-2'?'<div class="road-inline-progress active"><span>소집요구 제출 <b>10.27</b></span><span>소집 여부 확인 <b>'+Math.max(1,Math.floor((new Date().setHours(0,0,0,0)-new Date((step.waitingSince||'2026-10-27')+'T00:00:00').getTime())/86400000))+'일째</b></span><span>확인 기한 <b>14일</b></span></div>':'')+(step.note?'<div class="small">기록: '+esc(step.note)+'</div>':'')+'</div><div><span class="status '+esc(step.status)+'">'+statLabel(step.status)+'</span></div></article>'}).join('');
  $$('[data-week]').forEach(b=>b.onclick=()=>{
    const w=Number(b.dataset.week);
    selectedWeek=selectedWeek===w?null:w;
@@ -3109,7 +3077,6 @@ function renderRoad(){
  });
 }
 renderRoad();
-const wait=document.getElementById('convocationDay');if(wait){const days=Math.max(1,Math.floor((new Date().setHours(0,0,0,0)-new Date('2026-10-27T00:00:00').getTime())/86400000));wait.textContent=days+'일째';document.getElementById('convocationAsOf').textContent=new Date().toLocaleDateString('ko-KR')+' 기준';}
 const people=$('#people');
 const order=['이인섭','박형철','최천호','박종인','송병일'];
 const teamMap=new Map([...(d.advisors||[]),...(d.committee||[])].map(p=>[p.name,p]));
